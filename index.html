@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard CD Master</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0b0f19; color: #f1f5f9; }
+    .tab-btn.active { background: linear-gradient(135deg, #059669, #0d9488); color: #fff; border-color: transparent; }
+    table { width: 100%; text-align: left; border-collapse: collapse; }
+    th, td { padding: 0.75rem 1rem; border-bottom: 1px solid #1e293b; font-size: 0.75rem; }
+    th { text-transform: uppercase; color: #94a3b8; background: #0f172a; font-weight: 600; }
+  </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+  <header class="bg-[#111827] border-b border-slate-800 p-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white"><i data-lucide="boxes"></i></div>
+        <div><h1 class="font-bold text-lg text-white">Logistics Intelligence • CD Master</h1><p class="text-xs text-slate-400">Dashboard Executivo de Acurácia & Nível de Serviço</p></div>
+      </div>
+      <div class="px-3 py-1.5 bg-slate-800 rounded-lg text-xs flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span> <span id="dataStatus">Aguardando dados...</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="max-w-7xl mx-auto w-full px-4 pt-4">
+    <div id="errorBanner" class="hidden bg-rose-500/10 border-l-4 border-rose-500 p-4 mb-4 rounded-r-lg">
+      <div class="flex">
+        <div class="flex-shrink-0"><i data-lucide="alert-triangle" class="h-5 w-5 text-rose-500"></i></div>
+        <div class="ml-3"><h3 class="text-sm font-bold text-rose-400">Erros encontrados nas fórmulas da planilha:</h3><div class="mt-2 text-xs text-rose-200"><ul id="errorList" class="list-disc pl-5 space-y-1"></ul></div></div>
+      </div>
+    </div>
+
+    <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 flex flex-wrap gap-6 items-center">
+      <div class="flex gap-4 items-center">
+        <div class="text-xs font-semibold text-slate-300 flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4 text-emerald-400"></i> DATAS:</div>
+        <div class="flex items-center gap-2"><label class="text-xs text-slate-400">De:</label><input type="date" id="startDate" class="bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white" /></div>
+        <div class="flex items-center gap-2"><label class="text-xs text-slate-400">Até:</label><input type="date" id="endDate" class="bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white" /></div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="max-w-7xl mx-auto w-full px-4 mt-6 mb-6">
+    <div class="flex gap-2 border-b border-slate-800 pb-2 overflow-x-auto">
+      <button class="tab-btn active px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="geral">Visão Geral</button>
+      <button class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="ciclico">Cíclico</button>
+      <button class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="net">NET & Financeiro</button>
+      <button class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="plan">Planejamento</button>
+      <button class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="repick">Repicking</button>
+      <button class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="cortes">Cortes</button>
+      <button class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="sobras">Sobras (Status)</button>
+      <button class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="picdiv">Piclinha & Divcic</button>
+      <button class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="avarias">Avarias</button>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto w-full px-4 pb-12">
+    <!-- ABA: VISÃO GERAL -->
+    <div id="tab-geral" class="tab-content space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Estoque Auditado</p><h2 id="vgEstoque" class="text-xl font-bold text-white mt-1">R$ 0,00</h2></div>
+        <!-- NET PUXANDO AGORA DO YTD -->
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Impacto NET Geral (YTD)</p><h2 id="vgNetVal" class="text-xl font-bold text-blue-500 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-white uppercase bg-blue-600 px-1 inline-block rounded">% NET Geral (YTD)</p><h2 id="vgNetPct" class="text-xl font-bold text-blue-400 mt-1">0.00%</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Valor Sobras Pendentes</p><h2 id="vgSobrasPend" class="text-xl font-bold text-amber-400 mt-1">R$ 0,00</h2></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Cíclico - Sobra (+)</p><h2 id="vgCicSobra" class="text-xl font-bold text-emerald-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Cíclico - Falta (-)</p><h2 id="vgCicFalta" class="text-xl font-bold text-rose-500 mt-1">-R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Repicking Feitos (Valor)</p><h2 id="vgRepicking" class="text-xl font-bold text-blue-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Valor Total Cortes</p><h2 id="vgCortes" class="text-xl font-bold text-rose-400 mt-1">R$ 0,00</h2></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Valor Total)</p><h2 id="vgPicVal" class="text-xl font-bold text-blue-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Maior Aging)</p><h2 id="vgPicAging" class="text-xl font-bold text-white mt-1">0 Dias</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Valor Total)</p><h2 id="vgDivVal" class="text-xl font-bold text-purple-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Maior Aging)</p><h2 id="vgDivAging" class="text-xl font-bold text-white mt-1">0 Dias</h2></div>
+      </div>
+    </div>
+
+    <!-- ABA: CÍCLICO -->
+    <div id="tab-ciclico" class="tab-content hidden space-y-6">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">Valor Contagem</p><h2 id="cicSomaCont" class="text-lg font-bold text-white">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">Itens 1ª Contagem</p><h2 id="cicItensUnicos" class="text-lg font-bold text-emerald-400">0</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">Físico Final (Peças)</p><h2 id="cicFisico" class="text-lg font-bold text-blue-400">0</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">AJUSTE (+) Positivo</p><h2 id="cicAjPos" class="text-lg font-bold text-emerald-400">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">AJUSTE (-) Negativo</p><h2 id="cicAjNeg" class="text-lg font-bold text-rose-400">R$ 0,00</h2></div>
+      </div>
+      <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl flex flex-col w-full h-[400px]">
+        <h3 class="font-bold text-sm text-white mb-2">Gráfico de Pareto - Tratativas (Causas)</h3>
+        <div class="relative flex-grow w-full"><canvas id="chartTratativas"></canvas></div>
+      </div>
+      <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden shadow-xl w-full">
+        <div class="p-3 bg-slate-900 border-b border-slate-800"><h3 class="text-sm font-bold text-white">Top Ofensores</h3></div>
+        <div class="overflow-y-auto max-h-64">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="sticky top-0 bg-slate-900"><tr><th class="py-2 px-3">SKU</th><th class="py-2 px-3 text-right">Divergência (R$)</th></tr></thead>
+            <tbody id="tbOfensoresCiclico" class="divide-y divide-slate-800"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA: NET -->
+    <div id="tab-net" class="tab-content hidden space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
+          <h3 class="font-bold text-sm text-emerald-400 mb-2">Evolução do Valor NET (R$)</h3>
+          <div class="relative w-full h-64"><canvas id="chartNetVal"></canvas></div>
+        </div>
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
+          <h3 class="font-bold text-sm text-blue-400 mb-2">Evolução da Percentagem NET (%)</h3>
+          <div class="relative w-full h-64"><canvas id="chartNetPct"></canvas></div>
+        </div>
+      </div>
+      <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden">
+        <div class="p-3 bg-slate-900 border-b border-slate-800"><h3 class="text-sm font-bold text-white">Matriz Mensal</h3></div>
+        <div class="overflow-x-auto">
+          <table>
+            <thead><tr><th>Mês</th><th>DIVCIC</th><th>Ajuste (-)</th><th>Ajuste (+)</th><th>Sobras</th><th>Avaria</th><th>NET (R$)</th><th>% NET</th><th>GROSS (R$)</th><th>% GROSS</th></tr></thead>
+            <tbody id="tbNet"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA: PLANEJAMENTO -->
+    <div id="tab-plan" class="tab-content hidden space-y-6">
+      <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
+        <h3 class="font-bold text-sm text-white mb-2">Itens Contados vs Pendentes (Por Curva ABC)</h3>
+        <div class="relative w-full h-64"><canvas id="chartPlan"></canvas></div>
+      </div>
+      <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden">
+        <div class="p-3 bg-slate-900 border-b border-slate-800"><h3 class="text-sm font-bold text-white">Resumo Diário - Contagens (Físico)</h3></div>
+        <table>
+          <thead><tr><th>Data</th><th>Curva A</th><th>Curva B</th><th>Curva C</th><th>Total Dia</th></tr></thead>
+          <tbody id="tbPlanDiario"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ABA: REPICKING -->
+    <div id="tab-repick" class="tab-content hidden space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">Total Apontamentos (Linhas)</p><h2 id="repApontamentos" class="text-2xl font-bold text-blue-400 mt-2">0</h2></div>
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">Itens Encontrados Antes de Movimentar</p><h2 id="repEncontrados" class="text-2xl font-bold text-emerald-400 mt-2">0</h2></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl min-h-[300px] flex flex-col">
+          <h3 class="font-bold text-sm text-white mb-2">Volume (Quantidade de Linhas)</h3>
+          <div class="relative flex-grow w-full"><canvas id="chartRepQtd"></canvas></div>
+        </div>
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl min-h-[300px] flex flex-col">
+          <h3 class="font-bold text-sm text-white mb-2">Impacto (Soma de Valor R$)</h3>
+          <div class="relative flex-grow w-full"><canvas id="chartRepVal"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA: CORTES -->
+    <div id="tab-cortes" class="tab-content hidden space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">Total Itens Cortados</p><h2 id="kpiCortesItens" class="text-lg font-bold text-rose-400">0</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">Total Peças Cortadas</p><h2 id="kpiCortesPecas" class="text-lg font-bold text-amber-400">0</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">Valor Total de Cortes</p><h2 id="kpiCortesValor" class="text-lg font-bold text-white">R$ 0,00</h2></div>
+      </div>
+      <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
+        <h3 class="font-bold text-sm text-white mb-2">Evolução Diária de Cortes (R$)</h3>
+        <div class="relative w-full h-64"><canvas id="chartCortes"></canvas></div>
+      </div>
+    </div>
+
+    <!-- ABA: SOBRAS -->
+    <div id="tab-sobras" class="tab-content hidden space-y-6">
+      <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 flex gap-4 items-center">
+         <label class="text-xs text-slate-400 font-semibold uppercase">Filtro de Status:</label>
+         <select id="filtroStatusSobras" class="bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-white"><option value="ALL">TODOS OS STATUS</option></select>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden flex flex-col max-h-[420px]">
+          <div class="p-3 bg-slate-900 border-b border-slate-800 flex justify-between"><h3 class="text-sm font-bold text-white">Marcas (Por Status)</h3><h3 class="text-sm font-bold text-emerald-400" id="sobrasTableTotal">Total: R$ 0,00</h3></div>
+          <div class="overflow-x-auto overflow-y-auto flex-grow">
+             <table class="w-full text-left text-xs text-slate-300">
+               <thead class="sticky top-0 bg-slate-900"><tr><th class="py-2 px-3">Marca</th><th class="py-2 px-3 text-right">Locações</th><th class="py-2 px-3 text-right">Valor (R$)</th></tr></thead>
+               <tbody id="tbSobrasMarcas" class="divide-y divide-slate-800"></tbody>
+             </table>
+          </div>
+        </div>
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl max-h-[420px] flex flex-col">
+          <div class="flex justify-between items-center mb-2"><h3 class="font-bold text-sm text-amber-400">Top Marcas - Status PENDENTE</h3><span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded font-mono" id="sobrasChartTotal">Total: R$ 0,00</span></div>
+          <div class="relative flex-grow w-full"><canvas id="chartSobrasPendentes"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA: PICLINHA E DIVCIC -->
+    <div id="tab-picdiv" class="tab-content hidden space-y-6">
+      <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 flex gap-4 items-center">
+         <label class="text-xs font-semibold text-slate-300 flex items-center gap-2">FILTRAR AGING:</label>
+         <select id="filtroAging" multiple class="bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white h-24 w-32 custom-scrollbar"></select>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Valor Total)</p><h2 id="kpiPicValor" class="text-lg font-bold text-blue-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Maior Aging)</p><h2 id="kpiPicAging" class="text-lg font-bold text-white mt-1">0 Dias</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Valor Total)</p><h2 id="kpiDivValor" class="text-lg font-bold text-purple-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Maior Aging)</p><h2 id="kpiDivAging" class="text-lg font-bold text-white mt-1">0 Dias</h2></div>
+      </div>
+      <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-96 flex flex-col">
+        <h3 class="font-bold text-sm text-white mb-2">Comparativo por Família (Piclinha vs Divcic)</h3>
+        <div class="relative flex-grow w-full"><canvas id="chartPicDiv"></canvas></div>
+      </div>
+    </div>
+
+    <!-- ABA: AVARIAS -->
+    <div id="tab-avarias" class="tab-content hidden space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 border-t-4 border-t-orange-500"><p class="text-[11px] text-slate-400 uppercase">Total Avarias (CEVA)</p><h2 id="avaKpiCeva" class="text-2xl font-bold text-orange-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 border-t-4 border-t-teal-500"><p class="text-[11px] text-slate-400 uppercase">Total Avarias (Fábrica / Outros)</p><h2 id="avaKpiFabrica" class="text-2xl font-bold text-teal-400 mt-1">R$ 0,00</h2></div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl min-h-[350px] flex flex-col">
+          <h3 class="font-bold text-sm text-orange-400 mb-2">Motivos Avarias - CEVA</h3>
+          <div class="relative flex-grow w-full"><canvas id="chartAvaCeva"></canvas></div>
+        </div>
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl min-h-[350px] flex flex-col">
+          <h3 class="font-bold text-sm text-teal-400 mb-2">Motivos Avarias - Fábrica / Outros</h3>
+          <div class="relative flex-grow w-full"><canvas id="chartAvaFabrica"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    let DADOS = null;
+    let chartTratativas = null, chartNetValInst = null, chartNetPctInst = null, chartPlanInst = null;
+    let chartRepQtdInst = null, chartRepValInst = null, chartCortesInst = null;
+    let chartSobrasInst = null, chartPicDivInst = null;
+    let chartAvaCevaInst = null, chartAvaFabInst = null;
+    
+    const fmtR = v => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v);
+    const fmtPct = v => `${(v * 100).toFixed(2)}%`;
+    const fmtNum = v => new Intl.NumberFormat('pt-BR').format(v);
+
+    async function loadData() {
+      try {
+        const res = await fetch('dados.json');
+        DADOS = await res.json();
+        document.getElementById('dataStatus').innerHTML = `Dados Carregados`;
+        if (DADOS.erros && DADOS.erros.length > 0) {
+          document.getElementById('errorBanner').classList.remove('hidden');
+          document.getElementById('errorList').innerHTML = DADOS.erros.map(e => `<li>Aba <strong>${e.aba}</strong> - Célula <strong>${e.celula}</strong> (<span class="font-mono">${e.erro}</span>)</li>`).join('');
+        }
+        setupFilters();
+        if(DADOS.sobras && DADOS.sobras.length > 0) populateSobrasFilter();
+        if(DADOS.pic_div && DADOS.pic_div.length > 0) populateAgingFilter();
+        
+        renderAll();
+      } catch (e) {
+        document.getElementById('dataStatus').innerHTML = `Erro ao ler json`;
+      }
+    }
+
+    function setupFilters() {
+      let allDates = [];
+      if(DADOS.ciclico) allDates = allDates.concat(DADOS.ciclico.daily.map(d => d.data));
+      if(DADOS.cortes) allDates = allDates.concat(DADOS.cortes.map(d => d.data));
+      if(DADOS.avarias) allDates = allDates.concat(DADOS.avarias.map(d => d.data));
+      
+      allDates.sort();
+      if(allDates.length > 0) {
+        document.getElementById('startDate').value = allDates[0];
+        document.getElementById('endDate').value = allDates[allDates.length - 1];
+      }
+      document.getElementById('startDate').addEventListener('change', renderAll);
+      document.getElementById('endDate').addEventListener('change', renderAll);
+    }
+    
+    function populateAgingFilter() {
+      const agings = new Set(DADOS.pic_div.map(d => d.aging));
+      const select = document.getElementById('filtroAging');
+      select.innerHTML = `<option value="ALL">TODOS</option>`;
+      Array.from(agings).sort((a,b)=>a-b).forEach(ag => select.innerHTML += `<option value="${ag}">${ag} Dias</option>`);
+      select.addEventListener('change', renderAll);
+    }
+
+    function filterByDate(array) {
+      if(!array) return [];
+      const st = document.getElementById('startDate').value, en = document.getElementById('endDate').value;
+      if(!st || !en) return array;
+      return array.filter(d => d.data >= st && d.data <= en);
+    }
+
+    function populateSobrasFilter() {
+      const s = new Set(); DADOS.sobras.forEach(d => s.add(d.status));
+      const select = document.getElementById('filtroStatusSobras');
+      select.innerHTML = '<option value="ALL">TODOS OS STATUS</option>';
+      Array.from(s).sort().forEach(st => select.innerHTML += `<option value="${st}">${st}</option>`);
+      select.addEventListener('change', renderAll);
+    }
+
+    function renderAll() {
+      if(!DADOS) return;
+      const st = document.getElementById('startDate').value, en = document.getElementById('endDate').value;
+      
+      // CÍCLICO
+      const fCiclico = filterByDate(DADOS.ciclico.daily);
+      let cCont = 0, cFisico = 0, cPos = 0, cNeg = 0;
+      fCiclico.forEach(d => { cCont+=d.valorContagem; cFisico+=d.fisicoFinal; cPos+=d.ajustePos; cNeg+=d.ajusteNeg; });
+      document.getElementById('cicSomaCont').innerText = fmtR(cCont);
+      document.getElementById('cicItensUnicos').innerText = fmtNum(fCiclico.reduce((acc,d)=>acc+d.itensUnicos,0));
+      document.getElementById('cicFisico').innerText = fmtNum(cFisico);
+      document.getElementById('cicAjPos').innerText = fmtR(cPos);
+      document.getElementById('cicAjNeg').innerText = fmtR(cNeg);
+      document.getElementById('tbOfensoresCiclico').innerHTML = DADOS.ciclico.offenders.map(o => `<tr class="hover:bg-slate-800/50"><td class="font-mono text-emerald-400 font-bold">${o.sku}</td><td class="text-right font-mono ${o.valorAjuste < 0 ? 'text-rose-400' : 'text-slate-300'}">${fmtR(o.valorAjuste)}</td></tr>`).join('');
+      
+      if (DADOS.ciclico.tratativas) {
+        const mMap = {'JANEIRO':1, 'FEVEREIRO':2, 'MARÇO':3, 'ABRIL':4, 'MAIO':5, 'JUNHO':6, 'JULHO':7, 'AGOSTO':8, 'SETEMBRO':9, 'OUTUBRO':10, 'NOVEMBRO':11, 'DEZEMBRO':12};
+        const fTrat = DADOS.ciclico.tratativas.filter(t => { if(!st||!en) return true; const mStr = `2026-${(mMap[t.mes]||1).toString().padStart(2, '0')}`; return mStr >= st.slice(0,7) && mStr <= en.slice(0,7); });
+        const gTrat = {}; let tTrat = 0;
+        fTrat.forEach(t => { if(!gTrat[t.causa]) gTrat[t.causa] = 0; gTrat[t.causa] += t.qtd; tTrat += t.qtd; });
+        const sortC = Object.keys(gTrat).sort((a,b) => gTrat[b] - gTrat[a]);
+        const dQ=[], dP=[]; let acc=0;
+        sortC.forEach(c => { dQ.push(gTrat[c]); acc+=gTrat[c]; dP.push((acc/tTrat)*100); });
+        const ctx = document.getElementById('chartTratativas');
+        if(ctx) {
+          if(chartTratativas) chartTratativas.destroy();
+          chartTratativas = new Chart(ctx, { type: 'bar', data: { labels: sortC, datasets: [{ label: '% Acumulada', data: dP, type: 'line', yAxisID: 'yPct', borderColor: '#10b981', tension: 0.2, fill: false }, { label: 'Causas', data: dQ, yAxisID: 'yQtd', backgroundColor: '#3b82f6', borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { yQtd: { type: 'linear', position: 'left' }, yPct: { type: 'linear', position: 'right', max: 105, ticks: { callback: v=>v+'%' }, grid: { drawOnChartArea: false } }, x: { ticks: { maxRotation: 45, minRotation: 45, font:{size:10} }, grid: { display: false } } } } });
+        }
+      }
+
+      // NET
+      const fNetT = DADOS.net.filter(n => n.divcic !== 0 || n.netVal !== 0);
+      document.getElementById('tbNet').innerHTML = fNetT.map(n => `<tr class="hover:bg-slate-800/50"><td class="font-bold text-white">${n.mes}</td><td class="font-mono">${fmtR(n.divcic)}</td><td class="font-mono text-rose-400">${fmtR(n.ajusteNeg)}</td><td class="font-mono text-emerald-400">${fmtR(n.ajustePos)}</td><td class="font-mono">${fmtR(n.sobras)}</td><td class="font-mono text-rose-300">${fmtR(n.avaria)}</td><td class="font-mono font-bold ${n.netVal < 0 ? 'text-rose-500' : 'text-emerald-500'}">${fmtR(n.netVal)}</td><td class="font-mono">${fmtPct(n.netPct)}</td><td class="font-mono font-bold">${fmtR(n.grossVal)}</td><td class="font-mono">${fmtPct(n.grossPct)}</td></tr>`).join('');
+      const ctxNetV = document.getElementById('chartNetVal');
+      if(ctxNetV) {
+        if(chartNetValInst) chartNetValInst.destroy();
+        chartNetValInst = new Chart(ctxNetV, { type: 'line', data: { labels: fNetT.map(n=>n.mes), datasets: [{ label: 'NET (R$)', data: fNetT.map(n=>n.netVal), borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', fill: true, tension: 0.4 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } });
+      }
+      const ctxNetP = document.getElementById('chartNetPct');
+      if(ctxNetP) {
+        if(chartNetPctInst) chartNetPctInst.destroy();
+        chartNetPctInst = new Chart(ctxNetP, { type: 'line', data: { labels: fNetT.map(n=>n.mes), datasets: [{ label: '% NET', data: fNetT.map(n=>n.netPct*100), borderColor: '#3b82f6', borderDash: [5, 5], backgroundColor: 'rgba(59, 130, 246, 0.1)', fill: true, tension: 0.4 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>v+'%' } } } } });
+      }
+
+      // PLAN
+      document.getElementById('tbPlanDiario').innerHTML = filterByDate(DADOS.planejamento.daily).map(p => `<tr class="hover:bg-slate-800/50"><td class="font-mono text-white">${p.data.split('-').reverse().join('/')}</td><td class="text-emerald-400 font-bold">${p.curvas['A']||0}</td><td class="text-blue-400 font-bold">${p.curvas['B']||0}</td><td class="text-amber-400 font-bold">${p.curvas['C']||0}</td><td class="font-bold text-white">${p.total}</td></tr>`).join('');
+      const pKeys = Object.keys(DADOS.planejamento.curvas).sort();
+      const ctxPlan = document.getElementById('chartPlan');
+      if(ctxPlan) {
+        if(chartPlanInst) chartPlanInst.destroy();
+        chartPlanInst = new Chart(ctxPlan, { type: 'bar', data: { labels: pKeys.map(k=>'Curva '+k), datasets: [{ label: 'Contados (Planejado)', data: pKeys.map(k=>DADOS.planejamento.curvas[k].contado), backgroundColor: '#10b981' }, { label: 'Pendentes', data: pKeys.map(k=>DADOS.planejamento.curvas[k].pendente), backgroundColor: '#f43f5e' }] }, options: { responsive: true, maintainAspectRatio: false } });
+      }
+
+      // REPICKING
+      const kpisR = DADOS.repicking.kpis; const lancR = DADOS.repicking.lancamentos;
+      document.getElementById('repApontamentos').innerText = fmtNum(kpisR.apontamentos);
+      document.getElementById('repEncontrados').innerText = fmtNum(kpisR.encontrados);
+      const ctxRepQ = document.getElementById('chartRepQtd');
+      if(ctxRepQ) {
+        if(chartRepQtdInst) chartRepQtdInst.destroy();
+        chartRepQtdInst = new Chart(ctxRepQ, { type: 'bar', data: { labels: ['REPICKING', 'FALTA', 'CORTE'], datasets: [{ label: 'Qtd Linhas', data: [lancR['REPICKING'].qtd, lancR['FALTA'].qtd, lancR['CORTE'].qtd], backgroundColor: '#3b82f6' }] }, options: { responsive: true, maintainAspectRatio: false } });
+      }
+      const ctxRepV = document.getElementById('chartRepVal');
+      if(ctxRepV) {
+        if(chartRepValInst) chartRepValInst.destroy();
+        chartRepValInst = new Chart(ctxRepV, { type: 'bar', data: { labels: ['REPICKING', 'FALTA', 'CORTE'], datasets: [{ label: 'Soma Valor (R$)', data: [lancR['REPICKING'].valor, lancR['FALTA'].valor, lancR['CORTE'].valor], backgroundColor: '#f59e0b' }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } });
+      }
+      let vgValRepicking = 0; filterByDate(DADOS.repicking.daily).forEach(r => { if(r.valorRepicking) vgValRepicking += r.valorRepicking; });
+
+      // CORTES
+      const fCortes = filterByDate(DADOS.cortes);
+      let iC=0, pC=0, vC=0; const cDaily = {};
+      fCortes.forEach(c => { iC+=c.itens; pC+=c.pecas; vC+=c.valor; if(!cDaily[c.data]) cDaily[c.data]=0; cDaily[c.data]+=c.valor; });
+      document.getElementById('kpiCortesItens').innerText = fmtNum(iC); document.getElementById('kpiCortesPecas').innerText = fmtNum(pC); document.getElementById('kpiCortesValor').innerText = fmtR(vC);
+      const cLabels = Object.keys(cDaily).sort();
+      const ctxCortes = document.getElementById('chartCortes');
+      if(ctxCortes) {
+        if(chartCortesInst) chartCortesInst.destroy();
+        chartCortesInst = new Chart(ctxCortes, { type: 'line', data: { labels: cLabels.map(l=>l.split('-').reverse().join('/')), datasets: [{ label: 'Valor (R$)', data: cLabels.map(l=>cDaily[l]), borderColor: '#f43f5e', fill: true, backgroundColor: 'rgba(244, 63, 94, 0.1)', tension: 0.4 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } });
+      }
+
+      // SOBRAS
+      const sSel = document.getElementById('filtroStatusSobras').value;
+      const fSobras = sSel === 'ALL' ? DADOS.sobras : DADOS.sobras.filter(d => d.status === sSel);
+      const gSob = {}; let tSob = 0;
+      fSobras.forEach(d => { if(!gSob[d.marca]) gSob[d.marca] = { loc: 0, val: 0 }; gSob[d.marca].loc+=d.locacoes; gSob[d.marca].val+=d.valor; tSob+=d.valor; });
+      document.getElementById('sobrasTableTotal').innerText = `Total: ${fmtR(tSob)}`;
+      document.getElementById('tbSobrasMarcas').innerHTML = Object.keys(gSob).sort((a,b)=>gSob[b].val - gSob[a].val).map(m => `<tr class="hover:bg-slate-800/50"><td class="font-bold text-white">${m}</td><td class="font-mono text-right">${fmtNum(gSob[m].loc)}</td><td class="font-mono text-right text-emerald-400">${fmtR(gSob[m].val)}</td></tr>`).join('');
+      const pend = DADOS.sobras.filter(d => d.status === 'PENDENTE');
+      const gPend = {}; let tPend = 0;
+      pend.forEach(d => { if(!gPend[d.marca]) gPend[d.marca]=0; gPend[d.marca]+=d.valor; tPend+=d.valor; });
+      document.getElementById('sobrasChartTotal').innerText = `Total: ${fmtR(tPend)}`;
+      const pLabels = Object.keys(gPend).sort((a,b)=>gPend[b]-gPend[a]);
+      const ctxSob = document.getElementById('chartSobrasPendentes');
+      if(ctxSob) {
+          if(chartSobrasInst) chartSobrasInst.destroy();
+          chartSobrasInst = new Chart(ctxSob, { type: 'bar', data: { labels: pLabels, datasets: [{ label: 'Pendente (R$)', data: pLabels.map(l=>gPend[l]), backgroundColor: '#f59e0b' }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } });
+      }
+
+      // PIC/DIV
+      const selOpts = Array.from(document.getElementById('filtroAging').selectedOptions).map(o => o.value);
+      let selAgings = [];
+      if(!selOpts.includes('ALL') && selOpts.length > 0) selAgings = selOpts.map(v => parseInt(v));
+      const fPic = (selAgings.length > 0) ? DADOS.pic_div.filter(d => selAgings.includes(d.aging)) : DADOS.pic_div;
+      let mPic=0, mDiv=0, vPic=0, vDiv=0; const famM = {};
+      fPic.forEach(d => {
+         if(!famM[d.familia]) famM[d.familia] = { PICLINHA: 0, DIVCIC: 0 };
+         famM[d.familia][d.setor] += d.valor;
+         if(d.setor === 'PICLINHA') { vPic+=d.valor; if(d.aging>mPic) mPic=d.aging; }
+         if(d.setor === 'DIVCIC') { vDiv+=d.valor; if(d.aging>mDiv) mDiv=d.aging; }
+      });
+      document.getElementById('kpiPicValor').innerText = fmtR(vPic); document.getElementById('kpiPicAging').innerText = mPic + ' Dias';
+      document.getElementById('kpiDivValor').innerText = fmtR(vDiv); document.getElementById('kpiDivAging').innerText = mDiv + ' Dias';
+      
+      const fKeys = Object.keys(famM).sort((a,b) => (famM[b].PICLINHA + famM[b].DIVCIC) - (famM[a].PICLINHA + famM[a].DIVCIC));
+      const ctxPic = document.getElementById('chartPicDiv');
+      if(ctxPic) {
+          if(chartPicDivInst) chartPicDivInst.destroy();
+          chartPicDivInst = new Chart(ctxPic, { type: 'bar', data: { labels: fKeys, datasets: [{ label: 'Piclinha (R$)', data: fKeys.map(k=>famM[k].PICLINHA), backgroundColor: '#3b82f6' }, { label: 'Divcic (R$)', data: fKeys.map(k=>famM[k].DIVCIC), backgroundColor: '#a855f7' }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } });
+      }
+
+      // AVARIAS
+      const fAva = filterByDate(DADOS.avarias);
+      let tCeva = 0, tFab = 0; const gCeva = {}, gFab = {};
+      fAva.forEach(a => {
+          if(a.ocorrencia === 'CEVA') { tCeva += a.valor; if(!gCeva[a.motivo]) gCeva[a.motivo]=0; gCeva[a.motivo]+=a.valor; }
+          else { tFab += a.valor; if(!gFab[a.motivo]) gFab[a.motivo]=0; gFab[a.motivo]+=a.valor; }
+      });
+      document.getElementById('avaKpiCeva').innerText = fmtR(tCeva); document.getElementById('avaKpiFabrica').innerText = fmtR(tFab);
+      const cSort = Object.keys(gCeva).sort((a,b) => gCeva[b] - gCeva[a]);
+      const fSort = Object.keys(gFab).sort((a,b) => gFab[b] - gFab[a]);
+      const ctxAvaC = document.getElementById('chartAvaCeva');
+      if(ctxAvaC) {
+          if(chartAvaCevaInst) chartAvaCevaInst.destroy();
+          chartAvaCevaInst = new Chart(ctxAvaC, { type: 'bar', data: { labels: cSort, datasets: [{ label: 'Valor (R$)', data: cSort.map(m=>gCeva[m]), backgroundColor: '#f97316' }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } });
+      }
+      const ctxAvaF = document.getElementById('chartAvaFabrica');
+      if(ctxAvaF) {
+          if(chartAvaFabInst) chartAvaFabInst.destroy();
+          chartAvaFabInst = new Chart(ctxAvaF, { type: 'bar', data: { labels: fSort, datasets: [{ label: 'Valor (R$)', data: fSort.map(m=>gFab[m]), backgroundColor: '#14b8a6' }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } });
+      }
+
+      // VISÃO GERAL (YTD ATUALIZADO)
+      document.getElementById('vgEstoque').innerText = fmtR(cCont);
+      // Aqui usamos os dados de YTD fixos do Python, sem somar dinamicamente
+      if(DADOS.net_ytd) {
+          document.getElementById('vgNetVal').innerText = fmtR(DADOS.net_ytd.netVal);
+          document.getElementById('vgNetPct').innerText = fmtPct(DADOS.net_ytd.netPct);
+      }
+      document.getElementById('vgSobrasPend').innerText = fmtR(tPend);
+      document.getElementById('vgCicSobra').innerText = fmtR(cPos);
+      document.getElementById('vgCicFalta').innerText = fmtR(cNeg);
+      document.getElementById('vgRepicking').innerText = fmtR(vgValRepicking);
+      document.getElementById('vgCortes').innerText = fmtR(vC);
+      document.getElementById('vgPicVal').innerText = fmtR(vPic); document.getElementById('vgPicAging').innerText = mPic + ' Dias';
+      document.getElementById('vgDivVal').innerText = fmtR(vDiv); document.getElementById('vgDivAging').innerText = mDiv + ' Dias';
+    }
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => { document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); const t = btn.getAttribute('data-tab'); document.querySelectorAll('.tab-content').forEach(tc => tc.classList.add('hidden')); document.getElementById(`tab-${t}`).classList.remove('hidden'); });
+    });
+
+    window.onload = () => { lucide.createIcons(); loadData(); };
+  </script>
+</body>
+</html>
