@@ -1068,11 +1068,19 @@
             },
             {
                 "data": "2026-09-17",
-                "valorContagem": 5267849.659999998,
+                "valorContagem": 5267849.659999999,
                 "itensUnicos": 21,
-                "fisicoFinal": 264241.0,
-                "ajustePos": 246.40000000000003,
+                "fisicoFinal": 264008.0,
+                "ajustePos": 1302.2900000000002,
                 "ajusteNeg": -167.96
+            },
+            {
+                "data": "2026-09-18",
+                "valorContagem": 1006309.6000000001,
+                "itensUnicos": 21,
+                "fisicoFinal": 314745.0,
+                "ajustePos": 159.88,
+                "ajusteNeg": -259.2
             }
         ],
         "offenders": [
@@ -1245,6 +1253,10 @@
                 "valorAjuste": 1077.44
             },
             {
+                "sku": "56867",
+                "valorAjuste": 1055.89
+            },
+            {
                 "sku": "86538",
                 "valorAjuste": 1030.39
             },
@@ -1271,10 +1283,6 @@
             {
                 "sku": "89967",
                 "valorAjuste": -962.4000000000001
-            },
-            {
-                "sku": "54325",
-                "valorAjuste": 954.4499999999999
             }
         ],
         "tratativas": [
@@ -2957,20 +2965,29 @@
                     "B": 2,
                     "C": 12
                 }
+            },
+            {
+                "data": "2026-09-21",
+                "total": 21,
+                "curvas": {
+                    "A": 7,
+                    "B": 2,
+                    "C": 12
+                }
             }
         ],
         "curvas": {
             "A": {
-                "contado": 803,
-                "pendente": 277
+                "contado": 810,
+                "pendente": 270
             },
             "B": {
-                "contado": 630,
-                "pendente": 87
+                "contado": 632,
+                "pendente": 85
             },
             "C": {
-                "contado": 1719,
-                "pendente": 502
+                "contado": 1731,
+                "pendente": 490
             },
             "L": {
                 "contado": 20,
@@ -4147,25 +4164,35 @@
             },
             {
                 "data": "2026-09-18",
-                "repickFeito": 6,
-                "valorRepicking": 1861.0
+                "repickFeito": 27,
+                "valorRepicking": 8918.13
+            },
+            {
+                "data": "2026-09-19",
+                "repickFeito": 3,
+                "valorRepicking": 2942.34
+            },
+            {
+                "data": "2026-09-21",
+                "repickFeito": 3,
+                "valorRepicking": 366.1
             }
         ],
         "turnos": [
             {
                 "turno": "1° TURNO",
-                "ocorrencias": 1257,
-                "itens": 218405.0
+                "ocorrencias": 1260,
+                "itens": 218700.0
             },
             {
                 "turno": "2° TURNO",
-                "ocorrencias": 1505,
-                "itens": 218324.0
+                "ocorrencias": 1526,
+                "itens": 228566.0
             },
             {
                 "turno": "3° TURNO",
-                "ocorrencias": 1496,
-                "itens": 337511.03
+                "ocorrencias": 1499,
+                "itens": 337662.03
             },
             {
                 "turno": "REWORK",
@@ -4175,16 +4202,16 @@
         ],
         "kpis": {
             "apontamentos": 14999,
-            "encontrados": 818
+            "encontrados": 830
         },
         "lancamentos": {
             "REPICKING": {
-                "qtd": 1833,
-                "valor": 3081922.41
+                "qtd": 1847,
+                "valor": 3092287.98
             },
             "FALTA": {
-                "qtd": 2426,
-                "valor": 5060407.5309
+                "qtd": 2439,
+                "valor": 5109566.5909
             },
             "CORTE": {
                 "qtd": 6814,
