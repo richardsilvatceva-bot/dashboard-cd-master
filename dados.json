@@ -15945,7 +15945,680 @@
             "valor": 0.0
         }
     ],
-    "sobras_cruzamento": [],
+    "sobras_cruzamento": [
+        {
+            "status": "PENDENTE",
+            "sku": "59681",
+            "qtd_sobra": 192,
+            "valor_sobra": 3150.7200000000003,
+            "saldo_divcic": 0,
+            "saldo_piclinha": 192
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "77918",
+            "qtd_sobra": 259,
+            "valor_sobra": 1559.1799999999998,
+            "saldo_divcic": 3,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "85995",
+            "qtd_sobra": 60,
+            "valor_sobra": 1141.8000000000002,
+            "saldo_divcic": 0,
+            "saldo_piclinha": 63
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "89300",
+            "qtd_sobra": 3,
+            "valor_sobra": 584.22,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "85644",
+            "qtd_sobra": 21,
+            "valor_sobra": 480.06,
+            "saldo_divcic": 0,
+            "saldo_piclinha": 70
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "48653",
+            "qtd_sobra": 72,
+            "valor_sobra": 469.43999999999994,
+            "saldo_divcic": 8,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "53435",
+            "qtd_sobra": 48,
+            "valor_sobra": 434.40000000000003,
+            "saldo_divcic": 0,
+            "saldo_piclinha": 48
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "90510",
+            "qtd_sobra": 42,
+            "valor_sobra": 409.08,
+            "saldo_divcic": 3,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "48286",
+            "qtd_sobra": 30,
+            "valor_sobra": 352.5,
+            "saldo_divcic": 10,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "48286",
+            "qtd_sobra": 30,
+            "valor_sobra": 352.5,
+            "saldo_divcic": 10,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "48685",
+            "qtd_sobra": 39,
+            "valor_sobra": 315.12,
+            "saldo_divcic": 14,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "VALIDAR",
+            "sku": "88007",
+            "qtd_sobra": 48,
+            "valor_sobra": 295.68,
+            "saldo_divcic": 96,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "85656",
+            "qtd_sobra": 120,
+            "valor_sobra": 295.2,
+            "saldo_divcic": 6,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "50797",
+            "qtd_sobra": 30,
+            "valor_sobra": 280.5,
+            "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "85935",
+            "qtd_sobra": 13,
+            "valor_sobra": 273.26,
+            "saldo_divcic": 34,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "52147",
+            "qtd_sobra": 28,
+            "valor_sobra": 257.32,
+            "saldo_divcic": 6,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "53389",
+            "qtd_sobra": 27,
+            "valor_sobra": 244.89000000000001,
+            "saldo_divcic": 3,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "52079",
+            "qtd_sobra": 21,
+            "valor_sobra": 238.56,
+            "saldo_divcic": 7,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "89561",
+            "qtd_sobra": 7,
+            "valor_sobra": 210.14,
+            "saldo_divcic": 0,
+            "saldo_piclinha": 18
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "58310",
+            "qtd_sobra": 21,
+            "valor_sobra": 209.37,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "87042",
+            "qtd_sobra": 9,
+            "valor_sobra": 195.39000000000001,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "51164",
+            "qtd_sobra": 33,
+            "valor_sobra": 193.71,
+            "saldo_divcic": 71,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "48997",
+            "qtd_sobra": 15,
+            "valor_sobra": 164.25,
+            "saldo_divcic": 3,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "53838",
+            "qtd_sobra": 10,
+            "valor_sobra": 133.4,
+            "saldo_divcic": 5,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "94758",
+            "qtd_sobra": 23,
+            "valor_sobra": 133.4,
+            "saldo_divcic": 5,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "53838",
+            "qtd_sobra": 10,
+            "valor_sobra": 133.4,
+            "saldo_divcic": 5,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "87042",
+            "qtd_sobra": 6,
+            "valor_sobra": 130.26,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "87045",
+            "qtd_sobra": 5,
+            "valor_sobra": 111.4,
+            "saldo_divcic": 86,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "87315",
+            "qtd_sobra": 25,
+            "valor_sobra": 93.0,
+            "saldo_divcic": 31,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "47364",
+            "qtd_sobra": 8,
+            "valor_sobra": 85.52,
+            "saldo_divcic": 12,
+            "saldo_piclinha": 45
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "75374",
+            "qtd_sobra": 5,
+            "valor_sobra": 82.89999999999999,
+            "saldo_divcic": 3,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "53409",
+            "qtd_sobra": 13,
+            "valor_sobra": 81.25,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "84963",
+            "qtd_sobra": 5,
+            "valor_sobra": 73.75,
+            "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "53435",
+            "qtd_sobra": 8,
+            "valor_sobra": 72.4,
+            "saldo_divcic": 0,
+            "saldo_piclinha": 48
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "54121",
+            "qtd_sobra": 4,
+            "valor_sobra": 69.12,
+            "saldo_divcic": 27,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "56459",
+            "qtd_sobra": 16,
+            "valor_sobra": 68.16,
+            "saldo_divcic": 15,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "58190",
+            "qtd_sobra": 17,
+            "valor_sobra": 67.32,
+            "saldo_divcic": 16,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "87315",
+            "qtd_sobra": 18,
+            "valor_sobra": 66.96000000000001,
+            "saldo_divcic": 31,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "56623",
+            "qtd_sobra": 10,
+            "valor_sobra": 66.5,
+            "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "87139",
+            "qtd_sobra": 4,
+            "valor_sobra": 58.52,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "86169",
+            "qtd_sobra": 1,
+            "valor_sobra": 53.33,
+            "saldo_divcic": 4,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "75374",
+            "qtd_sobra": 3,
+            "valor_sobra": 49.739999999999995,
+            "saldo_divcic": 3,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "87374",
+            "qtd_sobra": 7,
+            "valor_sobra": 48.089999999999996,
+            "saldo_divcic": 11,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "44803",
+            "qtd_sobra": 3,
+            "valor_sobra": 44.339999999999996,
+            "saldo_divcic": 18,
+            "saldo_piclinha": 32
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "56623",
+            "qtd_sobra": 5,
+            "valor_sobra": 33.25,
+            "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "94576",
+            "qtd_sobra": 4,
+            "valor_sobra": 32.8,
+            "saldo_divcic": 4,
+            "saldo_piclinha": 28
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "59130",
+            "qtd_sobra": 1,
+            "valor_sobra": 26.54,
+            "saldo_divcic": 5,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "90104",
+            "qtd_sobra": 4,
+            "valor_sobra": 25.04,
+            "saldo_divcic": 4,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "51514",
+            "qtd_sobra": 9,
+            "valor_sobra": 24.839999999999996,
+            "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "77918",
+            "qtd_sobra": 4,
+            "valor_sobra": 24.08,
+            "saldo_divcic": 3,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "58121",
+            "qtd_sobra": 2,
+            "valor_sobra": 23.18,
+            "saldo_divcic": 15,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "86749",
+            "qtd_sobra": 1,
+            "valor_sobra": 22.24,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "81608",
+            "qtd_sobra": 4,
+            "valor_sobra": 21.44,
+            "saldo_divcic": 10,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "84971",
+            "qtd_sobra": 1,
+            "valor_sobra": 20.43,
+            "saldo_divcic": 3,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "58277",
+            "qtd_sobra": 5,
+            "valor_sobra": 19.3,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "87321",
+            "qtd_sobra": 2,
+            "valor_sobra": 19.02,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "88917",
+            "qtd_sobra": 1,
+            "valor_sobra": 17.11,
+            "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "88917",
+            "qtd_sobra": 1,
+            "valor_sobra": 17.11,
+            "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "48510",
+            "qtd_sobra": 3,
+            "valor_sobra": 15.84,
+            "saldo_divcic": 4,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "57616",
+            "qtd_sobra": 2,
+            "valor_sobra": 14.8,
+            "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "85656",
+            "qtd_sobra": 6,
+            "valor_sobra": 14.76,
+            "saldo_divcic": 6,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "56957",
+            "qtd_sobra": 2,
+            "valor_sobra": 14.54,
+            "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "56920",
+            "qtd_sobra": 10,
+            "valor_sobra": 10.600000000000001,
+            "saldo_divcic": 22,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "48510",
+            "qtd_sobra": 2,
+            "valor_sobra": 10.56,
+            "saldo_divcic": 4,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "50207",
+            "qtd_sobra": 1,
+            "valor_sobra": 10.45,
+            "saldo_divcic": 8,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "50207",
+            "qtd_sobra": 1,
+            "valor_sobra": 10.45,
+            "saldo_divcic": 8,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "50207",
+            "qtd_sobra": 1,
+            "valor_sobra": 10.45,
+            "saldo_divcic": 8,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "2276",
+            "qtd_sobra": 2,
+            "valor_sobra": 9.66,
+            "saldo_divcic": 4,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "54530",
+            "qtd_sobra": 1,
+            "valor_sobra": 9.53,
+            "saldo_divcic": 12,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "53971",
+            "qtd_sobra": 5,
+            "valor_sobra": 9.399999999999999,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "52147",
+            "qtd_sobra": 1,
+            "valor_sobra": 9.19,
+            "saldo_divcic": 6,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "88521",
+            "qtd_sobra": 1,
+            "valor_sobra": 8.75,
+            "saldo_divcic": 6,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "50289",
+            "qtd_sobra": 9,
+            "valor_sobra": 7.83,
+            "saldo_divcic": 14,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "47176",
+            "qtd_sobra": 1,
+            "valor_sobra": 6.52,
+            "saldo_divcic": 4,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "48653",
+            "qtd_sobra": 1,
+            "valor_sobra": 6.52,
+            "saldo_divcic": 8,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "55986",
+            "qtd_sobra": 1,
+            "valor_sobra": 5.92,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "57415",
+            "qtd_sobra": 1,
+            "valor_sobra": 5.44,
+            "saldo_divcic": 6,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "80888",
+            "qtd_sobra": 1,
+            "valor_sobra": 3.29,
+            "saldo_divcic": 84,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "56922",
+            "qtd_sobra": 2,
+            "valor_sobra": 2.42,
+            "saldo_divcic": 4,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "50289",
+            "qtd_sobra": 2,
+            "valor_sobra": 1.74,
+            "saldo_divcic": 14,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "96199",
+            "qtd_sobra": 1,
+            "valor_sobra": 1.5,
+            "saldo_divcic": 27,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "81424",
+            "qtd_sobra": 1,
+            "valor_sobra": 1.26,
+            "saldo_divcic": 8,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "59467",
+            "qtd_sobra": 1,
+            "valor_sobra": 1.03,
+            "saldo_divcic": 11,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "VALIDAR",
+            "sku": "88007",
+            "qtd_sobra": 39,
+            "valor_sobra": 0.0,
+            "saldo_divcic": 96,
+            "saldo_piclinha": 0
+        }
+    ],
     "pic_div": [
         {
             "setor": "PICLINHA",
