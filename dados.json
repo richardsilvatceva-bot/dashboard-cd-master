@@ -1,11 +1,5 @@
 {
-    "erros": [
-        {
-            "aba": "Piclinha e Divcic",
-            "celula": "A64",
-            "erro": "#N/D"
-        }
-    ],
+    "erros": [],
     "ciclico": {
         "daily": [
             {
@@ -19830,7 +19824,7 @@
             "setor": "PICLINHA",
             "familia": "Maquiagem",
             "aging": 1,
-            "valor": 825.0
+            "valor": 4945.200000000001
         },
         {
             "setor": "PICLINHA",
@@ -19969,12 +19963,6 @@
             "familia": "Sup. à Venda",
             "aging": 20,
             "valor": 450.17999999999995
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "#N/D",
-            "aging": 1,
-            "valor": 4120.200000000001
         },
         {
             "setor": "DIVCIC",
