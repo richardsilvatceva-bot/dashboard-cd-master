@@ -12380,17 +12380,10 @@
         },
         {
             "data": "2026-09-23",
-            "motivo": "DIVERGÊNCIA DE ESTOQUE",
-            "itens": 2,
-            "pecas": 74,
-            "valor": 1379.83
-        },
-        {
-            "data": "2026-09-23",
-            "motivo": "FIM DE SALDO",
-            "itens": 1,
-            "pecas": 14,
-            "valor": 74.2
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 3,
+            "valor": 41.31
         }
     ],
     "sobras": [
