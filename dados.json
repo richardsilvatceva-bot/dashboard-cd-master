@@ -1715,15 +1715,15 @@
         },
         {
             "mes": "SETEMBRO",
-            "divcic": 61045.3,
+            "divcic": 60511.06,
             "ajusteNeg": 8667.78,
             "ajustePos": 5186.110000000001,
             "sobras": 0.0,
             "avaria": 3854.8599999999997,
-            "netVal": -68381.83,
-            "netPct": 0.9997788662569862,
-            "grossVal": 78754.05,
-            "grossPct": 0.9997453244837993
+            "netVal": -67847.59,
+            "netPct": 0.9997805938868385,
+            "grossVal": 78219.81,
+            "grossPct": 0.9997470521136517
         },
         {
             "mes": "OUTUBRO",
@@ -1763,8 +1763,8 @@
         }
     ],
     "net_ytd": {
-        "netVal": -129047.54000000004,
-        "netPct": 0.9996133685330233
+        "netVal": -128513.29999999993,
+        "netPct": 0.9996149691369164
     },
     "planejamento": {
         "daily": [
@@ -8018,1376 +8018,4328 @@
     "cortes": [
         {
             "data": "2026-01-02",
-            "itens": 33,
-            "pecas": 204,
-            "valor": 3978.1300000000006
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 128,
+            "valor": 922.63
+        },
+        {
+            "data": "2026-01-02",
+            "motivo": "FIM DE SALDO",
+            "itens": 17,
+            "pecas": 52,
+            "valor": 2811.92
+        },
+        {
+            "data": "2026-01-02",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 13,
+            "pecas": 24,
+            "valor": 243.57999999999998
         },
         {
             "data": "2026-01-03",
-            "itens": 32,
-            "pecas": 295,
-            "valor": 7086.58
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 117,
+            "valor": 1597.4099999999999
+        },
+        {
+            "data": "2026-01-03",
+            "motivo": "FIM DE SALDO",
+            "itens": 14,
+            "pecas": 40,
+            "valor": 631.8600000000001
+        },
+        {
+            "data": "2026-01-03",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 15,
+            "pecas": 138,
+            "valor": 4857.3099999999995
         },
         {
             "data": "2026-01-04",
+            "motivo": "VENDA MAIOR QUE O SALDO",
             "itens": 3,
             "pecas": 28,
             "valor": 657.05
         },
         {
             "data": "2026-01-05",
-            "itens": 22,
-            "pecas": 272,
-            "valor": 2223.680000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 154,
+            "valor": 663.1800000000001
+        },
+        {
+            "data": "2026-01-05",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 23,
+            "valor": 372.32000000000005
+        },
+        {
+            "data": "2026-01-05",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 95,
+            "valor": 1188.1799999999998
         },
         {
             "data": "2026-01-06",
-            "itens": 6,
-            "pecas": 11,
-            "valor": 247.54999999999998
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 6,
+            "valor": 137.82
+        },
+        {
+            "data": "2026-01-06",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 5,
+            "valor": 109.73
         },
         {
             "data": "2026-01-07",
-            "itens": 24,
-            "pecas": 703,
-            "valor": 3804.8800000000006
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 10,
+            "pecas": 661,
+            "valor": 3332.3100000000004
+        },
+        {
+            "data": "2026-01-07",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 39,
+            "valor": 437.8300000000001
+        },
+        {
+            "data": "2026-01-07",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 3,
+            "valor": 34.74
         },
         {
             "data": "2026-01-08",
-            "itens": 11,
-            "pecas": 229,
-            "valor": 883.8799999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 212,
+            "valor": 660.74
+        },
+        {
+            "data": "2026-01-08",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 12,
+            "valor": 147.86
+        },
+        {
+            "data": "2026-01-08",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 5,
+            "valor": 75.28
         },
         {
             "data": "2026-01-09",
-            "itens": 5,
-            "pecas": 11,
-            "valor": 94.5
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 5,
+            "valor": 39.55
+        },
+        {
+            "data": "2026-01-09",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 6,
+            "valor": 54.95
         },
         {
             "data": "2026-01-12",
-            "itens": 5,
-            "pecas": 604,
-            "valor": 1012.53
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 598,
+            "valor": 634.8699999999999
+        },
+        {
+            "data": "2026-01-12",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 6,
+            "valor": 377.65999999999997
         },
         {
             "data": "2026-01-13",
-            "itens": 8,
-            "pecas": 510,
-            "valor": 2604.7400000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 498,
+            "valor": 2400.36
+        },
+        {
+            "data": "2026-01-13",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 8,
+            "valor": 115.65
+        },
+        {
+            "data": "2026-01-13",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 4,
+            "valor": 88.73
         },
         {
             "data": "2026-01-14",
-            "itens": 3,
-            "pecas": 25,
-            "valor": 48.37
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 23,
+            "valor": 22.31
+        },
+        {
+            "data": "2026-01-14",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 7.75
+        },
+        {
+            "data": "2026-01-14",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 18.31
         },
         {
             "data": "2026-01-15",
-            "itens": 3,
-            "pecas": 56,
-            "valor": 411.41
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 38,
+            "valor": 294.5
+        },
+        {
+            "data": "2026-01-15",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 18,
+            "valor": 116.91
         },
         {
             "data": "2026-01-16",
-            "itens": 5,
-            "pecas": 3533,
-            "valor": 8807.850000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 3302,
+            "valor": 7957.82
+        },
+        {
+            "data": "2026-01-16",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 231,
+            "valor": 850.0300000000002
         },
         {
             "data": "2026-01-17",
-            "itens": 6,
-            "pecas": 52,
-            "valor": 337.03
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 41,
+            "valor": 34.85
+        },
+        {
+            "data": "2026-01-17",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 7,
+            "valor": 110.84
+        },
+        {
+            "data": "2026-01-17",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 4,
+            "valor": 191.34
         },
         {
             "data": "2026-01-19",
-            "itens": 28,
-            "pecas": 545,
-            "valor": 4105.84
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 7,
+            "pecas": 272,
+            "valor": 1624.7299999999998
+        },
+        {
+            "data": "2026-01-19",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 36,
+            "valor": 356.84000000000003
+        },
+        {
+            "data": "2026-01-19",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 11,
+            "pecas": 237,
+            "valor": 2124.27
         },
         {
             "data": "2026-01-20",
-            "itens": 8,
-            "pecas": 50,
-            "valor": 537.62
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 32,
+            "valor": 322.56
+        },
+        {
+            "data": "2026-01-20",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 12,
+            "valor": 94.94
+        },
+        {
+            "data": "2026-01-20",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 6,
+            "valor": 120.12
         },
         {
             "data": "2026-01-21",
-            "itens": 38,
-            "pecas": 395,
-            "valor": 5629.579999999997
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 69,
+            "valor": 537.74
+        },
+        {
+            "data": "2026-01-21",
+            "motivo": "FIM DE SALDO",
+            "itens": 20,
+            "pecas": 57,
+            "valor": 940.0400000000001
+        },
+        {
+            "data": "2026-01-21",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 15,
+            "pecas": 269,
+            "valor": 4151.8
         },
         {
             "data": "2026-01-22",
-            "itens": 6,
-            "pecas": 341,
-            "valor": 3058.4900000000007
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 337,
+            "valor": 3004.8800000000006
+        },
+        {
+            "data": "2026-01-22",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 4,
+            "valor": 53.60999999999999
         },
         {
             "data": "2026-01-23",
-            "itens": 6,
-            "pecas": 207,
-            "valor": 3243.91
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 204,
+            "valor": 3209.01
+        },
+        {
+            "data": "2026-01-23",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 2,
+            "valor": 26.689999999999998
+        },
+        {
+            "data": "2026-01-23",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 8.21
         },
         {
             "data": "2026-01-24",
-            "itens": 7,
-            "pecas": 40,
-            "valor": 346.53000000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 33,
+            "valor": 247.89
+        },
+        {
+            "data": "2026-01-24",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 2,
+            "valor": 3.71
+        },
+        {
+            "data": "2026-01-24",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 5,
+            "valor": 94.92999999999999
         },
         {
             "data": "2026-01-26",
-            "itens": 27,
-            "pecas": 199,
-            "valor": 2794.2199999999993
+            "motivo": "FIM DE SALDO",
+            "itens": 18,
+            "pecas": 65,
+            "valor": 913.16
+        },
+        {
+            "data": "2026-01-26",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 134,
+            "valor": 1881.0600000000002
         },
         {
             "data": "2026-01-27",
-            "itens": 26,
-            "pecas": 210,
-            "valor": 2750.79
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 148,
+            "valor": 1992.71
+        },
+        {
+            "data": "2026-01-27",
+            "motivo": "FIM DE SALDO",
+            "itens": 12,
+            "pecas": 28,
+            "valor": 306.57
+        },
+        {
+            "data": "2026-01-27",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 34,
+            "valor": 451.50999999999993
         },
         {
             "data": "2026-01-28",
-            "itens": 28,
-            "pecas": 325,
-            "valor": 4017.03
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 7,
+            "pecas": 256,
+            "valor": 3340.23
+        },
+        {
+            "data": "2026-01-28",
+            "motivo": "FIM DE SALDO",
+            "itens": 15,
+            "pecas": 51,
+            "valor": 482.29
+        },
+        {
+            "data": "2026-01-28",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 18,
+            "valor": 194.51
         },
         {
             "data": "2026-01-29",
-            "itens": 23,
-            "pecas": 1672,
-            "valor": 12158.63
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 1589,
+            "valor": 10828.499999999998
+        },
+        {
+            "data": "2026-01-29",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 23,
+            "valor": 404.5400000000001
+        },
+        {
+            "data": "2026-01-29",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 8,
+            "pecas": 60,
+            "valor": 925.5899999999999
         },
         {
             "data": "2026-01-30",
-            "itens": 7,
-            "pecas": 181,
-            "valor": 1140.03
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 146,
+            "valor": 589.14
+        },
+        {
+            "data": "2026-01-30",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 10,
+            "valor": 114.79
+        },
+        {
+            "data": "2026-01-30",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 25,
+            "valor": 436.1
         },
         {
             "data": "2026-01-31",
-            "itens": 24,
-            "pecas": 368,
-            "valor": 2960.46
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 156,
+            "valor": 1564.94
+        },
+        {
+            "data": "2026-01-31",
+            "motivo": "FIM DE SALDO",
+            "itens": 14,
+            "pecas": 52,
+            "valor": 591.44
+        },
+        {
+            "data": "2026-01-31",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 160,
+            "valor": 804.08
         },
         {
             "data": "2026-02-02",
-            "itens": 32,
-            "pecas": 208,
-            "valor": 1769.48
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 80,
+            "valor": 628.44
+        },
+        {
+            "data": "2026-02-02",
+            "motivo": "FIM DE SALDO",
+            "itens": 14,
+            "pecas": 46,
+            "valor": 445.12
+        },
+        {
+            "data": "2026-02-02",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 13,
+            "pecas": 82,
+            "valor": 695.9200000000002
         },
         {
             "data": "2026-02-03",
-            "itens": 27,
-            "pecas": 239,
-            "valor": 4622.16
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 6,
+            "pecas": 177,
+            "valor": 1803.6
+        },
+        {
+            "data": "2026-02-03",
+            "motivo": "FIM DE SALDO",
+            "itens": 14,
+            "pecas": 48,
+            "valor": 506.88000000000005
+        },
+        {
+            "data": "2026-02-03",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 7,
+            "pecas": 14,
+            "valor": 2311.6800000000007
         },
         {
             "data": "2026-02-04",
-            "itens": 9,
-            "pecas": 44,
-            "valor": 334.27000000000004
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 26,
+            "valor": 127.66
+        },
+        {
+            "data": "2026-02-04",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 15,
+            "valor": 105.7
+        },
+        {
+            "data": "2026-02-04",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 3,
+            "valor": 100.91000000000001
         },
         {
             "data": "2026-02-05",
+            "motivo": "VENDA MAIOR QUE O SALDO",
             "itens": 1,
             "pecas": 1,
             "valor": 36.0
         },
         {
             "data": "2026-02-06",
-            "itens": 12,
-            "pecas": 81,
-            "valor": 1325.4999999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 70,
+            "valor": 1248.9499999999998
+        },
+        {
+            "data": "2026-02-06",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 9,
+            "valor": 50.49
+        },
+        {
+            "data": "2026-02-06",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 2,
+            "valor": 26.060000000000002
         },
         {
             "data": "2026-02-07",
-            "itens": 3,
-            "pecas": 47,
-            "valor": 463.17
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 32,
+            "valor": 296.21999999999997
+        },
+        {
+            "data": "2026-02-07",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 15,
+            "valor": 166.95000000000002
         },
         {
             "data": "2026-02-08",
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
             "itens": 1,
             "pecas": 5,
             "valor": 50.650000000000006
         },
         {
             "data": "2026-02-09",
-            "itens": 7,
-            "pecas": 32,
-            "valor": 143.68
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 14,
+            "valor": 43.26
+        },
+        {
+            "data": "2026-02-09",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 17,
+            "valor": 99.28
+        },
+        {
+            "data": "2026-02-09",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 1.14
         },
         {
             "data": "2026-02-10",
-            "itens": 13,
-            "pecas": 105,
-            "valor": 1393.18
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 39,
+            "valor": 622.55
+        },
+        {
+            "data": "2026-02-10",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 60,
+            "valor": 701.8000000000002
+        },
+        {
+            "data": "2026-02-10",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 6,
+            "valor": 68.83
         },
         {
             "data": "2026-02-11",
-            "itens": 6,
-            "pecas": 29,
-            "valor": 108.44999999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 21,
+            "valor": 84.32
+        },
+        {
+            "data": "2026-02-11",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 8,
+            "valor": 24.13
         },
         {
             "data": "2026-02-12",
-            "itens": 18,
-            "pecas": 101,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 64,
+            "valor": 0.0
+        },
+        {
+            "data": "2026-02-12",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 13,
+            "valor": 141.92999999999998
+        },
+        {
+            "data": "2026-02-12",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 24,
             "valor": 0.0
         },
         {
             "data": "2026-02-13",
-            "itens": 11,
-            "pecas": 64,
-            "valor": 644.5699999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 28,
+            "valor": 321.08000000000004
+        },
+        {
+            "data": "2026-02-13",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 11,
+            "valor": 152.98
+        },
+        {
+            "data": "2026-02-13",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 25,
+            "valor": 170.51
         },
         {
             "data": "2026-02-14",
-            "itens": 11,
-            "pecas": 29,
-            "valor": 320.76
+            "motivo": "FATURAMENTO",
+            "itens": 2,
+            "pecas": 3,
+            "valor": 48.33
+        },
+        {
+            "data": "2026-02-14",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 22,
+            "valor": 231.67000000000002
+        },
+        {
+            "data": "2026-02-14",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 4,
+            "valor": 40.760000000000005
         },
         {
             "data": "2026-02-17",
-            "itens": 12,
-            "pecas": 399,
-            "valor": 2507.41
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 384,
+            "valor": 2412.79
+        },
+        {
+            "data": "2026-02-17",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 11,
+            "valor": 40.730000000000004
+        },
+        {
+            "data": "2026-02-17",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 4,
+            "valor": 53.89
         },
         {
             "data": "2026-02-18",
-            "itens": 14,
-            "pecas": 174,
-            "valor": 1719.34
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 89,
+            "valor": 683.91
+        },
+        {
+            "data": "2026-02-18",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 29,
+            "valor": 642.5799999999999
+        },
+        {
+            "data": "2026-02-18",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 56,
+            "valor": 392.85
         },
         {
             "data": "2026-02-19",
-            "itens": 11,
-            "pecas": 89,
-            "valor": 635.5400000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 34,
+            "valor": 284.87
+        },
+        {
+            "data": "2026-02-19",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 26,
+            "valor": 130.57000000000002
+        },
+        {
+            "data": "2026-02-19",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 29,
+            "valor": 220.1
         },
         {
             "data": "2026-02-20",
-            "itens": 12,
-            "pecas": 1580,
-            "valor": 2577.25
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 1551,
+            "valor": 2293.05
+        },
+        {
+            "data": "2026-02-20",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 23,
+            "valor": 230.40999999999997
+        },
+        {
+            "data": "2026-02-20",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 6,
+            "valor": 53.78999999999999
         },
         {
             "data": "2026-02-21",
-            "itens": 11,
-            "pecas": 194,
-            "valor": 1614.28
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 132,
+            "valor": 895.73
+        },
+        {
+            "data": "2026-02-21",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 37,
+            "valor": 529.24
+        },
+        {
+            "data": "2026-02-21",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 25,
+            "valor": 189.30999999999997
         },
         {
             "data": "2026-02-23",
-            "itens": 3,
-            "pecas": 3,
-            "valor": 27.39
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 2,
+            "valor": 24.3
+        },
+        {
+            "data": "2026-02-23",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 3.09
         },
         {
             "data": "2026-02-24",
-            "itens": 9,
-            "pecas": 69,
-            "valor": 536.08
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 11,
+            "valor": 59.07
+        },
+        {
+            "data": "2026-02-24",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 23,
+            "valor": 201.89
+        },
+        {
+            "data": "2026-02-24",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 35,
+            "valor": 275.12
         },
         {
             "data": "2026-02-25",
-            "itens": 7,
-            "pecas": 17,
-            "valor": 177.37
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 7,
+            "valor": 59.78
+        },
+        {
+            "data": "2026-02-25",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 10,
+            "valor": 117.58999999999999
         },
         {
             "data": "2026-02-26",
-            "itens": 7,
-            "pecas": 250,
-            "valor": 1210.83
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 244,
+            "valor": 1163.38
+        },
+        {
+            "data": "2026-02-26",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 6,
+            "valor": 47.449999999999996
         },
         {
             "data": "2026-02-27",
-            "itens": 14,
-            "pecas": 150,
-            "valor": 2383.22
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 76,
+            "valor": 873.5999999999999
+        },
+        {
+            "data": "2026-02-27",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 38,
+            "valor": 401.54
+        },
+        {
+            "data": "2026-02-27",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 36,
+            "valor": 1108.08
         },
         {
             "data": "2026-02-28",
-            "itens": 11,
-            "pecas": 118,
-            "valor": 2241.48
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 94,
+            "valor": 1733.32
+        },
+        {
+            "data": "2026-02-28",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 22,
+            "valor": 385.2
+        },
+        {
+            "data": "2026-02-28",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 2,
+            "valor": 122.96000000000001
         },
         {
             "data": "2026-03-02",
-            "itens": 6,
-            "pecas": 10,
-            "valor": 77.86
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 8,
+            "valor": 29.740000000000002
+        },
+        {
+            "data": "2026-03-02",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 2,
+            "valor": 48.12
         },
         {
             "data": "2026-03-03",
-            "itens": 4,
-            "pecas": 42,
-            "valor": 605.84
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 38,
+            "valor": 554.04
+        },
+        {
+            "data": "2026-03-03",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 4,
+            "valor": 51.8
         },
         {
             "data": "2026-03-04",
-            "itens": 7,
-            "pecas": 140,
-            "valor": 659.0899999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 100,
+            "valor": 415.5
+        },
+        {
+            "data": "2026-03-04",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 1.03
+        },
+        {
+            "data": "2026-03-04",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 39,
+            "valor": 242.56
         },
         {
             "data": "2026-03-05",
-            "itens": 11,
-            "pecas": 217,
-            "valor": 1517.21
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 97,
+            "valor": 1032.46
+        },
+        {
+            "data": "2026-03-05",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 30,
+            "valor": 159.36
+        },
+        {
+            "data": "2026-03-05",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 90,
+            "valor": 325.39
         },
         {
             "data": "2026-03-06",
-            "itens": 15,
-            "pecas": 1946,
-            "valor": 24868.660000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 73,
+            "valor": 794.21
+        },
+        {
+            "data": "2026-03-06",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 55,
+            "valor": 321.5
+        },
+        {
+            "data": "2026-03-06",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 1818,
+            "valor": 23752.950000000004
         },
         {
             "data": "2026-03-07",
+            "motivo": "FIM DE SALDO",
             "itens": 3,
             "pecas": 4,
             "valor": 40.61
         },
         {
             "data": "2026-03-09",
-            "itens": 12,
-            "pecas": 138,
-            "valor": 1206.18
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 52,
+            "valor": 620.1
+        },
+        {
+            "data": "2026-03-09",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 48,
+            "valor": 287.71
+        },
+        {
+            "data": "2026-03-09",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 38,
+            "valor": 298.37
         },
         {
             "data": "2026-03-10",
-            "itens": 9,
-            "pecas": 196,
-            "valor": 2565.38
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 120,
+            "valor": 1796.81
+        },
+        {
+            "data": "2026-03-10",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 18,
+            "valor": 155.25
+        },
+        {
+            "data": "2026-03-10",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 58,
+            "valor": 613.32
         },
         {
             "data": "2026-03-11",
-            "itens": 7,
-            "pecas": 41,
-            "valor": 546.26
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 5,
+            "valor": 102.15
+        },
+        {
+            "data": "2026-03-11",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 29,
+            "valor": 298.44000000000005
+        },
+        {
+            "data": "2026-03-11",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 7,
+            "valor": 145.67
         },
         {
             "data": "2026-03-12",
-            "itens": 14,
-            "pecas": 807,
-            "valor": 5581.86
+            "motivo": "CORTE/EQUALIZAÇÃO",
+            "itens": 1,
+            "pecas": 336,
+            "valor": 2150.4
+        },
+        {
+            "data": "2026-03-12",
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 6,
+            "pecas": 155,
+            "valor": 1235.59
+        },
+        {
+            "data": "2026-03-12",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 4,
+            "valor": 32.44
+        },
+        {
+            "data": "2026-03-12",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 312,
+            "valor": 2163.43
         },
         {
             "data": "2026-03-13",
-            "itens": 14,
-            "pecas": 80,
-            "valor": 603.8100000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 40,
+            "valor": 315.74
+        },
+        {
+            "data": "2026-03-13",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 39,
+            "valor": 281.22999999999996
+        },
+        {
+            "data": "2026-03-13",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 6.84
         },
         {
             "data": "2026-03-16",
-            "itens": 5,
-            "pecas": 16,
-            "valor": 159.51999999999998
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 13,
+            "valor": 126.62
+        },
+        {
+            "data": "2026-03-16",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 3,
+            "valor": 32.9
         },
         {
             "data": "2026-03-17",
-            "itens": 22,
-            "pecas": 215,
-            "valor": 2232.5600000000004
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 6,
+            "pecas": 161,
+            "valor": 1369.8200000000002
+        },
+        {
+            "data": "2026-03-17",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 20,
+            "valor": 166.71
+        },
+        {
+            "data": "2026-03-17",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 34,
+            "valor": 696.0300000000001
         },
         {
             "data": "2026-03-18",
-            "itens": 9,
-            "pecas": 27,
-            "valor": 351.17999999999995
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 5,
+            "valor": 47.44
+        },
+        {
+            "data": "2026-03-18",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 22,
+            "valor": 303.74
         },
         {
             "data": "2026-03-19",
-            "itens": 7,
-            "pecas": 22,
-            "valor": 245.47000000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 7,
+            "valor": 25.97
+        },
+        {
+            "data": "2026-03-19",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 6,
+            "valor": 44.34
+        },
+        {
+            "data": "2026-03-19",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 9,
+            "valor": 175.16000000000003
         },
         {
             "data": "2026-03-20",
-            "itens": 9,
-            "pecas": 48,
-            "valor": 416.13
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 26,
+            "valor": 204.98000000000002
+        },
+        {
+            "data": "2026-03-20",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 22,
+            "valor": 211.15
         },
         {
             "data": "2026-03-21",
-            "itens": 5,
-            "pecas": 753,
-            "valor": 5826.950000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 751,
+            "valor": 5820.74
+        },
+        {
+            "data": "2026-03-21",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 2.25
+        },
+        {
+            "data": "2026-03-21",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 3.96
         },
         {
             "data": "2026-03-22",
-            "itens": 11,
-            "pecas": 89,
-            "valor": 2360.7499999999995
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 10,
+            "valor": 38.1
+        },
+        {
+            "data": "2026-03-22",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 26,
+            "valor": 663.5299999999999
+        },
+        {
+            "data": "2026-03-22",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 53,
+            "valor": 1659.1200000000001
         },
         {
             "data": "2026-03-23",
-            "itens": 8,
-            "pecas": 277,
-            "valor": 7949.92
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 114,
+            "valor": 1900.1999999999998
+        },
+        {
+            "data": "2026-03-23",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 2,
+            "valor": 14.76
+        },
+        {
+            "data": "2026-03-23",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 161,
+            "valor": 6034.959999999999
         },
         {
             "data": "2026-03-24",
-            "itens": 5,
-            "pecas": 183,
-            "valor": 3062.2300000000005
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 103,
+            "valor": 2072.58
+        },
+        {
+            "data": "2026-03-24",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 7,
+            "valor": 496.90000000000003
+        },
+        {
+            "data": "2026-03-24",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 73,
+            "valor": 492.75
         },
         {
             "data": "2026-03-25",
-            "itens": 21,
-            "pecas": 252,
-            "valor": 5027.73
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 57,
+            "valor": 613.92
+        },
+        {
+            "data": "2026-03-25",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 36,
+            "valor": 709.2500000000001
+        },
+        {
+            "data": "2026-03-25",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 159,
+            "valor": 3704.5599999999995
         },
         {
             "data": "2026-03-26",
-            "itens": 11,
-            "pecas": 147,
-            "valor": 1211.28
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 132,
+            "valor": 842.72
+        },
+        {
+            "data": "2026-03-26",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 11,
+            "valor": 339.48
+        },
+        {
+            "data": "2026-03-26",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 4,
+            "valor": 29.08
         },
         {
             "data": "2026-03-27",
-            "itens": 12,
-            "pecas": 90,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 59,
+            "valor": 410.24000000000007
+        },
+        {
+            "data": "2026-03-27",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 30,
+            "valor": 282.97
+        },
+        {
+            "data": "2026-03-27",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
             "valor": 0.0
         },
         {
             "data": "2026-03-28",
-            "itens": 14,
-            "pecas": 208,
-            "valor": 3638.54
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 3,
+            "valor": 20.85
+        },
+        {
+            "data": "2026-03-28",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 7,
+            "valor": 47.08
+        },
+        {
+            "data": "2026-03-28",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 198,
+            "valor": 3570.61
         },
         {
             "data": "2026-03-31",
-            "itens": 9,
-            "pecas": 16,
-            "valor": 261.36
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 121.73
+        },
+        {
+            "data": "2026-03-31",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 15,
+            "valor": 139.63000000000002
         },
         {
             "data": "2026-04-01",
-            "itens": 8,
-            "pecas": 44,
-            "valor": 578.3199999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 27,
+            "valor": 130.86
+        },
+        {
+            "data": "2026-04-01",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 17,
+            "valor": 447.4599999999999
         },
         {
             "data": "2026-04-02",
-            "itens": 20,
-            "pecas": 89,
-            "valor": 973.82
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 24,
+            "valor": 369.54999999999995
+        },
+        {
+            "data": "2026-04-02",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 65,
+            "valor": 604.2700000000001
         },
         {
             "data": "2026-04-03",
-            "itens": 14,
-            "pecas": 60,
-            "valor": 843.31
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 17,
+            "valor": 266.39
+        },
+        {
+            "data": "2026-04-03",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 29,
+            "valor": 317.09
+        },
+        {
+            "data": "2026-04-03",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 14,
+            "valor": 259.83000000000004
         },
         {
             "data": "2026-04-06",
-            "itens": 18,
-            "pecas": 94,
-            "valor": 1538.02
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 65,
+            "valor": 1246.93
+        },
+        {
+            "data": "2026-04-06",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 22,
+            "valor": 232.87999999999997
+        },
+        {
+            "data": "2026-04-06",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 7,
+            "valor": 58.21
         },
         {
             "data": "2026-04-07",
-            "itens": 8,
-            "pecas": 25,
-            "valor": 408.36999999999995
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 20,
+            "valor": 370.19000000000005
+        },
+        {
+            "data": "2026-04-07",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 5,
+            "valor": 38.17999999999999
         },
         {
             "data": "2026-04-08",
-            "itens": 2,
-            "pecas": 4,
-            "valor": 10.58
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 3,
+            "valor": 4.38
+        },
+        {
+            "data": "2026-04-08",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 6.2
         },
         {
             "data": "2026-04-09",
-            "itens": 18,
-            "pecas": 256,
-            "valor": 2125.0
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 7,
+            "pecas": 226,
+            "valor": 1093.77
+        },
+        {
+            "data": "2026-04-09",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 11,
+            "valor": 202.85999999999999
+        },
+        {
+            "data": "2026-04-09",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 8,
+            "pecas": 19,
+            "valor": 828.3699999999998
         },
         {
             "data": "2026-04-10",
-            "itens": 10,
-            "pecas": 31,
-            "valor": 456.21
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 15,
+            "valor": 163.54
+        },
+        {
+            "data": "2026-04-10",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 16,
+            "valor": 292.67
         },
         {
             "data": "2026-04-11",
-            "itens": 6,
-            "pecas": 33,
-            "valor": 464.87
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 6,
+            "valor": 74.1
+        },
+        {
+            "data": "2026-04-11",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 16,
+            "valor": 252.82999999999998
+        },
+        {
+            "data": "2026-04-11",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 11,
+            "valor": 137.94
         },
         {
             "data": "2026-04-13",
-            "itens": 12,
-            "pecas": 42,
-            "valor": 666.19
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 15,
+            "valor": 127.96000000000001
+        },
+        {
+            "data": "2026-04-13",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 7,
+            "pecas": 27,
+            "valor": 538.23
         },
         {
             "data": "2026-04-14",
-            "itens": 33,
-            "pecas": 125,
-            "valor": 1677.2100000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 18,
+            "valor": 164.27
+        },
+        {
+            "data": "2026-04-14",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 41,
+            "valor": 617.8299999999999
+        },
+        {
+            "data": "2026-04-14",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 22,
+            "pecas": 66,
+            "valor": 895.11
         },
         {
             "data": "2026-04-15",
-            "itens": 22,
-            "pecas": 177,
-            "valor": 3230.3399999999992
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 111,
+            "valor": 2572.08
+        },
+        {
+            "data": "2026-04-15",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 34,
+            "valor": 441.6
+        },
+        {
+            "data": "2026-04-15",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 32,
+            "valor": 216.66000000000003
         },
         {
             "data": "2026-04-16",
-            "itens": 18,
-            "pecas": 76,
-            "valor": 528.3000000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 19,
+            "valor": 109.82000000000001
+        },
+        {
+            "data": "2026-04-16",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 7,
+            "valor": 34.55
+        },
+        {
+            "data": "2026-04-16",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 12,
+            "pecas": 50,
+            "valor": 383.93
         },
         {
             "data": "2026-04-17",
-            "itens": 17,
-            "pecas": 47,
-            "valor": 458.78999999999996
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 5,
+            "valor": 30.099999999999998
+        },
+        {
+            "data": "2026-04-17",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 32,
+            "valor": 317.5
+        },
+        {
+            "data": "2026-04-17",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 10,
+            "valor": 111.18999999999998
         },
         {
             "data": "2026-04-18",
-            "itens": 5,
-            "pecas": 74,
-            "valor": 1635.5700000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 22,
+            "valor": 461.34
+        },
+        {
+            "data": "2026-04-18",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 18,
+            "valor": 61.75
+        },
+        {
+            "data": "2026-04-18",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 34,
+            "valor": 1112.48
         },
         {
             "data": "2026-04-20",
+            "motivo": "VENDA MAIOR QUE O SALDO",
             "itens": 5,
             "pecas": 11,
             "valor": 208.11999999999998
         },
         {
             "data": "2026-04-21",
-            "itens": 22,
-            "pecas": 105,
-            "valor": 915.0799999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 49,
+            "valor": 259.56
+        },
+        {
+            "data": "2026-04-21",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 29,
+            "valor": 352.15
+        },
+        {
+            "data": "2026-04-21",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 14,
+            "pecas": 27,
+            "valor": 303.37
         },
         {
             "data": "2026-04-22",
-            "itens": 18,
-            "pecas": 76,
-            "valor": 946.79
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 33,
+            "valor": 393.72
+        },
+        {
+            "data": "2026-04-22",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 29,
+            "valor": 409.62
+        },
+        {
+            "data": "2026-04-22",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 7,
+            "pecas": 14,
+            "valor": 143.45000000000002
         },
         {
             "data": "2026-04-23",
-            "itens": 12,
-            "pecas": 31,
-            "valor": 392.29
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 14,
+            "valor": 116.73
+        },
+        {
+            "data": "2026-04-23",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 8,
+            "valor": 182.47
+        },
+        {
+            "data": "2026-04-23",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 9,
+            "valor": 93.09
         },
         {
             "data": "2026-04-24",
-            "itens": 24,
-            "pecas": 391,
-            "valor": 2084.7700000000004
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 7,
+            "pecas": 281,
+            "valor": 1341.69
+        },
+        {
+            "data": "2026-04-24",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 19,
+            "valor": 225.79
+        },
+        {
+            "data": "2026-04-24",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 11,
+            "pecas": 91,
+            "valor": 517.29
         },
         {
             "data": "2026-04-25",
-            "itens": 13,
-            "pecas": 403,
-            "valor": 3599.3100000000004
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 156,
+            "valor": 1621.02
+        },
+        {
+            "data": "2026-04-25",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 16,
+            "valor": 117.50999999999999
+        },
+        {
+            "data": "2026-04-25",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 231,
+            "valor": 1860.7799999999997
         },
         {
             "data": "2026-04-26",
-            "itens": 4,
-            "pecas": 22,
-            "valor": 382.36
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 14,
+            "valor": 252.84
+        },
+        {
+            "data": "2026-04-26",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 8,
+            "valor": 129.52
         },
         {
             "data": "2026-04-27",
-            "itens": 33,
-            "pecas": 366,
-            "valor": 2979.77
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 56,
+            "valor": 266.56
+        },
+        {
+            "data": "2026-04-27",
+            "motivo": "FIM DE SALDO",
+            "itens": 17,
+            "pecas": 31,
+            "valor": 367.92
+        },
+        {
+            "data": "2026-04-27",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 15,
+            "pecas": 279,
+            "valor": 2345.29
         },
         {
             "data": "2026-04-28",
-            "itens": 14,
-            "pecas": 197,
-            "valor": 1631.86
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 181,
+            "valor": 1530.77
+        },
+        {
+            "data": "2026-04-28",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 10,
+            "valor": 55.43
+        },
+        {
+            "data": "2026-04-28",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 6,
+            "valor": 45.660000000000004
         },
         {
             "data": "2026-04-29",
-            "itens": 16,
-            "pecas": 119,
-            "valor": 1078.2200000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 33,
+            "valor": 267.96
+        },
+        {
+            "data": "2026-04-29",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 19,
+            "valor": 176.67000000000002
+        },
+        {
+            "data": "2026-04-29",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 11,
+            "pecas": 67,
+            "valor": 633.5899999999999
         },
         {
             "data": "2026-04-30",
-            "itens": 8,
-            "pecas": 173,
-            "valor": 1936.31
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 90,
+            "valor": 679.11
+        },
+        {
+            "data": "2026-04-30",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 2,
+            "valor": 41.18
+        },
+        {
+            "data": "2026-04-30",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 81,
+            "valor": 1216.02
         },
         {
             "data": "2026-05-01",
-            "itens": 8,
-            "pecas": 136,
-            "valor": 1209.09
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 106,
+            "valor": 1017.1399999999999
+        },
+        {
+            "data": "2026-05-01",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 7,
+            "valor": 41.61
+        },
+        {
+            "data": "2026-05-01",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 23,
+            "valor": 150.34
         },
         {
             "data": "2026-05-03",
-            "itens": 4,
-            "pecas": 136,
-            "valor": 588.21
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 114,
+            "valor": 487.89
+        },
+        {
+            "data": "2026-05-03",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 22,
+            "valor": 100.32
         },
         {
             "data": "2026-05-04",
-            "itens": 21,
-            "pecas": 109,
-            "valor": 648.1700000000001
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 24,
+            "valor": 297.97
+        },
+        {
+            "data": "2026-05-04",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 85,
+            "valor": 350.2
         },
         {
             "data": "2026-05-05",
-            "itens": 19,
-            "pecas": 76,
-            "valor": 1988.3999999999999
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 25,
+            "valor": 734.32
+        },
+        {
+            "data": "2026-05-05",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 11,
+            "pecas": 51,
+            "valor": 1254.08
         },
         {
             "data": "2026-05-06",
-            "itens": 14,
-            "pecas": 169,
-            "valor": 926.0899999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 133,
+            "valor": 607.88
+        },
+        {
+            "data": "2026-05-06",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 17,
+            "valor": 86.49
+        },
+        {
+            "data": "2026-05-06",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 19,
+            "valor": 231.72
         },
         {
             "data": "2026-05-07",
-            "itens": 19,
-            "pecas": 485,
-            "valor": 3306.9100000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 371,
+            "valor": 1493.4099999999999
+        },
+        {
+            "data": "2026-05-07",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 22,
+            "valor": 170.53000000000003
+        },
+        {
+            "data": "2026-05-07",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 8,
+            "pecas": 92,
+            "valor": 1642.97
         },
         {
             "data": "2026-05-08",
-            "itens": 11,
-            "pecas": 279,
-            "valor": 705.2099999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 4,
+            "valor": 93.92
+        },
+        {
+            "data": "2026-05-08",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 8,
+            "valor": 67.48
+        },
+        {
+            "data": "2026-05-08",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 267,
+            "valor": 543.81
         },
         {
             "data": "2026-05-09",
-            "itens": 20,
-            "pecas": 182,
-            "valor": 1627.53
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 93,
+            "valor": 693.47
+        },
+        {
+            "data": "2026-05-09",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 23,
+            "valor": 254.36
+        },
+        {
+            "data": "2026-05-09",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 66,
+            "valor": 679.7000000000002
         },
         {
             "data": "2026-05-11",
-            "itens": 5,
-            "pecas": 227,
-            "valor": 1633.08
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 224,
+            "valor": 1612.24
+        },
+        {
+            "data": "2026-05-11",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 1.33
+        },
+        {
+            "data": "2026-05-11",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 2,
+            "valor": 19.509999999999998
         },
         {
             "data": "2026-05-12",
-            "itens": 21,
-            "pecas": 366,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 189,
+            "valor": 1515.17
+        },
+        {
+            "data": "2026-05-12",
+            "motivo": "FIM DE SALDO",
+            "itens": 12,
+            "pecas": 66,
+            "valor": 630.57
+        },
+        {
+            "data": "2026-05-12",
+            "motivo": "QUALIDADE",
+            "itens": 1,
+            "pecas": 40,
             "valor": 0.0
+        },
+        {
+            "data": "2026-05-12",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 71,
+            "valor": 842.05
         },
         {
             "data": "2026-05-13",
-            "itens": 20,
-            "pecas": 142,
-            "valor": 1026.4799999999996
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 77,
+            "valor": 274.07
+        },
+        {
+            "data": "2026-05-13",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 26,
+            "valor": 188.60999999999999
+        },
+        {
+            "data": "2026-05-13",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 39,
+            "valor": 563.8
         },
         {
             "data": "2026-05-14",
-            "itens": 21,
-            "pecas": 90,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 26,
+            "valor": 63.18000000000001
+        },
+        {
+            "data": "2026-05-14",
+            "motivo": "FIM DE SALDO",
+            "itens": 13,
+            "pecas": 47,
             "valor": 0.0
         },
         {
+            "data": "2026-05-14",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 7,
+            "pecas": 17,
+            "valor": 74.66999999999999
+        },
+        {
             "data": "2026-05-15",
-            "itens": 13,
-            "pecas": 70,
-            "valor": 462.10999999999996
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 49,
+            "valor": 84.52
+        },
+        {
+            "data": "2026-05-15",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 4,
+            "valor": 94.63
+        },
+        {
+            "data": "2026-05-15",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 17,
+            "valor": 282.96000000000004
         },
         {
             "data": "2026-05-16",
-            "itens": 33,
-            "pecas": 395,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 231,
+            "valor": 3536.37
+        },
+        {
+            "data": "2026-05-16",
+            "motivo": "FIM DE SALDO",
+            "itens": 15,
+            "pecas": 50,
+            "valor": 626.0
+        },
+        {
+            "data": "2026-05-16",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 14,
+            "pecas": 114,
             "valor": 0.0
         },
         {
             "data": "2026-05-18",
-            "itens": 26,
-            "pecas": 194,
-            "valor": 1628.6999999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 117,
+            "valor": 1254.83
+        },
+        {
+            "data": "2026-05-18",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 19,
+            "valor": 93.46
+        },
+        {
+            "data": "2026-05-18",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 13,
+            "pecas": 58,
+            "valor": 280.40999999999997
         },
         {
             "data": "2026-05-19",
-            "itens": 29,
-            "pecas": 254,
-            "valor": 1363.3200000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 140,
+            "valor": 596.9499999999999
+        },
+        {
+            "data": "2026-05-19",
+            "motivo": "FIM DE SALDO",
+            "itens": 21,
+            "pecas": 100,
+            "valor": 665.7699999999999
+        },
+        {
+            "data": "2026-05-19",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 14,
+            "valor": 100.60000000000001
         },
         {
             "data": "2026-05-20",
-            "itens": 11,
-            "pecas": 132,
-            "valor": 525.6399999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 110,
+            "valor": 396.15
+        },
+        {
+            "data": "2026-05-20",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 17,
+            "valor": 101.61999999999999
+        },
+        {
+            "data": "2026-05-20",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 5,
+            "valor": 27.870000000000005
         },
         {
             "data": "2026-05-21",
-            "itens": 7,
-            "pecas": 26,
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 19,
+            "valor": 226.09000000000003
+        },
+        {
+            "data": "2026-05-21",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 7,
             "valor": 0.0
         },
         {
             "data": "2026-05-22",
-            "itens": 10,
-            "pecas": 585,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 34,
+            "valor": 169.89000000000001
+        },
+        {
+            "data": "2026-05-22",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 6,
+            "valor": 83.32000000000001
+        },
+        {
+            "data": "2026-05-22",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 545,
             "valor": 0.0
         },
         {
             "data": "2026-05-23",
-            "itens": 27,
-            "pecas": 227,
-            "valor": 1758.3100000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 53,
+            "valor": 203.32
+        },
+        {
+            "data": "2026-05-23",
+            "motivo": "FIM DE SALDO",
+            "itens": 12,
+            "pecas": 40,
+            "valor": 607.99
+        },
+        {
+            "data": "2026-05-23",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 13,
+            "pecas": 134,
+            "valor": 947.0000000000001
         },
         {
             "data": "2026-05-25",
-            "itens": 11,
-            "pecas": 160,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 62,
+            "valor": 1041.6000000000001
+        },
+        {
+            "data": "2026-05-25",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 13,
             "valor": 0.0
         },
         {
+            "data": "2026-05-25",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 7,
+            "pecas": 85,
+            "valor": 470.09000000000003
+        },
+        {
             "data": "2026-05-26",
-            "itens": 27,
-            "pecas": 280,
-            "valor": 1074.7099999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 150,
+            "valor": 376.77
+        },
+        {
+            "data": "2026-05-26",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 37,
+            "valor": 172.57
+        },
+        {
+            "data": "2026-05-26",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 12,
+            "pecas": 93,
+            "valor": 525.3699999999999
         },
         {
             "data": "2026-05-27",
-            "itens": 22,
-            "pecas": 252,
-            "valor": 2834.46
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 7,
+            "pecas": 163,
+            "valor": 1253.5300000000002
+        },
+        {
+            "data": "2026-05-27",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 46,
+            "valor": 599.19
+        },
+        {
+            "data": "2026-05-27",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 43,
+            "valor": 981.7400000000001
         },
         {
             "data": "2026-05-28",
-            "itens": 14,
-            "pecas": 204,
-            "valor": 1121.2599999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 87,
+            "valor": 259.61
+        },
+        {
+            "data": "2026-05-28",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 16,
+            "valor": 504.36999999999995
+        },
+        {
+            "data": "2026-05-28",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 101,
+            "valor": 357.28
         },
         {
             "data": "2026-05-29",
-            "itens": 6,
-            "pecas": 120,
-            "valor": 3607.04
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 18,
+            "valor": 215.93
+        },
+        {
+            "data": "2026-05-29",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 102,
+            "valor": 3391.1099999999997
         },
         {
             "data": "2026-05-30",
-            "itens": 30,
-            "pecas": 278,
-            "valor": 1858.0199999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 7,
+            "pecas": 189,
+            "valor": 994.36
+        },
+        {
+            "data": "2026-05-30",
+            "motivo": "FIM DE SALDO",
+            "itens": 19,
+            "pecas": 77,
+            "valor": 738.5799999999998
+        },
+        {
+            "data": "2026-05-30",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 12,
+            "valor": 125.07999999999998
         },
         {
             "data": "2026-05-31",
+            "motivo": "FIM DE SALDO",
             "itens": 1,
             "pecas": 1,
             "valor": 2.78
         },
         {
             "data": "2026-06-01",
-            "itens": 29,
-            "pecas": 490,
-            "valor": 3659.2999999999997
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 10,
+            "pecas": 342,
+            "valor": 2782.4999999999995
+        },
+        {
+            "data": "2026-06-01",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 19,
+            "valor": 177.57
+        },
+        {
+            "data": "2026-06-01",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 12,
+            "pecas": 129,
+            "valor": 699.23
         },
         {
             "data": "2026-06-03",
-            "itens": 8,
-            "pecas": 71,
-            "valor": 1376.7900000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 33,
+            "valor": 551.61
+        },
+        {
+            "data": "2026-06-03",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 5,
+            "valor": 117.8
+        },
+        {
+            "data": "2026-06-03",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 33,
+            "valor": 707.3799999999999
         },
         {
             "data": "2026-06-04",
-            "itens": 8,
-            "pecas": 376,
-            "valor": 1594.02
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 186,
+            "valor": 478.23
+        },
+        {
+            "data": "2026-06-04",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 190,
+            "valor": 1115.79
         },
         {
             "data": "2026-06-05",
-            "itens": 4,
-            "pecas": 70,
-            "valor": 653.53
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 62,
+            "valor": 562.96
+        },
+        {
+            "data": "2026-06-05",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 7,
+            "valor": 72.02
+        },
+        {
+            "data": "2026-06-05",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 18.55
         },
         {
             "data": "2026-06-06",
-            "itens": 3,
-            "pecas": 34,
-            "valor": 88.24000000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 8,
+            "valor": 15.84
+        },
+        {
+            "data": "2026-06-06",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 22.9
+        },
+        {
+            "data": "2026-06-06",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 25,
+            "valor": 49.5
         },
         {
             "data": "2026-06-08",
-            "itens": 14,
-            "pecas": 56,
-            "valor": 521.0500000000001
+            "motivo": "AVARIA",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 3.05
+        },
+        {
+            "data": "2026-06-08",
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 1.08
+        },
+        {
+            "data": "2026-06-08",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 41,
+            "valor": 342.68000000000006
+        },
+        {
+            "data": "2026-06-08",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 13,
+            "valor": 174.24
         },
         {
             "data": "2026-06-09",
-            "itens": 10,
-            "pecas": 187,
-            "valor": 2388.82
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 61,
+            "valor": 376.37
+        },
+        {
+            "data": "2026-06-09",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 3,
+            "valor": 15.129999999999999
+        },
+        {
+            "data": "2026-06-09",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 123,
+            "valor": 1997.32
         },
         {
             "data": "2026-06-10",
-            "itens": 16,
-            "pecas": 630,
-            "valor": 3467.1100000000006
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 556,
+            "valor": 2862.73
+        },
+        {
+            "data": "2026-06-10",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 51,
+            "valor": 478.1399999999999
+        },
+        {
+            "data": "2026-06-10",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 23,
+            "valor": 126.24000000000001
         },
         {
             "data": "2026-06-11",
+            "motivo": "FIM DE SALDO",
             "itens": 2,
             "pecas": 15,
             "valor": 185.99
         },
         {
             "data": "2026-06-12",
-            "itens": 5,
-            "pecas": 24,
-            "valor": 353.0199999999999
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 16,
+            "valor": 207.89999999999998
+        },
+        {
+            "data": "2026-06-12",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 8,
+            "valor": 145.12
         },
         {
             "data": "2026-06-13",
-            "itens": 6,
-            "pecas": 224,
-            "valor": 1125.55
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 145,
+            "valor": 993.11
+        },
+        {
+            "data": "2026-06-13",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 79,
+            "valor": 132.44000000000003
         },
         {
             "data": "2026-06-15",
-            "itens": 11,
-            "pecas": 82,
-            "valor": 749.0800000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 62,
+            "valor": 560.23
+        },
+        {
+            "data": "2026-06-15",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 15,
+            "valor": 107.53999999999999
+        },
+        {
+            "data": "2026-06-15",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 5,
+            "valor": 81.31
         },
         {
             "data": "2026-06-16",
-            "itens": 17,
-            "pecas": 71,
-            "valor": 669.9100000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 18,
+            "valor": 246.57999999999998
+        },
+        {
+            "data": "2026-06-16",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 32,
+            "valor": 326.84999999999997
+        },
+        {
+            "data": "2026-06-16",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 21,
+            "valor": 96.48
         },
         {
             "data": "2026-06-17",
+            "motivo": "FIM DE SALDO",
             "itens": 1,
             "pecas": 1,
             "valor": 5.21
         },
         {
             "data": "2026-06-18",
-            "itens": 24,
-            "pecas": 733,
-            "valor": 4391.819999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 510,
+            "valor": 2162.1499999999996
+        },
+        {
+            "data": "2026-06-18",
+            "motivo": "FIM DE SALDO",
+            "itens": 12,
+            "pecas": 26,
+            "valor": 225.98000000000002
+        },
+        {
+            "data": "2026-06-18",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 8,
+            "pecas": 197,
+            "valor": 2003.6899999999998
         },
         {
             "data": "2026-06-19",
-            "itens": 11,
-            "pecas": 74,
-            "valor": 677.81
+            "motivo": "ANALISE DE QUALIDADE",
+            "itens": 2,
+            "pecas": 48,
+            "valor": 320.64
+        },
+        {
+            "data": "2026-06-19",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 16,
+            "valor": 172.11
+        },
+        {
+            "data": "2026-06-19",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 10,
+            "valor": 185.05999999999997
         },
         {
             "data": "2026-06-20",
-            "itens": 21,
-            "pecas": 494,
-            "valor": 6921.81
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 7,
+            "pecas": 455,
+            "valor": 6470.96
+        },
+        {
+            "data": "2026-06-20",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 20,
+            "valor": 320.56
+        },
+        {
+            "data": "2026-06-20",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 19,
+            "valor": 130.29
         },
         {
             "data": "2026-06-21",
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
             "itens": 1,
             "pecas": 5,
             "valor": 6.25
         },
         {
             "data": "2026-06-23",
-            "itens": 6,
-            "pecas": 3529,
-            "valor": 144410.36000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 179,
+            "valor": 238.07000000000002
+        },
+        {
+            "data": "2026-06-23",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 6,
+            "valor": 40.5
+        },
+        {
+            "data": "2026-06-23",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 3344,
+            "valor": 144131.79
         },
         {
             "data": "2026-06-24",
-            "itens": 9,
-            "pecas": 47,
-            "valor": 390.44
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 7.68
+        },
+        {
+            "data": "2026-06-24",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 14,
+            "valor": 211.20999999999998
+        },
+        {
+            "data": "2026-06-24",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 32,
+            "valor": 171.55
         },
         {
             "data": "2026-06-25",
-            "itens": 23,
-            "pecas": 545,
-            "valor": 4321.160000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 7,
+            "pecas": 150,
+            "valor": 1744.79
+        },
+        {
+            "data": "2026-06-25",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 14,
+            "valor": 169.44
+        },
+        {
+            "data": "2026-06-25",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 381,
+            "valor": 2406.93
         },
         {
             "data": "2026-06-26",
-            "itens": 26,
-            "pecas": 498,
-            "valor": 2709.1600000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 94,
+            "valor": 530.13
+        },
+        {
+            "data": "2026-06-26",
+            "motivo": "FIM DE SALDO",
+            "itens": 12,
+            "pecas": 44,
+            "valor": 710.7199999999999
+        },
+        {
+            "data": "2026-06-26",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 360,
+            "valor": 1468.3100000000004
         },
         {
             "data": "2026-06-27",
-            "itens": 17,
-            "pecas": 269,
-            "valor": 4015.6499999999996
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 231,
+            "valor": 3505.3
+        },
+        {
+            "data": "2026-06-27",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 12,
+            "valor": 186.82
+        },
+        {
+            "data": "2026-06-27",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 26,
+            "valor": 323.53
         },
         {
             "data": "2026-06-29",
-            "itens": 51,
-            "pecas": 538,
-            "valor": 7275.469999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 116,
+            "valor": 678.5999999999999
+        },
+        {
+            "data": "2026-06-29",
+            "motivo": "FIM DE SALDO",
+            "itens": 20,
+            "pecas": 61,
+            "valor": 825.1100000000001
+        },
+        {
+            "data": "2026-06-29",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 27,
+            "pecas": 361,
+            "valor": 5771.76
         },
         {
             "data": "2026-06-30",
-            "itens": 26,
-            "pecas": 394,
-            "valor": 1255.6999999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 343,
+            "valor": 611.31
+        },
+        {
+            "data": "2026-06-30",
+            "motivo": "FIM DE SALDO",
+            "itens": 19,
+            "pecas": 49,
+            "valor": 625.76
+        },
+        {
+            "data": "2026-06-30",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 2,
+            "valor": 18.630000000000003
         },
         {
             "data": "2026-07-01",
-            "itens": 25,
-            "pecas": 618,
-            "valor": 6158.28
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 7,
+            "pecas": 456,
+            "valor": 3251.7200000000003
+        },
+        {
+            "data": "2026-07-01",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 16,
+            "valor": 332.85999999999996
+        },
+        {
+            "data": "2026-07-01",
+            "motivo": "VARIAÇÃO DE CAIXA FECHADA",
+            "itens": 1,
+            "pecas": 2,
+            "valor": 81.62
+        },
+        {
+            "data": "2026-07-01",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 11,
+            "pecas": 144,
+            "valor": 2492.08
         },
         {
             "data": "2026-07-02",
-            "itens": 19,
-            "pecas": 80,
-            "valor": 1175.6099999999997
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 23,
+            "valor": 226.81
+        },
+        {
+            "data": "2026-07-02",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 33,
+            "valor": 262.87999999999994
+        },
+        {
+            "data": "2026-07-02",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 24,
+            "valor": 685.92
         },
         {
             "data": "2026-07-03",
-            "itens": 29,
-            "pecas": 553,
-            "valor": 1321.0399999999997
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 163,
+            "valor": 201.62
+        },
+        {
+            "data": "2026-07-03",
+            "motivo": "FIM DE SALDO",
+            "itens": 17,
+            "pecas": 45,
+            "valor": 226.72
+        },
+        {
+            "data": "2026-07-03",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 345,
+            "valor": 892.7
         },
         {
             "data": "2026-07-04",
-            "itens": 21,
-            "pecas": 996,
-            "valor": 3618.64
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 134,
+            "valor": 257.92
+        },
+        {
+            "data": "2026-07-04",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 17,
+            "valor": 146.44
+        },
+        {
+            "data": "2026-07-04",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 8,
+            "pecas": 845,
+            "valor": 3214.28
         },
         {
             "data": "2026-07-05",
-            "itens": 20,
-            "pecas": 266,
-            "valor": 763.28
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 171,
+            "valor": 275.77
+        },
+        {
+            "data": "2026-07-05",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 6,
+            "valor": 73.57
+        },
+        {
+            "data": "2026-07-05",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 89,
+            "valor": 413.94000000000005
         },
         {
             "data": "2026-07-06",
-            "itens": 17,
-            "pecas": 168,
-            "valor": 7440.9400000000005
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 121,
+            "valor": 7222.09
+        },
+        {
+            "data": "2026-07-06",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 31,
+            "valor": 157.93
+        },
+        {
+            "data": "2026-07-06",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 16,
+            "valor": 60.92
         },
         {
             "data": "2026-07-07",
-            "itens": 29,
-            "pecas": 484,
-            "valor": 3690.560000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 10,
+            "pecas": 376,
+            "valor": 2762.12
+        },
+        {
+            "data": "2026-07-07",
+            "motivo": "FIM DE SALDO",
+            "itens": 14,
+            "pecas": 77,
+            "valor": 745.1800000000001
+        },
+        {
+            "data": "2026-07-07",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 31,
+            "valor": 183.26000000000002
         },
         {
             "data": "2026-07-08",
-            "itens": 10,
-            "pecas": 99,
-            "valor": 748.2200000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 68,
+            "valor": 272.67
+        },
+        {
+            "data": "2026-07-08",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 21,
+            "valor": 385.86
+        },
+        {
+            "data": "2026-07-08",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 10,
+            "valor": 89.69
         },
         {
             "data": "2026-07-09",
-            "itens": 10,
-            "pecas": 78,
-            "valor": 457.98
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 18,
+            "valor": 138.89000000000001
+        },
+        {
+            "data": "2026-07-09",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 17,
+            "valor": 93.42
+        },
+        {
+            "data": "2026-07-09",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 43,
+            "valor": 225.66999999999996
         },
         {
             "data": "2026-07-10",
-            "itens": 35,
-            "pecas": 926,
-            "valor": 9628.960000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 12,
+            "pecas": 679,
+            "valor": 5635.759999999999
+        },
+        {
+            "data": "2026-07-10",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 37,
+            "valor": 1102.7800000000002
+        },
+        {
+            "data": "2026-07-10",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 12,
+            "pecas": 210,
+            "valor": 2890.42
         },
         {
             "data": "2026-07-11",
-            "itens": 11,
-            "pecas": 427,
-            "valor": 3069.5700000000006
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 407,
+            "valor": 2573.69
+        },
+        {
+            "data": "2026-07-11",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 4,
+            "valor": 59.24
+        },
+        {
+            "data": "2026-07-11",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 16,
+            "valor": 436.64000000000004
         },
         {
             "data": "2026-07-12",
+            "motivo": "FIM DE SALDO",
             "itens": 1,
             "pecas": 1,
             "valor": 7.19
         },
         {
             "data": "2026-07-13",
-            "itens": 15,
-            "pecas": 139,
-            "valor": 971.81
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 108,
+            "valor": 553.71
+        },
+        {
+            "data": "2026-07-13",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 24,
+            "valor": 318.83
+        },
+        {
+            "data": "2026-07-13",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 7,
+            "valor": 99.27
         },
         {
             "data": "2026-07-14",
-            "itens": 13,
-            "pecas": 76,
-            "valor": 929.8499999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 35,
+            "valor": 463.34000000000003
+        },
+        {
+            "data": "2026-07-14",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 36,
+            "valor": 427.7900000000001
+        },
+        {
+            "data": "2026-07-14",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 5,
+            "valor": 38.72
         },
         {
             "data": "2026-07-15",
-            "itens": 10,
-            "pecas": 144,
-            "valor": 1123.7800000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 62,
+            "valor": 298.84000000000003
+        },
+        {
+            "data": "2026-07-15",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 23,
+            "valor": 140.20999999999998
+        },
+        {
+            "data": "2026-07-15",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 59,
+            "valor": 684.73
         },
         {
             "data": "2026-07-16",
-            "itens": 19,
-            "pecas": 719,
-            "valor": 8232.15
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 195,
+            "valor": 1413.33
+        },
+        {
+            "data": "2026-07-16",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 10,
+            "valor": 141.36
+        },
+        {
+            "data": "2026-07-16",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 12,
+            "pecas": 514,
+            "valor": 6677.459999999999
         },
         {
             "data": "2026-07-17",
-            "itens": 17,
-            "pecas": 94,
-            "valor": 1662.1399999999996
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 5,
+            "pecas": 55,
+            "valor": 1397.5299999999997
+        },
+        {
+            "data": "2026-07-17",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 33,
+            "valor": 213.34
+        },
+        {
+            "data": "2026-07-17",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 6,
+            "valor": 51.269999999999996
         },
         {
             "data": "2026-07-18",
-            "itens": 12,
-            "pecas": 155,
-            "valor": 3126.3499999999995
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 50,
+            "valor": 204.99999999999997
+        },
+        {
+            "data": "2026-07-18",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 23,
+            "valor": 193.72
+        },
+        {
+            "data": "2026-07-18",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 82,
+            "valor": 2727.6299999999997
         },
         {
             "data": "2026-07-19",
-            "itens": 2,
-            "pecas": 40,
-            "valor": 74.24000000000001
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 14.57
+        },
+        {
+            "data": "2026-07-19",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 39,
+            "valor": 59.67
         },
         {
             "data": "2026-07-20",
-            "itens": 14,
-            "pecas": 824,
-            "valor": 7730.75
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 793,
+            "valor": 7525.52
+        },
+        {
+            "data": "2026-07-20",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 31,
+            "valor": 205.23
         },
         {
             "data": "2026-07-21",
-            "itens": 14,
-            "pecas": 180,
-            "valor": 1081.3799999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 150,
+            "valor": 824.65
+        },
+        {
+            "data": "2026-07-21",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 23,
+            "valor": 235.57999999999998
+        },
+        {
+            "data": "2026-07-21",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 7,
+            "valor": 21.15
         },
         {
             "data": "2026-07-22",
-            "itens": 2,
-            "pecas": 199,
-            "valor": 991.0200000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 196,
+            "valor": 976.08
+        },
+        {
+            "data": "2026-07-22",
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 3,
+            "valor": 14.940000000000001
         },
         {
             "data": "2026-07-23",
-            "itens": 6,
-            "pecas": 49,
-            "valor": 548.18
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 42,
+            "valor": 392.28
+        },
+        {
+            "data": "2026-07-23",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 5,
+            "valor": 138.64
+        },
+        {
+            "data": "2026-07-23",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 2,
+            "valor": 17.26
         },
         {
             "data": "2026-07-24",
-            "itens": 7,
-            "pecas": 48,
-            "valor": 408.16999999999996
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 20,
+            "valor": 119.39999999999999
+        },
+        {
+            "data": "2026-07-24",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 10,
+            "valor": 204.95000000000002
+        },
+        {
+            "data": "2026-07-24",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 18,
+            "valor": 83.82000000000001
         },
         {
             "data": "2026-07-25",
-            "itens": 13,
-            "pecas": 312,
-            "valor": 2823.1500000000005
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 139,
+            "valor": 697.67
+        },
+        {
+            "data": "2026-07-25",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 45,
+            "valor": 606.5400000000001
+        },
+        {
+            "data": "2026-07-25",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 128,
+            "valor": 1518.94
         },
         {
             "data": "2026-07-27",
-            "itens": 25,
-            "pecas": 183,
-            "valor": 1419.2000000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 98,
+            "valor": 388.08
+        },
+        {
+            "data": "2026-07-27",
+            "motivo": "FIM DE SALDO",
+            "itens": 20,
+            "pecas": 51,
+            "valor": 611.82
+        },
+        {
+            "data": "2026-07-27",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 34,
+            "valor": 419.3
         },
         {
             "data": "2026-07-28",
-            "itens": 20,
-            "pecas": 128,
-            "valor": 1912.2799999999997
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 44,
+            "valor": 240.68
+        },
+        {
+            "data": "2026-07-28",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 55,
+            "valor": 631.3199999999999
+        },
+        {
+            "data": "2026-07-28",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 7,
+            "pecas": 29,
+            "valor": 1040.28
         },
         {
             "data": "2026-07-29",
-            "itens": 5,
-            "pecas": 42,
-            "valor": 210.98000000000002
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 41,
+            "valor": 186.63
+        },
+        {
+            "data": "2026-07-29",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 24.35
         },
         {
             "data": "2026-07-30",
-            "itens": 31,
-            "pecas": 328,
-            "valor": 2826.25
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 49,
+            "valor": 501.48
+        },
+        {
+            "data": "2026-07-30",
+            "motivo": "FIM DE SALDO",
+            "itens": 18,
+            "pecas": 80,
+            "valor": 684.5999999999999
+        },
+        {
+            "data": "2026-07-30",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 199,
+            "valor": 1640.17
         },
         {
             "data": "2026-08-01",
-            "itens": 20,
-            "pecas": 185,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 139,
+            "valor": 1318.69
+        },
+        {
+            "data": "2026-08-01",
+            "motivo": "FIM DE SALDO",
+            "itens": 12,
+            "pecas": 34,
+            "valor": 461.11
+        },
+        {
+            "data": "2026-08-01",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 12,
             "valor": 0.0
         },
         {
             "data": "2026-08-03",
-            "itens": 13,
-            "pecas": 82,
-            "valor": 1127.96
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 40,
+            "valor": 306.8
+        },
+        {
+            "data": "2026-08-03",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 31,
+            "valor": 688.37
+        },
+        {
+            "data": "2026-08-03",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 11,
+            "valor": 132.79
         },
         {
             "data": "2026-08-04",
+            "motivo": "FIM DE SALDO",
             "itens": 2,
             "pecas": 4,
             "valor": 30.619999999999997
         },
         {
             "data": "2026-08-05",
-            "itens": 11,
-            "pecas": 34,
-            "valor": 601.61
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 16,
+            "valor": 297.74
+        },
+        {
+            "data": "2026-08-05",
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 13,
+            "valor": 262.91999999999996
+        },
+        {
+            "data": "2026-08-05",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 5,
+            "valor": 40.95
         },
         {
             "data": "2026-08-06",
-            "itens": 24,
-            "pecas": 302,
-            "valor": 3325.4600000000005
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 6,
+            "pecas": 250,
+            "valor": 1919.0600000000002
+        },
+        {
+            "data": "2026-08-06",
+            "motivo": "FIM DE SALDO",
+            "itens": 13,
+            "pecas": 39,
+            "valor": 931.0299999999999
+        },
+        {
+            "data": "2026-08-06",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 13,
+            "valor": 475.37
         },
         {
             "data": "2026-08-07",
-            "itens": 8,
-            "pecas": 127,
-            "valor": 793.2900000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 99,
+            "valor": 468.71
+        },
+        {
+            "data": "2026-08-07",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 8,
+            "valor": 122.14000000000001
+        },
+        {
+            "data": "2026-08-07",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 20,
+            "valor": 202.44
         },
         {
             "data": "2026-08-08",
-            "itens": 13,
-            "pecas": 87,
-            "valor": 1436.77
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 38,
+            "valor": 231.2
+        },
+        {
+            "data": "2026-08-08",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 24,
+            "valor": 180.99000000000004
+        },
+        {
+            "data": "2026-08-08",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 25,
+            "valor": 1024.5800000000002
         },
         {
             "data": "2026-08-09",
+            "motivo": "FIM DE SALDO",
             "itens": 1,
             "pecas": 1,
             "valor": 14.48
         },
         {
             "data": "2026-08-10",
-            "itens": 18,
-            "pecas": 236,
-            "valor": 2152.8199999999997
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 186,
+            "valor": 1582.44
+        },
+        {
+            "data": "2026-08-10",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 16,
+            "valor": 143.31
+        },
+        {
+            "data": "2026-08-10",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 34,
+            "valor": 427.07
         },
         {
             "data": "2026-08-11",
-            "itens": 8,
-            "pecas": 332,
-            "valor": 2141.5800000000004
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 321,
+            "valor": 2047.6200000000001
+        },
+        {
+            "data": "2026-08-11",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 11,
+            "valor": 93.96000000000001
         },
         {
             "data": "2026-08-12",
+            "motivo": "FIM DE SALDO",
             "itens": 4,
             "pecas": 15,
             "valor": 305.69
         },
         {
             "data": "2026-08-13",
-            "itens": 10,
-            "pecas": 839,
-            "valor": 5061.610000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 763,
+            "valor": 4651.39
+        },
+        {
+            "data": "2026-08-13",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 17,
+            "valor": 149.19
+        },
+        {
+            "data": "2026-08-13",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 59,
+            "valor": 261.03
         },
         {
             "data": "2026-08-14",
-            "itens": 6,
-            "pecas": 18,
-            "valor": 78.50999999999999
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 17,
+            "valor": 73.75
+        },
+        {
+            "data": "2026-08-14",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 4.76
         },
         {
             "data": "2026-08-15",
-            "itens": 18,
-            "pecas": 171,
-            "valor": 988.08
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 8,
+            "pecas": 147,
+            "valor": 829.41
+        },
+        {
+            "data": "2026-08-15",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 23,
+            "valor": 157.26000000000002
+        },
+        {
+            "data": "2026-08-15",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 1.41
         },
         {
             "data": "2026-08-17",
-            "itens": 15,
-            "pecas": 122,
-            "valor": 4524.79
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 67,
+            "valor": 4027.1400000000003
+        },
+        {
+            "data": "2026-08-17",
+            "motivo": "FIM DE SALDO",
+            "itens": 7,
+            "pecas": 27,
+            "valor": 228.34
+        },
+        {
+            "data": "2026-08-17",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 28,
+            "valor": 269.31
         },
         {
             "data": "2026-08-18",
-            "itens": 13,
-            "pecas": 195,
-            "valor": 977.7299999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 157,
+            "valor": 533.7
+        },
+        {
+            "data": "2026-08-18",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 38,
+            "valor": 444.03
         },
         {
             "data": "2026-08-19",
-            "itens": 6,
-            "pecas": 191,
-            "valor": 837.0999999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 185,
+            "valor": 777.2099999999999
+        },
+        {
+            "data": "2026-08-19",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 6,
+            "valor": 59.88999999999999
         },
         {
             "data": "2026-08-20",
-            "itens": 13,
-            "pecas": 87,
-            "valor": 514.9100000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 50,
+            "valor": 61.0
+        },
+        {
+            "data": "2026-08-20",
+            "motivo": "FIM DE SALDO",
+            "itens": 9,
+            "pecas": 27,
+            "valor": 291.23999999999995
+        },
+        {
+            "data": "2026-08-20",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 10,
+            "valor": 162.67000000000002
         },
         {
             "data": "2026-08-21",
-            "itens": 4,
-            "pecas": 41,
-            "valor": 971.5500000000001
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 36,
+            "valor": 802.08
+        },
+        {
+            "data": "2026-08-21",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 5,
+            "valor": 169.47
         },
         {
             "data": "2026-08-22",
-            "itens": 10,
-            "pecas": 190,
-            "valor": 669.13
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 166,
+            "valor": 482.4799999999999
+        },
+        {
+            "data": "2026-08-22",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 18,
+            "valor": 102.9
+        },
+        {
+            "data": "2026-08-22",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 6,
+            "valor": 83.75
         },
         {
             "data": "2026-08-24",
-            "itens": 18,
-            "pecas": 43,
-            "valor": 436.69000000000005
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 36.16
+        },
+        {
+            "data": "2026-08-24",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 24,
+            "valor": 281.79
+        },
+        {
+            "data": "2026-08-24",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 18,
+            "valor": 118.74
         },
         {
             "data": "2026-08-25",
-            "itens": 11,
-            "pecas": 47,
-            "valor": 488.26
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 6,
+            "valor": 47.82
+        },
+        {
+            "data": "2026-08-25",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 37,
+            "valor": 413.14000000000004
+        },
+        {
+            "data": "2026-08-25",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 4,
+            "valor": 27.3
         },
         {
             "data": "2026-08-26",
-            "itens": 8,
-            "pecas": 31,
-            "valor": 274.35999999999996
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 6,
+            "valor": 53.510000000000005
+        },
+        {
+            "data": "2026-08-26",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 25,
+            "valor": 220.85
         },
         {
             "data": "2026-08-27",
-            "itens": 18,
-            "pecas": 86,
-            "valor": 859.96
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 41,
+            "valor": 328.40999999999997
+        },
+        {
+            "data": "2026-08-27",
+            "motivo": "FIM DE SALDO",
+            "itens": 14,
+            "pecas": 37,
+            "valor": 494.36
+        },
+        {
+            "data": "2026-08-27",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 3,
+            "pecas": 8,
+            "valor": 37.19
         },
         {
             "data": "2026-08-28",
-            "itens": 7,
-            "pecas": 177,
-            "valor": 1244.4099999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 160,
+            "valor": 1115.2
+        },
+        {
+            "data": "2026-08-28",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 15,
+            "valor": 114.57000000000001
+        },
+        {
+            "data": "2026-08-28",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 2,
+            "valor": 14.64
         },
         {
             "data": "2026-08-29",
-            "itens": 17,
-            "pecas": 34,
-            "valor": 437.57000000000005
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 4,
+            "valor": 40.04
+        },
+        {
+            "data": "2026-08-29",
+            "motivo": "FIM DE SALDO",
+            "itens": 14,
+            "pecas": 27,
+            "valor": 364.33000000000004
+        },
+        {
+            "data": "2026-08-29",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 3,
+            "valor": 33.2
         },
         {
             "data": "2026-08-30",
-            "itens": 2,
-            "pecas": 7,
-            "valor": 73.42999999999999
+            "motivo": "FIM DE SALDO",
+            "itens": 1,
+            "pecas": 6,
+            "valor": 62.94
+        },
+        {
+            "data": "2026-08-30",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 1,
+            "valor": 10.49
         },
         {
             "data": "2026-08-31",
-            "itens": 19,
-            "pecas": 332,
-            "valor": 2312.8900000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 6,
+            "pecas": 282,
+            "valor": 1762.3200000000002
+        },
+        {
+            "data": "2026-08-31",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 39,
+            "valor": 516.49
+        },
+        {
+            "data": "2026-08-31",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 11,
+            "valor": 34.08
         },
         {
             "data": "2026-09-01",
-            "itens": 17,
-            "pecas": 212,
-            "valor": 928.9399999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 171,
+            "valor": 179.84
+        },
+        {
+            "data": "2026-09-01",
+            "motivo": "FIM DE SALDO",
+            "itens": 11,
+            "pecas": 35,
+            "valor": 678.09
+        },
+        {
+            "data": "2026-09-01",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 6,
+            "valor": 71.01
         },
         {
             "data": "2026-09-02",
-            "itens": 5,
-            "pecas": 41,
-            "valor": 71.44
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 4,
+            "valor": 4.2
+        },
+        {
+            "data": "2026-09-02",
+            "motivo": "FIM DE SALDO",
+            "itens": 3,
+            "pecas": 10,
+            "valor": 38.080000000000005
+        },
+        {
+            "data": "2026-09-02",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 1,
+            "pecas": 27,
+            "valor": 29.160000000000004
         },
         {
             "data": "2026-09-03",
-            "itens": 21,
-            "pecas": 110,
-            "valor": 574.6299999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 54,
+            "valor": 220.64000000000001
+        },
+        {
+            "data": "2026-09-03",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 37,
+            "valor": 243.58999999999995
+        },
+        {
+            "data": "2026-09-03",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 19,
+            "valor": 110.4
         },
         {
             "data": "2026-09-04",
-            "itens": 49,
-            "pecas": 538,
-            "valor": 3514.49
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 8,
+            "pecas": 311,
+            "valor": 1484.6299999999999
+        },
+        {
+            "data": "2026-09-04",
+            "motivo": "FIM DE SALDO",
+            "itens": 18,
+            "pecas": 91,
+            "valor": 682.3899999999999
+        },
+        {
+            "data": "2026-09-04",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 23,
+            "pecas": 136,
+            "valor": 1347.4700000000003
         },
         {
             "data": "2026-09-05",
-            "itens": 16,
-            "pecas": 343,
-            "valor": 2978.96
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 26,
+            "valor": 501.07000000000005
+        },
+        {
+            "data": "2026-09-05",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 11,
+            "pecas": 317,
+            "valor": 2477.8900000000003
         },
         {
             "data": "2026-09-07",
+            "motivo": "VENDA MAIOR QUE O SALDO",
             "itens": 1,
             "pecas": 2,
             "valor": 12.48
         },
         {
             "data": "2026-09-08",
-            "itens": 20,
-            "pecas": 501,
-            "valor": 1357.72
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 66,
+            "valor": 323.48
+        },
+        {
+            "data": "2026-09-08",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 37,
+            "valor": 410.33000000000004
+        },
+        {
+            "data": "2026-09-08",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 7,
+            "pecas": 398,
+            "valor": 623.9100000000001
         },
         {
             "data": "2026-09-09",
-            "itens": 10,
-            "pecas": 92,
-            "valor": 867.2000000000003
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 3,
+            "pecas": 73,
+            "valor": 802.0600000000001
+        },
+        {
+            "data": "2026-09-09",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 15,
+            "valor": 41.099999999999994
+        },
+        {
+            "data": "2026-09-09",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 4,
+            "valor": 24.04
         },
         {
             "data": "2026-09-10",
-            "itens": 14,
-            "pecas": 116,
-            "valor": 820.91
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 61,
+            "valor": 621.1
+        },
+        {
+            "data": "2026-09-10",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 24,
+            "valor": 152.74
+        },
+        {
+            "data": "2026-09-10",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 31,
+            "valor": 47.06999999999999
         },
         {
             "data": "2026-09-11",
-            "itens": 17,
-            "pecas": 189,
-            "valor": 3635.57
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 4,
+            "pecas": 40,
+            "valor": 136.02
+        },
+        {
+            "data": "2026-09-11",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 14,
+            "valor": 176.17
+        },
+        {
+            "data": "2026-09-11",
+            "motivo": "SALDO PICLINHA",
+            "itens": 2,
+            "pecas": 93,
+            "valor": 2384.08
+        },
+        {
+            "data": "2026-09-11",
+            "motivo": "SEM SALDO",
+            "itens": 1,
+            "pecas": 19,
+            "valor": 412.67999999999995
+        },
+        {
+            "data": "2026-09-11",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 5,
+            "pecas": 23,
+            "valor": 526.62
         },
         {
             "data": "2026-09-12",
-            "itens": 25,
-            "pecas": 179,
-            "valor": 2331.06
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 73,
+            "valor": 931.96
+        },
+        {
+            "data": "2026-09-12",
+            "motivo": "FIM DE SALDO",
+            "itens": 14,
+            "pecas": 57,
+            "valor": 699.04
+        },
+        {
+            "data": "2026-09-12",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 49,
+            "valor": 700.06
         },
         {
             "data": "2026-09-14",
-            "itens": 17,
-            "pecas": 58,
-            "valor": 793.1499999999999
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 8,
+            "valor": 317.76
+        },
+        {
+            "data": "2026-09-14",
+            "motivo": "FIM DE SALDO",
+            "itens": 10,
+            "pecas": 38,
+            "valor": 329.16999999999996
+        },
+        {
+            "data": "2026-09-14",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 12,
+            "valor": 146.22
         },
         {
             "data": "2026-09-15",
-            "itens": 11,
-            "pecas": 235,
-            "valor": 1058.9299999999998
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 172,
+            "valor": 607.16
+        },
+        {
+            "data": "2026-09-15",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 28,
+            "valor": 78.82999999999998
+        },
+        {
+            "data": "2026-09-15",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 6,
+            "pecas": 35,
+            "valor": 372.94000000000005
         },
         {
             "data": "2026-09-16",
-            "itens": 8,
-            "pecas": 46,
-            "valor": 931.5799999999999
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 25,
+            "valor": 697.02
+        },
+        {
+            "data": "2026-09-16",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 2,
+            "pecas": 21,
+            "valor": 234.56
         },
         {
             "data": "2026-09-17",
-            "itens": 23,
-            "pecas": 146,
-            "valor": 1220.18
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 93,
+            "valor": 579.4100000000001
+        },
+        {
+            "data": "2026-09-17",
+            "motivo": "FIM DE SALDO",
+            "itens": 14,
+            "pecas": 38,
+            "valor": 511.98999999999995
+        },
+        {
+            "data": "2026-09-17",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 7,
+            "pecas": 15,
+            "valor": 128.78
         },
         {
             "data": "2026-09-18",
-            "itens": 16,
-            "pecas": 148,
-            "valor": 1615.8699999999997
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 116,
+            "valor": 1133.2300000000002
+        },
+        {
+            "data": "2026-09-18",
+            "motivo": "FIM DE SALDO",
+            "itens": 4,
+            "pecas": 21,
+            "valor": 23.03
+        },
+        {
+            "data": "2026-09-18",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 10,
+            "pecas": 11,
+            "valor": 459.61
         },
         {
             "data": "2026-09-19",
-            "itens": 16,
-            "pecas": 157,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 38,
+            "valor": 286.65
+        },
+        {
+            "data": "2026-09-19",
+            "motivo": "FIM DE SALDO",
+            "itens": 2,
+            "pecas": 2,
+            "valor": 12.54
+        },
+        {
+            "data": "2026-09-19",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 12,
+            "pecas": 117,
             "valor": 0.0
         },
         {
             "data": "2026-09-21",
-            "itens": 21,
-            "pecas": 51,
+            "motivo": "FIM DE SALDO",
+            "itens": 6,
+            "pecas": 28,
+            "valor": 0.0
+        },
+        {
+            "data": "2026-09-21",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 15,
+            "pecas": 23,
             "valor": 0.0
         },
         {
             "data": "2026-09-22",
-            "itens": 10,
-            "pecas": 36,
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 1,
+            "pecas": 8,
+            "valor": 8.72
+        },
+        {
+            "data": "2026-09-22",
+            "motivo": "FIM DE SALDO",
+            "itens": 5,
+            "pecas": 19,
+            "valor": 0.0
+        },
+        {
+            "data": "2026-09-22",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 4,
+            "pecas": 9,
             "valor": 0.0
         }
     ],
