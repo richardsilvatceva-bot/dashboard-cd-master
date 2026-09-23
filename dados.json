@@ -8482,9 +8482,9 @@
         {
             "data": "2026-01-29",
             "motivo": "DIVERGÊNCIA DE ESTOQUE",
-            "itens": 4,
-            "pecas": 1589,
-            "valor": 10828.499999999998
+            "itens": 3,
+            "pecas": 91,
+            "valor": 761.94
         },
         {
             "data": "2026-01-29",
@@ -8524,9 +8524,9 @@
         {
             "data": "2026-01-31",
             "motivo": "DIVERGÊNCIA DE ESTOQUE",
-            "itens": 5,
-            "pecas": 156,
-            "valor": 1564.94
+            "itens": 4,
+            "pecas": 138,
+            "valor": 1390.3400000000001
         },
         {
             "data": "2026-01-31",
@@ -8541,6 +8541,13 @@
             "itens": 5,
             "pecas": 160,
             "valor": 804.08
+        },
+        {
+            "data": "2026-01-31",
+            "motivo": "EQUALIZAÇÃO",
+            "itens": 1,
+            "pecas": 18,
+            "valor": 174.6
         },
         {
             "data": "2026-02-02",
@@ -9070,9 +9077,16 @@
         {
             "data": "2026-03-06",
             "motivo": "VENDA MAIOR QUE O SALDO",
-            "itens": 9,
-            "pecas": 1818,
-            "valor": 23752.950000000004
+            "itens": 8,
+            "pecas": 79,
+            "valor": 1198.12
+        },
+        {
+            "data": "2026-03-06",
+            "motivo": "EQUALIZAÇÃO",
+            "itens": 1,
+            "pecas": 1739,
+            "valor": 22554.83
         },
         {
             "data": "2026-03-07",
@@ -9146,13 +9160,6 @@
         },
         {
             "data": "2026-03-12",
-            "motivo": "CORTE/EQUALIZAÇÃO",
-            "itens": 1,
-            "pecas": 336,
-            "valor": 2150.4
-        },
-        {
-            "data": "2026-03-12",
             "motivo": "DIVERGÊNCIA DE ESTOQUE",
             "itens": 6,
             "pecas": 155,
@@ -9171,6 +9178,13 @@
             "itens": 6,
             "pecas": 312,
             "valor": 2163.43
+        },
+        {
+            "data": "2026-03-12",
+            "motivo": "EQUALIZAÇÃO",
+            "itens": 1,
+            "pecas": 336,
+            "valor": 2150.4
         },
         {
             "data": "2026-03-13",
@@ -9497,9 +9511,9 @@
         {
             "data": "2026-04-03",
             "motivo": "FIM DE SALDO",
-            "itens": 8,
-            "pecas": 29,
-            "valor": 317.09
+            "itens": 6,
+            "pecas": 19,
+            "valor": 199.86999999999998
         },
         {
             "data": "2026-04-03",
@@ -9507,6 +9521,13 @@
             "itens": 5,
             "pecas": 14,
             "valor": 259.83000000000004
+        },
+        {
+            "data": "2026-04-03",
+            "motivo": "EQUALIZAÇÃO",
+            "itens": 2,
+            "pecas": 10,
+            "valor": 117.22
         },
         {
             "data": "2026-04-06",
@@ -10806,9 +10827,16 @@
         {
             "data": "2026-06-23",
             "motivo": "VENDA MAIOR QUE O SALDO",
-            "itens": 4,
-            "pecas": 3344,
-            "valor": 144131.79
+            "itens": 3,
+            "pecas": 529,
+            "valor": 1298.69
+        },
+        {
+            "data": "2026-06-23",
+            "motivo": "EQUALIZAÇÃO",
+            "itens": 1,
+            "pecas": 1421,
+            "valor": 72101.54000000001
         },
         {
             "data": "2026-06-24",
