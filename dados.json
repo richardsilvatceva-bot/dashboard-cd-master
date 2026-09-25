@@ -1092,9 +1092,25 @@
             },
             {
                 "data": "2026-09-22",
-                "valorContagem": 821190.1500000003,
+                "valorContagem": 821190.1500000004,
                 "itensUnicos": 21,
-                "fisicoFinal": 127924.0,
+                "fisicoFinal": 128450.0,
+                "ajustePos": 373.27,
+                "ajusteNeg": -16.4
+            },
+            {
+                "data": "2026-09-23",
+                "valorContagem": 2196992.810000002,
+                "itensUnicos": 21,
+                "fisicoFinal": 125072.0,
+                "ajustePos": 108.67,
+                "ajusteNeg": -695.98
+            },
+            {
+                "data": "2026-09-25",
+                "valorContagem": 327.52,
+                "itensUnicos": 1,
+                "fisicoFinal": 46.0,
                 "ajustePos": 0.0,
                 "ajusteNeg": 0.0
             }
@@ -2953,11 +2969,11 @@
             },
             {
                 "data": "2026-09-15",
-                "total": 21,
+                "total": 20,
                 "curvas": {
                     "A": 7,
                     "B": 2,
-                    "C": 12
+                    "C": 11
                 }
             },
             {
@@ -3012,6 +3028,13 @@
                     "A": 7,
                     "B": 2,
                     "C": 12
+                }
+            },
+            {
+                "data": "2026-09-25",
+                "total": 1,
+                "curvas": {
+                    "C": 1
                 }
             }
         ],
@@ -8015,18 +8038,60 @@
             },
             {
                 "data": "2026-09-23",
-                "apontamentos": 4,
-                "encontrados": 0,
-                "repickFeito": 4,
-                "valorRepicking": 3848.4399999999996,
+                "apontamentos": 31,
+                "encontrados": 9,
+                "repickFeito": 31,
+                "valorRepicking": 27259.67,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 3,
-                        "valor": 3848.4399999999996
+                        "qtd": 21,
+                        "valor": 27259.67
                     },
                     "FALTA": {
-                        "qtd": 1,
-                        "valor": 370.32
+                        "qtd": 10,
+                        "valor": 5976.570000000001
+                    },
+                    "CORTE": {
+                        "qtd": 0,
+                        "valor": 0
+                    }
+                }
+            },
+            {
+                "data": "2026-09-24",
+                "apontamentos": 22,
+                "encontrados": 9,
+                "repickFeito": 22,
+                "valorRepicking": 8157.4400000000005,
+                "lancamentos": {
+                    "REPICKING": {
+                        "qtd": 10,
+                        "valor": 8157.4400000000005
+                    },
+                    "FALTA": {
+                        "qtd": 12,
+                        "valor": 12303.18
+                    },
+                    "CORTE": {
+                        "qtd": 0,
+                        "valor": 0
+                    }
+                }
+            },
+            {
+                "data": "2026-09-25",
+                "apontamentos": 2,
+                "encontrados": 0,
+                "repickFeito": 2,
+                "valorRepicking": 669.6099999999999,
+                "lancamentos": {
+                    "REPICKING": {
+                        "qtd": 2,
+                        "valor": 669.6099999999999
+                    },
+                    "FALTA": {
+                        "qtd": 0,
+                        "valor": 0
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8038,18 +8103,18 @@
         "turnos": [
             {
                 "turno": "1° TURNO",
-                "ocorrencias": 1266,
-                "itens": 219054.0
+                "ocorrencias": 1272,
+                "itens": 219834.0
             },
             {
                 "turno": "2° TURNO",
-                "ocorrencias": 1545,
-                "itens": 231798.0
+                "ocorrencias": 1582,
+                "itens": 236618.0
             },
             {
                 "turno": "3° TURNO",
-                "ocorrencias": 1517,
-                "itens": 339968.03
+                "ocorrencias": 1525,
+                "itens": 340459.03
             },
             {
                 "turno": "REWORK",
@@ -12380,17 +12445,45 @@
         },
         {
             "data": "2026-09-23",
-            "motivo": "VENDA MAIOR QUE O SALDO",
+            "motivo": "FIM DE SALDO",
             "itens": 3,
-            "pecas": 3,
+            "pecas": 4,
+            "valor": 0.0
+        },
+        {
+            "data": "2026-09-23",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 9,
+            "pecas": 17,
             "valor": 41.31
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "DIVERGÊNCIA DE ESTOQUE",
+            "itens": 2,
+            "pecas": 83,
+            "valor": 0.0
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "FIM DE SALDO",
+            "itens": 8,
+            "pecas": 19,
+            "valor": 0.0
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "VENDA MAIOR QUE O SALDO",
+            "itens": 12,
+            "pecas": 76,
+            "valor": 0.0
         }
     ],
     "sobras": [
         {
             "status": "DESCARTE ATUAL",
             "marca": "BOT",
-            "locacoes": 1,
+            "locacoes": 2,
             "valor": 0.0
         },
         {
@@ -12403,7 +12496,7 @@
             "status": "IRDR",
             "marca": "BOT",
             "locacoes": 1,
-            "valor": 6854.400000000001
+            "valor": 31122.0
         },
         {
             "status": "IRDR",
@@ -12462,6 +12555,12 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 10.92
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
             "locacoes": 4,
             "valor": 7655.670000000001
         },
@@ -12510,8 +12609,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 4,
-            "valor": 7398.72
+            "locacoes": 3,
+            "valor": 5549.04
         },
         {
             "status": "PENDENTE",
@@ -12707,12 +12806,6 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 85.52
-        },
-        {
-            "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
             "valor": 3.81
@@ -12762,6 +12855,12 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 59.11
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
             "locacoes": 2,
             "valor": 1916.34
         },
@@ -12780,8 +12879,14 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 3,
-            "valor": 694.6500000000001
+            "locacoes": 4,
+            "valor": 736.7500000000001
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 505.20000000000005
         },
         {
             "status": "PENDENTE",
@@ -12829,7 +12934,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 705.0
+            "valor": 587.5
         },
         {
             "status": "PENDENTE",
@@ -12847,13 +12952,19 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
+            "valor": 733.6
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
             "valor": 475.20000000000005
         },
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 28.92
+            "locacoes": 3,
+            "valor": 298.84000000000003
         },
         {
             "status": "PENDENTE",
@@ -12913,7 +13024,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 1704.78
+            "valor": 1549.8
         },
         {
             "status": "PENDENTE",
@@ -12960,8 +13071,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 509.04
+            "locacoes": 3,
+            "valor": 530.25
         },
         {
             "status": "PENDENTE",
@@ -12973,7 +13084,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 475.9599999999999
+            "valor": 449.87999999999994
         },
         {
             "status": "PENDENTE",
@@ -13003,7 +13114,13 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 315.12
+            "valor": 169.68
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 16.0
         },
         {
             "status": "PENDENTE",
@@ -13057,7 +13174,7 @@
             "status": "PENDENTE",
             "marca": "BOT",
             "locacoes": 1,
-            "valor": 96.46
+            "valor": 63.07
         },
         {
             "status": "PENDENTE",
@@ -13123,6 +13240,18 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
+            "valor": 810.6
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 5.78
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
             "valor": 628.4300000000001
         },
         {
@@ -13141,7 +13270,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 530.8
+            "valor": 477.71999999999997
         },
         {
             "status": "PENDENTE",
@@ -13236,8 +13365,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 34.24
+            "locacoes": 1,
+            "valor": 4.28
         },
         {
             "status": "PENDENTE",
@@ -13260,8 +13389,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 5.86
+            "locacoes": 2,
+            "valor": 35.160000000000004
         },
         {
             "status": "PENDENTE",
@@ -13308,8 +13437,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 3,
-            "valor": 31.349999999999998
+            "locacoes": 2,
+            "valor": 20.9
         },
         {
             "status": "PENDENTE",
@@ -13362,8 +13491,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 5.91
+            "locacoes": 2,
+            "valor": 17.73
         },
         {
             "status": "PENDENTE",
@@ -13428,20 +13557,14 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 60.75
+            "locacoes": 3,
+            "valor": 376.65
         },
         {
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
             "valor": 35.6
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 314.5
         },
         {
             "status": "PENDENTE",
@@ -13488,8 +13611,14 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 503.88000000000005
+            "locacoes": 1,
+            "valor": 494.00000000000006
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 3.97
         },
         {
             "status": "PENDENTE",
@@ -13589,6 +13718,12 @@
         },
         {
             "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 442.79999999999995
+        },
+        {
+            "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 28.699999999999996
@@ -13633,7 +13768,13 @@
             "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
-            "valor": 184.38
+            "valor": 20.28
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 158.04
         },
         {
             "status": "PENDENTE",
@@ -13658,6 +13799,12 @@
             "marca": "BOTI",
             "locacoes": 4,
             "valor": 663.38
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 1.3
         },
         {
             "status": "PENDENTE",
@@ -13692,8 +13839,8 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 2.47
+            "locacoes": 2,
+            "valor": 9.88
         },
         {
             "status": "PENDENTE",
@@ -13704,20 +13851,14 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 3,
-            "valor": 556.83
+            "locacoes": 1,
+            "valor": 169.47
         },
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 3,
             "valor": 846.1700000000001
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 324.4
         },
         {
             "status": "PENDENTE",
@@ -13740,8 +13881,8 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 11.61
+            "locacoes": 2,
+            "valor": 46.44
         },
         {
             "status": "PENDENTE",
@@ -13793,9 +13934,27 @@
         },
         {
             "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 278.95
+        },
+        {
+            "status": "PENDENTE",
             "marca": "BOT",
             "locacoes": 1,
             "valor": 18.57
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 518.65
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 9.43
         },
         {
             "status": "PENDENTE",
@@ -13860,8 +14019,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 94.08
+            "locacoes": 1,
+            "valor": 80.64
         },
         {
             "status": "PENDENTE",
@@ -13873,7 +14032,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 257.32
+            "valor": 202.17999999999998
         },
         {
             "status": "PENDENTE",
@@ -13949,12 +14108,6 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "BOT, QDB",
-            "locacoes": 1,
-            "valor": 22.82
-        },
-        {
-            "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 14.52
@@ -13986,8 +14139,8 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 64.56
+            "locacoes": 2,
+            "valor": 75.32000000000001
         },
         {
             "status": "PENDENTE",
@@ -14054,12 +14207,6 @@
             "marca": "BOT",
             "locacoes": 1,
             "valor": 68.69999999999999
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 549.5999999999999
         },
         {
             "status": "PENDENTE",
@@ -14168,6 +14315,12 @@
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 2.17
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 84.36
         },
         {
             "status": "PENDENTE",
@@ -14406,8 +14559,14 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 10.84
+            "locacoes": 1,
+            "valor": 5.42
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 1623.3600000000001
         },
         {
             "status": "PENDENTE",
@@ -14459,6 +14618,12 @@
         },
         {
             "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 10,
+            "valor": 18876.0
+        },
+        {
+            "status": "PENDENTE",
             "marca": "QDB",
             "locacoes": 3,
             "valor": 556.4999999999999
@@ -14468,12 +14633,6 @@
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 760.2
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 258.0
         },
         {
             "status": "PENDENTE",
@@ -14491,19 +14650,13 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 133.4
+            "valor": 80.03999999999999
         },
         {
             "status": "PENDENTE",
             "marca": "BOT",
             "locacoes": 2,
             "valor": 43.45
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 639.36
         },
         {
             "status": "PENDENTE",
@@ -14533,7 +14686,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 9.399999999999999
+            "valor": 7.52
         },
         {
             "status": "PENDENTE",
@@ -14588,12 +14741,6 @@
             "marca": "BOTI",
             "locacoes": 1,
             "valor": 46.08
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 256.56
         },
         {
             "status": "PENDENTE",
@@ -14681,12 +14828,6 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 250.74
-        },
-        {
-            "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 1.48
@@ -14737,7 +14878,13 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 422.96000000000004
+            "valor": 421.6
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 2,
+            "valor": 32.64
         },
         {
             "status": "PENDENTE",
@@ -14821,12 +14968,6 @@
             "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
-            "valor": 298.0
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "EUDORA",
-            "locacoes": 1,
             "valor": 17.16
         },
         {
@@ -14844,8 +14985,8 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 23.12
+            "locacoes": 3,
+            "valor": 80.92
         },
         {
             "status": "PENDENTE",
@@ -14861,6 +15002,12 @@
         },
         {
             "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 32.98
+        },
+        {
+            "status": "PENDENTE",
             "marca": "BOT",
             "locacoes": 1,
             "valor": 11.85
@@ -14869,7 +15016,7 @@
             "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
-            "valor": 280.56
+            "valor": 198.73
         },
         {
             "status": "PENDENTE",
@@ -14887,7 +15034,7 @@
             "status": "PENDENTE",
             "marca": "BOT",
             "locacoes": 1,
-            "valor": 66.12
+            "valor": 49.589999999999996
         },
         {
             "status": "PENDENTE",
@@ -15084,8 +15231,8 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 2,
-            "valor": 528.49
+            "locacoes": 1,
+            "valor": 51.56
         },
         {
             "status": "PENDENTE",
@@ -15114,8 +15261,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 22.22
+            "locacoes": 2,
+            "valor": 33.33
         },
         {
             "status": "PENDENTE",
@@ -15162,8 +15309,14 @@
         {
             "status": "PENDENTE",
             "marca": "QDB",
+            "locacoes": 2,
+            "valor": 21.57
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
             "locacoes": 1,
-            "valor": 14.38
+            "valor": 91.12
         },
         {
             "status": "PENDENTE",
@@ -15182,6 +15335,12 @@
             "marca": "BOT",
             "locacoes": 1,
             "valor": 288.42
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 60.72
         },
         {
             "status": "PENDENTE",
@@ -15246,8 +15405,8 @@
         {
             "status": "PENDENTE",
             "marca": "QDB",
-            "locacoes": 1,
-            "valor": 7.72
+            "locacoes": 2,
+            "valor": 15.44
         },
         {
             "status": "PENDENTE",
@@ -15278,6 +15437,12 @@
             "marca": "QDB",
             "locacoes": 1,
             "valor": 51.870000000000005
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 14.82
         },
         {
             "status": "PENDENTE",
@@ -15377,12 +15542,6 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "BOT",
-            "locacoes": 1,
-            "valor": 20.5
-        },
-        {
-            "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 4.1
@@ -15432,8 +15591,8 @@
         {
             "status": "PENDENTE",
             "marca": "QDB",
-            "locacoes": 1,
-            "valor": 67.32
+            "locacoes": 2,
+            "valor": 71.27999999999999
         },
         {
             "status": "PENDENTE",
@@ -15494,6 +15653,12 @@
             "marca": "BOTI",
             "locacoes": 1,
             "valor": 184.96
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 533.12
         },
         {
             "status": "PENDENTE",
@@ -15690,8 +15855,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 366.24
+            "locacoes": 4,
+            "valor": 693.24
         },
         {
             "status": "PENDENTE",
@@ -15769,7 +15934,13 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 26.98
+            "valor": 14.84
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 40.47
         },
         {
             "status": "PENDENTE",
@@ -15882,8 +16053,8 @@
         {
             "status": "PENDENTE",
             "marca": "QDB",
-            "locacoes": 1,
-            "valor": 27.76
+            "locacoes": 2,
+            "valor": 117.98
         },
         {
             "status": "PENDENTE",
@@ -15906,14 +16077,26 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 4,
-            "valor": 738.7199999999999
+            "locacoes": 1,
+            "valor": 27.88
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 5,
+            "valor": 978.1199999999999
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 239.4
         },
         {
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 6,
-            "valor": 1260.0
+            "valor": 1212.0
         },
         {
             "status": "PENDENTE",
@@ -15943,6 +16126,12 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
+            "valor": 15.94
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
             "valor": 128.06
         },
         {
@@ -15956,12 +16145,6 @@
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 15.09
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 3150.7200000000003
         },
         {
             "status": "PENDENTE",
@@ -15990,8 +16173,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 27.75
+            "locacoes": 3,
+            "valor": 46.25
         },
         {
             "status": "PENDENTE",
@@ -16015,7 +16198,7 @@
             "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
-            "valor": 123.84
+            "valor": 108.36
         },
         {
             "status": "PENDENTE",
@@ -16045,7 +16228,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 332.82
+            "valor": 221.88
         },
         {
             "status": "PENDENTE",
@@ -16058,6 +16241,12 @@
             "marca": "BOTI",
             "locacoes": 1,
             "valor": 501.21999999999997
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 21.49
         },
         {
             "status": "PENDENTE",
@@ -16098,8 +16287,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 31.9
+            "locacoes": 2,
+            "valor": 47.849999999999994
         },
         {
             "status": "PENDENTE",
@@ -16112,6 +16301,12 @@
             "marca": "QDB",
             "locacoes": 1,
             "valor": 8.17
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 9.42
         },
         {
             "status": "PENDENTE",
@@ -16146,8 +16341,8 @@
         {
             "status": "PENDENTE",
             "marca": "QDB",
-            "locacoes": 1,
-            "valor": 61.12
+            "locacoes": 2,
+            "valor": 76.39999999999999
         },
         {
             "status": "PENDENTE",
@@ -16249,7 +16444,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 909.9300000000001
+            "valor": 891.36
         },
         {
             "status": "PENDENTE",
@@ -16314,8 +16509,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 1593.71
+            "locacoes": 3,
+            "valor": 1696.53
         },
         {
             "status": "PENDENTE",
@@ -16338,8 +16533,8 @@
         {
             "status": "PENDENTE",
             "marca": "QDB",
-            "locacoes": 1,
-            "valor": 12.56
+            "locacoes": 2,
+            "valor": 25.12
         },
         {
             "status": "PENDENTE",
@@ -16351,7 +16546,13 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 749.8799999999999
+            "valor": 708.2199999999999
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 32.67
         },
         {
             "status": "PENDENTE",
@@ -16361,21 +16562,15 @@
         },
         {
             "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 279.65
+        },
+        {
+            "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 672.0
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 1266.56
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "EUDORA",
-            "locacoes": 4,
-            "valor": 2533.12
         },
         {
             "status": "PENDENTE",
@@ -16422,8 +16617,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 4,
-            "valor": 38.4
+            "locacoes": 5,
+            "valor": 53.76
         },
         {
             "status": "PENDENTE",
@@ -16478,6 +16673,18 @@
             "marca": "BOTI",
             "locacoes": 7,
             "valor": 4448.999999999999
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 563.54
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 2243.5
         },
         {
             "status": "PENDENTE",
@@ -16668,8 +16875,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 12.5
+            "locacoes": 2,
+            "valor": 25.0
         },
         {
             "status": "PENDENTE",
@@ -16729,6 +16936,12 @@
             "status": "PENDENTE",
             "marca": "QDB",
             "locacoes": 1,
+            "valor": 37.08
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
             "valor": 24.96
         },
         {
@@ -16760,12 +16973,6 @@
             "marca": "BOTI",
             "locacoes": 1,
             "valor": 95.85
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 2.59
         },
         {
             "status": "PENDENTE",
@@ -16812,8 +17019,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 3,
-            "valor": 1427.2100000000003
+            "locacoes": 5,
+            "valor": 3120.5100000000007
         },
         {
             "status": "PENDENTE",
@@ -16836,8 +17043,8 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 6.12
+            "locacoes": 2,
+            "valor": 91.80000000000001
         },
         {
             "status": "PENDENTE",
@@ -16873,25 +17080,25 @@
             "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
-            "valor": 136.99
+            "valor": 93.73
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 7.11
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 4,
+            "valor": 245.18999999999994
         },
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 3,
-            "valor": 99.54
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "EUDORA",
-            "locacoes": 2,
-            "valor": 156.02999999999997
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "EUDORA",
-            "locacoes": 2,
-            "valor": 206.64000000000001
+            "valor": 265.68
         },
         {
             "status": "PENDENTE",
@@ -16908,8 +17115,8 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 686.0
+            "locacoes": 2,
+            "valor": 715.4
         },
         {
             "status": "PENDENTE",
@@ -16932,8 +17139,26 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
+            "locacoes": 2,
+            "valor": 102.15
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 1000.3
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 8,
+            "valor": 4001.2000000000003
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
             "locacoes": 1,
-            "valor": 20.43
+            "valor": 6.16
         },
         {
             "status": "PENDENTE",
@@ -17027,12 +17252,6 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "BOT",
-            "locacoes": 1,
-            "valor": 63.910000000000004
-        },
-        {
-            "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
             "valor": 9.13
@@ -17066,6 +17285,12 @@
             "marca": "BOTI",
             "locacoes": 2,
             "valor": 1314.72
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 74.7
         },
         {
             "status": "PENDENTE",
@@ -17106,8 +17331,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 411.4
+            "locacoes": 3,
+            "valor": 468.6
         },
         {
             "status": "PENDENTE",
@@ -17160,12 +17385,6 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 1141.8000000000002
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "EUDORA",
             "locacoes": 2,
             "valor": 45.849999999999994
         },
@@ -17183,9 +17402,15 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "QDB",
+            "marca": "BOTI",
             "locacoes": 1,
-            "valor": 95.7
+            "valor": 38.28
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 2,
+            "valor": 105.27000000000001
         },
         {
             "status": "PENDENTE",
@@ -17196,8 +17421,14 @@
         {
             "status": "PENDENTE",
             "marca": "QDB",
-            "locacoes": 4,
-            "valor": 382.66
+            "locacoes": 1,
+            "valor": 3.71
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 5,
+            "valor": 386.27000000000004
         },
         {
             "status": "PENDENTE",
@@ -17209,7 +17440,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 273.28
+            "valor": 89.66999999999999
         },
         {
             "status": "PENDENTE",
@@ -17226,8 +17457,8 @@
         {
             "status": "PENDENTE",
             "marca": "QDB",
-            "locacoes": 3,
-            "valor": 12.809999999999999
+            "locacoes": 5,
+            "valor": 51.239999999999995
         },
         {
             "status": "PENDENTE",
@@ -17315,6 +17546,18 @@
         },
         {
             "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 144.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 72.0
+        },
+        {
+            "status": "PENDENTE",
             "marca": "BOT",
             "locacoes": 1,
             "valor": 39.9
@@ -17328,8 +17571,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 27.88
+            "locacoes": 3,
+            "valor": 41.82
         },
         {
             "status": "PENDENTE",
@@ -17393,12 +17636,6 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 57.39
-        },
-        {
-            "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 13.98
@@ -17414,6 +17651,12 @@
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 758.91
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 2,
+            "valor": 12.34
         },
         {
             "status": "PENDENTE",
@@ -17484,8 +17727,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 3,
-            "valor": 4061.8600000000006
+            "locacoes": 4,
+            "valor": 4065.9300000000007
         },
         {
             "status": "PENDENTE",
@@ -17508,14 +17751,14 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
+            "locacoes": 2,
             "valor": 195.39000000000001
         },
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 2057.85
+            "locacoes": 2,
+            "valor": 2082.06
         },
         {
             "status": "PENDENTE",
@@ -17635,25 +17878,19 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 277.44
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 1148.16
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 615.36
+            "valor": 150.28
         },
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 2,
-            "valor": 314.09000000000003
+            "locacoes": 3,
+            "valor": 378.19000000000005
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 307.68
         },
         {
             "status": "PENDENTE",
@@ -17726,12 +17963,6 @@
             "marca": "BOT",
             "locacoes": 1,
             "valor": 28.53
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 347.76
         },
         {
             "status": "PENDENTE",
@@ -17821,13 +18052,13 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 25.96
+            "valor": 13.67
         },
         {
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 8.19
+            "valor": 25.96
         },
         {
             "status": "PENDENTE",
@@ -17838,8 +18069,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 1474.56
+            "locacoes": 1,
+            "valor": 737.28
         },
         {
             "status": "PENDENTE",
@@ -17856,20 +18087,32 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 3,
-            "valor": 1136.1599999999999
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "QDB",
-            "locacoes": 1,
-            "valor": 21.240000000000002
+            "locacoes": 6,
+            "valor": 1338.6699999999998
         },
         {
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 28.01
+            "valor": 89.42
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 2,
+            "valor": 28.32
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 28.09
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 56.02
         },
         {
             "status": "PENDENTE",
@@ -17881,7 +18124,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 529.2
+            "valor": 485.1
         },
         {
             "status": "PENDENTE",
@@ -17894,6 +18137,12 @@
             "marca": "QDB",
             "locacoes": 2,
             "valor": 15.98
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 63.839999999999996
         },
         {
             "status": "PENDENTE",
@@ -17941,7 +18190,13 @@
             "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
-            "valor": 1142.1000000000001
+            "valor": 7.94
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 2,
+            "valor": 1360.8000000000002
         },
         {
             "status": "PENDENTE",
@@ -17959,7 +18214,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 584.22
+            "valor": 389.48
         },
         {
             "status": "PENDENTE",
@@ -17989,7 +18244,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 45.26
+            "valor": 22.63
         },
         {
             "status": "PENDENTE",
@@ -18013,12 +18268,6 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 537.66
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
             "valor": 42.57000000000001
         },
         {
@@ -18035,12 +18284,6 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 420.41999999999996
-        },
-        {
-            "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 38.22
@@ -18050,6 +18293,12 @@
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 62.230000000000004
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 21.36
         },
         {
             "status": "PENDENTE",
@@ -18073,19 +18322,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 24.48
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 210.14
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 370.32
+            "valor": 65.3
         },
         {
             "status": "PENDENTE",
@@ -18096,8 +18333,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 2,
-            "valor": 255.20000000000002
+            "locacoes": 1,
+            "valor": 253.00000000000003
         },
         {
             "status": "PENDENTE",
@@ -18126,8 +18363,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 141.67999999999998
+            "locacoes": 2,
+            "valor": 627.4399999999999
         },
         {
             "status": "PENDENTE",
@@ -18137,9 +18374,15 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "EUDORA",
+            "marca": "BOTI",
             "locacoes": 1,
-            "valor": 0.94
+            "valor": 20.97
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 2,
+            "valor": 5.639999999999999
         },
         {
             "status": "PENDENTE",
@@ -18253,7 +18496,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 44.04
+            "valor": 177.3
         },
         {
             "status": "PENDENTE",
@@ -18361,13 +18604,19 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
+            "valor": 167.2
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
             "valor": 63.63
         },
         {
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 8,
-            "valor": 11310.6
+            "valor": 10558.800000000001
         },
         {
             "status": "PENDENTE",
@@ -18390,8 +18639,8 @@
         {
             "status": "PENDENTE",
             "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 31.650000000000002
+            "locacoes": 2,
+            "valor": 63.300000000000004
         },
         {
             "status": "PENDENTE",
@@ -18428,12 +18677,6 @@
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 40.2
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 1549.28
         },
         {
             "status": "PENDENTE",
@@ -18493,13 +18736,19 @@
             "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
+            "valor": 21.49
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
             "valor": 295.5
         },
         {
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 174.08
+            "valor": 790.4
         },
         {
             "status": "PENDENTE",
@@ -18511,7 +18760,7 @@
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
-            "valor": 59.84
+            "valor": 419.68
         },
         {
             "status": "PENDENTE",
@@ -18624,8 +18873,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 29.189999999999998
+            "locacoes": 2,
+            "valor": 54.209999999999994
         },
         {
             "status": "PENDENTE",
@@ -18671,18 +18920,6 @@
         },
         {
             "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 2812.68
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "EUDORA",
-            "locacoes": 1,
-            "valor": 3.3
-        },
-        {
-            "status": "PENDENTE",
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 215.04000000000002
@@ -18707,6 +18944,12 @@
         },
         {
             "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 0.0
+        },
+        {
+            "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
             "valor": 607.1999999999999
@@ -18720,8 +18963,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 3,
-            "valor": 799.2
+            "locacoes": 6,
+            "valor": 1598.4000000000003
         },
         {
             "status": "PENDENTE",
@@ -18744,8 +18987,8 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 157.08
+            "locacoes": 2,
+            "valor": 158.62
         },
         {
             "status": "PENDENTE",
@@ -18792,32 +19035,770 @@
         {
             "status": "PENDENTE",
             "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 0.0
+            "locacoes": 2,
+            "valor": 329.3
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 3,
+            "valor": 394.79999999999995
         },
         {
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 1,
-            "valor": 0.0
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 0.0
-        },
-        {
-            "status": "PENDENTE",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 0.0
+            "valor": 181.5
         },
         {
             "status": "PENDENTE",
             "marca": "BOTI",
             "locacoes": 2,
+            "valor": 940.7199999999999
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 476.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 94.92
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 2,
+            "valor": 678.54
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 532.24
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 43.62
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 69.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 545.0999999999999
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 48.51
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 7.55
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 4.75
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 128.94
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
             "valor": 0.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 393.84000000000003
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 43.6
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 20.8
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 19.5
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 23.310000000000002
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 3.96
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 10.15
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 4138.82
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 13.22
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 10.169999999999998
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 8.72
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 25.68
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 4.68
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 7.37
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 11.7
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 33.84
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 8.04
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 24.119999999999997
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 14.73
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 1151.92
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 860.16
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 61.44
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 548.5000000000001
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 7,
+            "valor": 2849.7
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 4,
+            "valor": 785.92
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 4,
+            "valor": 1364.16
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 8560.2
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 3501.9
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 425.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 391.40000000000003
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 285.46000000000004
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 350.35
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 3,
+            "valor": 595.2
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 381.92
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 1129.4099999999999
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 1129.4099999999999
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 460.79999999999995
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 230.39999999999998
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 262.5
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 6,
+            "valor": 4073.34
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 140.46
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 403.20000000000005
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 275.85
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 9.12
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 66.64
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 5.739999999999999
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 490.56000000000006
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 204.47
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 240.66
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 38.46
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 24.599999999999998
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 0.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 28.72
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 344.64
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 34.2
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 1026.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 344.76
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 141.44
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 186.8
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 5.48
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 132.28
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 216.92999999999998
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 40.78
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 32.2
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 23.580000000000002
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 381.59999999999997
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 983.25
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 132.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 713.96
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 68.16
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 152.88
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 87.75
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 135.72
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 158.27
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 210.54
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 6.38
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 10.01
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 9.89
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 19.81
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 20.22
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "QDB",
+            "locacoes": 1,
+            "valor": 15.88
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 32.92
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 2,
+            "valor": 26.08
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 195.73
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 11.6
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 30.03
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 5.18
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "EUDORA",
+            "locacoes": 1,
+            "valor": 321.44
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 51.73
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 132.72
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 7.7
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 12.25
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 682.04
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 7.16
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 8.53
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 1145.28
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 2,
+            "valor": 1628.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 1072.32
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 6,
+            "valor": 5803.280000000001
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 0.0
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 640.11
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 748.8
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 534.76
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 305.79999999999995
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 103.04
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 287.67
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 12.52
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 14.07
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 20.36
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 618.8
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 63.27
+        },
+        {
+            "status": "PENDENTE",
+            "marca": "BOTI",
+            "locacoes": 1,
+            "valor": 12.54
         },
         {
             "status": "VALIDAR",
@@ -18947,12 +19928,6 @@
         },
         {
             "status": "VALIDAR",
-            "marca": "BOTI",
-            "locacoes": 1,
-            "valor": 0.0
-        },
-        {
-            "status": "VALIDAR",
             "marca": "EUDORA",
             "locacoes": 1,
             "valor": 10.55
@@ -18965,19 +19940,35 @@
         },
         {
             "status": "VALIDAR",
-            "marca": "EUDORA",
+            "marca": "BOTI",
             "locacoes": 1,
             "valor": 0.0
         }
     ],
     "sobras_cruzamento": [
         {
-            "status": "PENDENTE",
-            "sku": "59681",
-            "qtd_sobra": 192,
-            "valor_sobra": 3150.7200000000003,
+            "status": "IRDR",
+            "sku": "94159",
+            "qtd_sobra": 525,
+            "valor_sobra": 13671.0,
             "saldo_divcic": 0,
-            "saldo_piclinha": 192
+            "saldo_piclinha": 45
+        },
+        {
+            "status": "IRDR",
+            "sku": "94159",
+            "qtd_sobra": 525,
+            "valor_sobra": 13671.0,
+            "saldo_divcic": 0,
+            "saldo_piclinha": 45
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "44742",
+            "qtd_sobra": 34,
+            "valor_sobra": 4138.82,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
         },
         {
             "status": "PENDENTE",
@@ -18989,17 +19980,17 @@
         },
         {
             "status": "PENDENTE",
-            "sku": "85995",
-            "qtd_sobra": 60,
-            "valor_sobra": 1141.8000000000002,
-            "saldo_divcic": 0,
-            "saldo_piclinha": 63
+            "sku": "89681",
+            "qtd_sobra": 96,
+            "valor_sobra": 1072.32,
+            "saldo_divcic": 1,
+            "saldo_piclinha": 0
         },
         {
             "status": "PENDENTE",
-            "sku": "89300",
-            "qtd_sobra": 3,
-            "valor_sobra": 584.22,
+            "sku": "49963",
+            "qtd_sobra": 48,
+            "valor_sobra": 490.56000000000006,
             "saldo_divcic": 1,
             "saldo_piclinha": 0
         },
@@ -19009,38 +20000,6 @@
             "qtd_sobra": 42,
             "valor_sobra": 409.08,
             "saldo_divcic": 3,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "48286",
-            "qtd_sobra": 30,
-            "valor_sobra": 352.5,
-            "saldo_divcic": 10,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "48286",
-            "qtd_sobra": 30,
-            "valor_sobra": 352.5,
-            "saldo_divcic": 10,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "48685",
-            "qtd_sobra": 39,
-            "valor_sobra": 315.12,
-            "saldo_divcic": 14,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "VALIDAR",
-            "sku": "88007",
-            "qtd_sobra": 48,
-            "valor_sobra": 295.68,
-            "saldo_divcic": 96,
             "saldo_piclinha": 0
         },
         {
@@ -19061,18 +20020,18 @@
         },
         {
             "status": "PENDENTE",
-            "sku": "85935",
-            "qtd_sobra": 13,
-            "valor_sobra": 273.26,
-            "saldo_divcic": 34,
+            "sku": "80888",
+            "qtd_sobra": 85,
+            "valor_sobra": 279.65,
+            "saldo_divcic": 84,
             "saldo_piclinha": 0
         },
         {
             "status": "PENDENTE",
-            "sku": "52147",
-            "qtd_sobra": 28,
-            "valor_sobra": 257.32,
-            "saldo_divcic": 6,
+            "sku": "85935",
+            "qtd_sobra": 13,
+            "valor_sobra": 273.26,
+            "saldo_divcic": 34,
             "saldo_piclinha": 0
         },
         {
@@ -19085,14 +20044,6 @@
         },
         {
             "status": "PENDENTE",
-            "sku": "89561",
-            "qtd_sobra": 7,
-            "valor_sobra": 210.14,
-            "saldo_divcic": 0,
-            "saldo_piclinha": 18
-        },
-        {
-            "status": "PENDENTE",
             "sku": "58310",
             "qtd_sobra": 21,
             "valor_sobra": 209.37,
@@ -19101,18 +20052,10 @@
         },
         {
             "status": "PENDENTE",
-            "sku": "87042",
-            "qtd_sobra": 9,
-            "valor_sobra": 195.39000000000001,
-            "saldo_divcic": 1,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
             "sku": "51164",
             "qtd_sobra": 33,
             "valor_sobra": 193.71,
-            "saldo_divcic": 71,
+            "saldo_divcic": 70,
             "saldo_piclinha": 0
         },
         {
@@ -19125,34 +20068,10 @@
         },
         {
             "status": "PENDENTE",
-            "sku": "53838",
-            "qtd_sobra": 10,
-            "valor_sobra": 133.4,
-            "saldo_divcic": 5,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
             "sku": "94758",
             "qtd_sobra": 23,
             "valor_sobra": 133.4,
             "saldo_divcic": 5,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "53838",
-            "qtd_sobra": 10,
-            "valor_sobra": 133.4,
-            "saldo_divcic": 5,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "87042",
-            "qtd_sobra": 6,
-            "valor_sobra": 130.26,
-            "saldo_divcic": 1,
             "saldo_piclinha": 0
         },
         {
@@ -19173,18 +20092,18 @@
         },
         {
             "status": "PENDENTE",
-            "sku": "47364",
-            "qtd_sobra": 8,
-            "valor_sobra": 85.52,
-            "saldo_divcic": 12,
-            "saldo_piclinha": 45
-        },
-        {
-            "status": "PENDENTE",
             "sku": "75374",
             "qtd_sobra": 5,
             "valor_sobra": 82.89999999999999,
             "saldo_divcic": 2,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "84971",
+            "qtd_sobra": 4,
+            "valor_sobra": 81.72,
+            "saldo_divcic": 3,
             "saldo_piclinha": 0
         },
         {
@@ -19337,7 +20256,7 @@
             "qtd_sobra": 2,
             "valor_sobra": 23.18,
             "saldo_divcic": 15,
-            "saldo_piclinha": 0
+            "saldo_piclinha": 45
         },
         {
             "status": "PENDENTE",
@@ -19445,30 +20364,6 @@
         },
         {
             "status": "PENDENTE",
-            "sku": "50207",
-            "qtd_sobra": 1,
-            "valor_sobra": 10.45,
-            "saldo_divcic": 8,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "50207",
-            "qtd_sobra": 1,
-            "valor_sobra": 10.45,
-            "saldo_divcic": 8,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "50207",
-            "qtd_sobra": 1,
-            "valor_sobra": 10.45,
-            "saldo_divcic": 8,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
             "sku": "2276",
             "qtd_sobra": 2,
             "valor_sobra": 9.66,
@@ -19485,22 +20380,6 @@
         },
         {
             "status": "PENDENTE",
-            "sku": "53971",
-            "qtd_sobra": 5,
-            "valor_sobra": 9.399999999999999,
-            "saldo_divcic": 1,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "52147",
-            "qtd_sobra": 1,
-            "valor_sobra": 9.19,
-            "saldo_divcic": 6,
-            "saldo_piclinha": 0
-        },
-        {
-            "status": "PENDENTE",
             "sku": "88521",
             "qtd_sobra": 1,
             "valor_sobra": 8.75,
@@ -19513,6 +20392,22 @@
             "qtd_sobra": 9,
             "valor_sobra": 7.83,
             "saldo_divcic": 14,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "53502",
+            "qtd_sobra": 1,
+            "valor_sobra": 7.7,
+            "saldo_divcic": 21,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "53074",
+            "qtd_sobra": 1,
+            "valor_sobra": 7.16,
+            "saldo_divcic": 36,
             "saldo_piclinha": 0
         },
         {
@@ -19537,6 +20432,22 @@
             "qtd_sobra": 1,
             "valor_sobra": 5.44,
             "saldo_divcic": 6,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "75164",
+            "qtd_sobra": 1,
+            "valor_sobra": 5.18,
+            "saldo_divcic": 8,
+            "saldo_piclinha": 0
+        },
+        {
+            "status": "PENDENTE",
+            "sku": "58190",
+            "qtd_sobra": 1,
+            "valor_sobra": 3.96,
+            "saldo_divcic": 16,
             "saldo_piclinha": 0
         },
         {
@@ -19586,14 +20497,6 @@
             "valor_sobra": 1.03,
             "saldo_divcic": 11,
             "saldo_piclinha": 0
-        },
-        {
-            "status": "VALIDAR",
-            "sku": "88007",
-            "qtd_sobra": 39,
-            "valor_sobra": 0.0,
-            "saldo_divcic": 96,
-            "saldo_piclinha": 0
         }
     ],
     "pic_div": [
@@ -19601,2682 +20504,2658 @@
             "setor": "PICLINHA",
             "familia": "Acessórios",
             "aging": 4,
+            "valor": 472.96
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Acessórios",
+            "aging": 6,
             "valor": 478.08000000000004
         },
         {
             "setor": "PICLINHA",
             "familia": "Acessórios",
             "aging": 2,
-            "valor": 472.96
+            "valor": 278.88
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
-            "aging": 4,
-            "valor": 769.68
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cabelos",
-            "aging": 5,
-            "valor": 1083.84
+            "aging": 6,
+            "valor": 513.12
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
             "aging": 7,
-            "valor": 1328.67
+            "valor": 759.44
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
-            "aging": 8,
+            "aging": 10,
             "valor": 295.20000000000005
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
-            "aging": 9,
-            "valor": 339.36
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cabelos",
-            "aging": 10,
-            "valor": 1198.89
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cabelos",
-            "aging": 18,
-            "valor": 314.4
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cabelos",
-            "aging": 19,
+            "aging": 21,
             "valor": 106.04
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
-            "aging": 20,
-            "valor": 481.8
+            "aging": 2,
+            "valor": 521.55
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
-            "aging": 12,
-            "valor": 481.04999999999995
+            "aging": 20,
+            "valor": 314.4
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Cuid. C/ Barba",
+            "aging": 1,
+            "valor": 404.79999999999995
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
             "aging": 4,
-            "valor": 347.40000000000003
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cuid. C/ Pele",
-            "aging": 6,
-            "valor": 283.14
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cuid. C/ Pele",
-            "aging": 10,
-            "valor": 250.95
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cuid. C/ Pele",
-            "aging": 2,
             "valor": 480.96
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 31,
-            "valor": 975.52
+            "aging": 6,
+            "valor": 347.40000000000003
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 20,
+            "aging": 8,
+            "valor": 283.14
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Cuid. C/ Pele",
+            "aging": 22,
             "valor": 221.20000000000002
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 15,
-            "valor": 271.68
+            "aging": 25,
+            "valor": 347.40000000000003
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 23,
-            "valor": 762.9599999999999
+            "aging": 33,
+            "valor": 306.4
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. Faciais",
-            "aging": 5,
+            "aging": 7,
             "valor": 1210.1399999999999
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. Faciais",
-            "aging": 19,
+            "aging": 21,
             "valor": 3024.0
         },
         {
             "setor": "PICLINHA",
-            "familia": "Cuid. Faciais",
-            "aging": 2,
-            "valor": 3150.7200000000003
+            "familia": "Desodorantes",
+            "aging": 4,
+            "valor": 1000.0
         },
         {
             "setor": "PICLINHA",
             "familia": "Desodorantes",
-            "aging": 19,
+            "aging": 21,
             "valor": 1458.0
         },
         {
             "setor": "PICLINHA",
-            "familia": "Desodorantes",
-            "aging": 2,
-            "valor": 1000.0
+            "familia": "Gifts",
+            "aging": 1,
+            "valor": 482.85
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
             "aging": 4,
+            "valor": 3988.58
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Gifts",
+            "aging": 6,
             "valor": 317.7
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 5,
-            "valor": 1284.8000000000002
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Gifts",
             "aging": 7,
-            "valor": 337.48
+            "valor": 1127.6
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 8,
+            "aging": 10,
             "valor": 244.07999999999998
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 22,
-            "valor": 540.36
+            "aging": 17,
+            "valor": 1058.58
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 28,
+            "aging": 24,
+            "valor": 300.2
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Gifts",
+            "aging": 30,
             "valor": 148.20000000000002
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 29,
+            "aging": 2,
+            "valor": 2824.92
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Gifts",
+            "aging": 31,
             "valor": 317.02
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 30,
-            "valor": 12656.960000000001
+            "aging": 32,
+            "valor": 4349.320000000001
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 2,
-            "valor": 4824.199999999999
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Gifts",
-            "aging": 15,
-            "valor": 1077.36
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Gifts",
-            "aging": 34,
+            "aging": 36,
             "valor": 317.7
         },
         {
             "setor": "PICLINHA",
             "familia": "Maquiagem",
-            "aging": 1,
-            "valor": 4945.200000000001
+            "aging": 4,
+            "valor": 8547.24
         },
         {
             "setor": "PICLINHA",
             "familia": "Maquiagem",
-            "aging": 8,
-            "valor": 1111.68
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Maquiagem",
-            "aging": 11,
+            "aging": 13,
             "valor": 312.66
         },
         {
             "setor": "PICLINHA",
             "familia": "Maquiagem",
-            "aging": 2,
-            "valor": 10163.88
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Maquiagem",
-            "aging": 15,
+            "aging": 17,
             "valor": 3567.2000000000003
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 7,
-            "valor": 877.6
+            "aging": 1,
+            "valor": 2608.2
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 8,
-            "valor": 6588.9
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Perfumaria",
-            "aging": 14,
-            "valor": 676.8000000000001
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Perfumaria",
-            "aging": 25,
-            "valor": 618.6999999999999
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Perfumaria",
-            "aging": 2,
+            "aging": 4,
             "valor": 831.9499999999999
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 20,
-            "valor": 1480.32
+            "aging": 10,
+            "valor": 4240.5
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 15,
+            "aging": 17,
             "valor": 1692.52
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 26,
+            "aging": 22,
+            "valor": 1480.32
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Perfumaria",
+            "aging": 25,
+            "valor": 3505.52
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Perfumaria",
+            "aging": 27,
+            "valor": 390.04999999999995
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Perfumaria",
+            "aging": 28,
             "valor": 1485.0
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 23,
-            "valor": 3505.52
+            "aging": 2,
+            "valor": 1758.47
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Perfumaria",
+            "aging": 16,
+            "valor": 676.8000000000001
         },
         {
             "setor": "PICLINHA",
             "familia": "Sab. Corpo",
-            "aging": 1,
+            "aging": 3,
             "valor": 213.48
         },
         {
             "setor": "PICLINHA",
             "familia": "Sab. Corpo",
-            "aging": 10,
-            "valor": 297.36
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Sab. Corpo",
-            "aging": 18,
-            "valor": 174.0
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Sab. Corpo",
-            "aging": 19,
-            "valor": 645.84
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Sab. Corpo",
-            "aging": 2,
+            "aging": 4,
             "valor": 366.1
         },
         {
             "setor": "PICLINHA",
             "familia": "Sab. Corpo",
+            "aging": 2,
+            "valor": 4076.64
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Sab. Corpo",
             "aging": 20,
-            "valor": 335.65
+            "valor": 174.0
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Sab. Corpo",
+            "aging": 12,
+            "valor": 297.36
         },
         {
             "setor": "PICLINHA",
             "familia": "Solar",
-            "aging": 5,
+            "aging": 7,
             "valor": 708.8
         },
         {
             "setor": "PICLINHA",
             "familia": "Sup. à Venda",
-            "aging": 5,
+            "aging": 3,
+            "valor": 155.82
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Sup. à Venda",
+            "aging": 7,
             "valor": 132.0
         },
         {
             "setor": "PICLINHA",
             "familia": "Sup. à Venda",
-            "aging": 19,
-            "valor": 80.60000000000001
+            "aging": 21,
+            "valor": 49.6
         },
         {
             "setor": "PICLINHA",
             "familia": "Sup. à Venda",
-            "aging": 20,
-            "valor": 450.17999999999995
+            "aging": 22,
+            "valor": 403.82
         },
         {
-            "setor": "DIVCIC",
-            "familia": "Acessórios",
+            "setor": "PICLINHA",
+            "familia": "Embalagens",
             "aging": 2,
-            "valor": 12.89
+            "valor": 608.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 4,
-            "valor": 505.44
+            "aging": 6,
+            "valor": 41.4
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 11,
+            "aging": 13,
             "valor": 546.26
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 18,
+            "aging": 20,
             "valor": 254.4
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 27,
-            "valor": 11.9
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Acessórios",
-            "aging": 33,
+            "aging": 35,
             "valor": 129.28
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 36,
+            "aging": 38,
             "valor": 1924.1000000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 37,
+            "aging": 39,
             "valor": 63.96
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 42,
+            "aging": 44,
             "valor": 389.1
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 46,
+            "aging": 48,
             "valor": 293.15
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 60,
+            "aging": 59,
+            "valor": 11.12
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Acessórios",
+            "aging": 62,
             "valor": 290.68
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 69,
-            "valor": 44.75
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Acessórios",
-            "aging": 70,
-            "valor": 126.62
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Acessórios",
-            "aging": 64,
+            "aging": 66,
             "valor": 2314.04
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 57,
-            "valor": 11.12
+            "aging": 72,
+            "valor": 126.62
         },
         {
             "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 4,
-            "valor": 83.6
+            "familia": "Acessórios",
+            "aging": 29,
+            "valor": 11.9
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Acessórios",
+            "aging": 71,
+            "valor": 44.75
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 6,
-            "valor": 187.46
+            "valor": 73.14999999999999
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 11,
-            "valor": 588.64
+            "aging": 13,
+            "valor": 586.7599999999999
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 12,
-            "valor": 40.56
+            "aging": 17,
+            "valor": 56.71
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 18,
+            "aging": 20,
             "valor": 188.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 19,
+            "aging": 21,
             "valor": 24.84
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 21,
+            "aging": 23,
             "valor": 187.98
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 23,
-            "valor": 298.98
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 25,
-            "valor": 3154.51
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 27,
-            "valor": 99.96000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 28,
-            "valor": 6.81
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 30,
-            "valor": 141.35
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 33,
-            "valor": 92.68
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 36,
-            "valor": 1275.3999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 39,
-            "valor": 56.519999999999996
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 41,
-            "valor": 383.49
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 42,
-            "valor": 107.80000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 44,
-            "valor": 67.74
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 46,
-            "valor": 393.23
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 51,
-            "valor": 404.76
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 53,
-            "valor": 72.87
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 54,
-            "valor": 33.16
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 55,
-            "valor": 42.76
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 58,
-            "valor": 130.12
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 61,
-            "valor": 67.42
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 65,
-            "valor": 55.39
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 68,
-            "valor": 531.36
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 75,
-            "valor": 123.0
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 78,
-            "valor": 625.25
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 80,
-            "valor": 4.83
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 22,
+            "aging": 24,
             "valor": 34.22
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 29,
+            "aging": 25,
+            "valor": 298.98
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 27,
+            "valor": 2904.6800000000003
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 30,
+            "valor": 6.81
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 31,
             "valor": 1966.1100000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 43,
+            "aging": 32,
+            "valor": 141.35
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 35,
+            "valor": 92.68
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 38,
+            "valor": 1191.8999999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 41,
+            "valor": 56.52
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 44,
+            "valor": 107.80000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 45,
             "valor": 15.84
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 64,
-            "valor": 446.4
+            "aging": 46,
+            "valor": 56.449999999999996
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 50,
+            "aging": 48,
+            "valor": 393.23
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 52,
             "valor": 20.43
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 71,
+            "aging": 53,
+            "valor": 404.76
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 55,
+            "valor": 72.87
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 56,
+            "valor": 33.16
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 60,
+            "valor": 130.12
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 63,
+            "valor": 67.42
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 66,
+            "valor": 446.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 67,
+            "valor": 55.39
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 70,
+            "valor": 531.36
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 73,
             "valor": 49.56
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 81,
-            "valor": 87.07999999999998
+            "aging": 77,
+            "valor": 110.7
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 93,
+            "aging": 80,
+            "valor": 625.25
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 95,
             "valor": 115.5
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 107,
-            "valor": 29.0
+            "aging": 43,
+            "valor": 383.49
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 15,
-            "valor": 56.71
+            "aging": 8,
+            "valor": 187.46
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 1,
+            "valor": 481.04999999999995
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 14,
+            "valor": 40.56
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 82,
+            "valor": 4.83
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 83,
+            "valor": 87.07999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 109,
+            "valor": 29.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Barba",
-            "aging": 4,
+            "aging": 6,
             "valor": 89.92
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Barba",
-            "aging": 23,
+            "aging": 25,
             "valor": 434.13
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Barba",
-            "aging": 25,
+            "aging": 27,
             "valor": 4.15
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Barba",
-            "aging": 57,
-            "valor": 43.56
+            "aging": 52,
+            "valor": 59.4
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Barba",
-            "aging": 50,
-            "valor": 63.36
+            "aging": 59,
+            "valor": 43.56
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
-            "aging": 6,
-            "valor": 21.62
+            "aging": 3,
+            "valor": 34.72
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
-            "aging": 9,
-            "valor": 24.900000000000002
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 11,
-            "valor": 1065.3099999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 12,
-            "valor": 1046.18
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 13,
-            "valor": 45.48
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 18,
-            "valor": 285.94
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 21,
-            "valor": 46.2
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 23,
-            "valor": 109.62
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 25,
-            "valor": 544.27
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 26,
-            "valor": 21.09
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 27,
-            "valor": 560.0
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 30,
-            "valor": 23.28
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 32,
-            "valor": 51.34
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 36,
-            "valor": 1106.25
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 37,
-            "valor": 62.040000000000006
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 39,
-            "valor": 77.33
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 40,
-            "valor": 22.560000000000002
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 42,
-            "valor": 650.77
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 44,
-            "valor": 179.54999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 46,
-            "valor": 203.3
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 48,
-            "valor": 2.76
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 51,
-            "valor": 805.96
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 53,
-            "valor": 60.900000000000006
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 54,
-            "valor": 215.88000000000002
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 55,
-            "valor": 15.03
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 60,
-            "valor": 74.4
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 62,
-            "valor": 1030.8600000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 65,
-            "valor": 287.6
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 68,
-            "valor": 65.44
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 74,
-            "valor": 76.56
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 77,
-            "valor": 17.85
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 78,
-            "valor": 41.19
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 80,
-            "valor": 22.24
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 29,
-            "valor": 580.29
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 43,
-            "valor": 599.12
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 64,
-            "valor": 891.88
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 57,
-            "valor": 375.15999999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 8,
+            "aging": 10,
             "valor": 29.68
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
-            "aging": 71,
+            "aging": 11,
+            "valor": 24.900000000000002
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 13,
+            "valor": 1065.31
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 20,
+            "valor": 172.82
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 23,
+            "valor": 66.24
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 25,
+            "valor": 109.62
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 27,
+            "valor": 544.27
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 28,
+            "valor": 21.09
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 31,
+            "valor": 580.29
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 32,
+            "valor": 23.28
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 34,
+            "valor": 51.34
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 38,
+            "valor": 1106.25
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 39,
+            "valor": 62.040000000000006
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 41,
+            "valor": 77.33
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 42,
+            "valor": 22.560000000000002
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 44,
+            "valor": 650.77
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 45,
+            "valor": 599.12
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 46,
+            "valor": 179.54999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 48,
+            "valor": 203.3
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 53,
+            "valor": 753.6700000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 55,
+            "valor": 60.900000000000006
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 56,
+            "valor": 215.88000000000002
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 59,
+            "valor": 375.15999999999997
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 62,
+            "valor": 74.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 66,
+            "valor": 891.8799999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 67,
+            "valor": 287.6
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 70,
+            "valor": 65.44
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 73,
             "valor": 5.09
         },
         {
             "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 76,
+            "valor": 76.56
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 79,
+            "valor": 17.85
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 80,
+            "valor": 41.19
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 29,
+            "valor": 560.0
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 64,
+            "valor": 1025.88
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 57,
+            "valor": 15.03
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 50,
+            "valor": 2.76
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 8,
+            "valor": 10.620000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 14,
+            "valor": 1046.18
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 82,
+            "valor": 22.24
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 15,
+            "valor": 45.48
+        },
+        {
+            "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 4,
+            "aging": 6,
             "valor": 300.15
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 6,
-            "valor": 281.90999999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. Faciais",
-            "aging": 9,
+            "aging": 11,
             "valor": 735.5400000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 11,
-            "valor": 104.21000000000001
+            "aging": 13,
+            "valor": 99.14
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 18,
+            "aging": 20,
             "valor": 90.76
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 23,
+            "aging": 25,
             "valor": 112.64
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 25,
+            "aging": 27,
             "valor": 241.56
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 27,
-            "valor": 156.5
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. Faciais",
-            "aging": 36,
+            "aging": 38,
             "valor": 21.22
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 39,
+            "aging": 41,
             "valor": 84.88
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 44,
+            "aging": 46,
             "valor": 69.65
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 46,
+            "aging": 48,
             "valor": 885.72
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 48,
-            "valor": 241.5
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. Faciais",
-            "aging": 49,
+            "aging": 51,
             "valor": 95.15
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 61,
+            "aging": 63,
             "valor": 81.33000000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 70,
+            "aging": 72,
             "valor": 21.34
         },
         {
             "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 6,
-            "valor": 494.87
+            "familia": "Cuid. Faciais",
+            "aging": 29,
+            "valor": 156.5
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. Faciais",
+            "aging": 50,
+            "valor": 241.5
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. Faciais",
+            "aging": 8,
+            "valor": 281.90999999999997
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 9,
+            "aging": 11,
             "valor": 90.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 18,
+            "aging": 20,
             "valor": 134.97
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 20,
-            "valor": 18.63
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 21,
+            "aging": 23,
             "valor": 101.25
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 25,
+            "aging": 27,
             "valor": 8.35
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 26,
+            "aging": 28,
             "valor": 276.36
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 27,
-            "valor": 19.29
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 32,
+            "aging": 34,
             "valor": 32.97
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 39,
+            "aging": 41,
             "valor": 153.35
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 42,
+            "aging": 44,
             "valor": 728.99
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 47,
+            "aging": 49,
             "valor": 315.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 48,
-            "valor": 34.39
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 55,
-            "valor": 236.28
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 56,
-            "valor": 119.78999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 62,
-            "valor": 320.09999999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 65,
-            "valor": 573.4
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 67,
-            "valor": 292.5
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 68,
-            "valor": 11.25
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 75,
-            "valor": 218.62
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 77,
-            "valor": 218.62
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 78,
-            "valor": 30.779999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 97,
-            "valor": 42.24
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 64,
-            "valor": 202.5
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 50,
+            "aging": 52,
             "valor": 29.009999999999998
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 71,
+            "aging": 58,
+            "valor": 119.78999999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 66,
+            "valor": 202.5
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 67,
+            "valor": 573.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 69,
+            "valor": 292.5
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 70,
+            "valor": 11.25
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 73,
             "valor": 251.25
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 99,
+            "aging": 77,
+            "valor": 218.62
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 79,
+            "valor": 218.62
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 80,
+            "valor": 30.779999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 22,
+            "valor": 18.63
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 29,
+            "valor": 19.29
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 64,
+            "valor": 320.09999999999997
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 57,
+            "valor": 236.28
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 50,
+            "valor": 34.39
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 8,
+            "valor": 489.0
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 101,
             "valor": 7.6
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 90,
+            "aging": 92,
             "valor": 4.45
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 82,
+            "aging": 99,
+            "valor": 42.24
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 84,
             "valor": 3.72
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 107,
+            "aging": 109,
             "valor": 21.48
         },
         {
             "setor": "DIVCIC",
             "familia": "Embalagens",
-            "aging": 11,
+            "aging": 13,
             "valor": 8.88
         },
         {
             "setor": "DIVCIC",
             "familia": "Embalagens",
-            "aging": 18,
+            "aging": 20,
             "valor": 121.73
         },
         {
             "setor": "DIVCIC",
             "familia": "Embalagens",
-            "aging": 79,
-            "valor": 4.74
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Embalagens",
-            "aging": 29,
+            "aging": 31,
             "valor": 47.459999999999994
         },
         {
             "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 4,
-            "valor": 420.41999999999996
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 6,
-            "valor": 178.58999999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 7,
-            "valor": 294.87
+            "familia": "Embalagens",
+            "aging": 81,
+            "valor": 4.74
         },
         {
             "setor": "DIVCIC",
             "familia": "Gifts",
             "aging": 9,
-            "valor": 397.2
+            "valor": 294.87
         },
         {
             "setor": "DIVCIC",
             "familia": "Gifts",
-            "aging": 11,
-            "valor": 1030.48
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 19,
-            "valor": 48.64
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 23,
-            "valor": 194.74
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 27,
-            "valor": 109.07000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 33,
-            "valor": 176.97
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 34,
-            "valor": 486.23
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 35,
-            "valor": 657.0600000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 36,
-            "valor": 250.91
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 37,
-            "valor": 213.85
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 46,
-            "valor": 284.15999999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 47,
-            "valor": 185.01
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 48,
-            "valor": 183.3
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 49,
-            "valor": 402.81999999999994
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 51,
-            "valor": 320.15
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 53,
-            "valor": 56.16
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 54,
-            "valor": 68.42999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 72,
-            "valor": 314.28000000000003
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 74,
-            "valor": 39.04
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 75,
-            "valor": 1471.44
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 77,
-            "valor": 132.7
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 79,
-            "valor": 320.46000000000004
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 105,
-            "valor": 117.84
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 29,
-            "valor": 547.5500000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 64,
-            "valor": 224.56
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 57,
-            "valor": 40.59
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 8,
+            "aging": 10,
             "valor": 1925.9700000000003
         },
         {
             "setor": "DIVCIC",
             "familia": "Gifts",
-            "aging": 71,
+            "aging": 11,
+            "valor": 397.2
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 13,
+            "valor": 1030.48
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 21,
+            "valor": 48.64
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 31,
+            "valor": 547.5500000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 35,
+            "valor": 176.97
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 36,
+            "valor": 466.56
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 37,
+            "valor": 657.0600000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 38,
+            "valor": 250.91
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 39,
+            "valor": 213.85
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 48,
+            "valor": 284.15999999999997
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 49,
+            "valor": 185.01
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 51,
+            "valor": 402.81999999999994
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 53,
+            "valor": 275.48
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 55,
+            "valor": 56.16
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 56,
+            "valor": 68.42999999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 59,
+            "valor": 40.59
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 66,
+            "valor": 224.56
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 73,
             "valor": 104.76
         },
         {
             "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 74,
+            "valor": 314.28000000000003
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 76,
+            "valor": 39.04
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 77,
+            "valor": 1471.44
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 79,
+            "valor": 132.7
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 29,
+            "valor": 109.07000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 50,
+            "valor": 183.3
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 8,
+            "valor": 155.95999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 81,
+            "valor": 320.46000000000004
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 107,
+            "valor": 117.84
+        },
+        {
+            "setor": "DIVCIC",
             "familia": "Home Care",
-            "aging": 4,
+            "aging": 6,
             "valor": 46.78
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 2,
+            "aging": 4,
             "valor": 80.49
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 11,
+            "aging": 13,
             "valor": 31.39
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 13,
-            "valor": 35.75
+            "aging": 16,
+            "valor": 26.39
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 18,
+            "aging": 20,
             "valor": 153.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 21,
+            "aging": 23,
             "valor": 12.31
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 23,
+            "aging": 25,
             "valor": 62.94
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 27,
-            "valor": 8.76
+            "aging": 31,
+            "valor": 274.20000000000005
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 33,
+            "aging": 35,
             "valor": 41.44
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 36,
+            "aging": 38,
             "valor": 495.20000000000005
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 39,
+            "aging": 41,
             "valor": 35.04
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 41,
-            "valor": 17.52
+            "aging": 52,
+            "valor": 77.2
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 51,
+            "aging": 53,
             "valor": 12.31
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 60,
-            "valor": 23.88
+            "aging": 59,
+            "valor": 278.36
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
             "aging": 62,
-            "valor": 20.36
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 63,
-            "valor": 54.84
+            "valor": 23.88
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
             "aging": 65,
-            "valor": 7.97
+            "valor": 54.84
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
             "aging": 67,
+            "valor": 7.97
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 69,
             "valor": 28.96
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 68,
+            "aging": 70,
             "valor": 39.82
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 72,
+            "aging": 74,
             "valor": 182.8
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 78,
+            "aging": 80,
             "valor": 659.52
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
             "aging": 29,
-            "valor": 274.20000000000005
+            "valor": 8.76
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 57,
-            "valor": 278.36
+            "aging": 43,
+            "valor": 17.52
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 50,
-            "valor": 77.2
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 14,
-            "valor": 81.53
+            "aging": 64,
+            "valor": 20.36
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 2,
-            "valor": 246.57000000000002
+            "valor": 28.63
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 4,
+            "valor": 246.57
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 6,
             "valor": 1703.43
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 6,
-            "valor": 45.989999999999995
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 9,
-            "valor": 258.91
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
             "aging": 11,
-            "valor": 1272.03
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 12,
-            "valor": 3195.7299999999996
+            "valor": 147.6
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 13,
-            "valor": 192.72
+            "valor": 1251.7300000000002
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 18,
-            "valor": 505.21999999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 19,
-            "valor": 242.26
+            "aging": 17,
+            "valor": 363.85999999999996
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 20,
-            "valor": 1851.2
+            "valor": 505.21999999999997
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 21,
+            "valor": 228.82
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 23,
             "valor": 227.22000000000003
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 23,
-            "valor": 160.41
+            "aging": 25,
+            "valor": 160.41000000000003
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 25,
+            "aging": 27,
             "valor": 827.0100000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 27,
-            "valor": 2878.06
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 30,
-            "valor": 41.95
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 33,
-            "valor": 1986.15
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 34,
-            "valor": 67.13
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 35,
-            "valor": 624.97
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 37,
-            "valor": 1022.7099999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 38,
-            "valor": 60.06
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 39,
-            "valor": 326.0300000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 41,
-            "valor": 97.52000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 42,
-            "valor": 2043.6299999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 44,
-            "valor": 309.88
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 46,
-            "valor": 475.31
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 47,
-            "valor": 840.4300000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 48,
-            "valor": 1687.74
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 49,
-            "valor": 5.52
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 51,
-            "valor": 52.379999999999995
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 53,
-            "valor": 44.82
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 54,
-            "valor": 167.5
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 55,
-            "valor": 20.4
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 56,
-            "valor": 178.74
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 58,
-            "valor": 1056.82
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 60,
-            "valor": 17.62
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 61,
-            "valor": 268.72999999999996
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 62,
-            "valor": 393.45
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 65,
-            "valor": 4729.250000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 67,
-            "valor": 247.17999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 68,
-            "valor": 184.87
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 72,
-            "valor": 574.3299999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 74,
-            "valor": 364.88
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 75,
-            "valor": 1764.0
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 76,
-            "valor": 28.39
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 78,
-            "valor": 220.42
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 80,
-            "valor": 41.09
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 29,
+            "aging": 31,
             "valor": 1480.88
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 64,
-            "valor": 5463.700000000001
+            "aging": 32,
+            "valor": 41.95
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 57,
+            "aging": 35,
+            "valor": 1986.15
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 36,
+            "valor": 67.13
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 37,
+            "valor": 624.97
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 39,
+            "valor": 1022.7099999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 40,
+            "valor": 60.06
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 41,
+            "valor": 326.03
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 44,
+            "valor": 2043.6299999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 46,
+            "valor": 309.88
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 48,
+            "valor": 475.31
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 49,
+            "valor": 840.4300000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 51,
+            "valor": 5.52
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 53,
+            "valor": 52.379999999999995
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 55,
+            "valor": 34.89
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 56,
+            "valor": 167.5
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 58,
+            "valor": 158.88
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 59,
             "valor": 2138.76
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 96,
+            "aging": 60,
+            "valor": 65.78
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 62,
+            "valor": 17.62
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 63,
+            "valor": 268.73
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 66,
+            "valor": 5463.700000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 67,
+            "valor": 4729.250000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 69,
+            "valor": 247.17999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 70,
+            "valor": 184.87
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 74,
+            "valor": 574.3299999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 76,
+            "valor": 364.87999999999994
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 77,
+            "valor": 1764.0
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 78,
+            "valor": 28.39
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 80,
+            "valor": 220.42
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 22,
+            "valor": 1851.2
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 29,
+            "valor": 2878.06
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 43,
+            "valor": 77.66
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 64,
+            "valor": 393.45
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 57,
+            "valor": 20.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 50,
+            "valor": 1687.74
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 8,
+            "valor": 45.989999999999995
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 98,
             "valor": 3.18
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 82,
-            "valor": 8.52
+            "aging": 1,
+            "valor": 883.9
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 102,
+            "aging": 104,
             "valor": 21.44
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
+            "aging": 14,
+            "valor": 3182.21
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 82,
+            "valor": 41.09
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
             "aging": 15,
-            "valor": 363.85999999999996
+            "valor": 192.72
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 84,
+            "valor": 8.52
         },
         {
             "setor": "DIVCIC",
             "familia": "Óleos",
-            "aging": 4,
+            "aging": 6,
             "valor": 12.54
         },
         {
             "setor": "DIVCIC",
             "familia": "Óleos",
-            "aging": 18,
+            "aging": 20,
             "valor": 12.21
         },
         {
             "setor": "DIVCIC",
             "familia": "Óleos",
-            "aging": 41,
+            "aging": 43,
             "valor": 32.849999999999994
         },
         {
             "setor": "DIVCIC",
             "familia": "Óleos",
-            "aging": 55,
+            "aging": 57,
             "valor": 75.78
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 4,
-            "valor": 33.2
+            "aging": 2,
+            "valor": 1.04
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
             "aging": 6,
-            "valor": 279.59
+            "valor": 14.63
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 7,
+            "aging": 9,
             "valor": 204.67999999999998
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 9,
-            "valor": 53.8
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 11,
-            "valor": 665.2699999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 13,
-            "valor": 1558.88
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 18,
-            "valor": 328.3
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 21,
-            "valor": 961.53
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 27,
-            "valor": 34.22
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 32,
-            "valor": 288.84000000000003
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 33,
-            "valor": 97.15
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 34,
-            "valor": 720.0699999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 35,
-            "valor": 138.32999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 36,
-            "valor": 3073.93
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 44,
-            "valor": 11.7
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 47,
-            "valor": 191.94
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 51,
-            "valor": 3907.1600000000003
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 53,
-            "valor": 120.76
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 54,
-            "valor": 1443.15
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 55,
-            "valor": 1890.3999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 58,
-            "valor": 374.35999999999996
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 62,
-            "valor": 484.88
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 65,
-            "valor": 9.69
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 68,
-            "valor": 189.96
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 75,
-            "valor": 457.16
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 78,
-            "valor": 1839.7900000000002
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 79,
-            "valor": 721.9999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 80,
-            "valor": 31.049999999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 88,
-            "valor": 1982.73
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 22,
-            "valor": 18.94
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 29,
-            "valor": 1805.6
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 43,
-            "valor": 182.64
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 64,
-            "valor": 1905.68
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 57,
-            "valor": 2667.12
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 50,
-            "valor": 611.88
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 8,
+            "aging": 10,
             "valor": 827.17
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 71,
+            "aging": 11,
+            "valor": 53.8
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 13,
+            "valor": 665.2699999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 16,
+            "valor": 152.76000000000002
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 17,
+            "valor": 323.25
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 20,
+            "valor": 328.3
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 23,
+            "valor": 961.53
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 24,
+            "valor": 18.94
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 31,
+            "valor": 1805.6
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 34,
+            "valor": 288.84000000000003
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 35,
+            "valor": 97.15
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 36,
+            "valor": 720.0699999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 37,
+            "valor": 138.32999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 38,
+            "valor": 3073.93
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 45,
+            "valor": 182.64
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 46,
+            "valor": 11.7
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 49,
+            "valor": 191.94
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 52,
+            "valor": 611.88
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 53,
+            "valor": 3896.94
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 55,
+            "valor": 120.76
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 56,
+            "valor": 1443.15
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 59,
+            "valor": 2667.12
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 60,
+            "valor": 374.35999999999996
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 66,
+            "valor": 1905.68
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 67,
+            "valor": 9.69
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 70,
+            "valor": 189.96
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 73,
             "valor": 3143.2000000000003
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 14,
-            "valor": 175.58
+            "aging": 77,
+            "valor": 436.72
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 102,
+            "aging": 80,
+            "valor": 1839.79
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 29,
+            "valor": 34.22
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 64,
+            "valor": 484.88
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 57,
+            "valor": 1843.1399999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 8,
+            "valor": 279.59
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 81,
+            "valor": 721.9999999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 104,
             "valor": 421.8
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 112,
-            "valor": 22.83
+            "aging": 90,
+            "valor": 1982.73
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 82,
+            "valor": 31.049999999999997
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
             "aging": 15,
-            "valor": 344.8
+            "valor": 1558.88
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 114,
+            "valor": 22.83
         },
         {
             "setor": "DIVCIC",
             "familia": "Pets",
-            "aging": 19,
+            "aging": 21,
             "valor": 57.06
         },
         {
             "setor": "DIVCIC",
             "familia": "Pets",
-            "aging": 33,
+            "aging": 35,
             "valor": 5.12
         },
         {
             "setor": "DIVCIC",
             "familia": "Pets",
-            "aging": 37,
+            "aging": 39,
             "valor": 6.95
         },
         {
             "setor": "DIVCIC",
             "familia": "Pets",
-            "aging": 39,
+            "aging": 41,
             "valor": 6.95
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 4,
+            "aging": 6,
             "valor": 30.6
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 6,
-            "valor": 53.129999999999995
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 9,
+            "aging": 11,
             "valor": 37.43
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 21,
+            "aging": 23,
             "valor": 56.03
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 23,
-            "valor": 117.5
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 33,
+            "aging": 35,
             "valor": 19.169999999999998
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 34,
+            "aging": 36,
             "valor": 9.51
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 39,
+            "aging": 41,
             "valor": 30.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 51,
+            "aging": 53,
             "valor": 33.84
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 53,
+            "aging": 55,
             "valor": 41.22
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 55,
-            "valor": 42.95
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 58,
-            "valor": 68.58
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 61,
-            "valor": 8.6
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 65,
-            "valor": 6.25
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 68,
-            "valor": 10.42
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 70,
-            "valor": 10.5
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 74,
-            "valor": 24.04
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 75,
-            "valor": 1281.0
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 76,
-            "valor": 27.450000000000003
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 77,
-            "valor": 18.03
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 78,
-            "valor": 306.08
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 79,
-            "valor": 102.36
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 64,
-            "valor": 356.73
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 57,
+            "aging": 59,
             "valor": 7.02
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 71,
+            "aging": 60,
+            "valor": 68.58
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 63,
+            "valor": 8.6
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 66,
+            "valor": 356.73
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 67,
+            "valor": 6.25
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 70,
+            "valor": 10.42
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 72,
+            "valor": 10.5
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 73,
             "valor": 10.46
         },
         {
             "setor": "DIVCIC",
-            "familia": "Solar",
-            "aging": 11,
-            "valor": 66.7
+            "familia": "Sab. Corpo",
+            "aging": 76,
+            "valor": 24.04
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 77,
+            "valor": 1281.0
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 78,
+            "valor": 27.450000000000003
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 79,
+            "valor": 18.03
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 80,
+            "valor": 306.08
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 57,
+            "valor": 42.95
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 8,
+            "valor": 53.129999999999995
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 81,
+            "valor": 102.36
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
             "aging": 2,
-            "valor": 42.64
+            "valor": 2.18
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 3,
+            "valor": 40.980000000000004
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
             "aging": 4,
-            "valor": 60.349999999999994
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 5,
-            "valor": 4.74
+            "valor": 42.64
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
             "aging": 6,
-            "valor": 25.25
+            "valor": 60.349999999999994
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
-            "aging": 9,
-            "valor": 17.27
+            "aging": 7,
+            "valor": 4.74
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
-            "aging": 11,
-            "valor": 133.05
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 12,
-            "valor": 20.31
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 13,
-            "valor": 4.88
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 18,
-            "valor": 147.33
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 19,
-            "valor": 32.519999999999996
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 21,
-            "valor": 130.64999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 23,
-            "valor": 103.75000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 25,
-            "valor": 873.6
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 27,
-            "valor": 6.92
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 28,
-            "valor": 26.4
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 32,
-            "valor": 9.1
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 33,
-            "valor": 204.2
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 34,
-            "valor": 53.68
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 36,
-            "valor": 270.68
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 37,
-            "valor": 1417.91
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 39,
-            "valor": 8.06
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 40,
-            "valor": 81.72
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 42,
-            "valor": 104.39999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 44,
-            "valor": 263.85999999999996
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 47,
-            "valor": 12.7
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 48,
-            "valor": 6.539999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 51,
-            "valor": 3.58
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 54,
-            "valor": 129.52
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 55,
-            "valor": 5.28
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 56,
-            "valor": 38.25
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 60,
-            "valor": 17.919999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 61,
-            "valor": 26.58
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 62,
-            "valor": 291.90000000000003
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 65,
-            "valor": 11.42
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 67,
-            "valor": 6.1
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 68,
-            "valor": 29.06
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 69,
-            "valor": 167.57999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 70,
-            "valor": 78.96000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 72,
-            "valor": 627.02
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 74,
-            "valor": 304.31
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 75,
-            "valor": 21.419999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 76,
-            "valor": 39.11
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 78,
-            "valor": 441.27
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 79,
-            "valor": 1607.5299999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 80,
-            "valor": 243.08
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 29,
-            "valor": 16.0
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 43,
-            "valor": 16.799999999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 64,
-            "valor": 498.73
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 57,
-            "valor": 1287.54
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 8,
+            "aging": 10,
             "valor": 15.599999999999998
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
-            "aging": 71,
+            "aging": 11,
+            "valor": 15.700000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 13,
+            "valor": 133.04999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 16,
+            "valor": 40.39
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 20,
+            "valor": 147.33
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 21,
+            "valor": 31.65
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 23,
+            "valor": 130.64999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 25,
+            "valor": 103.75000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 27,
+            "valor": 873.6
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 30,
+            "valor": 26.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 31,
+            "valor": 16.0
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 34,
+            "valor": 9.1
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 35,
+            "valor": 204.2
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 36,
+            "valor": 53.68
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 38,
+            "valor": 11.33
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 39,
+            "valor": 1417.91
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 41,
+            "valor": 8.06
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 42,
+            "valor": 81.72
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 44,
+            "valor": 104.39999999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 45,
+            "valor": 16.799999999999997
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 46,
+            "valor": 263.85999999999996
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 49,
+            "valor": 12.7
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 53,
+            "valor": 3.58
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 56,
+            "valor": 129.52
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 58,
+            "valor": 38.25
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 59,
+            "valor": 1287.54
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 62,
+            "valor": 17.919999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 63,
+            "valor": 26.58
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 66,
+            "valor": 498.73
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 67,
+            "valor": 11.42
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 69,
+            "valor": 6.1
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 70,
+            "valor": 29.06
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 72,
+            "valor": 78.96000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 73,
             "valor": 6.380000000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
+            "aging": 74,
+            "valor": 627.02
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 76,
+            "valor": 304.31
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 77,
+            "valor": 21.419999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 78,
+            "valor": 39.11
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 80,
+            "valor": 441.27
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 29,
+            "valor": 6.92
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 64,
+            "valor": 291.90000000000003
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 57,
+            "valor": 5.28
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 50,
+            "valor": 6.539999999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 8,
+            "valor": 12.47
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 71,
+            "valor": 167.57999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
             "aging": 81,
-            "valor": 6.98
+            "valor": 1607.5299999999997
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 1,
+            "valor": 1.02
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
             "aging": 14,
-            "valor": 64.22999999999999
+            "valor": 20.31
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
             "aging": 82,
+            "valor": 242.28
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 15,
+            "valor": 4.88
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 83,
+            "valor": 6.98
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 84,
             "valor": 31.240000000000002
         }
     ],
@@ -41963,15 +42842,21 @@
         },
         {
             "data": "2026-09-23",
+            "motivo": "ACOPLAMENTO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 15.41
+        },
+        {
+            "data": "2026-09-23",
             "motivo": "AMASSADO",
             "ocorrencia": "FÁBRICA",
-            "valor": 213.15
+            "valor": 746.42
         },
         {
             "data": "2026-09-23",
             "motivo": "CELOFANE",
             "ocorrencia": "FÁBRICA",
-            "valor": 29.78
+            "valor": 66.88
         },
         {
             "data": "2026-09-23",
@@ -41995,7 +42880,91 @@
             "data": "2026-09-23",
             "motivo": "TORQUE",
             "ocorrencia": "FÁBRICA",
-            "valor": 10.22
+            "valor": 21.94
+        },
+        {
+            "data": "2026-09-23",
+            "motivo": "VAZAMENTO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 27.74
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "ACOPLAMENTO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 3.7
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "AMASSADO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 0.0
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "AMASSADO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 173.32
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "ASPECTO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 105.05
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "AUSÊNCIA DE COMPONENTE",
+            "ocorrencia": "FÁBRICA",
+            "valor": 24.75
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "CELOFANE",
+            "ocorrencia": "FÁBRICA",
+            "valor": 2.94
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "INFORMAÇÕES LEGAIS",
+            "ocorrencia": "FÁBRICA",
+            "valor": 1.23
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "INFORMAÇÕES LEGAIS",
+            "ocorrencia": "FÁBRICA",
+            "valor": 22.05
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "RASGADO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 28.42
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "SUJIDADE",
+            "ocorrencia": "FÁBRICA",
+            "valor": 2.02
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "TORQUE",
+            "ocorrencia": "FÁBRICA",
+            "valor": 21.35
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "VAZAMENTO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 0.0
+        },
+        {
+            "data": "2026-09-24",
+            "motivo": "VAZAMENTO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 37.18
         }
     ]
 }
