@@ -8,7 +8,7 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES DO GITHUB
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
 # ==========================================
@@ -148,38 +148,71 @@ def gerar_json():
         for _, row in df_rep.groupby('TURNO').agg(ocorrencias=('CHAVE', 'count'), itens=('Quantidade ', 'sum')).reset_index().iterrows():
             if str(row['TURNO']) not in ['0', 'nan']: rep_turnos.append({"turno": str(row['TURNO']), "ocorrencias": int(row['ocorrencias']), "itens": tratar_valor_monetario(row['itens'])})
 
-    # 5. CORTES (AGORA COM O MOTIVO)
+    # 5. CORTES (ATUALIZADO PARA LER DUAS TABELAS SIMULTANEAMENTE)
     aba_cortes = next((s for s in xls.sheet_names if 'cortes' in s.lower()), None)
-    df_cortes = pd.read_excel(xls, aba_cortes) if aba_cortes else pd.DataFrame()
+    df_cortes = pd.read_excel(xls, aba_cortes, header=None) if aba_cortes else pd.DataFrame()
     cortes_dados = []
+    cortes_itens = []
+    
     if not df_cortes.empty:
-        df_cortes.columns = [str(c).strip() for c in df_cortes.columns]
-        c_data = next((c for c in df_cortes.columns if 'rótulos' in c.lower() or 'data' in c.lower()), df_cortes.columns[0])
-        c_mot = next((c for c in df_cortes.columns if 'motivo' in c.lower()), None)
-        c_item = next((c for c in df_cortes.columns if 'item' in c.lower()), df_cortes.columns[1] if c_mot is None else df_cortes.columns[2])
-        c_peca = next((c for c in df_cortes.columns if 'pç' in c.lower() or 'peça' in c.lower() or 'qtd' in c.lower()), df_cortes.columns[2] if c_mot is None else df_cortes.columns[3])
-        c_val = next((c for c in df_cortes.columns if 'valor' in c.lower()), df_cortes.columns[3] if c_mot is None else df_cortes.columns[4])
-        
-        if c_data in df_cortes.columns:
-            df_cortes[c_data] = df_cortes[c_data].ffill()
-            
-        for _, row in df_cortes.iterrows():
-            dr = row.get(c_data)
-            if pd.isna(dr) or 'total' in str(dr).lower() or '(vazio)' in str(dr).lower(): continue
-            try:
-                dstr = pd.to_datetime(dr, dayfirst=True, errors='coerce').strftime('%Y-%m-%d')
-                if dstr == 'NaT': continue
-                motivo = str(row.get(c_mot)).strip().upper() if c_mot else "OUTROS"
-                if motivo in ['NAN', 'NONE', '']: motivo = "OUTROS"
+        header_row = -1
+        idx_d1 = idx_m1 = idx_i1 = idx_p1 = idx_v1 = -1
+        idx_d2 = idx_i2 = idx_v2 = -1
+
+        for r in range(min(15, len(df_cortes))):
+            row_vals = [str(v).upper().strip() for v in df_cortes.iloc[r].values]
+            if 'DATA' in row_vals and 'MOTIVO' in row_vals:
+                header_row = r
+                idx_d1 = row_vals.index('DATA')
+                idx_m1 = row_vals.index('MOTIVO')
                 
-                cortes_dados.append({
-                    "data": dstr, 
-                    "motivo": motivo,
-                    "itens": int(tratar_valor_monetario(row.get(c_item))), 
-                    "pecas": int(tratar_valor_monetario(row.get(c_peca))), 
-                    "valor": tratar_valor_monetario(row.get(c_val))
-                })
-            except: pass
+                # Procurar as colunas da Tabela 1 (Esquerda)
+                for i in range(idx_m1 + 1, len(row_vals)):
+                    if 'ITEM' in row_vals[i] and idx_i1 == -1: idx_i1 = i
+                    elif ('QTD' in row_vals[i] or 'PÇ' in row_vals[i] or 'PEÇA' in row_vals[i]) and idx_p1 == -1: idx_p1 = i
+                    elif 'VALOR' in row_vals[i] and idx_v1 == -1: idx_v1 = i
+
+                # Procurar as colunas da Tabela 2 (Direita)
+                for i in range(idx_v1 + 1, len(row_vals)):
+                    if 'DATA' in row_vals[i] and idx_d2 == -1: idx_d2 = i
+                    elif 'ITEM' in row_vals[i] and idx_i2 == -1: idx_i2 = i
+                    elif 'VALOR' in row_vals[i] and idx_v2 == -1: idx_v2 = i
+
+                if idx_d2 == -1: idx_d2 = idx_d1 # Usar a mesma Data se a Tabela 2 não a repetir
+                break
+
+        if header_row != -1:
+            curr_d1 = curr_d2 = None
+            for r in range(header_row + 1, len(df_cortes)):
+                # LER TABELA 1 (Motivos e Agrupamentos)
+                if idx_d1 != -1:
+                    v1 = df_cortes.iloc[r, idx_d1]
+                    if pd.notna(v1) and str(v1).strip().lower() not in ['', '(vazio)', 'nan']: curr_d1 = str(v1).strip()
+                if curr_d1 and 'TOTAL' not in curr_d1.upper():
+                    mot = str(df_cortes.iloc[r, idx_m1]).strip().upper() if idx_m1 != -1 else "OUTROS"
+                    if mot not in ['NAN', 'NONE', ''] and pd.notna(df_cortes.iloc[r, idx_m1]):
+                        dstr1 = pd.to_datetime(curr_d1, dayfirst=True, errors='coerce').strftime('%Y-%m-%d')
+                        if dstr1 != 'NaT':
+                            cortes_dados.append({
+                                "data": dstr1, "motivo": mot,
+                                "itens": int(tratar_valor_monetario(df_cortes.iloc[r, idx_i1])) if idx_i1 != -1 else 0,
+                                "pecas": int(tratar_valor_monetario(df_cortes.iloc[r, idx_p1])) if idx_p1 != -1 else 0,
+                                "valor": tratar_valor_monetario(df_cortes.iloc[r, idx_v1]) if idx_v1 != -1 else 0
+                            })
+                
+                # LER TABELA 2 (Detalhamento por ITEM)
+                if idx_d2 != -1:
+                    v2 = df_cortes.iloc[r, idx_d2]
+                    if pd.notna(v2) and str(v2).strip().lower() not in ['', '(vazio)', 'nan']: curr_d2 = str(v2).strip()
+                if curr_d2 and 'TOTAL' not in curr_d2.upper() and idx_i2 != -1:
+                    item_sku = str(df_cortes.iloc[r, idx_i2]).strip()
+                    if item_sku.lower() not in ['nan', 'none', '', '(vazio)'] and pd.notna(df_cortes.iloc[r, idx_i2]):
+                        dstr2 = pd.to_datetime(curr_d2, dayfirst=True, errors='coerce').strftime('%Y-%m-%d')
+                        if dstr2 != 'NaT':
+                            cortes_itens.append({
+                                "data": dstr2, "item": item_sku,
+                                "valor": tratar_valor_monetario(df_cortes.iloc[r, idx_v2]) if idx_v2 != -1 else 0
+                            })
 
     # 6. SOBRAS
     aba_sobras = next((s for s in xls.sheet_names if 'sobras' in s.lower()), None)
@@ -340,7 +373,7 @@ def gerar_json():
         "net": net_dados, "net_ytd": net_ytd, 
         "planejamento": {"daily": plan_dados, "curvas": plan_curvas},
         "repicking": {"daily": rep_dados, "turnos": rep_turnos},
-        "cortes": cortes_dados, 
+        "cortes": {"daily": cortes_dados, "itens": cortes_itens}, 
         "sobras": sobras_dados,
         "sobras_cruzamento": cruzamento_sobras, 
         "pic_div": pic_dados, 
@@ -373,7 +406,7 @@ def gerar_json():
             if e.code != 404: raise e
 
         payload = {
-            "message": "Atualização automática (Gráfico Motivos de Corte) 🚀", 
+            "message": "Atualização automática (Tabela Itens de Corte) 🚀", 
             "content": base64.b64encode(conteudo.encode('utf-8')).decode('utf-8')
         }
         if sha: payload["sha"] = sha
