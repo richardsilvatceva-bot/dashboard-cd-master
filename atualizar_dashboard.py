@@ -8,7 +8,7 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES DO GITHUB
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
 # ==========================================
