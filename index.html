@@ -67,7 +67,7 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Estoque Auditado</p><h2 id="vgEstoque" class="text-xl font-bold text-white mt-1">R$ 0,00</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Impacto NET Geral (YTD)</p><h2 id="vgNetVal" class="text-xl font-bold text-blue-500 mt-1">R$ 0,00</h2></div>
-        <!-- CORREÇÃO: Fundo azul removido, mantendo o padrão visual -->
+        <!-- CORREÇÃO APLICADA: Sem fundo azul, texto discreto -->
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">% NET Geral (YTD)</p><h2 id="vgNetPct" class="text-xl font-bold text-blue-400 mt-1">0.00%</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Valor Sobras Pendentes</p><h2 id="vgSobrasPend" class="text-xl font-bold text-amber-400 mt-1">R$ 0,00</h2></div>
       </div>
@@ -173,31 +173,27 @@
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-xs text-slate-400">Valor Total de Cortes</p><h2 id="kpiCortesValor" class="text-lg font-bold text-white">R$ 0,00</h2></div>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <!-- Gráfico de Evolução (Linha) -->
         <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
           <h3 class="font-bold text-sm text-white mb-2">Evolução Diária de Cortes (R$)</h3>
           <div class="relative w-full h-64"><canvas id="chartCortes"></canvas></div>
         </div>
-        <!-- Gráfico de Motivos (Barras) -->
         <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
           <h3 class="font-bold text-sm text-amber-400 mb-2">Motivos de Cortes (R$)</h3>
           <div class="relative w-full h-64"><canvas id="chartCortesMotivos"></canvas></div>
         </div>
       </div>
       
-      <!-- NOVO BLOCO: TABELA DE DETALHES DOS CORTES -->
+      <!-- TABELA ATUALIZADA: Detalhamento por Item (SKU) -->
       <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden flex flex-col max-h-80 shadow-xl mt-6">
         <div class="p-3 bg-slate-900 border-b border-slate-800">
-          <h3 class="text-sm font-bold text-white">Detalhamento de Cortes (Ordem Decrescente por Valor)</h3>
+          <h3 class="text-sm font-bold text-white">Detalhamento de Cortes por Item (Ordem Decrescente)</h3>
         </div>
         <div class="overflow-y-auto flex-grow custom-scrollbar">
           <table class="w-full text-left text-xs text-slate-300">
             <thead class="sticky top-0 bg-slate-950">
               <tr>
                 <th class="py-2 px-3">Data</th>
-                <th class="py-2 px-3">Motivo</th>
-                <th class="py-2 px-3 text-right">Qtd Itens</th>
-                <th class="py-2 px-3 text-right">Qtd Peças</th>
+                <th class="py-2 px-3">SKU (Item)</th>
                 <th class="py-2 px-3 text-right">Valor de Corte (R$)</th>
               </tr>
             </thead>
@@ -340,7 +336,7 @@
     function setupFilters() {
       let allDates = [];
       if(DADOS.ciclico && DADOS.ciclico.daily) allDates = allDates.concat(DADOS.ciclico.daily.map(d => d.data));
-      if(DADOS.cortes) allDates = allDates.concat(DADOS.cortes.map(d => d.data));
+      if(DADOS.cortes && DADOS.cortes.daily) allDates = allDates.concat(DADOS.cortes.daily.map(d => d.data));
       if(DADOS.avarias) allDates = allDates.concat(DADOS.avarias.map(d => d.data));
       if(DADOS.repicking && DADOS.repicking.daily) allDates = allDates.concat(DADOS.repicking.daily.map(d => d.data));
       
@@ -476,21 +472,17 @@
           }
       }
 
-      // CORTES (COM TABELA DETALHADA E GRÁFICO DE MOTIVOS)
-      if(DADOS.cortes) {
-          const fCortes = filterByDate(DADOS.cortes);
+      // CORTES (COM NOVA TABELA DE SKUs)
+      if(DADOS.cortes && DADOS.cortes.daily) {
+          const fCortes = filterByDate(DADOS.cortes.daily);
           let iC=0, pC=0; 
           const cDaily = {};
           const cMotivos = {};
           
           fCortes.forEach(c => { 
-              iC+=c.itens; 
-              pC+=c.pecas; 
-              vC+=c.valor; 
-              
+              iC+=c.itens; pC+=c.pecas; vC+=c.valor; 
               if(!cDaily[c.data]) cDaily[c.data]=0; 
               cDaily[c.data]+=c.valor; 
-              
               const mot = c.motivo || 'OUTROS';
               if(!cMotivos[mot]) cMotivos[mot]=0;
               cMotivos[mot]+=c.valor;
@@ -520,18 +512,19 @@
                 options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } 
             });
           }
-
-          // NOVA TABELA DE CORTES ORDENADA
-          const fCortesSorted = [...fCortes].sort((a, b) => b.valor - a.valor);
-          document.getElementById('tbCortesDetalhe').innerHTML = fCortesSorted.map(c => 
-            `<tr class="hover:bg-slate-800/50">
-              <td class="font-mono text-white">${c.data.split('-').reverse().join('/')}</td>
-              <td class="font-bold text-amber-400">${c.motivo}</td>
-              <td class="font-mono text-right text-white">${fmtNum(c.itens)}</td>
-              <td class="font-mono text-right text-amber-200">${fmtNum(c.pecas)}</td>
-              <td class="font-mono text-right text-rose-400 font-bold">${fmtR(c.valor)}</td>
-            </tr>`
-          ).join('');
+          
+          // Listagem Decrescente de Itens (SKU)
+          if(DADOS.cortes.itens) {
+              const fCortesItens = filterByDate(DADOS.cortes.itens);
+              const fCortesSorted = [...fCortesItens].sort((a, b) => b.valor - a.valor);
+              document.getElementById('tbCortesDetalhe').innerHTML = fCortesSorted.map(c => 
+                `<tr class="hover:bg-slate-800/50">
+                  <td class="font-mono text-white">${c.data.split('-').reverse().join('/')}</td>
+                  <td class="font-bold text-amber-400">${c.item}</td>
+                  <td class="font-mono text-right text-rose-400 font-bold">${fmtR(c.valor)}</td>
+                </tr>`
+              ).join('');
+          }
       }
 
       // SOBRAS
@@ -591,7 +584,7 @@
           }
       }
 
-      // PIC/DIV (GRÁFICOS SEPARADOS)
+      // PIC/DIV
       if(DADOS.pic_div) {
           const selOpts = Array.from(document.getElementById('filtroAging').selectedOptions).map(o => o.value);
           let selAgings = [];
