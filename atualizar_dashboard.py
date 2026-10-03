@@ -8,7 +8,7 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES DO GITHUB
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
 # ==========================================
@@ -166,25 +166,22 @@ def gerar_json():
                 idx_d1 = row_vals.index('DATA')
                 idx_m1 = row_vals.index('MOTIVO')
                 
-                # Procurar as colunas da Tabela 1 (Esquerda)
                 for i in range(idx_m1 + 1, len(row_vals)):
                     if 'ITEM' in row_vals[i] and idx_i1 == -1: idx_i1 = i
                     elif ('QTD' in row_vals[i] or 'PÇ' in row_vals[i] or 'PEÇA' in row_vals[i]) and idx_p1 == -1: idx_p1 = i
                     elif 'VALOR' in row_vals[i] and idx_v1 == -1: idx_v1 = i
 
-                # Procurar as colunas da Tabela 2 (Direita)
                 for i in range(idx_v1 + 1, len(row_vals)):
                     if 'DATA' in row_vals[i] and idx_d2 == -1: idx_d2 = i
                     elif 'ITEM' in row_vals[i] and idx_i2 == -1: idx_i2 = i
                     elif 'VALOR' in row_vals[i] and idx_v2 == -1: idx_v2 = i
 
-                if idx_d2 == -1: idx_d2 = idx_d1 # Usar a mesma Data se a Tabela 2 não a repetir
+                if idx_d2 == -1: idx_d2 = idx_d1
                 break
 
         if header_row != -1:
             curr_d1 = curr_d2 = None
             for r in range(header_row + 1, len(df_cortes)):
-                # LER TABELA 1 (Motivos e Agrupamentos)
                 if idx_d1 != -1:
                     v1 = df_cortes.iloc[r, idx_d1]
                     if pd.notna(v1) and str(v1).strip().lower() not in ['', '(vazio)', 'nan']: curr_d1 = str(v1).strip()
@@ -200,7 +197,6 @@ def gerar_json():
                                 "valor": tratar_valor_monetario(df_cortes.iloc[r, idx_v1]) if idx_v1 != -1 else 0
                             })
                 
-                # LER TABELA 2 (Detalhamento por ITEM)
                 if idx_d2 != -1:
                     v2 = df_cortes.iloc[r, idx_d2]
                     if pd.notna(v2) and str(v2).strip().lower() not in ['', '(vazio)', 'nan']: curr_d2 = str(v2).strip()
@@ -288,9 +284,10 @@ def gerar_json():
     aba_pic = next((s for s in xls.sheet_names if 'piclinha' in s.lower() or 'divcic' in s.lower() and 'net' not in s.lower()), None)
     df_pic_raw = pd.read_excel(xls, aba_pic, header=None) if aba_pic else pd.DataFrame()
     pic_dados = []
+    
     saldos_divcic = {}
     saldos_piclinha = {}
-    valor_piclinha = {}
+    todos_saldos = []
     
     if not df_pic_raw.empty:
         header_idx = -1
@@ -311,64 +308,89 @@ def gerar_json():
                         pic_dados.append({"setor": setor, "familia": f, "aging": int(float(a)), "valor": v})
                     except: pass
 
-        # Atualizado para buscar os SALDOS e também o VALOR do Piclinha
+        # Extração melhorada e à prova de falhas para SALDOS e VALORES (Piclinha e Divcic)
+        header_row_saldos = -1
+        idx_div = -1
+        idx_pic = -1
+        
         for r in range(min(15, len(df_pic_raw))):
             row_vals = [str(v).upper().strip() for v in df_pic_raw.iloc[r].values]
             if 'SALDO DIVCIC' in row_vals or 'SALDO PICLINHA' in row_vals:
+                header_row_saldos = r
                 idx_div = row_vals.index('SALDO DIVCIC') if 'SALDO DIVCIC' in row_vals else -1
                 idx_pic = row_vals.index('SALDO PICLINHA') if 'SALDO PICLINHA' in row_vals else -1
-                
-                if idx_div != -1:
-                    for i in range(r+2, len(df_pic_raw)):
-                        sku = str(df_pic_raw.iloc[i, idx_div]).strip()
-                        if sku.lower() in ['nan', 'none', '', '(vazio)', 'total geral']: continue
-                        if pd.isna(df_pic_raw.iloc[i, idx_div]): break
-                        saldos_divcic[sku] = int(tratar_valor_monetario(df_pic_raw.iloc[i, idx_div+1]))
-                        
-                if idx_pic != -1:
-                    # Tenta encontrar a coluna de VALOR imediatamente após a de QTD (que vem a seguir ao rótulo)
-                    idx_pic_val = idx_pic + 2 if (idx_pic + 2) < len(df_pic_raw.columns) else -1
-                    
-                    for i in range(r+2, len(df_pic_raw)):
-                        sku = str(df_pic_raw.iloc[i, idx_pic]).strip()
-                        if sku.lower() in ['nan', 'none', '', '(vazio)', 'total geral']: continue
-                        if pd.isna(df_pic_raw.iloc[i, idx_pic]): break
-                        
-                        saldos_piclinha[sku] = int(tratar_valor_monetario(df_pic_raw.iloc[i, idx_pic+1]))
-                        
-                        if idx_pic_val != -1:
-                             valor_piclinha[sku] = tratar_valor_monetario(df_pic_raw.iloc[i, idx_pic_val])
                 break
+                
+        if header_row_saldos != -1:
+            # 1. Ler SALDO DIVCIC
+            if idx_div != -1:
+                for i in range(header_row_saldos + 2, len(df_pic_raw)):
+                    sku = str(df_pic_raw.iloc[i, idx_div]).strip()
+                    if sku.lower() in ['nan', 'none', '', '(vazio)', 'total geral']: continue
+                    if pd.isna(df_pic_raw.iloc[i, idx_div]): break
+                    
+                    qtd = tratar_valor_monetario(df_pic_raw.iloc[i, idx_div+1])
+                    val = tratar_valor_monetario(df_pic_raw.iloc[i, idx_div+2]) if (idx_div+2) < len(df_pic_raw.columns) else 0
+                    
+                    saldos_divcic[sku] = {"qtd": int(qtd), "valor": val}
+                    todos_saldos.append({"sku": sku, "setor": "DIVCIC", "qtd": int(qtd), "valor": val})
 
+            # 2. Ler SALDO PICLINHA
+            if idx_pic != -1:
+                for i in range(header_row_saldos + 2, len(df_pic_raw)):
+                    sku = str(df_pic_raw.iloc[i, idx_pic]).strip()
+                    if sku.lower() in ['nan', 'none', '', '(vazio)', 'total geral']: continue
+                    if pd.isna(df_pic_raw.iloc[i, idx_pic]): break
+                    
+                    qtd = tratar_valor_monetario(df_pic_raw.iloc[i, idx_pic+1])
+                    val = tratar_valor_monetario(df_pic_raw.iloc[i, idx_pic+2]) if (idx_pic+2) < len(df_pic_raw.columns) else 0
+                    
+                    saldos_piclinha[sku] = {"qtd": int(qtd), "valor": val}
+                    todos_saldos.append({"sku": sku, "setor": "PICLINHA", "qtd": int(qtd), "valor": val})
+
+    # Cruzamento Dinâmico de Sobras com Tipo de Resgate (Parcial/Total)
     cruzamento_sobras = []
     for item in sobras_detalhe:
-        # Apenas processar se for pendente
         if item['status'] != 'PENDENTE': continue
         
         sku = item['produto']
-        saldo_divcic = saldos_divcic.get(sku, 0)
-        saldo_piclinha = saldos_piclinha.get(sku, 0)
+        sd = saldos_divcic.get(sku, {"qtd": 0, "valor": 0})
+        sp = saldos_piclinha.get(sku, {"qtd": 0, "valor": 0})
         
-        if saldo_divcic > 0 or saldo_piclinha > 0:
+        saldo_divcic_qtd = sd["qtd"]
+        saldo_piclinha_qtd = sp["qtd"]
+        valor_piclinha = sp["valor"]
+        
+        if saldo_divcic_qtd > 0 or saldo_piclinha_qtd > 0:
             qtd_sobra = item['qtd']
-            saldo_total = saldo_divcic + saldo_piclinha
             
-            if qtd_sobra > saldo_total:
-                resgate_tipo = "PARCIAL"
-            else:
+            # Se a quantidade de sobra couber toda no saldo do piclinha é Total.
+            # Caso contrário, e precisando apenas de um pouco no piclinha, é Parcial.
+            if saldo_piclinha_qtd >= qtd_sobra:
                 resgate_tipo = "TOTAL"
+            else:
+                resgate_tipo = "PARCIAL"
                 
             cruzamento_sobras.append({
                 "status": item['status'],
                 "sku": sku,
                 "qtd_sobra": qtd_sobra,
                 "valor_sobra": item['valor'],
-                "saldo_divcic": saldo_divcic,
-                "saldo_piclinha": saldo_piclinha,
-                "valor_piclinha": valor_piclinha.get(sku, 0),
+                "saldo_divcic": saldo_divcic_qtd,
+                "saldo_piclinha": saldo_piclinha_qtd,
+                "valor_piclinha": valor_piclinha,
                 "resgate_tipo": resgate_tipo
             })
     cruzamento_sobras = sorted(cruzamento_sobras, key=lambda x: x['valor_sobra'], reverse=True)
+
+    # Preparar a Lista Top 20 de Saldos (Piclinha e Divcic) para a nova tabela
+    sobras_qtd_map = {item['produto']: item['qtd'] for item in sobras_detalhe}
+    for s in todos_saldos:
+        sqtd = sobras_qtd_map.get(s['sku'], 0)
+        s['tem_sobra'] = "SIM" if sqtd > 0 else "NÃO"
+        s['qtd_sobra'] = sqtd
+
+    top20_saldos = sorted(todos_saldos, key=lambda x: x['valor'], reverse=True)[:20]
 
     # 8. AVARIAS
     aba_avarias = next((s for s in xls.sheet_names if 'avarias' in s.lower()), None)
@@ -401,7 +423,8 @@ def gerar_json():
         "cortes": {"daily": cortes_dados, "itens": cortes_itens}, 
         "sobras": sobras_dados,
         "sobras_cruzamento": cruzamento_sobras, 
-        "pic_div": pic_dados, 
+        "pic_div": pic_dados,
+        "top_saldos": top20_saldos,
         "avarias": avarias_dados
     }
 
@@ -431,7 +454,7 @@ def gerar_json():
             if e.code != 404: raise e
 
         payload = {
-            "message": "Atualização automática (Ajustes Sobras Pendentes e Parcial/Total) 🚀", 
+            "message": "Atualização automática (Top Saldos, Correção Valores e Lógica Total/Parcial) 🚀", 
             "content": base64.b64encode(conteudo.encode('utf-8')).decode('utf-8')
         }
         if sha: payload["sha"] = sha
