@@ -8,7 +8,7 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES DO GITHUB
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
 # ==========================================
@@ -148,7 +148,7 @@ def gerar_json():
         for _, row in df_rep.groupby('TURNO').agg(ocorrencias=('CHAVE', 'count'), itens=('Quantidade ', 'sum')).reset_index().iterrows():
             if str(row['TURNO']) not in ['0', 'nan']: rep_turnos.append({"turno": str(row['TURNO']), "ocorrencias": int(row['ocorrencias']), "itens": tratar_valor_monetario(row['itens'])})
 
-    # 5. CORTES (ATUALIZADO PARA LER DUAS TABELAS SIMULTANEAMENTE)
+    # 5. CORTES
     aba_cortes = next((s for s in xls.sheet_names if 'cortes' in s.lower()), None)
     df_cortes = pd.read_excel(xls, aba_cortes, header=None) if aba_cortes else pd.DataFrame()
     cortes_dados = []
@@ -290,6 +290,7 @@ def gerar_json():
     pic_dados = []
     saldos_divcic = {}
     saldos_piclinha = {}
+    valor_piclinha = {}
     
     if not df_pic_raw.empty:
         header_idx = -1
@@ -310,6 +311,7 @@ def gerar_json():
                         pic_dados.append({"setor": setor, "familia": f, "aging": int(float(a)), "valor": v})
                     except: pass
 
+        # Atualizado para buscar os SALDOS e também o VALOR do Piclinha
         for r in range(min(15, len(df_pic_raw))):
             row_vals = [str(v).upper().strip() for v in df_pic_raw.iloc[r].values]
             if 'SALDO DIVCIC' in row_vals or 'SALDO PICLINHA' in row_vals:
@@ -324,24 +326,47 @@ def gerar_json():
                         saldos_divcic[sku] = int(tratar_valor_monetario(df_pic_raw.iloc[i, idx_div+1]))
                         
                 if idx_pic != -1:
+                    # Tenta encontrar a coluna de VALOR imediatamente após a de QTD (que vem a seguir ao rótulo)
+                    idx_pic_val = idx_pic + 2 if (idx_pic + 2) < len(df_pic_raw.columns) else -1
+                    
                     for i in range(r+2, len(df_pic_raw)):
                         sku = str(df_pic_raw.iloc[i, idx_pic]).strip()
                         if sku.lower() in ['nan', 'none', '', '(vazio)', 'total geral']: continue
                         if pd.isna(df_pic_raw.iloc[i, idx_pic]): break
+                        
                         saldos_piclinha[sku] = int(tratar_valor_monetario(df_pic_raw.iloc[i, idx_pic+1]))
+                        
+                        if idx_pic_val != -1:
+                             valor_piclinha[sku] = tratar_valor_monetario(df_pic_raw.iloc[i, idx_pic_val])
                 break
 
     cruzamento_sobras = []
     for item in sobras_detalhe:
+        # Apenas processar se for pendente
+        if item['status'] != 'PENDENTE': continue
+        
         sku = item['produto']
-        if sku in saldos_divcic or sku in saldos_piclinha:
+        saldo_divcic = saldos_divcic.get(sku, 0)
+        saldo_piclinha = saldos_piclinha.get(sku, 0)
+        
+        if saldo_divcic > 0 or saldo_piclinha > 0:
+            qtd_sobra = item['qtd']
+            saldo_total = saldo_divcic + saldo_piclinha
+            
+            if qtd_sobra > saldo_total:
+                resgate_tipo = "PARCIAL"
+            else:
+                resgate_tipo = "TOTAL"
+                
             cruzamento_sobras.append({
                 "status": item['status'],
                 "sku": sku,
-                "qtd_sobra": item['qtd'],
+                "qtd_sobra": qtd_sobra,
                 "valor_sobra": item['valor'],
-                "saldo_divcic": saldos_divcic.get(sku, 0),
-                "saldo_piclinha": saldos_piclinha.get(sku, 0)
+                "saldo_divcic": saldo_divcic,
+                "saldo_piclinha": saldo_piclinha,
+                "valor_piclinha": valor_piclinha.get(sku, 0),
+                "resgate_tipo": resgate_tipo
             })
     cruzamento_sobras = sorted(cruzamento_sobras, key=lambda x: x['valor_sobra'], reverse=True)
 
@@ -406,7 +431,7 @@ def gerar_json():
             if e.code != 404: raise e
 
         payload = {
-            "message": "Atualização automática (Tabela Itens de Corte) 🚀", 
+            "message": "Atualização automática (Ajustes Sobras Pendentes e Parcial/Total) 🚀", 
             "content": base64.b64encode(conteudo.encode('utf-8')).decode('utf-8')
         }
         if sha: payload["sha"] = sha
