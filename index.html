@@ -67,7 +67,6 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Estoque Auditado</p><h2 id="vgEstoque" class="text-xl font-bold text-white mt-1">R$ 0,00</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Impacto NET Geral (YTD)</p><h2 id="vgNetVal" class="text-xl font-bold text-blue-500 mt-1">R$ 0,00</h2></div>
-        <!-- CORREÇÃO APLICADA: Sem fundo azul, texto discreto -->
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">% NET Geral (YTD)</p><h2 id="vgNetPct" class="text-xl font-bold text-blue-400 mt-1">0.00%</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Valor Sobras Pendentes</p><h2 id="vgSobrasPend" class="text-xl font-bold text-amber-400 mt-1">R$ 0,00</h2></div>
       </div>
@@ -79,9 +78,10 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Valor Total)</p><h2 id="vgPicVal" class="text-xl font-bold text-blue-400 mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Maior Aging)</p><h2 id="vgPicAging" class="text-xl font-bold text-white mt-1">0 Dias</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Valor Total)</p><h2 id="vgDivVal" class="text-xl font-bold text-purple-400 mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Maior Aging)</p><h2 id="vgDivAging" class="text-xl font-bold text-white mt-1">0 Dias</h2></div>
+        <!-- ATUALIZADO: Indicadores de Avarias incluídos na Visão Geral -->
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-orange-500"><p class="text-[11px] text-slate-400 uppercase">Avarias CEVA</p><h2 id="vgAvariasCeva" class="text-xl font-bold text-orange-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-teal-500"><p class="text-[11px] text-slate-400 uppercase">Avarias Fábrica/Outros</p><h2 id="vgAvariasFabrica" class="text-xl font-bold text-teal-400 mt-1">R$ 0,00</h2></div>
       </div>
     </div>
 
@@ -183,7 +183,6 @@
         </div>
       </div>
       
-      <!-- TABELA ATUALIZADA: Detalhamento por Item (SKU) -->
       <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden flex flex-col max-h-80 shadow-xl mt-6">
         <div class="p-3 bg-slate-900 border-b border-slate-800">
           <h3 class="text-sm font-bold text-white">Detalhamento de Cortes por Item (Ordem Decrescente)</h3>
@@ -205,15 +204,20 @@
 
     <!-- ABA: SOBRAS -->
     <div id="tab-sobras" class="tab-content hidden space-y-6">
-      <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 flex gap-4 items-center">
-         <label class="text-xs text-slate-400 font-semibold uppercase">Filtro de Status:</label>
-         <select id="filtroStatusSobras" class="bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-white"><option value="ALL">TODOS OS STATUS</option></select>
-      </div>
       
       <!-- Bloco Clássico de Marcas -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Gráfico Fixo em PENDENTE -->
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl max-h-[420px] flex flex-col">
+          <div class="flex justify-between items-center mb-2"><h3 class="font-bold text-sm text-amber-400" id="sobrasChartTitle">Top Marcas (Status: PENDENTE)</h3><span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded font-mono" id="sobrasChartTotal">Total: R$ 0,00</span></div>
+          <div class="relative flex-grow w-full"><canvas id="chartSobrasPendentes"></canvas></div>
+        </div>
+
         <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden flex flex-col max-h-[420px]">
-          <div class="p-3 bg-slate-900 border-b border-slate-800 flex justify-between"><h3 class="text-sm font-bold text-white">Marcas (Por Status)</h3><h3 class="text-sm font-bold text-emerald-400" id="sobrasTableTotal">Total: R$ 0,00</h3></div>
+          <div class="p-3 bg-slate-900 border-b border-slate-800 flex justify-between items-center">
+             <h3 class="text-sm font-bold text-white">Marcas (Por Status)</h3>
+             <select id="filtroStatusSobras" class="bg-slate-800 border border-slate-700 rounded px-2 py-1 text-xs text-white"><option value="ALL">TODOS OS STATUS</option></select>
+          </div>
           <div class="overflow-x-auto overflow-y-auto flex-grow">
              <table class="w-full text-left text-xs text-slate-300">
                <thead class="sticky top-0 bg-slate-900"><tr><th class="py-2 px-3">Marca</th><th class="py-2 px-3 text-right">Locações</th><th class="py-2 px-3 text-right">Valor (R$)</th></tr></thead>
@@ -221,32 +225,36 @@
              </table>
           </div>
         </div>
-        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl max-h-[420px] flex flex-col">
-          <div class="flex justify-between items-center mb-2"><h3 class="font-bold text-sm text-amber-400" id="sobrasChartTitle">Top Marcas</h3><span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded font-mono" id="sobrasChartTotal">Total: R$ 0,00</span></div>
-          <div class="relative flex-grow w-full"><canvas id="chartSobrasPendentes"></canvas></div>
-        </div>
       </div>
       
       <!-- NOVO BLOCO: CRUZAMENTO DE SOBRAS COM SALDOS -->
-      <div class="mt-6 bg-[#131d31] p-4 rounded-xl border border-slate-800 flex flex-col">
-        <h3 class="font-bold text-sm text-white border-b border-slate-800 pb-2 mb-4">Análise Cruzada: Sobras Físicas vs Saldos (Piclinha / Divcic)</h3>
-        <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
-          <!-- Gráfico Top 10 -->
-          <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 shadow-inner h-80 flex flex-col">
+      <div class="mt-6 bg-[#131d31] p-4 rounded-xl border border-slate-800 flex flex-col w-full h-[800px]">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-2 mb-4">
+            <h3 class="font-bold text-sm text-white">Análise Cruzada: Sobras PENDENTES vs Saldos (Piclinha / Divcic)</h3>
+            <button id="btnExportCSV" class="bg-blue-600 hover:bg-blue-500 text-white text-xs py-1 px-3 rounded flex items-center gap-2 transition-colors">
+                <i data-lucide="download" class="w-4 h-4"></i> Exportar CSV
+            </button>
+        </div>
+        
+        <div class="flex flex-col gap-6 h-full">
+          <!-- Gráfico Top 10 MAIOR -->
+          <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 shadow-inner flex flex-col flex-grow">
             <h4 class="font-bold text-xs text-emerald-400 mb-2">Top 10 Sobras com Saldo (Por Valor de Sobra R$)</h4>
             <div class="relative flex-grow w-full"><canvas id="chartSobrasCruzamento"></canvas></div>
           </div>
-          <!-- Tabela Detalhada -->
-          <div class="bg-slate-900 rounded-lg border border-slate-800 shadow-inner overflow-hidden flex flex-col h-80">
+          <!-- Tabela Detalhada ABAIXO -->
+          <div class="bg-slate-900 rounded-lg border border-slate-800 shadow-inner overflow-hidden flex flex-col h-64 flex-shrink-0">
              <div class="overflow-y-auto flex-grow custom-scrollbar">
                <table class="w-full text-left text-[11px] text-slate-300">
                  <thead class="sticky top-0 bg-slate-950">
                    <tr>
                      <th class="py-2 px-3">SKU</th>
                      <th class="py-2 px-3 text-right">Qtd Sobra</th>
-                     <th class="py-2 px-3 text-right">Valor Sobra</th>
+                     <th class="py-2 px-3 text-right text-emerald-400">Valor Sobra</th>
                      <th class="py-2 px-3 text-right text-purple-400">Saldo Divcic</th>
                      <th class="py-2 px-3 text-right text-blue-400">Saldo Piclinha</th>
+                     <th class="py-2 px-3 text-right text-blue-300">Valor Piclinha</th>
+                     <th class="py-2 px-3 text-center">Tipo Resgate</th>
                    </tr>
                  </thead>
                  <tbody id="tbSobrasCruzamento" class="divide-y divide-slate-800"></tbody>
@@ -314,6 +322,9 @@
     const fmtPct = v => `${(v * 100).toFixed(2)}%`;
     const fmtNum = v => new Intl.NumberFormat('pt-BR').format(v);
 
+    // Variável para exportar CSV depois
+    let csvDataToExport = [];
+
     async function loadData() {
       try {
         const res = await fetch('dados.json');
@@ -379,6 +390,7 @@
       const st = document.getElementById('startDate').value, en = document.getElementById('endDate').value;
       
       let cCont = 0, cPos = 0, cNeg = 0, vgValRepicking = 0, vC = 0, vPic = 0, vDiv = 0, mPic = 0, mDiv = 0, tPend = 0;
+      let vgAvariaCeva = 0, vgAvariaFabrica = 0;
 
       // CÍCLICO
       if(DADOS.ciclico && DADOS.ciclico.daily) {
@@ -472,7 +484,7 @@
           }
       }
 
-      // CORTES (COM NOVA TABELA DE SKUs)
+      // CORTES
       if(DADOS.cortes && DADOS.cortes.daily) {
           const fCortes = filterByDate(DADOS.cortes.daily);
           let iC=0, pC=0; 
@@ -513,7 +525,6 @@
             });
           }
           
-          // Listagem Decrescente de Itens (SKU)
           if(DADOS.cortes.itens) {
               const fCortesItens = filterByDate(DADOS.cortes.itens);
               const fCortesSorted = [...fCortesItens].sort((a, b) => b.valor - a.valor);
@@ -534,30 +545,34 @@
           const fSobras = sSel === 'ALL' ? DADOS.sobras : DADOS.sobras.filter(d => d.status === sSel);
           const gSob = {}; let tSob = 0;
           fSobras.forEach(d => { if(!gSob[d.marca]) gSob[d.marca] = { loc: 0, val: 0 }; gSob[d.marca].loc+=d.locacoes; gSob[d.marca].val+=d.valor; tSob+=d.valor; });
-          document.getElementById('sobrasTableTotal').innerText = `Total: ${fmtR(tSob)}`;
+          
           document.getElementById('tbSobrasMarcas').innerHTML = Object.keys(gSob).sort((a,b)=>gSob[b].val - gSob[a].val).map(m => `<tr class="hover:bg-slate-800/50"><td class="font-bold text-white">${m}</td><td class="font-mono text-right">${fmtNum(gSob[m].loc)}</td><td class="font-mono text-right text-emerald-400">${fmtR(gSob[m].val)}</td></tr>`).join('');
           
-          const pend = DADOS.sobras.filter(d => d.status === 'PENDENTE');
-          const gPend = {}; 
-          pend.forEach(d => { if(!gPend[d.marca]) gPend[d.marca]=0; gPend[d.marca]+=d.valor; tPend+=d.valor; });
+          // O Gráfico de Top Marcas agora é SEMPRE PENDENTE
+          const pendentes = DADOS.sobras.filter(d => d.status === 'PENDENTE');
+          const gMarcasPendentes = {}; let tMarcasPendentes = 0;
           
-          const gMarcas = {}; let tMarcas = 0;
-          fSobras.forEach(d => { if(!gMarcas[d.marca]) gMarcas[d.marca]=0; gMarcas[d.marca]+=d.valor; tMarcas+=d.valor; });
-          document.getElementById('sobrasChartTitle').innerText = sSel === 'ALL' ? 'Top Marcas - TODOS OS STATUS' : `Top Marcas - Status ${sSel}`;
-          document.getElementById('sobrasChartTotal').innerText = `Total: ${fmtR(tMarcas)}`;
+          pendentes.forEach(d => { 
+              if(!gMarcasPendentes[d.marca]) gMarcasPendentes[d.marca]=0; 
+              gMarcasPendentes[d.marca]+=d.valor; 
+              tMarcasPendentes+=d.valor; 
+              tPend+=d.valor; // Aproveito para guardar o valor total Pendente para a Visão Geral
+          });
           
-          const pLabels = Object.keys(gMarcas).sort((a,b)=>gMarcas[b]-gMarcas[a]);
+          document.getElementById('sobrasChartTotal').innerText = `Total: ${fmtR(tMarcasPendentes)}`;
+          
+          const pLabels = Object.keys(gMarcasPendentes).sort((a,b)=>gMarcasPendentes[b]-gMarcasPendentes[a]);
           const ctxSob = document.getElementById('chartSobrasPendentes');
           if(ctxSob) {
               if(chartSobrasInst) chartSobrasInst.destroy();
-              chartSobrasInst = new Chart(ctxSob, { type: 'bar', data: { labels: pLabels, datasets: [{ label: 'Valor (R$)', data: pLabels.map(l=>gMarcas[l]), backgroundColor: '#f59e0b' }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } });
+              chartSobrasInst = new Chart(ctxSob, { type: 'bar', data: { labels: pLabels, datasets: [{ label: 'Valor (R$)', data: pLabels.map(l=>gMarcasPendentes[l]), backgroundColor: '#f59e0b' }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v=>fmtR(v) } } } } });
           }
       }
 
-      // CRUZAMENTO DE SOBRAS COM SALDOS
+      // CRUZAMENTO DE SOBRAS PENDENTES COM SALDOS
       if (DADOS.sobras_cruzamento) {
-          let fCruz = DADOS.sobras_cruzamento.filter(c => c.saldo_divcic > 0 || c.saldo_piclinha > 0);
-          if (sSel !== 'ALL') fCruz = fCruz.filter(c => c.status === sSel);
+          // O Python já só manda os pendentes com saldo, mas filtramos para ter a certeza
+          let fCruz = DADOS.sobras_cruzamento.filter(c => c.status === 'PENDENTE');
           
           document.getElementById('tbSobrasCruzamento').innerHTML = fCruz.map(c => 
               `<tr class="hover:bg-slate-800/50 border-b border-slate-800">
@@ -566,8 +581,16 @@
                 <td class="font-mono text-right text-emerald-400">${fmtR(c.valor_sobra)}</td>
                 <td class="font-mono text-right text-purple-400 font-bold">${fmtNum(c.saldo_divcic)}</td>
                 <td class="font-mono text-right text-blue-400 font-bold">${fmtNum(c.saldo_piclinha)}</td>
+                <td class="font-mono text-right text-blue-300 font-bold">${fmtR(c.valor_piclinha)}</td>
+                <td class="font-bold text-center text-[10px] ${c.resgate_tipo === 'TOTAL' ? 'text-emerald-400' : 'text-amber-400'}">${c.resgate_tipo}</td>
               </tr>`
           ).join('');
+          
+          // Preparar dados para o Botão CSV
+          csvDataToExport = [
+              ["SKU", "QTD_SOBRA", "VALOR_SOBRA", "SALDO_DIVCIC", "SALDO_PICLINHA", "VALOR_PICLINHA", "TIPO_RESGATE"],
+              ...fCruz.map(c => [c.sku, c.qtd_sobra, c.valor_sobra, c.saldo_divcic, c.saldo_piclinha, c.valor_piclinha, c.resgate_tipo])
+          ];
           
           const top10Cruz = fCruz.slice(0, 10);
           const ctxSobCruz = document.getElementById('chartSobrasCruzamento');
@@ -619,14 +642,23 @@
       // AVARIAS
       if(DADOS.avarias) {
           const fAva = filterByDate(DADOS.avarias);
-          let tCeva = 0, tFab = 0; const gCeva = {}, gFab = {};
           fAva.forEach(a => {
-              if(a.ocorrencia === 'CEVA') { tCeva += a.valor; if(!gCeva[a.motivo]) gCeva[a.motivo]=0; gCeva[a.motivo]+=a.valor; }
-              else { tFab += a.valor; if(!gFab[a.motivo]) gFab[a.motivo]=0; gFab[a.motivo]+=a.valor; }
+              if(a.ocorrencia === 'CEVA') { vgAvariaCeva += a.valor; }
+              else { vgAvariaFabrica += a.valor; }
           });
-          document.getElementById('avaKpiCeva').innerText = fmtR(tCeva); document.getElementById('avaKpiFabrica').innerText = fmtR(tFab);
+          
+          document.getElementById('avaKpiCeva').innerText = fmtR(vgAvariaCeva); 
+          document.getElementById('avaKpiFabrica').innerText = fmtR(vgAvariaFabrica);
+          
+          const gCeva = {}, gFab = {};
+          fAva.forEach(a => {
+              if(a.ocorrencia === 'CEVA') { if(!gCeva[a.motivo]) gCeva[a.motivo]=0; gCeva[a.motivo]+=a.valor; }
+              else { if(!gFab[a.motivo]) gFab[a.motivo]=0; gFab[a.motivo]+=a.valor; }
+          });
+
           const cSort = Object.keys(gCeva).sort((a,b) => gCeva[b] - gCeva[a]);
           const fSort = Object.keys(gFab).sort((a,b) => gFab[b] - gFab[a]);
+          
           const ctxAvaC = document.getElementById('chartAvaCeva');
           if(ctxAvaC) {
               if(chartAvaCevaInst) chartAvaCevaInst.destroy();
@@ -652,7 +684,26 @@
       document.getElementById('vgCortes').innerText = fmtR(vC);
       document.getElementById('vgPicVal').innerText = fmtR(vPic); document.getElementById('vgPicAging').innerText = mPic + ' Dias';
       document.getElementById('vgDivVal').innerText = fmtR(vDiv); document.getElementById('vgDivAging').innerText = mDiv + ' Dias';
+      document.getElementById('vgAvariasCeva').innerText = fmtR(vgAvariaCeva);
+      document.getElementById('vgAvariasFabrica').innerText = fmtR(vgAvariaFabrica);
     }
+
+    // Função para gerar o CSV
+    document.getElementById('btnExportCSV').addEventListener('click', () => {
+        if(csvDataToExport.length <= 1) {
+            alert("Não existem dados de sobras para exportar neste período.");
+            return;
+        }
+        let csvContent = "data:text/csv;charset=utf-8," 
+            + csvDataToExport.map(e => e.join(";")).join("\n");
+        var encodedUri = encodeURI(csvContent);
+        var link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "Analise_Sobras_Pendentes.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
 
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => { document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); const t = btn.getAttribute('data-tab'); document.querySelectorAll('.tab-content').forEach(tc => tc.classList.add('hidden')); document.getElementById(`tab-${t}`).classList.remove('hidden'); });
