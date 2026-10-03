@@ -1118,7 +1118,7 @@
                 "data": "2026-10-01",
                 "valorContagem": 1878495.76,
                 "itensUnicos": 21,
-                "fisicoFinal": 228525.0,
+                "fisicoFinal": 226977.0,
                 "ajustePos": 9.1,
                 "ajusteNeg": -144.47999999999996
             },
@@ -7936,15 +7936,15 @@
                 "apontamentos": 10,
                 "encontrados": 5,
                 "repickFeito": 10,
-                "valorRepicking": 20323.74,
+                "valorRepicking": 19178.46,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 6,
-                        "valor": 20323.74
+                        "qtd": 5,
+                        "valor": 19178.46
                     },
                     "FALTA": {
-                        "qtd": 4,
-                        "valor": 4220.6900000000005
+                        "qtd": 5,
+                        "valor": 5365.97
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -7957,15 +7957,15 @@
                 "apontamentos": 4,
                 "encontrados": 1,
                 "repickFeito": 4,
-                "valorRepicking": 1013.24,
+                "valorRepicking": 565.6,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 3,
-                        "valor": 1013.24
+                        "qtd": 2,
+                        "valor": 565.6
                     },
                     "FALTA": {
-                        "qtd": 1,
-                        "valor": 35.52
+                        "qtd": 2,
+                        "valor": 483.15999999999997
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -7999,15 +7999,15 @@
                 "apontamentos": 15,
                 "encontrados": 9,
                 "repickFeito": 15,
-                "valorRepicking": 16570.31,
+                "valorRepicking": 15202.54,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 8,
-                        "valor": 16570.31
+                        "qtd": 5,
+                        "valor": 15202.54
                     },
                     "FALTA": {
-                        "qtd": 7,
-                        "valor": 3480.3
+                        "qtd": 10,
+                        "valor": 4848.07
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8041,15 +8041,15 @@
                 "apontamentos": 27,
                 "encontrados": 12,
                 "repickFeito": 27,
-                "valorRepicking": 8918.13,
+                "valorRepicking": 4926.8,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 12,
-                        "valor": 8918.13
+                        "qtd": 9,
+                        "valor": 4926.8
                     },
                     "FALTA": {
-                        "qtd": 15,
-                        "valor": 51129.29
+                        "qtd": 18,
+                        "valor": 55120.619999999995
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8062,15 +8062,15 @@
                 "apontamentos": 17,
                 "encontrados": 7,
                 "repickFeito": 17,
-                "valorRepicking": 9905.57,
+                "valorRepicking": 5407.38,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 10,
-                        "valor": 9905.57
+                        "qtd": 7,
+                        "valor": 5407.38
                     },
                     "FALTA": {
-                        "qtd": 7,
-                        "valor": 14445.439999999999
+                        "qtd": 10,
+                        "valor": 18943.629999999997
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8083,15 +8083,15 @@
                 "apontamentos": 13,
                 "encontrados": 2,
                 "repickFeito": 13,
-                "valorRepicking": 17734.22,
+                "valorRepicking": 16231.220000000001,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 11,
-                        "valor": 17734.22
+                        "qtd": 9,
+                        "valor": 16231.220000000001
                     },
                     "FALTA": {
-                        "qtd": 2,
-                        "valor": 816.0
+                        "qtd": 4,
+                        "valor": 2319.0
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8104,15 +8104,15 @@
                 "apontamentos": 15,
                 "encontrados": 9,
                 "repickFeito": 15,
-                "valorRepicking": 25732.62,
+                "valorRepicking": 6378.57,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 11,
-                        "valor": 25732.62
+                        "qtd": 5,
+                        "valor": 6378.57
                     },
                     "FALTA": {
-                        "qtd": 4,
-                        "valor": 2391.37
+                        "qtd": 10,
+                        "valor": 21745.42
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8125,15 +8125,15 @@
                 "apontamentos": 31,
                 "encontrados": 9,
                 "repickFeito": 31,
-                "valorRepicking": 27259.67,
+                "valorRepicking": 29773.88,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 21,
-                        "valor": 27259.67
+                        "qtd": 20,
+                        "valor": 29773.88
                     },
                     "FALTA": {
-                        "qtd": 10,
-                        "valor": 5976.570000000001
+                        "qtd": 11,
+                        "valor": 3462.36
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8146,15 +8146,15 @@
                 "apontamentos": 22,
                 "encontrados": 9,
                 "repickFeito": 22,
-                "valorRepicking": 8157.4400000000005,
+                "valorRepicking": 5707.97,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 10,
-                        "valor": 8157.4400000000005
+                        "qtd": 7,
+                        "valor": 5707.97
                     },
                     "FALTA": {
-                        "qtd": 12,
-                        "valor": 14359.18
+                        "qtd": 15,
+                        "valor": 16808.65
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8167,15 +8167,15 @@
                 "apontamentos": 29,
                 "encontrados": 14,
                 "repickFeito": 29,
-                "valorRepicking": 47231.33,
+                "valorRepicking": 39434.01,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 23,
-                        "valor": 47231.33
+                        "qtd": 15,
+                        "valor": 39434.01
                     },
                     "FALTA": {
-                        "qtd": 6,
-                        "valor": 5373.39
+                        "qtd": 14,
+                        "valor": 13170.71
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8188,15 +8188,15 @@
                 "apontamentos": 22,
                 "encontrados": 5,
                 "repickFeito": 22,
-                "valorRepicking": 19709.6,
+                "valorRepicking": 19429.31,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 19,
-                        "valor": 19709.6
+                        "qtd": 17,
+                        "valor": 19429.31
                     },
                     "FALTA": {
-                        "qtd": 3,
-                        "valor": 893.2
+                        "qtd": 5,
+                        "valor": 1173.49
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8230,15 +8230,15 @@
                 "apontamentos": 22,
                 "encontrados": 11,
                 "repickFeito": 22,
-                "valorRepicking": 17024.8,
+                "valorRepicking": 4970.02,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 15,
-                        "valor": 17024.8
+                        "qtd": 8,
+                        "valor": 4970.02
                     },
                     "FALTA": {
-                        "qtd": 7,
-                        "valor": 6345.17
+                        "qtd": 14,
+                        "valor": 18399.95
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8251,15 +8251,15 @@
                 "apontamentos": 26,
                 "encontrados": 10,
                 "repickFeito": 26,
-                "valorRepicking": 39661.81,
+                "valorRepicking": 19060.81,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 13,
-                        "valor": 39661.81
+                        "qtd": 12,
+                        "valor": 19060.81
                     },
                     "FALTA": {
-                        "qtd": 13,
-                        "valor": 19073.739999999998
+                        "qtd": 14,
+                        "valor": 39674.74
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8296,12 +8296,12 @@
                 "valorRepicking": 13323.339999999998,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 13,
+                        "qtd": 12,
                         "valor": 13323.339999999998
                     },
                     "FALTA": {
-                        "qtd": 5,
-                        "valor": 7160.38
+                        "qtd": 6,
+                        "valor": 10123.62
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8311,18 +8311,39 @@
             },
             {
                 "data": "2026-10-02",
-                "apontamentos": 7,
+                "apontamentos": 9,
                 "encontrados": 2,
-                "repickFeito": 7,
-                "valorRepicking": 12234.640000000001,
+                "repickFeito": 9,
+                "valorRepicking": 14624.460000000001,
                 "lancamentos": {
                     "REPICKING": {
-                        "qtd": 4,
-                        "valor": 12234.640000000001
+                        "qtd": 7,
+                        "valor": 14624.460000000001
                     },
                     "FALTA": {
-                        "qtd": 3,
-                        "valor": 14551.04
+                        "qtd": 2,
+                        "valor": 13855.04
+                    },
+                    "CORTE": {
+                        "qtd": 0,
+                        "valor": 0
+                    }
+                }
+            },
+            {
+                "data": "2026-10-03",
+                "apontamentos": 1,
+                "encontrados": 0,
+                "repickFeito": 1,
+                "valorRepicking": 0.0,
+                "lancamentos": {
+                    "REPICKING": {
+                        "qtd": 1,
+                        "valor": 0.0
+                    },
+                    "FALTA": {
+                        "qtd": 0,
+                        "valor": 0
                     },
                     "CORTE": {
                         "qtd": 0,
@@ -8339,8 +8360,8 @@
             },
             {
                 "turno": "2° TURNO",
-                "ocorrencias": 1643,
-                "itens": 243090.0
+                "ocorrencias": 1647,
+                "itens": 243253.0
             },
             {
                 "turno": "3° TURNO",
@@ -8375,7 +8396,7 @@
                 "motivo": "VENDA MAIOR QUE O SALDO",
                 "itens": 14,
                 "pecas": 38,
-                "valor": 1525.42
+                "valor": 0.0
             },
             {
                 "data": "2026-03-01",
@@ -9201,7 +9222,7 @@
                 "motivo": "FIM DE SALDO",
                 "itens": 6,
                 "pecas": 23,
-                "valor": 201.89
+                "valor": 0.0
             },
             {
                 "data": "2026-02-24",
@@ -10384,14 +10405,14 @@
                 "motivo": "FIM DE SALDO",
                 "itens": 5,
                 "pecas": 23,
-                "valor": 254.36
+                "valor": 0.0
             },
             {
                 "data": "2026-09-05",
                 "motivo": "VENDA MAIOR QUE O SALDO",
                 "itens": 10,
                 "pecas": 66,
-                "valor": 679.7000000000002
+                "valor": 0.0
             },
             {
                 "data": "2026-11-05",
@@ -11182,7 +11203,7 @@
                 "motivo": "VENDA MAIOR QUE O SALDO",
                 "itens": 8,
                 "pecas": 29,
-                "valor": 373.03999999999996
+                "valor": 0.0
             },
             {
                 "data": "2026-06-29",
@@ -11196,7 +11217,7 @@
                 "motivo": "FIM DE SALDO",
                 "itens": 20,
                 "pecas": 68,
-                "valor": 889.8500000000001
+                "valor": 0.0
             },
             {
                 "data": "2026-06-29",
@@ -12799,7 +12820,7 @@
                 "motivo": "FIM DE SALDO",
                 "itens": 13,
                 "pecas": 50,
-                "valor": 0.0
+                "valor": 493.73
             },
             {
                 "data": "2026-09-30",
@@ -12813,14 +12834,14 @@
                 "motivo": "DIVERGÊNCIA DE ESTOQUE",
                 "itens": 3,
                 "pecas": 157,
-                "valor": 0.0
+                "valor": 1130.19
             },
             {
                 "data": "2026-01-10",
                 "motivo": "FIM DE SALDO",
                 "itens": 8,
                 "pecas": 31,
-                "valor": 0.0
+                "valor": 68.75999999999999
             },
             {
                 "data": "2026-01-10",
@@ -12855,6 +12876,27 @@
                 "motivo": "VENDA MAIOR QUE O SALDO",
                 "itens": 1,
                 "pecas": 1,
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "motivo": "DIVERGÊNCIA DE ESTOQUE",
+                "itens": 5,
+                "pecas": 705,
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "motivo": "FIM DE SALDO",
+                "itens": 7,
+                "pecas": 30,
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "motivo": "VENDA MAIOR QUE O SALDO",
+                "itens": 2,
+                "pecas": 3,
                 "valor": 0.0
             }
         ],
@@ -13007,7 +13049,7 @@
             {
                 "data": "2026-02-01",
                 "item": "95343",
-                "valor": 29.7
+                "valor": 0.0
             },
             {
                 "data": "2026-03-01",
@@ -15627,7 +15669,7 @@
             {
                 "data": "2026-02-24",
                 "item": "84339",
-                "valor": 19.1
+                "valor": 0.0
             },
             {
                 "data": "2026-02-24",
@@ -19137,7 +19179,7 @@
             {
                 "data": "2026-09-05",
                 "item": "93057",
-                "valor": 33.12
+                "valor": 0.0
             },
             {
                 "data": "2026-09-05",
@@ -21717,7 +21759,7 @@
             {
                 "data": "2026-06-27",
                 "item": "46059",
-                "valor": 94.2
+                "valor": 0.0
             },
             {
                 "data": "2026-06-27",
@@ -21962,7 +22004,7 @@
             {
                 "data": "2026-06-29",
                 "item": "83183",
-                "valor": 1.73
+                "valor": 0.0
             },
             {
                 "data": "2026-06-29",
@@ -27512,7 +27554,7 @@
             {
                 "data": "2026-09-30",
                 "item": "87452",
-                "valor": 0.0
+                "valor": 58.08
             },
             {
                 "data": "2026-01-10",
@@ -27557,17 +27599,17 @@
             {
                 "data": "2026-01-10",
                 "item": "49089",
-                "valor": 0.0
+                "valor": 6.19
             },
             {
                 "data": "2026-01-10",
                 "item": "47146",
-                "valor": 0.0
+                "valor": 15.5
             },
             {
                 "data": "2026-01-10",
                 "item": "94820",
-                "valor": 0.0
+                "valor": 453.55
             },
             {
                 "data": "2026-01-10",
@@ -27577,7 +27619,7 @@
             {
                 "data": "2026-01-10",
                 "item": "55734",
-                "valor": 0.0
+                "valor": 35.76
             },
             {
                 "data": "2026-01-10",
@@ -27607,6 +27649,71 @@
             {
                 "data": "2026-02-10",
                 "item": "96201",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "52216",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "55481",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "57046",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "85574",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "86151",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "87819",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "52301",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "58934",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "55253",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "52175",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "53922",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "58735",
+                "valor": 0.0
+            },
+            {
+                "data": "2026-03-10",
+                "item": "57551",
                 "valor": 0.0
             }
         ]
@@ -34939,1910 +35046,1898 @@
         {
             "setor": "PICLINHA",
             "familia": "Acessórios",
-            "aging": 11,
+            "aging": 12,
             "valor": 472.96
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
-            "aging": 1,
-            "valor": 12453.36
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cabelos",
             "aging": 3,
-            "valor": 578.88
+            "valor": 963.8399999999999
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
             "aging": 4,
+            "valor": 253.45999999999998
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Cabelos",
+            "aging": 5,
             "valor": 2060.1000000000004
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
-            "aging": 17,
+            "aging": 18,
             "valor": 295.20000000000005
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
-            "aging": 28,
+            "aging": 29,
             "valor": 106.04
         },
         {
             "setor": "PICLINHA",
             "familia": "Cabelos",
             "aging": 2,
-            "valor": 963.8399999999999
+            "valor": 12453.36
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 1,
-            "valor": 1607.2800000000002
+            "aging": 4,
+            "valor": 1164.8
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 3,
-            "valor": 1169.35
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cuid. C/ Pele",
-            "aging": 6,
+            "aging": 7,
             "valor": 150.97
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 7,
-            "valor": 1170.72
+            "aging": 8,
+            "valor": 479.76
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 11,
-            "valor": 480.96
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cuid. C/ Pele",
-            "aging": 13,
+            "aging": 14,
             "valor": 347.40000000000003
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 29,
+            "aging": 30,
             "valor": 197.5
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 15,
-            "valor": 283.14
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cuid. C/ Pele",
-            "aging": 32,
+            "aging": 33,
             "valor": 347.40000000000003
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 0,
-            "valor": 696.0
+            "aging": 2,
+            "valor": 1126.3200000000002
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. C/ Pele",
-            "aging": 40,
+            "aging": 16,
+            "valor": 283.14
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Cuid. C/ Pele",
+            "aging": 41,
             "valor": 306.4
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. Faciais",
-            "aging": 1,
-            "valor": 1165.92
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Cuid. Faciais",
-            "aging": 7,
+            "aging": 8,
             "valor": 1236.9
         },
         {
             "setor": "PICLINHA",
             "familia": "Cuid. Faciais",
-            "aging": 28,
+            "aging": 29,
             "valor": 3024.0
         },
         {
             "setor": "PICLINHA",
+            "familia": "Cuid. Faciais",
+            "aging": 2,
+            "valor": 1165.92
+        },
+        {
+            "setor": "PICLINHA",
             "familia": "Desodorantes",
-            "aging": 28,
+            "aging": 29,
             "valor": 1451.25
         },
         {
             "setor": "PICLINHA",
             "familia": "Desodorantes",
-            "aging": 2,
-            "valor": 584.32
+            "aging": 0,
+            "valor": 2172.6
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
             "aging": 1,
-            "valor": 675.8399999999999
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Gifts",
-            "aging": 3,
-            "valor": 8117.7
+            "valor": 2306.9399999999996
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
             "aging": 4,
+            "valor": 8098.95
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Gifts",
+            "aging": 5,
             "valor": 1234.67
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 6,
+            "aging": 7,
             "valor": 3536.6800000000003
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 7,
+            "aging": 8,
             "valor": 2367.54
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 8,
+            "aging": 9,
             "valor": 461.12
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 9,
+            "aging": 10,
             "valor": 2271.05
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 11,
-            "valor": 15852.5
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Gifts",
-            "aging": 13,
-            "valor": 317.7
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Gifts",
             "aging": 14,
-            "valor": 471.6
+            "valor": 232.98
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 17,
+            "aging": 18,
             "valor": 654.81
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 24,
+            "aging": 25,
             "valor": 360.81000000000006
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 31,
+            "aging": 2,
+            "valor": 675.8399999999999
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Gifts",
+            "aging": 15,
+            "valor": 471.6
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Gifts",
+            "aging": 12,
+            "valor": 15852.5
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Gifts",
+            "aging": 32,
             "valor": 60.04
         },
         {
             "setor": "PICLINHA",
             "familia": "Gifts",
-            "aging": 39,
+            "aging": 0,
+            "valor": 1681.12
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Gifts",
+            "aging": 40,
             "valor": 13180.51
         },
         {
             "setor": "PICLINHA",
             "familia": "Infantil",
-            "aging": 3,
+            "aging": 4,
             "valor": 725.4
         },
         {
             "setor": "PICLINHA",
             "familia": "Maquiagem",
-            "aging": 1,
+            "aging": 2,
             "valor": 6736.9400000000005
         },
         {
             "setor": "PICLINHA",
             "familia": "Maquiagem",
-            "aging": 11,
+            "aging": 12,
             "valor": 3185.56
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 1,
-            "valor": 9681.119999999999
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Perfumaria",
-            "aging": 3,
+            "aging": 4,
             "valor": 1480.32
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 6,
+            "aging": 7,
             "valor": 897.12
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 7,
-            "valor": 10249.199999999999
+            "aging": 8,
+            "valor": 8746.48
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 8,
+            "aging": 9,
             "valor": 3261.2999999999997
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 11,
-            "valor": 831.9499999999999
+            "aging": 25,
+            "valor": 1368.95
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 17,
-            "valor": 4240.5
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Perfumaria",
-            "aging": 24,
-            "valor": 1667.63
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Perfumaria",
-            "aging": 2,
-            "valor": 1502.72
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Perfumaria",
-            "aging": 32,
+            "aging": 33,
             "valor": 3505.52
         },
         {
             "setor": "PICLINHA",
             "familia": "Perfumaria",
-            "aging": 35,
+            "aging": 36,
             "valor": 891.0
         },
         {
             "setor": "PICLINHA",
             "familia": "Sab. Corpo",
-            "aging": 1,
-            "valor": 1504.5
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Sab. Corpo",
-            "aging": 19,
-            "valor": 297.36
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Sab. Corpo",
-            "aging": 27,
+            "aging": 28,
             "valor": 174.0
         },
         {
             "setor": "PICLINHA",
+            "familia": "Sab. Corpo",
+            "aging": 20,
+            "valor": 297.36
+        },
+        {
+            "setor": "PICLINHA",
             "familia": "Solar",
-            "aging": 14,
+            "aging": 15,
             "valor": 708.8
         },
         {
             "setor": "PICLINHA",
             "familia": "Sup. à Venda",
-            "aging": 1,
-            "valor": 5657.04
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "Sup. à Venda",
-            "aging": 6,
+            "aging": 7,
             "valor": 69.9
         },
         {
             "setor": "PICLINHA",
             "familia": "Sup. à Venda",
-            "aging": 7,
+            "aging": 8,
             "valor": 1665.0
         },
         {
             "setor": "PICLINHA",
             "familia": "Sup. à Venda",
-            "aging": 8,
+            "aging": 9,
             "valor": 1364.16
         },
         {
             "setor": "PICLINHA",
             "familia": "Sup. à Venda",
-            "aging": 14,
-            "valor": 132.0
+            "aging": 29,
+            "valor": 49.6
         },
         {
             "setor": "PICLINHA",
             "familia": "Sup. à Venda",
-            "aging": 28,
-            "valor": 49.6
+            "aging": 2,
+            "valor": 5657.04
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 4,
+            "aging": 2,
+            "valor": 5.95
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Acessórios",
+            "aging": 5,
             "valor": 8.28
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 6,
+            "aging": 7,
             "valor": 584.75
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 13,
-            "valor": 41.4
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Acessórios",
-            "aging": 20,
+            "aging": 21,
             "valor": 546.26
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 27,
+            "aging": 28,
             "valor": 254.4
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 36,
+            "aging": 37,
             "valor": 11.9
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 42,
-            "valor": 129.28
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Acessórios",
-            "aging": 45,
-            "valor": 1924.1000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Acessórios",
             "aging": 46,
+            "valor": 1672.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Acessórios",
+            "aging": 47,
             "valor": 63.96
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 51,
-            "valor": 389.1
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Acessórios",
-            "aging": 55,
+            "aging": 56,
             "valor": 293.15
         },
         {
             "setor": "DIVCIC",
             "familia": "Acessórios",
-            "aging": 1,
-            "valor": 5.95
+            "aging": 43,
+            "valor": 129.28
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Acessórios",
+            "aging": 14,
+            "valor": 41.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Acessórios",
+            "aging": 52,
+            "valor": 389.1
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 2,
-            "valor": 378.88
+            "valor": 2061.92
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 4,
+            "aging": 5,
             "valor": 26.52
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 6,
+            "aging": 7,
             "valor": 40.730000000000004
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 7,
-            "valor": 7.46
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 13,
-            "valor": 73.14999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 20,
+            "aging": 21,
             "valor": 189.74
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 21,
-            "valor": 40.56
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 27,
-            "valor": 188.0
+            "aging": 25,
+            "valor": 56.71
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 28,
-            "valor": 24.84
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 30,
-            "valor": 187.98000000000002
+            "valor": 188.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 32,
+            "valor": 34.22
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 33,
             "valor": 298.98
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 34,
+            "aging": 35,
             "valor": 2904.6800000000003
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 37,
-            "valor": 6.81
+            "aging": 39,
+            "valor": 1919.91
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 39,
+            "aging": 40,
             "valor": 141.35
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 42,
-            "valor": 92.68
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 45,
+            "aging": 46,
             "valor": 1175.3
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 48,
-            "valor": 56.52
+            "aging": 49,
+            "valor": 56.519999999999996
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 51,
-            "valor": 107.80000000000001
+            "valor": 383.49
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 53,
-            "valor": 56.449999999999996
+            "valor": 15.84
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 55,
+            "aging": 54,
+            "valor": 45.16
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 56,
             "valor": 393.23
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 60,
+            "valor": 20.43
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 61,
             "valor": 270.09
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 50,
-            "valor": 383.49
+            "aging": 22,
+            "valor": 40.56
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 29,
+            "valor": 24.84
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cabelos",
+            "aging": 43,
+            "valor": 92.68
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 8,
-            "valor": 481.04999999999995
+            "valor": 7.46
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 1,
-            "valor": 2055.92
+            "aging": 14,
+            "valor": 73.14999999999999
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 31,
-            "valor": 34.22
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cabelos",
-            "aging": 24,
-            "valor": 56.71
+            "valor": 187.98000000000002
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 38,
-            "valor": 1919.91
+            "valor": 6.81
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
             "aging": 52,
-            "valor": 15.84
+            "valor": 107.80000000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Cabelos",
-            "aging": 59,
-            "valor": 20.43
+            "aging": 3,
+            "valor": 26.53
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Barba",
-            "aging": 13,
-            "valor": 89.92
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Barba",
-            "aging": 32,
+            "aging": 33,
             "valor": 434.13
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Barba",
-            "aging": 34,
+            "aging": 35,
             "valor": 4.15
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Barba",
-            "aging": 59,
+            "aging": 60,
             "valor": 59.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Barba",
+            "aging": 14,
+            "valor": 89.92
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
             "aging": 2,
-            "valor": 35.84
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 4,
-            "valor": 657.85
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 6,
-            "valor": 4.52
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 20,
-            "valor": 1065.31
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 21,
-            "valor": 1046.18
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 27,
-            "valor": 172.82
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 30,
-            "valor": 66.24
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 32,
-            "valor": 109.62
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 34,
-            "valor": 544.27
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 35,
-            "valor": 21.09
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 36,
-            "valor": 560.0
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 41,
-            "valor": 51.34
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 45,
-            "valor": 1106.25
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 46,
-            "valor": 21.12
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 48,
-            "valor": 46.75
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 49,
-            "valor": 22.560000000000002
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 51,
-            "valor": 650.77
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 53,
-            "valor": 179.54999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 55,
-            "valor": 203.3
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 60,
-            "valor": 753.6700000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 22,
-            "valor": 45.48
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 57,
-            "valor": 2.76
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. C/ Pele",
-            "aging": 1,
             "valor": 81.95
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
-            "aging": 15,
-            "valor": 10.620000000000001
+            "aging": 5,
+            "valor": 657.85
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
-            "aging": 0,
-            "valor": 129.63
+            "aging": 7,
+            "valor": 4.52
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
-            "aging": 10,
+            "aging": 11,
             "valor": 34.72
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
-            "aging": 17,
+            "aging": 16,
+            "valor": 10.620000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 18,
             "valor": 29.68
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
-            "aging": 38,
+            "aging": 21,
+            "valor": 1055.57
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 28,
+            "valor": 172.82
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 33,
+            "valor": 109.62
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 35,
+            "valor": 466.94
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 36,
+            "valor": 14.06
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 37,
+            "valor": 560.0
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 39,
             "valor": 580.29
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. C/ Pele",
-            "aging": 52,
+            "aging": 42,
+            "valor": 46.400000000000006
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 46,
+            "valor": 1106.25
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 47,
+            "valor": 21.12
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 49,
+            "valor": 46.75
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 53,
             "valor": 599.12
         },
         {
             "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 54,
+            "valor": 179.54999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 56,
+            "valor": 203.3
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 58,
+            "valor": 2.76
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 61,
+            "valor": 751.3000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 22,
+            "valor": 1046.18
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 50,
+            "valor": 22.560000000000002
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 1,
+            "valor": 129.63
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 31,
+            "valor": 37.239999999999995
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 23,
+            "valor": 45.48
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 52,
+            "valor": 650.77
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. C/ Pele",
+            "aging": 3,
+            "valor": 35.84
+        },
+        {
+            "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 6,
+            "aging": 2,
+            "valor": 24.839999999999996
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. Faciais",
+            "aging": 7,
             "valor": 23.91
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 13,
-            "valor": 300.15
+            "aging": 16,
+            "valor": 281.90999999999997
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 18,
+            "aging": 19,
             "valor": 717.6
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 20,
-            "valor": 89.0
+            "aging": 21,
+            "valor": 83.93
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 27,
+            "aging": 28,
             "valor": 85.95
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 32,
+            "aging": 33,
             "valor": 112.64
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 34,
+            "aging": 35,
             "valor": 241.56
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 36,
+            "aging": 37,
             "valor": 156.5
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 45,
+            "aging": 46,
             "valor": 21.22
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 48,
+            "aging": 49,
             "valor": 84.88
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 53,
+            "aging": 54,
             "valor": 69.65
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
-            "aging": 55,
+            "aging": 56,
             "valor": 885.72
         },
         {
             "setor": "DIVCIC",
             "familia": "Cuid. Faciais",
             "aging": 58,
+            "valor": 212.52
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. Faciais",
+            "aging": 14,
+            "valor": 300.15
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Cuid. Faciais",
+            "aging": 59,
             "valor": 95.15
         },
         {
             "setor": "DIVCIC",
-            "familia": "Cuid. Faciais",
-            "aging": 57,
-            "valor": 241.5
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. Faciais",
-            "aging": 1,
-            "valor": 24.839999999999996
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Cuid. Faciais",
-            "aging": 15,
-            "valor": 281.90999999999997
+            "familia": "Desodorantes",
+            "aging": 2,
+            "valor": 499.85
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 18,
+            "aging": 16,
+            "valor": 483.13
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 19,
             "valor": 90.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 27,
+            "aging": 28,
             "valor": 134.97
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
             "aging": 30,
-            "valor": 101.25
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 35,
-            "valor": 259.91
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 36,
-            "valor": 19.29
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 41,
-            "valor": 32.97
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 48,
-            "valor": 153.35
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 51,
-            "valor": 728.99
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 29,
             "valor": 18.63
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 57,
+            "aging": 36,
+            "valor": 250.04
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 37,
+            "valor": 19.29
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 42,
+            "valor": 32.97
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 49,
+            "valor": 59.6
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 58,
             "valor": 21.76
         },
         {
             "setor": "DIVCIC",
             "familia": "Desodorantes",
-            "aging": 1,
-            "valor": 507.6
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 15,
-            "valor": 489.0
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 0,
-            "valor": 660.0
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Desodorantes",
-            "aging": 59,
+            "aging": 60,
             "valor": 29.009999999999998
         },
         {
             "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 1,
+            "valor": 116.25
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 31,
+            "valor": 101.25
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Desodorantes",
+            "aging": 52,
+            "valor": 728.99
+        },
+        {
+            "setor": "DIVCIC",
             "familia": "Embalagens",
-            "aging": 20,
+            "aging": 21,
             "valor": 8.88
         },
         {
             "setor": "DIVCIC",
             "familia": "Embalagens",
-            "aging": 27,
+            "aging": 28,
             "valor": 121.73
         },
         {
             "setor": "DIVCIC",
             "familia": "Embalagens",
-            "aging": 38,
+            "aging": 39,
             "valor": 47.459999999999994
         },
         {
             "setor": "DIVCIC",
             "familia": "Gifts",
             "aging": 2,
-            "valor": 3622.3900000000003
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 4,
-            "valor": 68.42999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 16,
-            "valor": 294.87
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 18,
-            "valor": 397.2
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 20,
-            "valor": 320.15999999999997
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 28,
-            "valor": 48.64
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 36,
-            "valor": 109.07000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 42,
-            "valor": 176.97
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 44,
-            "valor": 657.0600000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 45,
-            "valor": 250.91
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 46,
-            "valor": 213.85
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 55,
-            "valor": 110.75999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 56,
-            "valor": 185.01
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 58,
-            "valor": 402.81999999999994
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 60,
-            "valor": 275.48
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 43,
-            "valor": 466.56
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 57,
-            "valor": 183.3
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 8,
-            "valor": 26.34
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Gifts",
-            "aging": 1,
             "valor": 589.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Gifts",
-            "aging": 15,
+            "aging": 4,
+            "valor": 4972.2
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 5,
+            "valor": 68.42999999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 9,
+            "valor": 26.34
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 16,
             "valor": 155.95999999999998
         },
         {
             "setor": "DIVCIC",
             "familia": "Gifts",
-            "aging": 17,
+            "aging": 18,
             "valor": 1776.72
         },
         {
             "setor": "DIVCIC",
             "familia": "Gifts",
-            "aging": 38,
+            "aging": 19,
+            "valor": 397.2
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 21,
+            "valor": 320.15999999999997
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 37,
+            "valor": 109.07000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 39,
             "valor": 547.5500000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Gifts",
-            "aging": 3,
-            "valor": 4972.2
+            "aging": 44,
+            "valor": 466.56
         },
         {
             "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 11,
-            "valor": 64.33
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 20,
-            "valor": 31.39
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 27,
-            "valor": 18.0
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 30,
-            "valor": 12.31
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 36,
-            "valor": 8.76
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 42,
-            "valor": 41.44
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Infantil",
+            "familia": "Gifts",
             "aging": 45,
-            "valor": 489.01000000000005
+            "valor": 657.0600000000001
         },
         {
             "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 48,
-            "valor": 35.04
+            "familia": "Gifts",
+            "aging": 46,
+            "valor": 250.91
         },
         {
             "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 60,
-            "valor": 12.31
+            "familia": "Gifts",
+            "aging": 47,
+            "valor": 213.85
         },
         {
             "setor": "DIVCIC",
-            "familia": "Infantil",
-            "aging": 50,
-            "valor": 17.52
+            "familia": "Gifts",
+            "aging": 56,
+            "valor": 110.75999999999999
         },
         {
             "setor": "DIVCIC",
-            "familia": "Infantil",
+            "familia": "Gifts",
+            "aging": 58,
+            "valor": 183.3
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 61,
+            "valor": 275.48
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 29,
+            "valor": 48.64
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 43,
+            "valor": 176.97
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 57,
+            "valor": 185.01
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
             "aging": 1,
+            "valor": 188.0
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 17,
+            "valor": 294.87
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 59,
+            "valor": 402.81999999999994
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Gifts",
+            "aging": 3,
+            "valor": 3622.3900000000003
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 2,
             "valor": 149.27
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 23,
-            "valor": 26.39
+            "aging": 12,
+            "valor": 64.33
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 38,
+            "aging": 21,
+            "valor": 31.39
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 28,
+            "valor": 18.0
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 37,
+            "valor": 8.76
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 39,
             "valor": 274.20000000000005
         },
         {
             "setor": "DIVCIC",
             "familia": "Infantil",
-            "aging": 59,
+            "aging": 46,
+            "valor": 489.01000000000005
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 49,
+            "valor": 35.04
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 51,
+            "valor": 17.52
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 60,
             "valor": 77.2
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 61,
+            "valor": 12.31
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 43,
+            "valor": 41.44
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 31,
+            "valor": 12.31
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Infantil",
+            "aging": 24,
+            "valor": 26.39
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 2,
-            "valor": 5.4
+            "valor": 104.49000000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 4,
-            "valor": 3964.620000000001
+            "aging": 5,
+            "valor": 3949.1500000000005
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 6,
-            "valor": 1388.3200000000002
+            "aging": 7,
+            "valor": 1395.8600000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 9,
-            "valor": 28.63
+            "aging": 12,
+            "valor": 229.53999999999996
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 11,
-            "valor": 246.57
+            "aging": 16,
+            "valor": 45.989999999999995
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 13,
-            "valor": 1637.35
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 18,
-            "valor": 147.6
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 20,
-            "valor": 1085.8
+            "aging": 19,
+            "valor": 127.17
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 21,
-            "valor": 1064.93
+            "valor": 1085.8
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 27,
-            "valor": 487.71
+            "aging": 25,
+            "valor": 289.03
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 28,
-            "valor": 228.82
+            "valor": 487.71
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 30,
-            "valor": 227.22000000000003
+            "valor": 1851.2
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 32,
+            "aging": 33,
             "valor": 140.61
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 34,
+            "aging": 35,
             "valor": 827.0100000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 36,
+            "aging": 37,
             "valor": 2864.7799999999997
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 39,
+            "valor": 1466.5800000000002
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 40,
             "valor": 41.95
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 42,
-            "valor": 92.35000000000001
+            "aging": 44,
+            "valor": 67.13
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 44,
+            "aging": 45,
             "valor": 624.9699999999999
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 46,
-            "valor": 1022.7099999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
             "aging": 47,
-            "valor": 60.06
+            "valor": 990.55
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 48,
+            "valor": 60.06
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 49,
             "valor": 312.19
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 51,
-            "valor": 1967.94
+            "valor": 55.38
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 53,
+            "aging": 54,
             "valor": 309.88
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 55,
+            "aging": 56,
             "valor": 475.31
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 56,
-            "valor": 840.43
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
             "aging": 58,
-            "valor": 5.52
+            "valor": 1687.74
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 60,
+            "aging": 61,
             "valor": 52.379999999999995
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 22,
-            "valor": 73.74
+            "valor": 1064.93
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 29,
-            "valor": 1851.2
+            "valor": 228.82
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 43,
-            "valor": 67.13
+            "valor": 92.35000000000001
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 57,
-            "valor": 1687.74
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Maquiagem",
-            "aging": 50,
-            "valor": 55.38
+            "valor": 840.43
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
             "aging": 1,
-            "valor": 116.5
+            "valor": 47.339999999999996
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 15,
-            "valor": 45.989999999999995
+            "aging": 106,
+            "valor": 3.18
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 0,
-            "valor": 35.76
+            "aging": 14,
+            "valor": 1637.35
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 24,
-            "valor": 289.03
+            "aging": 31,
+            "valor": 227.22000000000003
         },
         {
             "setor": "DIVCIC",
             "familia": "Maquiagem",
-            "aging": 38,
-            "valor": 1480.88
+            "aging": 23,
+            "valor": 73.74
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 10,
+            "valor": 28.63
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 52,
+            "valor": 1967.94
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 59,
+            "valor": 5.52
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 3,
+            "valor": 5.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Maquiagem",
+            "aging": 112,
+            "valor": 21.44
         },
         {
             "setor": "DIVCIC",
             "familia": "Óleos",
-            "aging": 13,
-            "valor": 12.54
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Óleos",
-            "aging": 27,
+            "aging": 28,
             "valor": 12.21
         },
         {
             "setor": "DIVCIC",
             "familia": "Óleos",
-            "aging": 50,
+            "aging": 51,
             "valor": 21.9
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Óleos",
+            "aging": 14,
+            "valor": 12.54
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
             "aging": 4,
-            "valor": 1293.5
+            "valor": 20012.4
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 6,
+            "aging": 5,
+            "valor": 1273.44
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 7,
             "valor": 393.48
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
             "aging": 16,
-            "valor": 204.67999999999998
+            "valor": 279.59
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 20,
+            "aging": 18,
+            "valor": 216.48000000000002
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 21,
             "valor": 664.23
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 27,
-            "valor": 263.1
+            "aging": 25,
+            "valor": 323.25
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 30,
-            "valor": 980.03
+            "aging": 28,
+            "valor": 251.69
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 36,
+            "aging": 32,
+            "valor": 18.94
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 37,
             "valor": 19.46
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 41,
-            "valor": 288.84000000000003
+            "aging": 39,
+            "valor": 1805.6
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
             "aging": 42,
-            "valor": 97.15
+            "valor": 288.84000000000003
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 45,
+            "aging": 44,
+            "valor": 720.0699999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 46,
             "valor": 3073.93
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
             "aging": 53,
-            "valor": 11.7
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 56,
-            "valor": 191.94
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 60,
-            "valor": 3886.7200000000003
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 22,
-            "valor": 1522.72
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 43,
-            "valor": 720.0699999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 15,
-            "valor": 279.59
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 31,
-            "valor": 18.94
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 23,
-            "valor": 152.76000000000002
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 17,
-            "valor": 216.48000000000002
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 24,
-            "valor": 323.25
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 38,
-            "valor": 1805.6
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Perfumaria",
-            "aging": 52,
             "valor": 182.64
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 59,
+            "aging": 54,
+            "valor": 11.7
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 60,
             "valor": 143.08
         },
         {
             "setor": "DIVCIC",
             "familia": "Perfumaria",
-            "aging": 3,
-            "valor": 20012.4
+            "aging": 61,
+            "valor": 3446.56
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 43,
+            "valor": 97.15
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 57,
+            "valor": 191.94
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 31,
+            "valor": 980.03
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 23,
+            "valor": 1522.72
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 17,
+            "valor": 204.67999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Perfumaria",
+            "aging": 24,
+            "valor": 152.76000000000002
         },
         {
             "setor": "DIVCIC",
             "familia": "Pets",
-            "aging": 28,
+            "aging": 47,
+            "valor": 6.95
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Pets",
+            "aging": 49,
+            "valor": 6.95
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Pets",
+            "aging": 29,
             "valor": 57.06
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Pets",
-            "aging": 46,
-            "valor": 6.95
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Pets",
-            "aging": 48,
-            "valor": 6.95
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
             "aging": 2,
-            "valor": 34.16
+            "valor": 492.33000000000004
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 13,
-            "valor": 30.6
+            "aging": 16,
+            "valor": 53.129999999999995
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 18,
-            "valor": 37.43
+            "aging": 19,
+            "valor": 27.21
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 30,
-            "valor": 50.8
+            "aging": 44,
+            "valor": 9.51
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 42,
-            "valor": 19.169999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sab. Corpo",
-            "aging": 48,
+            "aging": 49,
             "valor": 30.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 60,
+            "aging": 61,
             "valor": 33.84
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
             "aging": 43,
-            "valor": 9.51
+            "valor": 19.169999999999998
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 1,
-            "valor": 492.33000000000004
+            "aging": 14,
+            "valor": 30.6
         },
         {
             "setor": "DIVCIC",
             "familia": "Sab. Corpo",
-            "aging": 15,
-            "valor": 53.129999999999995
+            "aging": 31,
+            "valor": 50.8
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sab. Corpo",
+            "aging": 3,
+            "valor": 34.16
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
-            "aging": 4,
+            "aging": 2,
+            "valor": 70.34
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 5,
             "valor": 30.240000000000002
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
-            "aging": 6,
+            "aging": 7,
             "valor": 86.18
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
             "aging": 9,
-            "valor": 3.22
+            "valor": 35.900000000000006
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
             "aging": 11,
-            "valor": 38.8
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 13,
-            "valor": 59.02000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 18,
-            "valor": 15.700000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 20,
-            "valor": 134.09
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 21,
-            "valor": 20.31
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 27,
-            "valor": 132.32999999999998
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 28,
-            "valor": 31.65
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 30,
-            "valor": 323.52
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 32,
-            "valor": 103.75000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 34,
-            "valor": 873.6
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 36,
-            "valor": 9.379999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 37,
-            "valor": 26.4
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 41,
-            "valor": 9.1
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 42,
-            "valor": 209.32000000000002
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 45,
-            "valor": 11.33
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 46,
-            "valor": 5727.110000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 48,
-            "valor": 8.06
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 49,
-            "valor": 81.72
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 51,
-            "valor": 104.39999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 53,
-            "valor": 263.85999999999996
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 56,
-            "valor": 12.7
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 60,
-            "valor": 3.58
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 43,
-            "valor": 53.68
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 57,
-            "valor": 6.539999999999999
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 8,
-            "valor": 36.92000000000001
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 1,
-            "valor": 70.34
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 14,
-            "valor": 4.74
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 15,
-            "valor": 6.72
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 23,
-            "valor": 40.39
-        },
-        {
-            "setor": "DIVCIC",
-            "familia": "Sup. à Venda",
-            "aging": 10,
             "valor": 40.980000000000004
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
-            "aging": 17,
-            "valor": 590.99
+            "aging": 12,
+            "valor": 38.8
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
-            "aging": 38,
+            "aging": 16,
+            "valor": 6.72
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 18,
+            "valor": 587.46
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 19,
+            "valor": 14.13
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 21,
+            "valor": 134.09
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 28,
+            "valor": 132.32999999999998
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 33,
+            "valor": 103.75000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 35,
+            "valor": 873.6
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 37,
+            "valor": 9.379999999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 39,
             "valor": 16.0
         },
         {
             "setor": "DIVCIC",
             "familia": "Sup. à Venda",
-            "aging": 52,
+            "aging": 42,
+            "valor": 9.1
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 44,
+            "valor": 53.68
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 46,
+            "valor": 11.33
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 47,
+            "valor": 5727.110000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 49,
+            "valor": 8.06
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 53,
             "valor": 16.799999999999997
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 54,
+            "valor": 263.85999999999996
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 58,
+            "valor": 6.539999999999999
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 61,
+            "valor": 3.58
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 22,
+            "valor": 20.31
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 29,
+            "valor": 31.65
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 43,
+            "valor": 209.32000000000002
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 57,
+            "valor": 12.7
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 50,
+            "valor": 81.72
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 1,
+            "valor": 13.86
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 14,
+            "valor": 59.02000000000001
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 15,
+            "valor": 4.74
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 0,
+            "valor": 132.0
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 31,
+            "valor": 323.52
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 10,
+            "valor": 3.22
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 24,
+            "valor": 40.39
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 38,
+            "valor": 26.4
+        },
+        {
+            "setor": "DIVCIC",
+            "familia": "Sup. à Venda",
+            "aging": 52,
+            "valor": 104.39999999999999
         }
     ],
     "top_saldos": [
@@ -56530,7 +56625,7 @@
             "data": "2026-09-19",
             "motivo": "AMASSADO",
             "ocorrencia": "FÁBRICA",
-            "valor": 530.65
+            "valor": 541.54
         },
         {
             "data": "2026-09-19",
@@ -57167,6 +57262,60 @@
             "motivo": "VAZAMENTO",
             "ocorrencia": "FÁBRICA",
             "valor": 43.14
+        },
+        {
+            "data": "2026-10-03",
+            "motivo": "ACOPLAMENTO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 54.13
+        },
+        {
+            "data": "2026-10-03",
+            "motivo": "AMASSADO",
+            "ocorrencia": "CEVA",
+            "valor": 106.59
+        },
+        {
+            "data": "2026-10-03",
+            "motivo": "AMASSADO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 443.36
+        },
+        {
+            "data": "2026-10-03",
+            "motivo": "AMASSADO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 216.03000000000003
+        },
+        {
+            "data": "2026-10-03",
+            "motivo": "ASPECTO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 21.52
+        },
+        {
+            "data": "2026-10-03",
+            "motivo": "AUSÊNCIA DE COMPONENTE",
+            "ocorrencia": "CEVA",
+            "valor": 37.11000000000001
+        },
+        {
+            "data": "2026-10-03",
+            "motivo": "QUEBRADO/TRINCADO",
+            "ocorrencia": "CEVA",
+            "valor": 72.77
+        },
+        {
+            "data": "2026-10-03",
+            "motivo": "RASGADO",
+            "ocorrencia": "CEVA",
+            "valor": 229.05999999999997
+        },
+        {
+            "data": "2026-10-03",
+            "motivo": "VAZAMENTO",
+            "ocorrencia": "FÁBRICA",
+            "valor": 69.19
         }
     ]
 }
