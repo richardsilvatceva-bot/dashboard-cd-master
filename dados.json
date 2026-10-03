@@ -34351,7 +34351,7 @@
             "valor_sobra": 3773.7000000000003,
             "saldo_divcic": 0,
             "saldo_piclinha": 315,
-            "valor_piclinha": 0,
+            "valor_piclinha": 3773.7000000000003,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34371,7 +34371,7 @@
             "valor_sobra": 1023.1200000000001,
             "saldo_divcic": 0,
             "saldo_piclinha": 60,
-            "valor_piclinha": 0,
+            "valor_piclinha": 1705.2,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34381,18 +34381,8 @@
             "valor_sobra": 989.01,
             "saldo_divcic": 0,
             "saldo_piclinha": 500,
-            "valor_piclinha": 0,
+            "valor_piclinha": 1665.0,
             "resgate_tipo": "TOTAL"
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "74444",
-            "qtd_sobra": 34,
-            "valor_sobra": 682.04,
-            "saldo_divcic": 1,
-            "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34401,7 +34391,7 @@
             "valor_sobra": 614.4,
             "saldo_divcic": 0,
             "saldo_piclinha": 11,
-            "valor_piclinha": 0,
+            "valor_piclinha": 675.8399999999999,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34410,26 +34400,6 @@
             "qtd_sobra": 42,
             "valor_sobra": 553.14,
             "saldo_divcic": 2,
-            "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "51227",
-            "qtd_sobra": 50,
-            "valor_sobra": 501.49999999999994,
-            "saldo_divcic": 0,
-            "saldo_piclinha": 150,
-            "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "49963",
-            "qtd_sobra": 48,
-            "valor_sobra": 490.56000000000006,
-            "saldo_divcic": 1,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
             "resgate_tipo": "PARCIAL"
@@ -34461,7 +34431,7 @@
             "valor_sobra": 341.04,
             "saldo_divcic": 0,
             "saldo_piclinha": 60,
-            "valor_piclinha": 0,
+            "valor_piclinha": 1705.2,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34489,7 +34459,7 @@
             "sku": "80888",
             "qtd_sobra": 85,
             "valor_sobra": 279.65,
-            "saldo_divcic": 79,
+            "saldo_divcic": 76,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
             "resgate_tipo": "PARCIAL"
@@ -34502,7 +34472,7 @@
             "saldo_divcic": 34,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34511,7 +34481,7 @@
             "valor_sobra": 245.76,
             "saldo_divcic": 0,
             "saldo_piclinha": 11,
-            "valor_piclinha": 0,
+            "valor_piclinha": 675.8399999999999,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34529,10 +34499,10 @@
             "sku": "51164",
             "qtd_sobra": 33,
             "valor_sobra": 193.71,
-            "saldo_divcic": 70,
+            "saldo_divcic": 69,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34546,23 +34516,13 @@
         },
         {
             "status": "PENDENTE",
-            "sku": "94758",
-            "qtd_sobra": 23,
-            "valor_sobra": 133.4,
-            "saldo_divcic": 5,
-            "saldo_piclinha": 120,
-            "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
-        },
-        {
-            "status": "PENDENTE",
             "sku": "56488",
             "qtd_sobra": 4,
             "valor_sobra": 132.28,
             "saldo_divcic": 9,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34579,7 +34539,7 @@
             "sku": "84971",
             "qtd_sobra": 4,
             "valor_sobra": 81.72,
-            "saldo_divcic": 3,
+            "saldo_divcic": 2,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
             "resgate_tipo": "PARCIAL"
@@ -34602,7 +34562,7 @@
             "saldo_divcic": 27,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34641,17 +34601,7 @@
             "valor_sobra": 61.44,
             "saldo_divcic": 0,
             "saldo_piclinha": 11,
-            "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
-        },
-        {
-            "status": "PENDENTE",
-            "sku": "1314",
-            "qtd_sobra": 3,
-            "valor_sobra": 54.78,
-            "saldo_divcic": 0,
-            "saldo_piclinha": 32,
-            "valor_piclinha": 0,
+            "valor_piclinha": 675.8399999999999,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34662,7 +34612,7 @@
             "saldo_divcic": 4,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34681,7 +34631,7 @@
             "valor_sobra": 44.339999999999996,
             "saldo_divcic": 18,
             "saldo_piclinha": 32,
-            "valor_piclinha": 0,
+            "valor_piclinha": 472.96,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34702,7 +34652,7 @@
             "saldo_divcic": 8,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34712,7 +34662,7 @@
             "saldo_divcic": 36,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34741,7 +34691,7 @@
             "valor_sobra": 23.18,
             "saldo_divcic": 0,
             "saldo_piclinha": 90,
-            "valor_piclinha": 0,
+            "valor_piclinha": 1043.1,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34752,17 +34702,17 @@
             "saldo_divcic": 10,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
             "sku": "84971",
             "qtd_sobra": 1,
             "valor_sobra": 20.43,
-            "saldo_divcic": 3,
+            "saldo_divcic": 2,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34772,7 +34722,7 @@
             "saldo_divcic": 6,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34792,7 +34742,7 @@
             "saldo_divcic": 12,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34802,7 +34752,7 @@
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34812,7 +34762,7 @@
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34822,7 +34772,7 @@
             "saldo_divcic": 4,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34832,7 +34782,7 @@
             "saldo_divcic": 11,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34852,7 +34802,7 @@
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34862,7 +34812,7 @@
             "saldo_divcic": 31,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34872,7 +34822,7 @@
             "saldo_divcic": 4,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34882,7 +34832,7 @@
             "saldo_divcic": 12,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34892,7 +34842,7 @@
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34902,7 +34852,7 @@
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34912,7 +34862,7 @@
             "saldo_divcic": 9,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34922,7 +34872,7 @@
             "saldo_divcic": 8,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34932,17 +34882,17 @@
             "saldo_divcic": 11,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
             "sku": "80888",
             "qtd_sobra": 1,
             "valor_sobra": 3.29,
-            "saldo_divcic": 79,
+            "saldo_divcic": 76,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34952,7 +34902,7 @@
             "saldo_divcic": 4,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34962,7 +34912,7 @@
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34972,7 +34922,7 @@
             "saldo_divcic": 11,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         },
         {
             "status": "PENDENTE",
@@ -34982,7 +34932,7 @@
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
             "valor_piclinha": 0,
-            "resgate_tipo": "TOTAL"
+            "resgate_tipo": "PARCIAL"
         }
     ],
     "pic_div": [
@@ -36893,6 +36843,168 @@
             "familia": "Sup. à Venda",
             "aging": 52,
             "valor": 16.799999999999997
+        }
+    ],
+    "top_saldos": [
+        {
+            "sku": "53511",
+            "setor": "DIVCIC",
+            "qtd": 2040,
+            "valor": 20012.4,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "94140",
+            "setor": "PICLINHA",
+            "qtd": 378,
+            "valor": 16983.54,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "96617",
+            "setor": "PICLINHA",
+            "qtd": 756,
+            "valor": 12360.6,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "94148",
+            "setor": "PICLINHA",
+            "qtd": 182,
+            "valor": 7287.28,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "94139",
+            "setor": "PICLINHA",
+            "qtd": 136,
+            "valor": 6718.4,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "90513",
+            "setor": "PICLINHA",
+            "qtd": 280,
+            "valor": 6655.599999999999,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "94149",
+            "setor": "PICLINHA",
+            "qtd": 156,
+            "valor": 6254.040000000001,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "94135",
+            "setor": "DIVCIC",
+            "qtd": 119,
+            "valor": 5916.679999999999,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "37876",
+            "setor": "DIVCIC",
+            "qtd": 54,
+            "valor": 5684.04,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "51442",
+            "setor": "PICLINHA",
+            "qtd": 200,
+            "valor": 5316.0,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "89098",
+            "setor": "PICLINHA",
+            "qtd": 315,
+            "valor": 3773.7000000000003,
+            "tem_sobra": "SIM",
+            "qtd_sobra": 315
+        },
+        {
+            "sku": "56639",
+            "setor": "DIVCIC",
+            "qtd": 564,
+            "valor": 3592.6800000000003,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "83976",
+            "setor": "PICLINHA",
+            "qtd": 116,
+            "valor": 3505.52,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "87896",
+            "setor": "PICLINHA",
+            "qtd": 105,
+            "valor": 3261.2999999999997,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "59884",
+            "setor": "PICLINHA",
+            "qtd": 367,
+            "valor": 3185.56,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "94134",
+            "setor": "PICLINHA",
+            "qtd": 42,
+            "valor": 3071.88,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "87031",
+            "setor": "PICLINHA",
+            "qtd": 210,
+            "valor": 3024.0,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "59886",
+            "setor": "PICLINHA",
+            "qtd": 266,
+            "valor": 2963.2400000000002,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "84861",
+            "setor": "DIVCIC",
+            "qtd": 427,
+            "valor": 2835.2799999999997,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
+        },
+        {
+            "sku": "52190",
+            "setor": "DIVCIC",
+            "qtd": 480,
+            "valor": 2515.2000000000003,
+            "tem_sobra": "NÃO",
+            "qtd_sobra": 0
         }
     ],
     "avarias": [
