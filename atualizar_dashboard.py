@@ -8,7 +8,7 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES DO GITHUB
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
 # ==========================================
@@ -308,7 +308,6 @@ def gerar_json():
                         pic_dados.append({"setor": setor, "familia": f, "aging": int(float(a)), "valor": v})
                     except: pass
 
-        # Extração melhorada e à prova de falhas para SALDOS e VALORES (Piclinha e Divcic)
         header_row_saldos = -1
         idx_div = -1
         idx_pic = -1
@@ -324,26 +323,28 @@ def gerar_json():
         if header_row_saldos != -1:
             # 1. Ler SALDO DIVCIC
             if idx_div != -1:
+                idx_div_val = idx_div + 2 if (idx_div + 2) < len(df_pic_raw.columns) else -1
                 for i in range(header_row_saldos + 2, len(df_pic_raw)):
                     sku = str(df_pic_raw.iloc[i, idx_div]).strip()
                     if sku.lower() in ['nan', 'none', '', '(vazio)', 'total geral']: continue
                     if pd.isna(df_pic_raw.iloc[i, idx_div]): break
                     
                     qtd = tratar_valor_monetario(df_pic_raw.iloc[i, idx_div+1])
-                    val = tratar_valor_monetario(df_pic_raw.iloc[i, idx_div+2]) if (idx_div+2) < len(df_pic_raw.columns) else 0
+                    val = tratar_valor_monetario(df_pic_raw.iloc[i, idx_div_val]) if idx_div_val != -1 else 0
                     
                     saldos_divcic[sku] = {"qtd": int(qtd), "valor": val}
                     todos_saldos.append({"sku": sku, "setor": "DIVCIC", "qtd": int(qtd), "valor": val})
 
             # 2. Ler SALDO PICLINHA
             if idx_pic != -1:
+                idx_pic_val = idx_pic + 2 if (idx_pic + 2) < len(df_pic_raw.columns) else -1
                 for i in range(header_row_saldos + 2, len(df_pic_raw)):
                     sku = str(df_pic_raw.iloc[i, idx_pic]).strip()
                     if sku.lower() in ['nan', 'none', '', '(vazio)', 'total geral']: continue
                     if pd.isna(df_pic_raw.iloc[i, idx_pic]): break
                     
                     qtd = tratar_valor_monetario(df_pic_raw.iloc[i, idx_pic+1])
-                    val = tratar_valor_monetario(df_pic_raw.iloc[i, idx_pic+2]) if (idx_pic+2) < len(df_pic_raw.columns) else 0
+                    val = tratar_valor_monetario(df_pic_raw.iloc[i, idx_pic_val]) if idx_pic_val != -1 else 0
                     
                     saldos_piclinha[sku] = {"qtd": int(qtd), "valor": val}
                     todos_saldos.append({"sku": sku, "setor": "PICLINHA", "qtd": int(qtd), "valor": val})
@@ -359,14 +360,16 @@ def gerar_json():
         
         saldo_divcic_qtd = sd["qtd"]
         saldo_piclinha_qtd = sp["qtd"]
-        valor_piclinha = sp["valor"]
+        
+        # AQUI SOMAMOS O VALOR DOS DOIS SE HOUVER NOS DOIS
+        valor_saldo_total = sd["valor"] + sp["valor"]
         
         if saldo_divcic_qtd > 0 or saldo_piclinha_qtd > 0:
             qtd_sobra = item['qtd']
+            saldo_total_qtd = saldo_divcic_qtd + saldo_piclinha_qtd
             
-            # Se a quantidade de sobra couber toda no saldo do piclinha é Total.
-            # Caso contrário, e precisando apenas de um pouco no piclinha, é Parcial.
-            if saldo_piclinha_qtd >= qtd_sobra:
+            # Se a quantidade de saldo (Divcic + Piclinha) for maior ou igual à sobra, é TOTAL
+            if saldo_total_qtd >= qtd_sobra:
                 resgate_tipo = "TOTAL"
             else:
                 resgate_tipo = "PARCIAL"
@@ -378,7 +381,7 @@ def gerar_json():
                 "valor_sobra": item['valor'],
                 "saldo_divcic": saldo_divcic_qtd,
                 "saldo_piclinha": saldo_piclinha_qtd,
-                "valor_piclinha": valor_piclinha,
+                "valor_saldo": valor_saldo_total,
                 "resgate_tipo": resgate_tipo
             })
     cruzamento_sobras = sorted(cruzamento_sobras, key=lambda x: x['valor_sobra'], reverse=True)
@@ -454,7 +457,7 @@ def gerar_json():
             if e.code != 404: raise e
 
         payload = {
-            "message": "Atualização automática (Top Saldos, Correção Valores e Lógica Total/Parcial) 🚀", 
+            "message": "Atualização automática (Soma de Valores e Lógica de Resgate) 🚀", 
             "content": base64.b64encode(conteudo.encode('utf-8')).decode('utf-8')
         }
         if sha: payload["sha"] = sha
