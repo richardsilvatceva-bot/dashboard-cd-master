@@ -34448,7 +34448,7 @@
             "valor_sobra": 4138.82,
             "saldo_divcic": 1,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 121.73,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34458,7 +34458,7 @@
             "valor_sobra": 3773.7000000000003,
             "saldo_divcic": 0,
             "saldo_piclinha": 315,
-            "valor_piclinha": 3773.7000000000003,
+            "valor_saldo": 3773.7000000000003,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34468,7 +34468,7 @@
             "valor_sobra": 1559.1799999999998,
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 18.06,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34478,7 +34478,7 @@
             "valor_sobra": 1023.1200000000001,
             "saldo_divcic": 0,
             "saldo_piclinha": 60,
-            "valor_piclinha": 1705.2,
+            "valor_saldo": 1705.2,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34488,7 +34488,7 @@
             "valor_sobra": 989.01,
             "saldo_divcic": 0,
             "saldo_piclinha": 500,
-            "valor_piclinha": 1665.0,
+            "valor_saldo": 1665.0,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34498,7 +34498,7 @@
             "valor_sobra": 614.4,
             "saldo_divcic": 0,
             "saldo_piclinha": 11,
-            "valor_piclinha": 675.8399999999999,
+            "valor_saldo": 675.8399999999999,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34508,7 +34508,7 @@
             "valor_sobra": 553.14,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 26.34,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34518,7 +34518,7 @@
             "valor_sobra": 409.08,
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 29.22,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34528,7 +34528,7 @@
             "valor_sobra": 393.84000000000003,
             "saldo_divcic": 6,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 196.92000000000002,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34538,7 +34538,7 @@
             "valor_sobra": 341.04,
             "saldo_divcic": 0,
             "saldo_piclinha": 60,
-            "valor_piclinha": 1705.2,
+            "valor_saldo": 1705.2,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34548,7 +34548,7 @@
             "valor_sobra": 295.2,
             "saldo_divcic": 1,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 2.46,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34558,7 +34558,7 @@
             "valor_sobra": 280.5,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 18.7,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34568,7 +34568,7 @@
             "valor_sobra": 279.65,
             "saldo_divcic": 76,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 250.04,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34578,8 +34578,8 @@
             "valor_sobra": 273.26,
             "saldo_divcic": 34,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 714.68,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34588,7 +34588,7 @@
             "valor_sobra": 245.76,
             "saldo_divcic": 0,
             "saldo_piclinha": 11,
-            "valor_piclinha": 675.8399999999999,
+            "valor_saldo": 675.8399999999999,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34598,7 +34598,7 @@
             "valor_sobra": 244.89000000000001,
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 27.21,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34608,8 +34608,8 @@
             "valor_sobra": 193.71,
             "saldo_divcic": 69,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 405.03000000000003,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34618,7 +34618,7 @@
             "valor_sobra": 164.25,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 21.9,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34628,8 +34628,8 @@
             "valor_sobra": 132.28,
             "saldo_divcic": 9,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 297.63,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34638,7 +34638,7 @@
             "valor_sobra": 82.89999999999999,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 33.16,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34648,7 +34648,7 @@
             "valor_sobra": 81.72,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 40.86,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34658,7 +34658,7 @@
             "valor_sobra": 73.75,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 29.5,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34668,8 +34668,8 @@
             "valor_sobra": 69.12,
             "saldo_divcic": 27,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 466.56,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34678,7 +34678,7 @@
             "valor_sobra": 68.16,
             "saldo_divcic": 15,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 63.9,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34688,7 +34688,7 @@
             "valor_sobra": 67.32,
             "saldo_divcic": 11,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 43.56,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34698,7 +34698,7 @@
             "valor_sobra": 66.5,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 13.3,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34708,7 +34708,7 @@
             "valor_sobra": 61.44,
             "saldo_divcic": 0,
             "saldo_piclinha": 11,
-            "valor_piclinha": 675.8399999999999,
+            "valor_saldo": 675.8399999999999,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34718,8 +34718,8 @@
             "valor_sobra": 53.33,
             "saldo_divcic": 4,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 213.32,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34728,7 +34728,7 @@
             "valor_sobra": 49.739999999999995,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 33.16,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34738,7 +34738,7 @@
             "valor_sobra": 44.339999999999996,
             "saldo_divcic": 18,
             "saldo_piclinha": 32,
-            "valor_piclinha": 472.96,
+            "valor_saldo": 739.0,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34748,7 +34748,7 @@
             "valor_sobra": 33.25,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 13.3,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34758,8 +34758,8 @@
             "valor_sobra": 32.8,
             "saldo_divcic": 8,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 65.6,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34768,8 +34768,8 @@
             "valor_sobra": 32.2,
             "saldo_divcic": 36,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 33.120000000000005,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34778,7 +34778,7 @@
             "valor_sobra": 24.839999999999996,
             "saldo_divcic": 1,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 2.76,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34788,7 +34788,7 @@
             "valor_sobra": 24.08,
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 18.06,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34798,7 +34798,7 @@
             "valor_sobra": 23.18,
             "saldo_divcic": 0,
             "saldo_piclinha": 90,
-            "valor_piclinha": 1043.1,
+            "valor_saldo": 1043.1,
             "resgate_tipo": "TOTAL"
         },
         {
@@ -34808,8 +34808,8 @@
             "valor_sobra": 21.44,
             "saldo_divcic": 10,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 53.60000000000001,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34818,8 +34818,8 @@
             "valor_sobra": 20.43,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 40.86,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34828,8 +34828,8 @@
             "valor_sobra": 19.36,
             "saldo_divcic": 6,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 58.08,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34838,7 +34838,7 @@
             "valor_sobra": 19.02,
             "saldo_divcic": 1,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 9.51,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34848,8 +34848,8 @@
             "valor_sobra": 18.04,
             "saldo_divcic": 12,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 54.12,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34858,8 +34858,8 @@
             "valor_sobra": 17.11,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 34.22,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34868,8 +34868,8 @@
             "valor_sobra": 17.11,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 34.22,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34878,8 +34878,8 @@
             "valor_sobra": 15.84,
             "saldo_divcic": 4,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 21.12,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34888,8 +34888,8 @@
             "valor_sobra": 14.9,
             "saldo_divcic": 11,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 81.95,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34898,7 +34898,7 @@
             "valor_sobra": 14.76,
             "saldo_divcic": 1,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
+            "valor_saldo": 2.46,
             "resgate_tipo": "PARCIAL"
         },
         {
@@ -34908,8 +34908,8 @@
             "valor_sobra": 14.54,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 14.54,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34918,8 +34918,8 @@
             "valor_sobra": 10.600000000000001,
             "saldo_divcic": 31,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 32.86,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34928,8 +34928,8 @@
             "valor_sobra": 10.56,
             "saldo_divcic": 4,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 21.12,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34938,8 +34938,8 @@
             "valor_sobra": 9.02,
             "saldo_divcic": 12,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 54.12,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34948,8 +34948,8 @@
             "valor_sobra": 8.75,
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 26.25,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34958,8 +34958,8 @@
             "valor_sobra": 6.52,
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 19.56,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34968,8 +34968,8 @@
             "valor_sobra": 5.92,
             "saldo_divcic": 9,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 53.28,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34978,8 +34978,8 @@
             "valor_sobra": 5.18,
             "saldo_divcic": 8,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 41.44,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34988,8 +34988,8 @@
             "valor_sobra": 3.96,
             "saldo_divcic": 11,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 43.56,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -34998,8 +34998,8 @@
             "valor_sobra": 3.29,
             "saldo_divcic": 76,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 250.04,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -35008,8 +35008,8 @@
             "valor_sobra": 2.42,
             "saldo_divcic": 4,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 4.84,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -35018,8 +35018,8 @@
             "valor_sobra": 1.5,
             "saldo_divcic": 2,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 3.0,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -35028,8 +35028,8 @@
             "valor_sobra": 1.03,
             "saldo_divcic": 11,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 11.33,
+            "resgate_tipo": "TOTAL"
         },
         {
             "status": "PENDENTE",
@@ -35038,8 +35038,8 @@
             "valor_sobra": 1.02,
             "saldo_divcic": 3,
             "saldo_piclinha": 0,
-            "valor_piclinha": 0,
-            "resgate_tipo": "PARCIAL"
+            "valor_saldo": 3.06,
+            "resgate_tipo": "TOTAL"
         }
     ],
     "pic_div": [
