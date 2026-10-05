@@ -62,11 +62,11 @@
   </nav>
 
   <main class="max-w-7xl mx-auto w-full px-4 pb-12">
-    <!-- ABA: VISÃO GERAL -->
+    <!-- ABA: VISÃO GERAL (TODOS OS ALERTAS A VERMELHO) -->
     <div id="tab-geral" class="tab-content space-y-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Estoque Auditado</p><h2 id="vgEstoque" class="text-xl font-bold text-white mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Impacto NET Geral (YTD)</p><h2 id="vgNetVal" class="text-xl font-bold text-blue-500 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Impacto NET Geral (YTD)</p><h2 id="vgNetVal" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">% NET Geral (YTD)</p><h2 id="vgNetPct" class="text-xl font-bold text-blue-400 mt-1">0.00%</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Valor Sobras Pendentes</p><h2 id="vgSobrasPend" class="text-xl font-bold text-emerald-400 mt-1">R$ 0,00</h2></div>
       </div>
@@ -87,8 +87,10 @@
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-teal-500"><p class="text-[11px] text-slate-400 uppercase">Avarias Fábrica/Outros</p><h2 id="vgAvariasFabrica" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
       </div>
       
-      <div id="imagemSection" class="hidden mt-6 bg-[#131d31] p-4 rounded-xl border border-slate-800 w-full flex justify-center items-center shadow-xl">
-         <img id="dashboardImagem" src="" alt="Dashboard Imagem Extra" class="max-w-full rounded" />
+      <!-- NOVA SECÇÃO: ACURACIDADE DINÂMICA -->
+      <div id="acuracidadeSection" class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 hidden">
+        <div id="acuNet" class="bg-slate-200 rounded-xl p-4 shadow-xl border border-slate-800 relative"></div>
+        <div id="acuLoc" class="bg-slate-200 rounded-xl p-4 shadow-xl border border-slate-800 relative"></div>
       </div>
     </div>
 
@@ -241,13 +243,11 @@
 
     <!-- ABA: SOBRAS -->
     <div id="tab-sobras" class="tab-content hidden space-y-6">
-      
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl max-h-[420px] flex flex-col">
           <div class="flex justify-between items-center mb-2"><h3 class="font-bold text-sm text-amber-400" id="sobrasChartTitle">Top Marcas (Status: PENDENTE)</h3><span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded font-mono" id="sobrasChartTotal">Total: R$ 0,00</span></div>
           <div class="relative flex-grow w-full"><canvas id="chartSobrasPendentes"></canvas></div>
         </div>
-
         <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden flex flex-col max-h-[420px]">
           <div class="p-3 bg-slate-900 border-b border-slate-800 flex justify-between items-center">
              <h3 class="text-sm font-bold text-white">Marcas (Por Status)</h3>
@@ -261,7 +261,6 @@
           </div>
         </div>
       </div>
-      
       <div class="mt-6 bg-[#131d31] p-4 rounded-xl border border-slate-800 flex flex-col w-full min-h-[500px]">
         <div class="flex justify-between items-center border-b border-slate-800 pb-2 mb-4">
             <h3 class="font-bold text-sm text-white flex items-center">
@@ -385,12 +384,6 @@
         DADOS = await res.json();
         document.getElementById('dataStatus').innerHTML = `Dados Carregados`;
         
-        // MOSTRAR IMAGEM SE EXISTIR NO JSON
-        if (DADOS.imagem_b64) {
-            document.getElementById('imagemSection').classList.remove('hidden');
-            document.getElementById('dashboardImagem').src = DADOS.imagem_b64;
-        }
-
         if (DADOS.erros && DADOS.erros.length > 0) {
           document.getElementById('errorBanner').classList.remove('hidden');
           document.getElementById('errorList').innerHTML = DADOS.erros.map(e => `<li>Aba <strong>${e.aba}</strong> - Célula <strong>${e.celula}</strong> (<span class="font-mono">${e.erro}</span>)</li>`).join('');
@@ -447,11 +440,62 @@
       select.addEventListener('change', renderAll);
     }
 
+    function renderAcuracidade(containerId, dados, titulo, subtitulo) {
+        const container = document.getElementById(containerId);
+        if(!dados || dados.length === 0) { container.classList.add('hidden'); return; }
+        
+        let html = `
+            <div class="text-center mb-4">
+                <h2 class="text-xl font-black text-[#0f172a] uppercase tracking-wide">ACURACIDADE DE ESTOQUE</h2>
+                <p class="text-sm font-medium text-slate-600 mt-1">Resultado da acuracidade <span class="text-rose-600 font-black text-lg">"${subtitulo}"</span> do inventário cíclico em cada mês</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        `;
+        
+        dados.forEach(d => {
+            let meta = d.meta <= 1.2 ? d.meta * 100 : d.meta;
+            let res = d.resultado <= 1.2 ? d.resultado * 100 : d.resultado;
+            let atingiu = res >= meta;
+            let emoji = atingiu ? '😉👍' : '😢';
+            let msg = atingiu ? 'PARABÉNS!!!' : 'TEMOS QUE MELHORAR!!!';
+            let color = atingiu ? 'text-emerald-600' : 'text-rose-600';
+            
+            html += `
+            <div class="border-2 border-dashed border-slate-400 bg-white flex flex-col h-full shadow-sm">
+                <div class="bg-[#0f172a] text-white text-center py-1.5 font-bold text-xs uppercase">${d.mes}</div>
+                <div class="p-2 flex flex-col flex-grow text-center text-[#0f172a]">
+                    <div class="grid grid-cols-2 gap-1 text-[11px] font-bold border-b border-slate-200 pb-1 mb-1">
+                        <span class="text-right pr-1 uppercase text-slate-500">META:</span><span class="text-left pl-1">${meta.toFixed(2).replace('.',',')}%</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-1 text-xs font-bold mb-3">
+                        <span class="text-right pr-1 uppercase text-slate-500">Resultado:</span><span class="text-left pl-1 ${color}">${res.toFixed(2).replace('.',',')}%</span>
+                    </div>
+                    <div class="flex-grow flex items-center justify-center text-5xl mb-2 drop-shadow-md">
+                        ${emoji}
+                    </div>
+                    <div class="${color} font-black text-[9px] tracking-tighter border-t border-slate-200 pt-1.5 mt-auto uppercase">
+                        ${msg}
+                    </div>
+                </div>
+            </div>`;
+        });
+        
+        html += `</div>`;
+        container.innerHTML = html;
+        container.classList.remove('hidden');
+        document.getElementById('acuracidadeSection').classList.remove('hidden');
+    }
+
     function renderAll() {
       if(!DADOS) return;
       
       let cCont = 0, cPos = 0, cNeg = 0, vgValRepicking = 0, vC = 0, vPic = 0, vDiv = 0, mPic = 0, mDiv = 0, tPend = 0;
       let vgAvariaCeva = 0, vgAvariaFabrica = 0;
+
+      if(DADOS.acuracidade) {
+          renderAcuracidade('acuNet', DADOS.acuracidade.net, 'Acuracidade de Estoque', 'NET');
+          renderAcuracidade('acuLoc', DADOS.acuracidade.locacao, 'Acuracidade de Estoque', 'LOCAÇÃO');
+      }
 
       // CÍCLICO
       if(DADOS.ciclico && DADOS.ciclico.daily) {
@@ -661,7 +705,7 @@
           }
       }
 
-      // CRUZAMENTO DE SOBRAS PENDENTES COM SALDOS
+      // CRUZAMENTO DE SOBRAS
       if (DADOS.sobras_cruzamento) {
           let fCruz = DADOS.sobras_cruzamento.filter(c => c.status === 'PENDENTE');
           let totalResgateVal = 0;
