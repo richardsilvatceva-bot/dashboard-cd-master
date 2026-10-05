@@ -8,7 +8,7 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES DO GITHUB
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
 # ==========================================
@@ -140,25 +140,25 @@ def gerar_json():
 
     cont_skus = {}
     
-    # Procura na Aba Cíclico
-    c_item_cic = None
     if not df_cic.empty:
-        for c in df_cic.columns:
-            cup = str(c).strip().upper()
-            if 'ITEM' in cup and 'CONTAGEM' in cup:
-                c_item_cic = c
+        df_cic_cols = [str(c).upper() for c in df_cic.columns]
+        c_item_cic = None
+        for orig, up in zip(df_cic.columns, df_cic_cols):
+            if 'ITEM' in up and ('CONT' in up or '1' in up):
+                c_item_cic = orig
                 break
-                
-    if c_item_cic and not df_cic.empty:
-        for _, row in df_cic.dropna(subset=['DATA_STR']).iterrows():
-            d = row['DATA_STR']
-            sku = str(row[c_item_cic]).strip()
-            if sku.endswith('.0'): sku = sku[:-2]
-            if sku and sku.lower() not in ['nan', 'none', '(vazio)', 'total']:
-                if d not in cont_skus: cont_skus[d] = set()
-                cont_skus[d].add(sku)
+        if not c_item_cic:
+            c_item_cic = next((orig for orig, up in zip(df_cic.columns, df_cic_cols) if 'ITEM' in up or 'SKU' in up or 'MATERIAL' in up), None)
+            
+        if c_item_cic:
+            for _, row in df_cic.dropna(subset=['DATA_STR']).iterrows():
+                d = row['DATA_STR']
+                sku = str(row[c_item_cic]).strip()
+                if sku.endswith('.0'): sku = sku[:-2]
+                if sku and sku.lower() not in ['nan', 'none', '(vazio)', 'total']:
+                    if d not in cont_skus: cont_skus[d] = set()
+                    cont_skus[d].add(sku)
 
-    # Procura em Aba Contagens Externa (Garantia)
     aba_cont = next((s for s in xls.sheet_names if 'contagen' in s.lower() or 'contagem' in s.lower() and 'ciclico' not in s.lower()), None)
     if aba_cont:
         df_cont = pd.read_excel(xls, aba_cont)
@@ -183,11 +183,7 @@ def gerar_json():
         p_set = plan_skus.get(d, set())
         c_set = cont_skus.get(d, set())
         
-        daily_comparativo.append({
-            "data": d,
-            "planejado": len(p_set),
-            "contado": len(c_set)
-        })
+        daily_comparativo.append({"data": d, "planejado": len(p_set), "contado": len(c_set)})
         
         p_not_c = p_set - c_set
         c_not_p = c_set - p_set
@@ -219,6 +215,9 @@ def gerar_json():
                 "valorRepicking": lanc_diario['REPICKING']['valor'],
                 "lancamentos": lanc_diario
             })
+            
+        for _, row in df_rep.groupby('TURNO').agg(ocorrencias=('CHAVE', 'count'), itens=('Quantidade ', 'sum')).reset_index().iterrows():
+            if str(row['TURNO']) not in ['0', 'nan']: rep_turnos.append({"turno": str(row['TURNO']), "ocorrencias": int(row['ocorrencias']), "itens": tratar_valor_monetario(row['itens'])})
 
     # 5. CORTES
     aba_cortes = next((s for s in xls.sheet_names if 'cortes' in s.lower()), None)
@@ -431,7 +430,6 @@ def gerar_json():
 
     # 8. AVARIAS
     aba_avarias = next((s for s in xls.sheet_names if 'avarias' in s.lower()), None)
-    df_avarias = pd.read_excel(xls, aba_avarias) if aba_avarias else pd.DataFrame()
     avarias_dados = []
     if not df_avarias.empty:
         df_avarias.columns = [str(c).strip() for c in df_avarias.columns]
@@ -452,7 +450,7 @@ def gerar_json():
                 except: pass
 
     # ==========================================
-    # 9. LER ACURACIDADE (EMOJIS)
+    # 9. ACURACIDADE (EMOJIS DINÂMICOS)
     # ==========================================
     aba_acuracidade = next((s for s in xls.sheet_names if 'acuraci' in s.lower()), None)
     acuracidade_dados = {"net": [], "locacao": []}
@@ -492,9 +490,14 @@ def gerar_json():
                     mes_val = str(df_acu.iloc[r, c_mes]).strip().upper()
                     mes_nome = next((m for m in meses_str if m[:3] in mes_val), None)
                     if mes_nome:
-                        meta = tratar_valor_monetario(df_acu.iloc[r, c_meta])
-                        resultado = tratar_valor_monetario(df_acu.iloc[r, c_res])
-                        res.append({"mes": mes_nome, "meta": float(meta), "resultado": float(resultado)})
+                        meta_str = str(df_acu.iloc[r, c_meta]).strip().upper()
+                        res_str = str(df_acu.iloc[r, c_res]).strip().upper()
+                        
+                        meta_val = tratar_valor_monetario(meta_str) if meta_str not in ['NAN', 'NONE', '', '(VAZIO)'] else None
+                        res_val = tratar_valor_monetario(res_str) if res_str not in ['NAN', 'NONE', '', '(VAZIO)'] else None
+                        
+                        if meta_val is not None:
+                            res.append({"mes": mes_nome, "meta": meta_val, "resultado": res_val})
             return res
             
         acuracidade_dados['net'] = extrair_bloco(max(0, col_net if col_net != -1 else 0))
