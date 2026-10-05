@@ -19,7 +19,7 @@
 <body class="antialiased min-h-screen flex flex-col">
 
   <header class="bg-[#111827] border-b border-slate-800 p-4 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="w-full px-4 mx-auto flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white"><i data-lucide="boxes"></i></div>
         <div><h1 class="font-bold text-lg text-white">Logistics Intelligence • CD Master</h1><p class="text-xs text-slate-400">Dashboard Executivo de Acurácia & Nível de Serviço</p></div>
@@ -30,7 +30,7 @@
     </div>
   </header>
 
-  <section class="max-w-7xl mx-auto w-full px-4 pt-4">
+  <section class="w-full px-8 pt-4">
     <div id="errorBanner" class="hidden bg-rose-500/10 border-l-4 border-rose-500 p-4 mb-4 rounded-r-lg">
       <div class="flex">
         <div class="flex-shrink-0"><i data-lucide="alert-triangle" class="h-5 w-5 text-rose-500"></i></div>
@@ -47,7 +47,7 @@
     </div>
   </section>
 
-  <nav class="max-w-7xl mx-auto w-full px-4 mt-6 mb-6">
+  <nav class="w-full px-8 mt-6 mb-6">
     <div class="flex gap-2 border-b border-slate-800 pb-2 overflow-x-auto">
       <button class="tab-btn active px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="geral">Visão Geral</button>
       <button class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 text-slate-400" data-tab="ciclico">Cíclico</button>
@@ -61,8 +61,8 @@
     </div>
   </nav>
 
-  <main class="max-w-7xl mx-auto w-full px-4 pb-12">
-    <!-- ABA: VISÃO GERAL (TODOS OS ALERTAS A VERMELHO) -->
+  <main class="w-full px-8 pb-12">
+    <!-- ABA: VISÃO GERAL (Cores Atualizadas) -->
     <div id="tab-geral" class="tab-content space-y-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Estoque Auditado</p><h2 id="vgEstoque" class="text-xl font-bold text-white mt-1">R$ 0,00</h2></div>
@@ -87,10 +87,10 @@
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-teal-500"><p class="text-[11px] text-slate-400 uppercase">Avarias Fábrica/Outros</p><h2 id="vgAvariasFabrica" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
       </div>
       
-      <!-- NOVA SECÇÃO: ACURACIDADE DINÂMICA -->
-      <div id="acuracidadeSection" class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 hidden">
-        <div id="acuNet" class="bg-slate-200 rounded-xl p-4 shadow-xl border border-slate-800 relative"></div>
-        <div id="acuLoc" class="bg-slate-200 rounded-xl p-4 shadow-xl border border-slate-800 relative"></div>
+      <!-- ACURACIDADE DINÂMICA (EMOJIS / PENDENTES) -->
+      <div id="acuracidadeSection" class="mt-8 grid grid-cols-1 xl:grid-cols-2 gap-8 hidden">
+        <div id="acuNet" class="bg-[#eef2f6] rounded-xl p-6 shadow-xl border border-slate-300 relative min-w-full"></div>
+        <div id="acuLoc" class="bg-[#eef2f6] rounded-xl p-6 shadow-xl border border-slate-300 relative min-w-full"></div>
       </div>
     </div>
 
@@ -141,7 +141,7 @@
       </div>
     </div>
 
-    <!-- ABA: PLANEJAMENTO (COM DIVERGÊNCIAS CLICÁVEIS E GRÁFICO COMPARATIVO) -->
+    <!-- ABA: PLANEJAMENTO -->
     <div id="tab-plan" class="tab-content hidden space-y-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
@@ -172,13 +172,14 @@
           <h3 class="text-sm font-bold text-rose-400">Itens com Divergência (Planejado vs Contado)</h3>
           <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
         </button>
-        <div id="planDivContent" class="overflow-y-auto max-h-80 custom-scrollbar hidden">
+        <div id="planDivContent" class="overflow-y-auto max-h-96 custom-scrollbar hidden">
           <table class="w-full text-left text-xs text-slate-300">
             <thead class="sticky top-0 bg-slate-950">
               <tr>
                 <th class="py-2 px-3">Data</th>
                 <th class="py-2 px-3">SKU</th>
                 <th class="py-2 px-3">Motivo da Divergência</th>
+                <th class="py-2 px-3 w-2/5">Justificativa (Salva automaticamente)</th>
               </tr>
             </thead>
             <tbody id="tbPlanDivergencias" class="divide-y divide-slate-800"></tbody>
@@ -261,6 +262,7 @@
           </div>
         </div>
       </div>
+      
       <div class="mt-6 bg-[#131d31] p-4 rounded-xl border border-slate-800 flex flex-col w-full min-h-[500px]">
         <div class="flex justify-between items-center border-b border-slate-800 pb-2 mb-4">
             <h3 class="font-bold text-sm text-white flex items-center">
@@ -305,9 +307,9 @@
          <select id="filtroAging" multiple class="bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white h-24 w-32 custom-scrollbar"></select>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Valor Total)</p><h2 id="kpiPicValor" class="text-lg font-bold text-blue-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Valor Total)</p><h2 id="kpiPicValor" class="text-lg font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Maior Aging)</p><h2 id="kpiPicAging" class="text-lg font-bold text-white mt-1">0 Dias</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Valor Total)</p><h2 id="kpiDivValor" class="text-lg font-bold text-purple-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Valor Total)</p><h2 id="kpiDivValor" class="text-lg font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Maior Aging)</p><h2 id="kpiDivAging" class="text-lg font-bold text-white mt-1">0 Dias</h2></div>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
@@ -346,8 +348,8 @@
     <!-- ABA: AVARIAS -->
     <div id="tab-avarias" class="tab-content hidden space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 border-t-4 border-t-orange-500"><p class="text-[11px] text-slate-400 uppercase">Total Avarias (CEVA)</p><h2 id="avaKpiCeva" class="text-2xl font-bold text-orange-400 mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 border-t-4 border-t-teal-500"><p class="text-[11px] text-slate-400 uppercase">Total Avarias (Fábrica / Outros)</p><h2 id="avaKpiFabrica" class="text-2xl font-bold text-teal-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 border-t-4 border-t-orange-500"><p class="text-[11px] text-slate-400 uppercase">Total Avarias (CEVA)</p><h2 id="avaKpiCeva" class="text-2xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 border-t-4 border-t-teal-500"><p class="text-[11px] text-slate-400 uppercase">Total Avarias (Fábrica / Outros)</p><h2 id="avaKpiFabrica" class="text-2xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
         <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl min-h-[350px] flex flex-col">
@@ -377,6 +379,21 @@
     const fmtNum = v => new Intl.NumberFormat('pt-BR').format(v);
 
     let csvDataToExport = [];
+
+    window.saveJustification = function(key, inputElement) {
+        localStorage.setItem(key, inputElement.value);
+        inputElement.classList.add('border-emerald-500', 'bg-emerald-500/10');
+        let icon = document.getElementById('check_' + key);
+        if(icon) {
+            icon.classList.remove('opacity-0');
+            icon.classList.add('opacity-100');
+            setTimeout(() => {
+                inputElement.classList.remove('border-emerald-500', 'bg-emerald-500/10');
+                icon.classList.remove('opacity-100');
+                icon.classList.add('opacity-0');
+            }, 2000);
+        }
+    };
 
     async function loadData() {
       try {
@@ -445,39 +462,61 @@
         if(!dados || dados.length === 0) { container.classList.add('hidden'); return; }
         
         let html = `
-            <div class="text-center mb-4">
-                <h2 class="text-xl font-black text-[#0f172a] uppercase tracking-wide">ACURACIDADE DE ESTOQUE</h2>
-                <p class="text-sm font-medium text-slate-600 mt-1">Resultado da acuracidade <span class="text-rose-600 font-black text-lg">"${subtitulo}"</span> do inventário cíclico em cada mês</p>
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-black text-[#0f172a] uppercase tracking-wider">${titulo}</h2>
+                <p class="text-base font-medium text-slate-600 mt-2">Resultado da acuracidade <span class="text-rose-600 font-black text-xl">"${subtitulo}"</span> do inventário cíclico em cada mês</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         `;
         
         dados.forEach(d => {
-            let meta = d.meta <= 1.2 ? d.meta * 100 : d.meta;
-            let res = d.resultado <= 1.2 ? d.resultado * 100 : d.resultado;
-            let atingiu = res >= meta;
-            let emoji = atingiu ? '😉👍' : '😢';
-            let msg = atingiu ? 'PARABÉNS!!!' : 'TEMOS QUE MELHORAR!!!';
-            let color = atingiu ? 'text-emerald-600' : 'text-rose-600';
+            let meta = d.meta <= 1.2 && d.meta > 0 ? d.meta * 100 : d.meta;
             
-            html += `
-            <div class="border-2 border-dashed border-slate-400 bg-white flex flex-col h-full shadow-sm">
-                <div class="bg-[#0f172a] text-white text-center py-1.5 font-bold text-xs uppercase">${d.mes}</div>
-                <div class="p-2 flex flex-col flex-grow text-center text-[#0f172a]">
-                    <div class="grid grid-cols-2 gap-1 text-[11px] font-bold border-b border-slate-200 pb-1 mb-1">
-                        <span class="text-right pr-1 uppercase text-slate-500">META:</span><span class="text-left pl-1">${meta.toFixed(2).replace('.',',')}%</span>
+            if (d.resultado === null || d.resultado === undefined || isNaN(d.resultado) || d.resultado === 0) {
+                html += `
+                <div class="border-2 border-dashed border-slate-400 bg-white flex flex-col h-full shadow-sm">
+                    <div class="bg-[#0f172a] text-white text-center py-2 font-bold text-sm uppercase tracking-wide">${d.mes}</div>
+                    <div class="p-3 flex flex-col flex-grow text-center text-[#0f172a]">
+                        <div class="grid grid-cols-2 gap-2 text-xs font-bold border-b border-slate-200 pb-2 mb-2">
+                            <span class="text-right pr-2 uppercase text-slate-500">META:</span><span class="text-left pl-2">${meta.toFixed(2).replace('.',',')}%</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-sm font-bold mb-4">
+                            <span class="text-right pr-2 uppercase text-slate-500">Resultado:</span><span class="text-left pl-2 text-slate-400">-</span>
+                        </div>
+                        <div class="flex-grow flex items-center justify-center text-6xl mb-4 drop-shadow-md grayscale opacity-50">
+                            😐
+                        </div>
+                        <div class="text-slate-500 font-black text-[11px] tracking-tighter border-t border-slate-200 pt-2 mt-auto uppercase">
+                            PENDENTE
+                        </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-1 text-xs font-bold mb-3">
-                        <span class="text-right pr-1 uppercase text-slate-500">Resultado:</span><span class="text-left pl-1 ${color}">${res.toFixed(2).replace('.',',')}%</span>
+                </div>`;
+            } else {
+                let res = d.resultado <= 1.2 ? d.resultado * 100 : d.resultado;
+                let atingiu = res >= meta;
+                let emoji = atingiu ? '😉👍' : '😢';
+                let msg = atingiu ? 'PARABÉNS!!!' : 'TEMOS QUE MELHORAR!!!';
+                let color = atingiu ? 'text-emerald-500' : 'text-rose-600';
+                
+                html += `
+                <div class="border-2 border-dashed border-slate-400 bg-white flex flex-col h-full shadow-sm">
+                    <div class="bg-[#0f172a] text-white text-center py-2 font-bold text-sm uppercase tracking-wide">${d.mes}</div>
+                    <div class="p-3 flex flex-col flex-grow text-center text-[#0f172a]">
+                        <div class="grid grid-cols-2 gap-2 text-xs font-bold border-b border-slate-200 pb-2 mb-2">
+                            <span class="text-right pr-2 uppercase text-slate-500">META:</span><span class="text-left pl-2">${meta.toFixed(2).replace('.',',')}%</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-sm font-bold mb-4">
+                            <span class="text-right pr-2 uppercase text-slate-500">Resultado:</span><span class="text-left pl-2 ${color}">${res.toFixed(2).replace('.',',')}%</span>
+                        </div>
+                        <div class="flex-grow flex items-center justify-center text-6xl mb-4 drop-shadow-md">
+                            ${emoji}
+                        </div>
+                        <div class="${color} font-black text-[11px] tracking-tighter border-t border-slate-200 pt-2 mt-auto uppercase">
+                            ${msg}
+                        </div>
                     </div>
-                    <div class="flex-grow flex items-center justify-center text-5xl mb-2 drop-shadow-md">
-                        ${emoji}
-                    </div>
-                    <div class="${color} font-black text-[9px] tracking-tighter border-t border-slate-200 pt-1.5 mt-auto uppercase">
-                        ${msg}
-                    </div>
-                </div>
-            </div>`;
+                </div>`;
+            }
         });
         
         html += `</div>`;
@@ -497,7 +536,6 @@
           renderAcuracidade('acuLoc', DADOS.acuracidade.locacao, 'Acuracidade de Estoque', 'LOCAÇÃO');
       }
 
-      // CÍCLICO
       if(DADOS.ciclico && DADOS.ciclico.daily) {
           const fCiclico = filterByDate(DADOS.ciclico.daily);
           let cFisico = 0;
@@ -526,7 +564,6 @@
           }
       }
 
-      // NET
       if(DADOS.net) {
           const fNetT = DADOS.net.filter(n => n.divcic !== 0 || n.netVal !== 0);
           document.getElementById('tbNet').innerHTML = fNetT.map(n => `<tr class="hover:bg-slate-800/50"><td class="font-bold text-white">${n.mes}</td><td class="font-mono">${fmtR(n.divcic)}</td><td class="font-mono text-rose-400">${fmtR(n.ajusteNeg)}</td><td class="font-mono text-emerald-400">${fmtR(n.ajustePos)}</td><td class="font-mono">${fmtR(n.sobras)}</td><td class="font-mono text-rose-300">${fmtR(n.avaria)}</td><td class="font-mono font-bold ${n.netVal < 0 ? 'text-rose-500' : 'text-emerald-500'}">${fmtR(n.netVal)}</td><td class="font-mono">${fmtPct(n.netPct)}</td><td class="font-mono font-bold">${fmtR(n.grossVal)}</td><td class="font-mono">${fmtPct(n.grossPct)}</td></tr>`).join('');
@@ -542,7 +579,6 @@
           }
       }
 
-      // PLANEJAMENTO
       if(DADOS.planejamento) {
           document.getElementById('tbPlanDiario').innerHTML = filterByDate(DADOS.planejamento.daily).map(p => `<tr class="hover:bg-slate-800/50"><td class="font-mono text-white">${p.data.split('-').reverse().join('/')}</td><td class="text-emerald-400 font-bold">${p.curvas['A']||0}</td><td class="text-blue-400 font-bold">${p.curvas['B']||0}</td><td class="text-amber-400 font-bold">${p.curvas['C']||0}</td><td class="font-bold text-white">${p.total}</td></tr>`).join('');
           
@@ -576,17 +612,28 @@
 
           if(DADOS.planejamento.divergencias) {
               const fDivs = filterByDate(DADOS.planejamento.divergencias);
-              document.getElementById('tbPlanDivergencias').innerHTML = fDivs.map(d => 
-                  `<tr class="hover:bg-slate-800/50">
-                      <td class="font-mono text-white">${d.data.split('-').reverse().join('/')}</td>
-                      <td class="font-bold text-amber-400">${d.sku}</td>
-                      <td class="font-bold ${d.motivo.includes('não contado') ? 'text-rose-400' : 'text-blue-400'}">${d.motivo}</td>
+              document.getElementById('tbPlanDivergencias').innerHTML = fDivs.map(d => {
+                  let jKey = `just_${d.data}_${d.sku}`;
+                  let savedJust = localStorage.getItem(jKey) || '';
+                  return `
+                  <tr class="hover:bg-slate-800/50 border-b border-slate-800">
+                      <td class="font-mono text-white align-middle">${d.data.split('-').reverse().join('/')}</td>
+                      <td class="font-bold text-amber-400 align-middle">${d.sku}</td>
+                      <td class="font-bold ${d.motivo.includes('não contado') ? 'text-rose-400' : 'text-blue-400'} align-middle">${d.motivo}</td>
+                      <td class="align-middle py-2">
+                          <div class="flex items-center gap-2">
+                              <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-white focus:outline-none placeholder-slate-600 transition-colors" 
+                                     placeholder="Escreva e prima Enter..." 
+                                     value="${savedJust}" 
+                                     onchange="saveJustification('${jKey}', this)">
+                              <span id="check_${jKey}" class="text-emerald-500 opacity-0 transition-opacity duration-300"><i data-lucide="check" class="w-4 h-4"></i></span>
+                          </div>
+                      </td>
                   </tr>`
-              ).join('');
+              }).join('');
           }
       }
 
-      // REPICKING
       if(DADOS.repicking && DADOS.repicking.daily) {
           const fRep = filterByDate(DADOS.repicking.daily);
           let rApo = 0, rEnc = 0;
@@ -621,7 +668,6 @@
           }
       }
 
-      // CORTES
       if(DADOS.cortes && DADOS.cortes.daily) {
           const fCortes = filterByDate(DADOS.cortes.daily);
           let iC=0, pC=0; 
@@ -675,10 +721,8 @@
           }
       }
 
-      // SOBRAS
-      let sSel = 'ALL';
       if(DADOS.sobras) {
-          sSel = document.getElementById('filtroStatusSobras').value;
+          let sSel = document.getElementById('filtroStatusSobras').value;
           const fSobras = sSel === 'ALL' ? DADOS.sobras : DADOS.sobras.filter(d => d.status === sSel);
           const gSob = {}; let tSob = 0;
           fSobras.forEach(d => { if(!gSob[d.marca]) gSob[d.marca] = { loc: 0, val: 0 }; gSob[d.marca].loc+=d.locacoes; gSob[d.marca].val+=d.valor; tSob+=d.valor; });
@@ -705,7 +749,6 @@
           }
       }
 
-      // CRUZAMENTO DE SOBRAS
       if (DADOS.sobras_cruzamento) {
           let fCruz = DADOS.sobras_cruzamento.filter(c => c.status === 'PENDENTE');
           let totalResgateVal = 0;
@@ -745,7 +788,6 @@
           }
       }
 
-      // PIC/DIV
       if(DADOS.pic_div) {
           const selOpts = Array.from(document.getElementById('filtroAging').selectedOptions).map(o => o.value);
           let selAgings = [];
@@ -782,7 +824,7 @@
                   <td class="font-bold text-white">${s.sku}</td>
                   <td class="font-bold ${s.setor === 'PICLINHA' ? 'text-blue-400' : 'text-purple-400'}">${s.setor}</td>
                   <td class="font-mono text-right text-slate-300">${fmtNum(s.qtd)}</td>
-                  <td class="font-mono text-right font-bold ${s.setor === 'PICLINHA' ? 'text-blue-400' : 'text-purple-400'}">${fmtR(s.valor)}</td>
+                  <td class="font-mono text-right font-bold ${s.setor === 'PICLINHA' ? 'text-rose-500' : 'text-rose-500'}">${fmtR(s.valor)}</td>
                   <td class="text-center align-middle">
                      <span class="font-bold text-[10px] ${s.tem_sobra === 'SIM' ? 'text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 py-1 px-2 rounded-full inline-block' : 'text-slate-500'}">${s.tem_sobra}</span>
                   </td>
@@ -792,7 +834,6 @@
           }
       }
 
-      // AVARIAS
       if(DADOS.avarias) {
           const fAva = filterByDate(DADOS.avarias);
           fAva.forEach(a => {
@@ -824,7 +865,6 @@
           }
       }
 
-      // VISÃO GERAL
       document.getElementById('vgEstoque').innerText = fmtR(cCont);
       if(DADOS.net_ytd) {
           document.getElementById('vgNetVal').innerText = fmtR(DADOS.net_ytd.netVal);
@@ -841,23 +881,19 @@
       document.getElementById('vgAvariasFabrica').innerText = fmtR(vgAvariaFabrica);
     }
 
-    document.getElementById('btnExportCSV').addEventListener('click', () => {
-        if(csvDataToExport.length <= 1) {
-            alert("Não existem dados de sobras para exportar neste período.");
-            return;
-        }
-        let csvContent = "data:text/csv;charset=utf-8," + csvDataToExport.map(e => e.join(";")).join("\n");
-        var encodedUri = encodeURI(csvContent);
-        var link = document.createElement("a");
-        link.setAttribute("href", encodedUri);
-        link.setAttribute("download", "Analise_Sobras_Pendentes.csv");
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    });
-
     document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => { document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); const t = btn.getAttribute('data-tab'); document.querySelectorAll('.tab-content').forEach(tc => tc.classList.add('hidden')); document.getElementById(`tab-${t}`).classList.remove('hidden'); });
+      btn.addEventListener('click', () => { 
+          document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); 
+          btn.classList.add('active'); 
+          const t = btn.getAttribute('data-tab'); 
+          document.querySelectorAll('.tab-content').forEach(tc => tc.classList.add('hidden')); 
+          document.getElementById(`tab-${t}`).classList.remove('hidden'); 
+          
+          if(t === 'geral' && DADOS && DADOS.acuracidade) {
+             renderAcuracidade('acuNet', DADOS.acuracidade.net, 'Acuracidade de Estoque', 'NET');
+             renderAcuracidade('acuLoc', DADOS.acuracidade.locacao, 'Acuracidade de Estoque', 'LOCAÇÃO');
+          }
+      });
     });
 
     window.onload = () => { lucide.createIcons(); loadData(); };
