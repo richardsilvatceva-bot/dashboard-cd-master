@@ -62,29 +62,34 @@
   </nav>
 
   <main class="max-w-7xl mx-auto w-full px-4 pb-12">
-    <!-- ABA: VISÃO GERAL -->
+    <!-- ABA: VISÃO GERAL (TODOS OS ALERTAS A VERMELHO) -->
     <div id="tab-geral" class="tab-content space-y-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Estoque Auditado</p><h2 id="vgEstoque" class="text-xl font-bold text-white mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Impacto NET Geral (YTD)</p><h2 id="vgNetVal" class="text-xl font-bold text-blue-500 mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">% NET Geral (YTD)</p><h2 id="vgNetPct" class="text-xl font-bold text-blue-400 mt-1">0.00%</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Valor Sobras Pendentes</p><h2 id="vgSobrasPend" class="text-xl font-bold text-amber-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Impacto NET Geral (YTD)</p><h2 id="vgNetVal" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">% NET Geral (YTD)</p><h2 id="vgNetPct" class="text-xl font-bold text-rose-500 mt-1">0.00%</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Valor Sobras Pendentes</p><h2 id="vgSobrasPend" class="text-xl font-bold text-emerald-400 mt-1">R$ 0,00</h2></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Cíclico - Sobra (+)</p><h2 id="vgCicSobra" class="text-xl font-bold text-emerald-400 mt-1">R$ 0,00</h2></div>
         <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Cíclico - Falta (-)</p><h2 id="vgCicFalta" class="text-xl font-bold text-rose-500 mt-1">-R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Repicking Feitos (Valor)</p><h2 id="vgRepicking" class="text-xl font-bold text-blue-400 mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Valor Total Cortes</p><h2 id="vgCortes" class="text-xl font-bold text-rose-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Repicking Feitos (Valor)</p><h2 id="vgRepicking" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800"><p class="text-[11px] text-slate-400 uppercase">Valor Total Cortes</p><h2 id="vgCortes" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Valor Total)</p><h2 id="vgPicVal" class="text-xl font-bold text-blue-400 mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Maior Aging)</p><h2 id="vgPicAging" class="text-xl font-bold text-white mt-1">0 Dias</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Valor Total)</p><h2 id="vgDivVal" class="text-xl font-bold text-purple-400 mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Maior Aging)</p><h2 id="vgDivAging" class="text-xl font-bold text-white mt-1">0 Dias</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Valor Total)</p><h2 id="vgPicVal" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-blue-500"><p class="text-[11px] text-slate-400 uppercase">PICLINHA (Maior Aging)</p><h2 id="vgPicAging" class="text-xl font-bold text-rose-500 mt-1">0 Dias</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Valor Total)</p><h2 id="vgDivVal" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-purple-500"><p class="text-[11px] text-slate-400 uppercase">DIVCIC (Maior Aging)</p><h2 id="vgDivAging" class="text-xl font-bold text-rose-500 mt-1">0 Dias</h2></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-orange-500"><p class="text-[11px] text-slate-400 uppercase">Avarias CEVA</p><h2 id="vgAvariasCeva" class="text-xl font-bold text-orange-400 mt-1">R$ 0,00</h2></div>
-        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-teal-500"><p class="text-[11px] text-slate-400 uppercase">Avarias Fábrica/Outros</p><h2 id="vgAvariasFabrica" class="text-xl font-bold text-teal-400 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-orange-500"><p class="text-[11px] text-slate-400 uppercase">Avarias CEVA</p><h2 id="vgAvariasCeva" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
+        <div class="bg-[#131d31] p-4 rounded-xl border border-slate-800 border-t-4 border-t-teal-500"><p class="text-[11px] text-slate-400 uppercase">Avarias Fábrica/Outros</p><h2 id="vgAvariasFabrica" class="text-xl font-bold text-rose-500 mt-1">R$ 0,00</h2></div>
+      </div>
+      
+      <!-- AQUI É ONDE A IMAGEM VAI APARECER -->
+      <div id="imagemSection" class="hidden mt-6 bg-[#131d31] p-4 rounded-xl border border-slate-800 w-full flex justify-center items-center shadow-xl">
+         <img id="dashboardImagem" src="" alt="Dashboard Imagem Extra" class="max-w-full rounded" />
       </div>
     </div>
 
@@ -135,18 +140,49 @@
       </div>
     </div>
 
-    <!-- ABA: PLANEJAMENTO -->
+    <!-- ABA: PLANEJAMENTO (COM DIVERGÊNCIAS CLICÁVEIS) -->
     <div id="tab-plan" class="tab-content hidden space-y-6">
-      <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
-        <h3 class="font-bold text-sm text-white mb-2">Itens Contados vs Pendentes (Por Curva ABC)</h3>
-        <div class="relative w-full h-64"><canvas id="chartPlan"></canvas></div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
+            <h3 class="font-bold text-sm text-white mb-2">Itens Contados vs Pendentes (Por Curva ABC)</h3>
+            <div class="relative w-full h-64"><canvas id="chartPlan"></canvas></div>
+          </div>
+          <div class="bg-[#131d31] p-5 rounded-xl border border-slate-800 shadow-xl w-full h-80">
+            <h3 class="font-bold text-sm text-blue-400 mb-2">Evolução Diária (Planejado vs Contado)</h3>
+            <div class="relative w-full h-64"><canvas id="chartPlanComparativo"></canvas></div>
+          </div>
       </div>
-      <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden">
-        <div class="p-3 bg-slate-900 border-b border-slate-800"><h3 class="text-sm font-bold text-white">Resumo Diário - Contagens (Físico)</h3></div>
-        <table>
-          <thead><tr><th>Data</th><th>Curva A</th><th>Curva B</th><th>Curva C</th><th>Total Dia</th></tr></thead>
-          <tbody id="tbPlanDiario"></tbody>
-        </table>
+      
+      <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden shadow-xl">
+        <button onclick="document.getElementById('planDiarioContent').classList.toggle('hidden')" class="w-full p-3 bg-slate-900 border-b border-slate-800 flex justify-between items-center hover:bg-slate-800 transition-colors">
+          <h3 class="text-sm font-bold text-white">Resumo Diário - Contagens (Físico)</h3>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+        </button>
+        <div id="planDiarioContent" class="overflow-x-auto">
+          <table>
+            <thead><tr><th>Data</th><th>Curva A</th><th>Curva B</th><th>Curva C</th><th>Total Dia</th></tr></thead>
+            <tbody id="tbPlanDiario"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-[#131d31] rounded-xl border border-slate-800 overflow-hidden shadow-xl mt-6">
+        <button onclick="document.getElementById('planDivContent').classList.toggle('hidden')" class="w-full p-3 bg-slate-900 border-b border-slate-800 flex justify-between items-center hover:bg-slate-800 transition-colors">
+          <h3 class="text-sm font-bold text-rose-400">Itens com Divergência (Planejado vs Contado)</h3>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+        </button>
+        <div id="planDivContent" class="overflow-y-auto max-h-80 custom-scrollbar hidden">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="sticky top-0 bg-slate-950">
+              <tr>
+                <th class="py-2 px-3">Data</th>
+                <th class="py-2 px-3">SKU</th>
+                <th class="py-2 px-3">Motivo da Divergência</th>
+              </tr>
+            </thead>
+            <tbody id="tbPlanDivergencias" class="divide-y divide-slate-800"></tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -238,7 +274,6 @@
                 <i data-lucide="download" class="w-4 h-4"></i> Exportar CSV
             </button>
         </div>
-        
         <div class="flex flex-col gap-6 flex-grow">
           <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 shadow-inner flex flex-col flex-grow">
             <h4 class="font-bold text-xs text-emerald-400 mb-2">Top 10 Sobras com Saldo (Por Valor de Sobra R$)</h4>
@@ -333,7 +368,7 @@
 
   <script>
     let DADOS = null;
-    let chartTratativas = null, chartNetValInst = null, chartNetPctInst = null, chartPlanInst = null;
+    let chartTratativas = null, chartNetValInst = null, chartNetPctInst = null, chartPlanInst = null, chartPlanCompInst = null;
     let chartRepQtdInst = null, chartRepValInst = null;
     let chartCortesInst = null, chartCortesMotivosInst = null;
     let chartSobrasInst = null, chartSobrasCruzInst = null;
@@ -351,6 +386,13 @@
         const res = await fetch('dados.json');
         DADOS = await res.json();
         document.getElementById('dataStatus').innerHTML = `Dados Carregados`;
+        
+        // MOSTRAR IMAGEM SE EXISTIR NO JSON
+        if (DADOS.imagem_b64) {
+            document.getElementById('imagemSection').classList.remove('hidden');
+            document.getElementById('dashboardImagem').src = DADOS.imagem_b64;
+        }
+
         if (DADOS.erros && DADOS.erros.length > 0) {
           document.getElementById('errorBanner').classList.remove('hidden');
           document.getElementById('errorList').innerHTML = DADOS.erros.map(e => `<li>Aba <strong>${e.aba}</strong> - Célula <strong>${e.celula}</strong> (<span class="font-mono">${e.erro}</span>)</li>`).join('');
@@ -371,6 +413,7 @@
       if(DADOS.cortes && DADOS.cortes.daily) allDates = allDates.concat(DADOS.cortes.daily.map(d => d.data));
       if(DADOS.avarias) allDates = allDates.concat(DADOS.avarias.map(d => d.data));
       if(DADOS.repicking && DADOS.repicking.daily) allDates = allDates.concat(DADOS.repicking.daily.map(d => d.data));
+      if(DADOS.planejamento && DADOS.planejamento.comparativo) allDates = allDates.concat(DADOS.planejamento.comparativo.map(d => d.data));
       
       allDates = Array.from(new Set(allDates)).sort();
       if(allDates.length > 0) {
@@ -408,7 +451,6 @@
 
     function renderAll() {
       if(!DADOS) return;
-      const st = document.getElementById('startDate').value, en = document.getElementById('endDate').value;
       
       let cCont = 0, cPos = 0, cNeg = 0, vgValRepicking = 0, vC = 0, vPic = 0, vDiv = 0, mPic = 0, mDiv = 0, tPend = 0;
       let vgAvariaCeva = 0, vgAvariaFabrica = 0;
@@ -426,6 +468,7 @@
           document.getElementById('tbOfensoresCiclico').innerHTML = DADOS.ciclico.offenders.map(o => `<tr class="hover:bg-slate-800/50"><td class="font-mono text-emerald-400 font-bold">${o.sku}</td><td class="text-right font-mono ${o.valorAjuste < 0 ? 'text-rose-400' : 'text-slate-300'}">${fmtR(o.valorAjuste)}</td></tr>`).join('');
           
           if (DADOS.ciclico.tratativas) {
+            const st = document.getElementById('startDate').value, en = document.getElementById('endDate').value;
             const mMap = {'JANEIRO':1, 'FEVEREIRO':2, 'MARÇO':3, 'ABRIL':4, 'MAIO':5, 'JUNHO':6, 'JULHO':7, 'AGOSTO':8, 'SETEMBRO':9, 'OUTUBRO':10, 'NOVEMBRO':11, 'DEZEMBRO':12};
             const fTrat = DADOS.ciclico.tratativas.filter(t => { if(!st||!en) return true; const mStr = `2026-${(mMap[t.mes]||1).toString().padStart(2, '0')}`; return mStr >= st.slice(0,7) && mStr <= en.slice(0,7); });
             const gTrat = {}; let tTrat = 0;
@@ -457,9 +500,10 @@
           }
       }
 
-      // PLAN
+      // PLANEJAMENTO
       if(DADOS.planejamento) {
           document.getElementById('tbPlanDiario').innerHTML = filterByDate(DADOS.planejamento.daily).map(p => `<tr class="hover:bg-slate-800/50"><td class="font-mono text-white">${p.data.split('-').reverse().join('/')}</td><td class="text-emerald-400 font-bold">${p.curvas['A']||0}</td><td class="text-blue-400 font-bold">${p.curvas['B']||0}</td><td class="text-amber-400 font-bold">${p.curvas['C']||0}</td><td class="font-bold text-white">${p.total}</td></tr>`).join('');
+          
           if(DADOS.planejamento.curvas) {
               const pKeys = Object.keys(DADOS.planejamento.curvas).sort();
               const ctxPlan = document.getElementById('chartPlan');
@@ -467,6 +511,36 @@
                 if(chartPlanInst) chartPlanInst.destroy();
                 chartPlanInst = new Chart(ctxPlan, { type: 'bar', data: { labels: pKeys.map(k=>'Curva '+k), datasets: [{ label: 'Contados (Planejado)', data: pKeys.map(k=>DADOS.planejamento.curvas[k].contado), backgroundColor: '#10b981' }, { label: 'Pendentes', data: pKeys.map(k=>DADOS.planejamento.curvas[k].pendente), backgroundColor: '#f43f5e' }] }, options: { responsive: true, maintainAspectRatio: false } });
               }
+          }
+
+          if(DADOS.planejamento.comparativo) {
+              const fComp = filterByDate(DADOS.planejamento.comparativo);
+              const ctxComp = document.getElementById('chartPlanComparativo');
+              if(ctxComp) {
+                  if(chartPlanCompInst) chartPlanCompInst.destroy();
+                  chartPlanCompInst = new Chart(ctxComp, {
+                      type: 'bar',
+                      data: {
+                          labels: fComp.map(d => d.data.split('-').reverse().join('/')),
+                          datasets: [
+                              { label: 'Planejado', data: fComp.map(d=>d.planejado), backgroundColor: '#3b82f6' },
+                              { label: 'Contado', data: fComp.map(d=>d.contado), backgroundColor: '#10b981' }
+                          ]
+                      },
+                      options: { responsive: true, maintainAspectRatio: false }
+                  });
+              }
+          }
+
+          if(DADOS.planejamento.divergencias) {
+              const fDivs = filterByDate(DADOS.planejamento.divergencias);
+              document.getElementById('tbPlanDivergencias').innerHTML = fDivs.map(d => 
+                  `<tr class="hover:bg-slate-800/50">
+                      <td class="font-mono text-white">${d.data.split('-').reverse().join('/')}</td>
+                      <td class="font-bold text-amber-400">${d.sku}</td>
+                      <td class="font-bold ${d.motivo.includes('não contado') ? 'text-rose-400' : 'text-blue-400'}">${d.motivo}</td>
+                  </tr>`
+              ).join('');
           }
       }
 
@@ -603,7 +677,7 @@
                 <td class="font-mono text-right text-purple-400 font-bold">${fmtNum(c.saldo_divcic)}</td>
                 <td class="font-mono text-right text-blue-400 font-bold">${fmtNum(c.saldo_piclinha)}</td>
                 <td class="font-mono text-right text-blue-300 font-bold">${fmtR(c.valor_saldo)}</td>
-                <td class="font-bold text-center text-[10px] ${c.resgate_tipo === 'TOTAL' ? 'text-emerald-400' : 'text-amber-400'}">${c.resgate_tipo}</td>
+                <td class="font-bold text-center text-[10px] align-middle"><span class="${c.resgate_tipo === 'TOTAL' ? 'text-emerald-400' : 'text-amber-400'}">${c.resgate_tipo}</span></td>
               </tr>`
           }).join('');
 
