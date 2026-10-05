@@ -8,7 +8,7 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES DO GITHUB
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
 # ==========================================
@@ -430,6 +430,7 @@ def gerar_json():
 
     # 8. AVARIAS
     aba_avarias = next((s for s in xls.sheet_names if 'avarias' in s.lower()), None)
+    df_avarias = pd.read_excel(xls, aba_avarias) if aba_avarias else pd.DataFrame()
     avarias_dados = []
     if not df_avarias.empty:
         df_avarias.columns = [str(c).strip() for c in df_avarias.columns]
