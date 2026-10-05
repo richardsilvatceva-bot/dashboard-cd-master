@@ -9139,7 +9139,28 @@
                 }
             }
         ],
-        "turnos": []
+        "turnos": [
+            {
+                "turno": "1° TURNO",
+                "ocorrencias": 1324,
+                "itens": 226892.0
+            },
+            {
+                "turno": "2° TURNO",
+                "ocorrencias": 1650,
+                "itens": 243474.0
+            },
+            {
+                "turno": "3° TURNO",
+                "ocorrencias": 1562,
+                "itens": 348577.03
+            },
+            {
+                "turno": "REWORK",
+                "ocorrencias": 6814,
+                "itens": 22711.0
+            }
+        ]
     },
     "cortes": {
         "daily": [
@@ -58278,22 +58299,22 @@
             {
                 "mes": "SETEMBRO",
                 "meta": 0.999,
-                "resultado": 0.0
+                "resultado": 1.0
             },
             {
                 "mes": "OUTUBRO",
                 "meta": 0.999,
-                "resultado": 0.0
+                "resultado": null
             },
             {
                 "mes": "NOVEMBRO",
                 "meta": 0.999,
-                "resultado": 0.0
+                "resultado": null
             },
             {
                 "mes": "DEZEMBRO",
                 "meta": 0.999,
-                "resultado": 0.0
+                "resultado": null
             }
         ],
         "locacao": [
@@ -58340,22 +58361,22 @@
             {
                 "mes": "SETEMBRO",
                 "meta": 0.995,
-                "resultado": 0.0
+                "resultado": 0.9608
             },
             {
                 "mes": "OUTUBRO",
                 "meta": 0.995,
-                "resultado": 0.0
+                "resultado": null
             },
             {
                 "mes": "NOVEMBRO",
                 "meta": 0.995,
-                "resultado": 0.0
+                "resultado": null
             },
             {
                 "mes": "DEZEMBRO",
                 "meta": 0.995,
-                "resultado": 0.0
+                "resultado": null
             }
         ]
     }
