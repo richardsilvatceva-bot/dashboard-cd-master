@@ -8,7 +8,7 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES DO GITHUB
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
 # ==========================================
@@ -108,19 +108,85 @@ def gerar_json():
         for i, mes in enumerate(meses):
             net_dados.append({"mes": mes, "divcic": ex('DIVCIC', i+1), "ajusteNeg": ex('Ajuste Cíclico Negativo', i+1), "ajustePos": ex('Ajuste Cíclico Positivo', i+1), "sobras": ex('Sobras Processadas', i+1), "avaria": ex('Avaria Processo', i+1), "netVal": ex('NET', i+1), "netPct": ex('% NET', i+1), "grossVal": ex('GROSS', i+1), "grossPct": ex('% GROSS', i+1)})
 
-    # 3. PLANEJAMENTO
+    # 3. PLANEJAMENTO E CONTAGENS (COMPARAÇÃO)
     df_plan = pd.read_excel(xls, 'Planejamento') if 'Planejamento' in xls.sheet_names else pd.DataFrame()
     plan_dados, plan_curvas = [], {}
+    plan_skus = {}
+    
     if not df_plan.empty:
         df_plan['DATA_STR'] = pd.to_datetime(df_plan['DATA'], errors='coerce').dt.strftime('%Y-%m-%d')
         df_plan['Curva ABC'] = df_plan['Curva ABC'].fillna('Sem Curva')
+        
         for data, group in df_plan.dropna(subset=['DATA_STR']).groupby(['DATA_STR', 'Curva ABC']).size().reset_index(name='qtd').groupby('DATA_STR'):
             plan_dados.append({"data": data, "total": int(group['qtd'].sum()), "curvas": {r['Curva ABC']: int(r['qtd']) for _, r in group.iterrows()}})
+            
         if 'OBSERVAÇÃO' in df_plan.columns:
             for c in df_plan['Curva ABC'].unique():
                 df_c = df_plan[df_plan['Curva ABC'] == c]
                 obs = df_c['OBSERVAÇÃO'].astype(str).str.upper()
                 plan_curvas[str(c)] = {"contado": int(len(df_c[obs == 'PLANEJADO'])), "pendente": int(len(df_c[obs == 'PENDENTE']))}
+
+        # Extrair os itens (SKUs) Planeados
+        df_plan_cols = [str(c).strip().upper() for c in df_plan.columns]
+        c_item_plan = None
+        for orig_col, up_col in zip(df_plan.columns, df_plan_cols):
+            if 'ITEM' in up_col or 'MATERIAL' in up_col or 'PRODUTO' in up_col or 'SKU' in up_col:
+                c_item_plan = orig_col
+                break
+                
+        if c_item_plan:
+            for _, row in df_plan.dropna(subset=['DATA_STR']).iterrows():
+                d = row['DATA_STR']
+                sku = str(row[c_item_plan]).strip()
+                if sku and sku.lower() not in ['nan', 'none', '(vazio)', 'total']:
+                    if d not in plan_skus: plan_skus[d] = set()
+                    plan_skus[d].add(sku)
+
+    # Ler a Aba de Contagens Reais
+    aba_cont = next((s for s in xls.sheet_names if 'contagen' in s.lower() or 'contagem' in s.lower()), None)
+    cont_skus = {}
+    if aba_cont:
+        df_cont = pd.read_excel(xls, aba_cont)
+        df_cont.columns = [str(c).strip().upper() for c in df_cont.columns]
+        
+        c_data_cont = next((c for c in df_cont.columns if 'DATA' in c), None)
+        c_item_cont = next((c for c in df_cont.columns if 'ITEM' in c or 'MATERIAL' in c or 'PRODUTO' in c or 'SKU' in c), None)
+        
+        if c_data_cont and c_item_cont:
+            df_cont['DATA_STR'] = pd.to_datetime(df_cont[c_data_cont], errors='coerce').dt.strftime('%Y-%m-%d')
+            for _, row in df_cont.dropna(subset=['DATA_STR']).iterrows():
+                d = row['DATA_STR']
+                sku = str(row[c_item_cont]).strip()
+                if sku and sku.lower() not in ['nan', 'none', '(vazio)', 'total']:
+                    if d not in cont_skus: cont_skus[d] = set()
+                    cont_skus[d].add(sku)
+
+    # Calcular as Divergências Diárias
+    daily_comparativo = []
+    divergencias = []
+    
+    todas_datas = sorted(list(set(plan_skus.keys()).union(set(cont_skus.keys()))))
+    for d in todas_datas:
+        p_set = plan_skus.get(d, set())
+        c_set = cont_skus.get(d, set())
+        
+        daily_comparativo.append({
+            "data": d,
+            "planejado": len(p_set),
+            "contado": len(c_set)
+        })
+        
+        # Encontrar as diferenças
+        p_not_c = p_set - c_set
+        c_not_p = c_set - p_set
+        
+        for sku in p_not_c:
+            divergencias.append({"data": d, "sku": sku, "motivo": "Planejado e não contado"})
+        for sku in c_not_p:
+            divergencias.append({"data": d, "sku": sku, "motivo": "Contado e não planejado"})
+            
+    # Ordenar divergências da data mais recente para a mais antiga
+    divergencias = sorted(divergencias, key=lambda x: x['data'], reverse=True)
 
     # 4. REPICKING
     df_rep = pd.read_excel(xls, 'Repicking') if 'Repicking' in xls.sheet_names else pd.DataFrame()
@@ -321,7 +387,6 @@ def gerar_json():
                 break
                 
         if header_row_saldos != -1:
-            # 1. Ler SALDO DIVCIC
             if idx_div != -1:
                 idx_div_val = idx_div + 2 if (idx_div + 2) < len(df_pic_raw.columns) else -1
                 for i in range(header_row_saldos + 2, len(df_pic_raw)):
@@ -335,7 +400,6 @@ def gerar_json():
                     saldos_divcic[sku] = {"qtd": int(qtd), "valor": val}
                     todos_saldos.append({"sku": sku, "setor": "DIVCIC", "qtd": int(qtd), "valor": val})
 
-            # 2. Ler SALDO PICLINHA
             if idx_pic != -1:
                 idx_pic_val = idx_pic + 2 if (idx_pic + 2) < len(df_pic_raw.columns) else -1
                 for i in range(header_row_saldos + 2, len(df_pic_raw)):
@@ -349,7 +413,6 @@ def gerar_json():
                     saldos_piclinha[sku] = {"qtd": int(qtd), "valor": val}
                     todos_saldos.append({"sku": sku, "setor": "PICLINHA", "qtd": int(qtd), "valor": val})
 
-    # Cruzamento Dinâmico de Sobras com Tipo de Resgate (Parcial/Total)
     cruzamento_sobras = []
     for item in sobras_detalhe:
         if item['status'] != 'PENDENTE': continue
@@ -360,19 +423,12 @@ def gerar_json():
         
         saldo_divcic_qtd = sd["qtd"]
         saldo_piclinha_qtd = sp["qtd"]
-        
-        # AQUI SOMAMOS O VALOR DOS DOIS SE HOUVER NOS DOIS
         valor_saldo_total = sd["valor"] + sp["valor"]
         
         if saldo_divcic_qtd > 0 or saldo_piclinha_qtd > 0:
             qtd_sobra = item['qtd']
             saldo_total_qtd = saldo_divcic_qtd + saldo_piclinha_qtd
-            
-            # Se a quantidade de saldo (Divcic + Piclinha) for maior ou igual à sobra, é TOTAL
-            if saldo_total_qtd >= qtd_sobra:
-                resgate_tipo = "TOTAL"
-            else:
-                resgate_tipo = "PARCIAL"
+            resgate_tipo = "TOTAL" if saldo_total_qtd >= qtd_sobra else "PARCIAL"
                 
             cruzamento_sobras.append({
                 "status": item['status'],
@@ -386,7 +442,6 @@ def gerar_json():
             })
     cruzamento_sobras = sorted(cruzamento_sobras, key=lambda x: x['valor_sobra'], reverse=True)
 
-    # Preparar a Lista Top 20 de Saldos (Piclinha e Divcic) para a nova tabela
     sobras_qtd_map = {item['produto']: item['qtd'] for item in sobras_detalhe}
     for s in todos_saldos:
         sqtd = sobras_qtd_map.get(s['sku'], 0)
@@ -417,18 +472,33 @@ def gerar_json():
                         avarias_dados.append({"data": dstr, "motivo": mot.upper(), "ocorrencia": oc.upper() if oc.lower() not in ['nan','none',''] else 'OUTROS', "valor": tratar_valor_monetario(row.get(c_val))})
                 except: pass
 
+    # ==========================================
+    # CARREGAR IMAGEM (SE EXISTIR NA PASTA)
+    # ==========================================
+    imagem_b64 = None
+    imagem_nome = "image_30b115.png" # Você deve salvar a imagem com este nome exato na pasta
+    
+    # Procura também por jpg se não achar png
+    if not os.path.exists(imagem_nome):
+        imagem_nome = "image_30b115.jpg"
+        
+    if os.path.exists(imagem_nome):
+        with open(imagem_nome, "rb") as image_file:
+            imagem_b64 = f"data:image/{imagem_nome.split('.')[-1]};base64,{base64.b64encode(image_file.read()).decode('utf-8')}"
+
     json_final = {
         "erros": erros_encontrados, 
         "ciclico": {"daily": ciclico_dados, "offenders": offenders, "tratativas": tratativas},
         "net": net_dados, "net_ytd": net_ytd, 
-        "planejamento": {"daily": plan_dados, "curvas": plan_curvas},
+        "planejamento": {"daily": plan_dados, "curvas": plan_curvas, "comparativo": daily_comparativo, "divergencias": divergencias},
         "repicking": {"daily": rep_dados, "turnos": rep_turnos},
         "cortes": {"daily": cortes_dados, "itens": cortes_itens}, 
         "sobras": sobras_dados,
         "sobras_cruzamento": cruzamento_sobras, 
         "pic_div": pic_dados,
         "top_saldos": top20_saldos,
-        "avarias": avarias_dados
+        "avarias": avarias_dados,
+        "imagem_b64": imagem_b64  # A IMAGEM VAI AQUI
     }
 
     with open('dados.json', 'w', encoding='utf-8') as f:
@@ -457,7 +527,7 @@ def gerar_json():
             if e.code != 404: raise e
 
         payload = {
-            "message": "Atualização automática (Soma de Valores e Lógica de Resgate) 🚀", 
+            "message": "Atualização automática (Ajustes Finais de Cor, Plan e Imagem) 🚀", 
             "content": base64.b64encode(conteudo.encode('utf-8')).decode('utf-8')
         }
         if sha: payload["sha"] = sha
