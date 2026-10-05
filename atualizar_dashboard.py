@@ -8,7 +8,7 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES DO GITHUB
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
 # ==========================================
@@ -108,13 +108,13 @@ def gerar_json():
         for i, mes in enumerate(meses):
             net_dados.append({"mes": mes, "divcic": ex('DIVCIC', i+1), "ajusteNeg": ex('Ajuste Cíclico Negativo', i+1), "ajustePos": ex('Ajuste Cíclico Positivo', i+1), "sobras": ex('Sobras Processadas', i+1), "avaria": ex('Avaria Processo', i+1), "netVal": ex('NET', i+1), "netPct": ex('% NET', i+1), "grossVal": ex('GROSS', i+1), "grossPct": ex('% GROSS', i+1)})
 
-    # 3. PLANEJAMENTO E CONTAGENS (COMPARAÇÃO)
+    # 3. PLANEJAMENTO E CONTAGENS (COMPARAÇÃO INTELIGENTE)
     df_plan = pd.read_excel(xls, 'Planejamento') if 'Planejamento' in xls.sheet_names else pd.DataFrame()
     plan_dados, plan_curvas = [], {}
     plan_skus = {}
     
     if not df_plan.empty:
-        df_plan['DATA_STR'] = pd.to_datetime(df_plan['DATA'], errors='coerce').dt.strftime('%Y-%m-%d')
+        df_plan['DATA_STR'] = pd.to_datetime(df_plan['DATA'], dayfirst=True, errors='coerce').dt.strftime('%Y-%m-%d')
         df_plan['Curva ABC'] = df_plan['Curva ABC'].fillna('Sem Curva')
         
         for data, group in df_plan.dropna(subset=['DATA_STR']).groupby(['DATA_STR', 'Curva ABC']).size().reset_index(name='qtd').groupby('DATA_STR'):
@@ -126,55 +126,59 @@ def gerar_json():
                 obs = df_c['OBSERVAÇÃO'].astype(str).str.upper()
                 plan_curvas[str(c)] = {"contado": int(len(df_c[obs == 'PLANEJADO'])), "pendente": int(len(df_c[obs == 'PENDENTE']))}
 
-        # Extrair os itens (SKUs) Planejados
         df_plan_cols = [str(c).strip().upper() for c in df_plan.columns]
-        c_item_plan = None
-        for orig_col, up_col in zip(df_plan.columns, df_plan_cols):
-            if 'ITEM' in up_col or 'MATERIAL' in up_col or 'PRODUTO' in up_col or 'SKU' in up_col:
-                c_item_plan = orig_col
-                break
+        c_item_plan = next((orig for orig, up in zip(df_plan.columns, df_plan_cols) if 'ITEM' in up or 'MATERIAL' in up or 'PRODUTO' in up or 'SKU' in up), None)
                 
         if c_item_plan:
             for _, row in df_plan.dropna(subset=['DATA_STR']).iterrows():
                 d = row['DATA_STR']
                 sku = str(row[c_item_plan]).strip()
+                if sku.endswith('.0'): sku = sku[:-2]
                 if sku and sku.lower() not in ['nan', 'none', '(vazio)', 'total']:
                     if d not in plan_skus: plan_skus[d] = set()
                     plan_skus[d].add(sku)
 
-    # Ler Abas de Contagens Reais ('Contagens' e 'Cíclico')
     cont_skus = {}
     
-    # Tentativa 1: Aba Contagens
-    aba_cont = next((s for s in xls.sheet_names if 'contagen' in s.lower() or 'contagem' in s.lower()), None)
-    if aba_cont:
-        df_cont = pd.read_excel(xls, aba_cont)
-        df_cont.columns = [str(c).strip().upper() for c in df_cont.columns]
-        c_data_cont = next((c for c in df_cont.columns if 'DATA' in c), None)
-        c_item_cont = next((c for c in df_cont.columns if 'ITEM' in c or 'MATERIAL' in c or 'PRODUTO' in c or 'SKU' in c), None)
-        
-        if c_data_cont and c_item_cont:
-            df_cont['DATA_STR'] = pd.to_datetime(df_cont[c_data_cont], errors='coerce').dt.strftime('%Y-%m-%d')
-            for _, row in df_cont.dropna(subset=['DATA_STR']).iterrows():
-                d = row['DATA_STR']
-                sku = str(row[c_item_cont]).strip()
-                if sku and sku.lower() not in ['nan', 'none', '(vazio)', 'total']:
-                    if d not in cont_skus: cont_skus[d] = set()
-                    cont_skus[d].add(sku)
-
-    # Tentativa 2 (Garantia): Aba Cíclico
-    if not df_cic.empty and 'ITEM 1° CONTAGEM' in df_cic.columns:
+    # Procura na Aba Cíclico
+    c_item_cic = None
+    if not df_cic.empty:
+        for c in df_cic.columns:
+            cup = str(c).strip().upper()
+            if 'ITEM' in cup and 'CONTAGEM' in cup:
+                c_item_cic = c
+                break
+                
+    if c_item_cic and not df_cic.empty:
         for _, row in df_cic.dropna(subset=['DATA_STR']).iterrows():
             d = row['DATA_STR']
-            sku = str(row['ITEM 1° CONTAGEM']).strip()
+            sku = str(row[c_item_cic]).strip()
+            if sku.endswith('.0'): sku = sku[:-2]
             if sku and sku.lower() not in ['nan', 'none', '(vazio)', 'total']:
                 if d not in cont_skus: cont_skus[d] = set()
                 cont_skus[d].add(sku)
 
-    # Calcular as Divergências Diárias
+    # Procura em Aba Contagens Externa (Garantia)
+    aba_cont = next((s for s in xls.sheet_names if 'contagen' in s.lower() or 'contagem' in s.lower() and 'ciclico' not in s.lower()), None)
+    if aba_cont:
+        df_cont = pd.read_excel(xls, aba_cont)
+        c_data_cont = next((c for c in df_cont.columns if 'DATA' in str(c).upper()), None)
+        c_item_cont = next((c for c in df_cont.columns if 'ITEM' in str(c).upper() or 'MATERIAL' in str(c).upper() or 'SKU' in str(c).upper()), None)
+        
+        if c_data_cont and c_item_cont:
+            df_cont['DATA_STR'] = pd.to_datetime(df_cont[c_data_cont], dayfirst=True, errors='coerce').dt.strftime('%Y-%m-%d')
+            for _, row in df_cont.dropna(subset=['DATA_STR']).iterrows():
+                d = row['DATA_STR']
+                sku = str(row[c_item_cont]).strip()
+                if sku.endswith('.0'): sku = sku[:-2]
+                if sku and sku.lower() not in ['nan', 'none', '(vazio)', 'total']:
+                    if d not in cont_skus: cont_skus[d] = set()
+                    cont_skus[d].add(sku)
+
     daily_comparativo = []
     divergencias = []
     todas_datas = sorted(list(set(plan_skus.keys()).union(set(cont_skus.keys()))))
+    
     for d in todas_datas:
         p_set = plan_skus.get(d, set())
         c_set = cont_skus.get(d, set())
@@ -185,14 +189,11 @@ def gerar_json():
             "contado": len(c_set)
         })
         
-        # Encontrar as diferenças
         p_not_c = p_set - c_set
         c_not_p = c_set - p_set
         
-        for sku in p_not_c:
-            divergencias.append({"data": d, "sku": sku, "motivo": "Planejado e não contado"})
-        for sku in c_not_p:
-            divergencias.append({"data": d, "sku": sku, "motivo": "Contado e não planejado"})
+        for sku in p_not_c: divergencias.append({"data": d, "sku": sku, "motivo": "Planejado e não contado"})
+        for sku in c_not_p: divergencias.append({"data": d, "sku": sku, "motivo": "Contado e não planejado"})
             
     divergencias = sorted(divergencias, key=lambda x: x['data'], reverse=True)
 
@@ -200,7 +201,7 @@ def gerar_json():
     df_rep = pd.read_excel(xls, 'Repicking') if 'Repicking' in xls.sheet_names else pd.DataFrame()
     rep_dados, rep_turnos = [], []
     if not df_rep.empty:
-        df_rep['DATA_STR'] = pd.to_datetime(df_rep['DATA'], errors='coerce').dt.strftime('%Y-%m-%d')
+        df_rep['DATA_STR'] = pd.to_datetime(df_rep['DATA'], dayfirst=True, errors='coerce').dt.strftime('%Y-%m-%d')
         df_rep['TRAT_UP'] = df_rep['TRATATIVA'].astype(str).str.upper()
         df_rep['LANC_UP'] = df_rep['LANÇAMENTO'].astype(str).str.upper().str.strip()
         
@@ -218,9 +219,6 @@ def gerar_json():
                 "valorRepicking": lanc_diario['REPICKING']['valor'],
                 "lancamentos": lanc_diario
             })
-            
-        for _, row in df_rep.groupby('TURNO').agg(ocorrencias=('CHAVE', 'count'), itens=('Quantidade ', 'sum')).reset_index().iterrows():
-            if str(row['TURNO']) not in ['0', 'nan']: rep_turnos.append({"turno": str(row['TURNO']), "ocorrencias": int(row['ocorrencias']), "itens": tratar_valor_monetario(row['itens'])})
 
     # 5. CORTES
     aba_cortes = next((s for s in xls.sheet_names if 'cortes' in s.lower()), None)
@@ -239,17 +237,14 @@ def gerar_json():
                 header_row = r
                 idx_d1 = row_vals.index('DATA')
                 idx_m1 = row_vals.index('MOTIVO')
-                
                 for i in range(idx_m1 + 1, len(row_vals)):
                     if 'ITEM' in row_vals[i] and idx_i1 == -1: idx_i1 = i
                     elif ('QTD' in row_vals[i] or 'PÇ' in row_vals[i] or 'PEÇA' in row_vals[i]) and idx_p1 == -1: idx_p1 = i
                     elif 'VALOR' in row_vals[i] and idx_v1 == -1: idx_v1 = i
-
                 for i in range(idx_v1 + 1, len(row_vals)):
                     if 'DATA' in row_vals[i] and idx_d2 == -1: idx_d2 = i
                     elif 'ITEM' in row_vals[i] and idx_i2 == -1: idx_i2 = i
                     elif 'VALOR' in row_vals[i] and idx_v2 == -1: idx_v2 = i
-
                 if idx_d2 == -1: idx_d2 = idx_d1
                 break
 
@@ -284,11 +279,10 @@ def gerar_json():
                                 "valor": tratar_valor_monetario(df_cortes.iloc[r, idx_v2]) if idx_v2 != -1 else 0
                             })
 
-    # 6. SOBRAS E 7. PICLINHA/DIVCIC
+    # 6. SOBRAS
     aba_sobras = next((s for s in xls.sheet_names if 'sobras' in s.lower()), None)
     df_sobras = pd.read_excel(xls, aba_sobras, header=None) if aba_sobras else pd.DataFrame()
-    sobras_dados, sobras_detalhe = [], []
-    sku_map = {}
+    sobras_dados, sobras_detalhe, sku_map = [], [], {}
     
     if not df_sobras.empty:
         header_1 = -1
@@ -347,9 +341,9 @@ def gerar_json():
                 
                 qtd = tratar_valor_monetario(df_sobras.iloc[r, idx_qtd2]) if idx_qtd2 != -1 else 0
                 val = tratar_valor_monetario(df_sobras.iloc[r, idx_val2]) if idx_val2 != -1 else 0
-                
                 sobras_detalhe.append({"status": info["status"], "produto": prod, "qtd": int(qtd), "valor": val})
 
+    # 7. PICLINHA E DIVCIC
     aba_pic = next((s for s in xls.sheet_names if 'piclinha' in s.lower() or 'divcic' in s.lower() and 'net' not in s.lower()), None)
     df_pic_raw = pd.read_excel(xls, aba_pic, header=None) if aba_pic else pd.DataFrame()
     pic_dados, saldos_divcic, saldos_piclinha, todos_saldos = [], {}, {}, []
@@ -458,17 +452,53 @@ def gerar_json():
                 except: pass
 
     # ==========================================
-    # CARREGAR IMAGEM GENÉRICA (SE EXISTIR)
+    # 9. LER ACURACIDADE (EMOJIS)
     # ==========================================
-    imagem_b64 = None
-    nomes_possiveis = ["Imagem.png", "imagem.png", "Imagem.jpg", "imagem.jpg", "image_30b115.png"]
+    aba_acuracidade = next((s for s in xls.sheet_names if 'acuraci' in s.lower()), None)
+    acuracidade_dados = {"net": [], "locacao": []}
     
-    for nome in nomes_possiveis:
-        if os.path.exists(nome):
-            with open(nome, "rb") as image_file:
-                ext = nome.split('.')[-1]
-                imagem_b64 = f"data:image/{ext};base64,{base64.b64encode(image_file.read()).decode('utf-8')}"
-            break
+    if aba_acuracidade:
+        df_acu = pd.read_excel(xls, aba_acuracidade, header=None)
+        col_net = col_loc = -1
+        
+        for r in range(min(10, len(df_acu))):
+            for c in range(len(df_acu.columns)):
+                val = str(df_acu.iloc[r, c]).strip().upper()
+                if val == 'NET': col_net = c
+                if 'LOCA' in val: col_loc = c
+                
+        def extrair_bloco(col_start):
+            res = []
+            if col_start == -1: return res
+            row_start = -1
+            c_mes, c_meta, c_res = col_start, col_start+1, col_start+2
+            meses_str = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO']
+            
+            for r in range(min(15, len(df_acu))):
+                row_vals = [str(df_acu.iloc[r, c]).strip().upper() for c in range(col_start, min(col_start+4, len(df_acu.columns)))]
+                if any(m in v for m in meses_str for v in row_vals) or 'META' in row_vals:
+                    row_start = r; break
+                    
+            if row_start != -1:
+                for r in range(max(0, row_start-2), min(row_start+2, len(df_acu))):
+                    for c in range(col_start-1, min(col_start+4, len(df_acu.columns))):
+                        if c < 0: continue
+                        v = str(df_acu.iloc[r, c]).strip().upper()
+                        if v in meses_str or 'MÊS' in v or 'MES' in v: c_mes = c
+                        elif 'META' in v: c_meta = c
+                        elif 'RESULTADO' in v: c_res = c
+                
+                for r in range(row_start, len(df_acu)):
+                    mes_val = str(df_acu.iloc[r, c_mes]).strip().upper()
+                    mes_nome = next((m for m in meses_str if m[:3] in mes_val), None)
+                    if mes_nome:
+                        meta = tratar_valor_monetario(df_acu.iloc[r, c_meta])
+                        resultado = tratar_valor_monetario(df_acu.iloc[r, c_res])
+                        res.append({"mes": mes_nome, "meta": float(meta), "resultado": float(resultado)})
+            return res
+            
+        acuracidade_dados['net'] = extrair_bloco(max(0, col_net if col_net != -1 else 0))
+        acuracidade_dados['locacao'] = extrair_bloco(col_loc if col_loc != -1 else 4)
 
     json_final = {
         "erros": erros_encontrados, 
@@ -482,7 +512,7 @@ def gerar_json():
         "pic_div": pic_dados,
         "top_saldos": top20_saldos,
         "avarias": avarias_dados,
-        "imagem_b64": imagem_b64
+        "acuracidade": acuracidade_dados
     }
 
     with open('dados.json', 'w', encoding='utf-8') as f:
@@ -511,7 +541,7 @@ def gerar_json():
             if e.code != 404: raise e
 
         payload = {
-            "message": "Atualização automática (Ajustes Finais de Cor, Plan e Imagem) 🚀", 
+            "message": "Atualização (Acuracidade, Planejado vs Contado e Cores) 🚀", 
             "content": base64.b64encode(conteudo.encode('utf-8')).decode('utf-8')
         }
         if sha: payload["sha"] = sha
