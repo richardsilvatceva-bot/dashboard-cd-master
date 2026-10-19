@@ -4073,22 +4073,7 @@
         "divergencias": [
             {
                 "data": "2026-10-19",
-                "sku": "52619",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-19",
-                "sku": "87415",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-19",
-                "sku": "56960",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-19",
-                "sku": "58968",
+                "sku": "86271",
                 "motivo": "Planejado e não contado"
             },
             {
@@ -4098,32 +4083,12 @@
             },
             {
                 "data": "2026-10-19",
-                "sku": "85030",
+                "sku": "87415",
                 "motivo": "Planejado e não contado"
             },
             {
                 "data": "2026-10-19",
-                "sku": "86271",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-19",
-                "sku": "53628",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-19",
-                "sku": "58683",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-19",
-                "sku": "57551",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-19",
-                "sku": "88560",
+                "sku": "81108",
                 "motivo": "Planejado e não contado"
             },
             {
@@ -4143,7 +4108,12 @@
             },
             {
                 "data": "2026-10-19",
-                "sku": "86536",
+                "sku": "92730",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-19",
+                "sku": "58683",
                 "motivo": "Planejado e não contado"
             },
             {
@@ -4153,47 +4123,47 @@
             },
             {
                 "data": "2026-10-19",
+                "sku": "58968",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-19",
+                "sku": "88560",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-19",
+                "sku": "56960",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-19",
+                "sku": "85030",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-19",
                 "sku": "81618",
                 "motivo": "Planejado e não contado"
             },
             {
                 "data": "2026-10-19",
-                "sku": "81108",
+                "sku": "57551",
                 "motivo": "Planejado e não contado"
             },
             {
                 "data": "2026-10-19",
-                "sku": "92730",
+                "sku": "53628",
                 "motivo": "Planejado e não contado"
             },
             {
-                "data": "2026-10-16",
-                "sku": "56729",
+                "data": "2026-10-19",
+                "sku": "52619",
                 "motivo": "Planejado e não contado"
             },
             {
-                "data": "2026-10-16",
-                "sku": "59516",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-16",
-                "sku": "54451",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-16",
-                "sku": "59496",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-16",
-                "sku": "79133",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-16",
-                "sku": "97440",
+                "data": "2026-10-19",
+                "sku": "86536",
                 "motivo": "Planejado e não contado"
             },
             {
@@ -4203,32 +4173,12 @@
             },
             {
                 "data": "2026-10-16",
-                "sku": "81631",
+                "sku": "79133",
                 "motivo": "Planejado e não contado"
             },
             {
                 "data": "2026-10-16",
-                "sku": "59437",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-16",
-                "sku": "48280",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-16",
-                "sku": "75298",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-16",
-                "sku": "57737",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-16",
-                "sku": "89969",
+                "sku": "50679",
                 "motivo": "Planejado e não contado"
             },
             {
@@ -4238,17 +4188,32 @@
             },
             {
                 "data": "2026-10-16",
-                "sku": "88911",
+                "sku": "54451",
                 "motivo": "Planejado e não contado"
             },
             {
                 "data": "2026-10-16",
-                "sku": "85672",
+                "sku": "89969",
                 "motivo": "Planejado e não contado"
             },
             {
                 "data": "2026-10-16",
-                "sku": "58735",
+                "sku": "48280",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "57737",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "59516",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "75298",
                 "motivo": "Planejado e não contado"
             },
             {
@@ -4258,77 +4223,47 @@
             },
             {
                 "data": "2026-10-16",
-                "sku": "50679",
+                "sku": "88911",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "59437",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "85672",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "56729",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "81631",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "59496",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "58735",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-16",
+                "sku": "97440",
                 "motivo": "Planejado e não contado"
             },
             {
                 "data": "2026-10-15",
-                "sku": "56721",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "87601",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "59468",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "85032",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "84281",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "55884",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "84971",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "58852",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "85013",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "94675",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "49291",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "85542",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "50872",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "94197",
+                "sku": "51235",
                 "motivo": "Planejado e não contado"
             },
             {
@@ -4338,27 +4273,12 @@
             },
             {
                 "data": "2026-10-15",
-                "sku": "86151",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "87308",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
                 "sku": "52405",
                 "motivo": "Planejado e não contado"
             },
             {
                 "data": "2026-10-15",
-                "sku": "57738",
-                "motivo": "Planejado e não contado"
-            },
-            {
-                "data": "2026-10-15",
-                "sku": "82964",
+                "sku": "84971",
                 "motivo": "Planejado e não contado"
             },
             {
@@ -4368,12 +4288,92 @@
             },
             {
                 "data": "2026-10-15",
+                "sku": "94675",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "84281",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "56721",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
                 "sku": "90685",
                 "motivo": "Planejado e não contado"
             },
             {
                 "data": "2026-10-15",
-                "sku": "51235",
+                "sku": "87601",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "86151",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "49291",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "87308",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "50872",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "59468",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "85542",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "57738",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "55884",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "94197",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "58852",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "85032",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "82964",
+                "motivo": "Planejado e não contado"
+            },
+            {
+                "data": "2026-10-15",
+                "sku": "85013",
                 "motivo": "Planejado e não contado"
             },
             {
