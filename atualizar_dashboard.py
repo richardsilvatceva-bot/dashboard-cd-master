@@ -8,12 +8,11 @@ import base64
 # ==========================================
 # CONFIGURAÇÕES PRINCIPAIS
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
 
-# Substitua abaixo pelo caminho do seu SharePoint sincronizado no PC
-# Mantenha o 'r' antes das aspas!
-CAMINHO_PLANILHA = r"C:\Users\SeuUsuario\SuaEmpresa\Pasta do SharePoint\Matris.xlsx"
+# Como o Excel está na mesma pasta, basta o nome do ficheiro
+CAMINHO_PLANILHA = "Matris.xlsx"
 
 # ==========================================
 # FUNÇÕES AUXILIARES E TRATAMENTO
@@ -60,13 +59,13 @@ def tratar_valor_monetario(val):
 # FUNÇÃO PRINCIPAL DE LEITURA
 # ==========================================
 def gerar_json():
-    arquivo_excel = CAMINHO_PLANILHA.strip('"').strip("'")
+    arquivo_excel = CAMINHO_PLANILHA
     
     if not os.path.exists(arquivo_excel):
-        print(f"Erro: Arquivo '{arquivo_excel}' não encontrado. Verifique se o caminho do SharePoint está correto.")
+        print(f"Erro: Arquivo '{arquivo_excel}' não encontrado na pasta atual.")
         return
 
-    print("A analisar dados da planilha...")
+    print("A analisar dados da planilha local...")
     xls = pd.ExcelFile(arquivo_excel)
     erros_encontrados = mapear_erros(xls)
     
@@ -446,7 +445,7 @@ def gerar_json():
         "top_saldos": top20_saldos,
         "avarias": avarias_dados,
         "acuracidade": acuracidade_dados,
-        "estoque_diario": estoque_diario_dados  # NOVO CAMPO
+        "estoque_diario": estoque_diario_dados
     }
 
     with open('dados.json', 'w', encoding='utf-8') as f:
@@ -475,7 +474,7 @@ def gerar_json():
             if e.code != 404: raise e
 
         payload = {
-            "message": "Atualização Completa (Estoque Diário) 🚀", 
+            "message": "Atualização Completa 🚀", 
             "content": base64.b64encode(conteudo.encode('utf-8')).decode('utf-8')
         }
         if sha: payload["sha"] = sha
