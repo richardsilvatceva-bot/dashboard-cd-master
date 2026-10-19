@@ -6,10 +6,14 @@ import urllib.error
 import base64
 
 # ==========================================
-# CONFIGURAÇÕES DO GITHUB
+# CONFIGURAÇÕES PRINCIPAIS
 # ==========================================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_REPO = "richardsilvatceva-bot/dashboard-cd-master" 
+
+# Substitua abaixo pelo caminho do seu SharePoint sincronizado no PC
+# Mantenha o 'r' antes das aspas!
+CAMINHO_PLANILHA = r"C:\Users\SeuUsuario\SuaEmpresa\Pasta do SharePoint\Matris.xlsx"
 
 # ==========================================
 # FUNÇÕES AUXILIARES E TRATAMENTO
@@ -56,9 +60,10 @@ def tratar_valor_monetario(val):
 # FUNÇÃO PRINCIPAL DE LEITURA
 # ==========================================
 def gerar_json():
-    arquivo_excel = 'Matris.xlsx'
+    arquivo_excel = CAMINHO_PLANILHA.strip('"').strip("'")
+    
     if not os.path.exists(arquivo_excel):
-        print(f"Erro: Arquivo '{arquivo_excel}' não encontrado na pasta atual.")
+        print(f"Erro: Arquivo '{arquivo_excel}' não encontrado. Verifique se o caminho do SharePoint está correto.")
         return
 
     print("A analisar dados da planilha...")
@@ -108,18 +113,15 @@ def gerar_json():
         for i, mes in enumerate(meses):
             net_dados.append({"mes": mes, "divcic": ex('DIVCIC', i+1), "ajusteNeg": ex('Ajuste Cíclico Negativo', i+1), "ajustePos": ex('Ajuste Cíclico Positivo', i+1), "sobras": ex('Sobras Processadas', i+1), "avaria": ex('Avaria Processo', i+1), "netVal": ex('NET', i+1), "netPct": ex('% NET', i+1), "grossVal": ex('GROSS', i+1), "grossPct": ex('% GROSS', i+1)})
 
-    # 3. PLANEJAMENTO E CONTAGENS (COMPARAÇÃO INTELIGENTE)
+    # 3. PLANEJAMENTO
     df_plan = pd.read_excel(xls, 'Planejamento') if 'Planejamento' in xls.sheet_names else pd.DataFrame()
     plan_dados, plan_curvas = [], {}
     plan_skus = {}
-    
     if not df_plan.empty:
         df_plan['DATA_STR'] = pd.to_datetime(df_plan['DATA'], dayfirst=True, errors='coerce').dt.strftime('%Y-%m-%d')
         df_plan['Curva ABC'] = df_plan['Curva ABC'].fillna('Sem Curva')
-        
         for data, group in df_plan.dropna(subset=['DATA_STR']).groupby(['DATA_STR', 'Curva ABC']).size().reset_index(name='qtd').groupby('DATA_STR'):
             plan_dados.append({"data": data, "total": int(group['qtd'].sum()), "curvas": {r['Curva ABC']: int(r['qtd']) for _, r in group.iterrows()}})
-            
         if 'OBSERVAÇÃO' in df_plan.columns:
             for c in df_plan['Curva ABC'].unique():
                 df_c = df_plan[df_plan['Curva ABC'] == c]
@@ -128,7 +130,6 @@ def gerar_json():
 
         df_plan_cols = [str(c).strip().upper() for c in df_plan.columns]
         c_item_plan = next((orig for orig, up in zip(df_plan.columns, df_plan_cols) if 'ITEM' in up or 'MATERIAL' in up or 'PRODUTO' in up or 'SKU' in up), None)
-                
         if c_item_plan:
             for _, row in df_plan.dropna(subset=['DATA_STR']).iterrows():
                 d = row['DATA_STR']
@@ -139,17 +140,10 @@ def gerar_json():
                     plan_skus[d].add(sku)
 
     cont_skus = {}
-    
     if not df_cic.empty:
         df_cic_cols = [str(c).upper() for c in df_cic.columns]
-        c_item_cic = None
-        for orig, up in zip(df_cic.columns, df_cic_cols):
-            if 'ITEM' in up and ('CONT' in up or '1' in up):
-                c_item_cic = orig
-                break
-        if not c_item_cic:
-            c_item_cic = next((orig for orig, up in zip(df_cic.columns, df_cic_cols) if 'ITEM' in up or 'SKU' in up or 'MATERIAL' in up), None)
-            
+        c_item_cic = next((orig for orig, up in zip(df_cic.columns, df_cic_cols) if 'ITEM' in up and ('CONT' in up or '1' in up)), None)
+        if not c_item_cic: c_item_cic = next((orig for orig, up in zip(df_cic.columns, df_cic_cols) if 'ITEM' in up or 'SKU' in up or 'MATERIAL' in up), None)
         if c_item_cic:
             for _, row in df_cic.dropna(subset=['DATA_STR']).iterrows():
                 d = row['DATA_STR']
@@ -164,7 +158,6 @@ def gerar_json():
         df_cont = pd.read_excel(xls, aba_cont)
         c_data_cont = next((c for c in df_cont.columns if 'DATA' in str(c).upper()), None)
         c_item_cont = next((c for c in df_cont.columns if 'ITEM' in str(c).upper() or 'MATERIAL' in str(c).upper() or 'SKU' in str(c).upper()), None)
-        
         if c_data_cont and c_item_cont:
             df_cont['DATA_STR'] = pd.to_datetime(df_cont[c_data_cont], dayfirst=True, errors='coerce').dt.strftime('%Y-%m-%d')
             for _, row in df_cont.dropna(subset=['DATA_STR']).iterrows():
@@ -175,22 +168,13 @@ def gerar_json():
                     if d not in cont_skus: cont_skus[d] = set()
                     cont_skus[d].add(sku)
 
-    daily_comparativo = []
-    divergencias = []
+    daily_comparativo, divergencias = [], []
     todas_datas = sorted(list(set(plan_skus.keys()).union(set(cont_skus.keys()))))
-    
     for d in todas_datas:
-        p_set = plan_skus.get(d, set())
-        c_set = cont_skus.get(d, set())
-        
+        p_set, c_set = plan_skus.get(d, set()), cont_skus.get(d, set())
         daily_comparativo.append({"data": d, "planejado": len(p_set), "contado": len(c_set)})
-        
-        p_not_c = p_set - c_set
-        c_not_p = c_set - p_set
-        
-        for sku in p_not_c: divergencias.append({"data": d, "sku": sku, "motivo": "Planejado e não contado"})
-        for sku in c_not_p: divergencias.append({"data": d, "sku": sku, "motivo": "Contado e não planejado"})
-            
+        for sku in (p_set - c_set): divergencias.append({"data": d, "sku": sku, "motivo": "Planejado e não contado"})
+        for sku in (c_set - p_set): divergencias.append({"data": d, "sku": sku, "motivo": "Contado e não planejado"})
     divergencias = sorted(divergencias, key=lambda x: x['data'], reverse=True)
 
     # 4. REPICKING
@@ -200,42 +184,26 @@ def gerar_json():
         df_rep['DATA_STR'] = pd.to_datetime(df_rep['DATA'], dayfirst=True, errors='coerce').dt.strftime('%Y-%m-%d')
         df_rep['TRAT_UP'] = df_rep['TRATATIVA'].astype(str).str.upper()
         df_rep['LANC_UP'] = df_rep['LANÇAMENTO'].astype(str).str.upper().str.strip()
-        
         for data, group in df_rep.dropna(subset=['DATA_STR']).groupby('DATA_STR'):
             lanc_diario = {}
             for l in ['REPICKING', 'FALTA', 'CORTE']:
                 df_l = group[group['LANC_UP'] == l]
                 lanc_diario[l] = {"qtd": len(df_l), "valor": sum(tratar_valor_monetario(v) for v in df_l['VALOR'])}
-                
-            rep_dados.append({
-                "data": data, 
-                "apontamentos": len(group),
-                "encontrados": int(len(group[group['TRAT_UP'].str.contains('ENCONTRADO ANTES', na=False)])),
-                "repickFeito": int(len(group[group['Status'].astype(str).str.contains('REPICKING', na=False)])), 
-                "valorRepicking": lanc_diario['REPICKING']['valor'],
-                "lancamentos": lanc_diario
-            })
-            
+            rep_dados.append({"data": data, "apontamentos": len(group), "encontrados": int(len(group[group['TRAT_UP'].str.contains('ENCONTRADO ANTES', na=False)])), "repickFeito": int(len(group[group['Status'].astype(str).str.contains('REPICKING', na=False)])), "valorRepicking": lanc_diario['REPICKING']['valor'], "lancamentos": lanc_diario})
         for _, row in df_rep.groupby('TURNO').agg(ocorrencias=('CHAVE', 'count'), itens=('Quantidade ', 'sum')).reset_index().iterrows():
             if str(row['TURNO']) not in ['0', 'nan']: rep_turnos.append({"turno": str(row['TURNO']), "ocorrencias": int(row['ocorrencias']), "itens": tratar_valor_monetario(row['itens'])})
 
     # 5. CORTES
     aba_cortes = next((s for s in xls.sheet_names if 'cortes' in s.lower()), None)
     df_cortes = pd.read_excel(xls, aba_cortes, header=None) if aba_cortes else pd.DataFrame()
-    cortes_dados = []
-    cortes_itens = []
-    
+    cortes_dados, cortes_itens = [], []
     if not df_cortes.empty:
         header_row = -1
-        idx_d1 = idx_m1 = idx_i1 = idx_p1 = idx_v1 = -1
-        idx_d2 = idx_i2 = idx_v2 = -1
-
+        idx_d1 = idx_m1 = idx_i1 = idx_p1 = idx_v1 = idx_d2 = idx_i2 = idx_v2 = -1
         for r in range(min(15, len(df_cortes))):
             row_vals = [str(v).upper().strip() for v in df_cortes.iloc[r].values]
             if 'DATA' in row_vals and 'MOTIVO' in row_vals:
-                header_row = r
-                idx_d1 = row_vals.index('DATA')
-                idx_m1 = row_vals.index('MOTIVO')
+                header_row, idx_d1, idx_m1 = r, row_vals.index('DATA'), row_vals.index('MOTIVO')
                 for i in range(idx_m1 + 1, len(row_vals)):
                     if 'ITEM' in row_vals[i] and idx_i1 == -1: idx_i1 = i
                     elif ('QTD' in row_vals[i] or 'PÇ' in row_vals[i] or 'PEÇA' in row_vals[i]) and idx_p1 == -1: idx_p1 = i
@@ -257,14 +225,7 @@ def gerar_json():
                     mot = str(df_cortes.iloc[r, idx_m1]).strip().upper() if idx_m1 != -1 else "OUTROS"
                     if mot not in ['NAN', 'NONE', ''] and pd.notna(df_cortes.iloc[r, idx_m1]):
                         dstr1 = pd.to_datetime(curr_d1, dayfirst=True, errors='coerce').strftime('%Y-%m-%d')
-                        if dstr1 != 'NaT':
-                            cortes_dados.append({
-                                "data": dstr1, "motivo": mot,
-                                "itens": int(tratar_valor_monetario(df_cortes.iloc[r, idx_i1])) if idx_i1 != -1 else 0,
-                                "pecas": int(tratar_valor_monetario(df_cortes.iloc[r, idx_p1])) if idx_p1 != -1 else 0,
-                                "valor": tratar_valor_monetario(df_cortes.iloc[r, idx_v1]) if idx_v1 != -1 else 0
-                            })
-                
+                        if dstr1 != 'NaT': cortes_dados.append({"data": dstr1, "motivo": mot, "itens": int(tratar_valor_monetario(df_cortes.iloc[r, idx_i1])) if idx_i1 != -1 else 0, "pecas": int(tratar_valor_monetario(df_cortes.iloc[r, idx_p1])) if idx_p1 != -1 else 0, "valor": tratar_valor_monetario(df_cortes.iloc[r, idx_v1]) if idx_v1 != -1 else 0})
                 if idx_d2 != -1:
                     v2 = df_cortes.iloc[r, idx_d2]
                     if pd.notna(v2) and str(v2).strip().lower() not in ['', '(vazio)', 'nan']: curr_d2 = str(v2).strip()
@@ -272,31 +233,22 @@ def gerar_json():
                     item_sku = str(df_cortes.iloc[r, idx_i2]).strip()
                     if item_sku.lower() not in ['nan', 'none', '', '(vazio)'] and pd.notna(df_cortes.iloc[r, idx_i2]):
                         dstr2 = pd.to_datetime(curr_d2, dayfirst=True, errors='coerce').strftime('%Y-%m-%d')
-                        if dstr2 != 'NaT':
-                            cortes_itens.append({
-                                "data": dstr2, "item": item_sku,
-                                "valor": tratar_valor_monetario(df_cortes.iloc[r, idx_v2]) if idx_v2 != -1 else 0
-                            })
+                        if dstr2 != 'NaT': cortes_itens.append({"data": dstr2, "item": item_sku, "valor": tratar_valor_monetario(df_cortes.iloc[r, idx_v2]) if idx_v2 != -1 else 0})
 
     # 6. SOBRAS
     aba_sobras = next((s for s in xls.sheet_names if 'sobras' in s.lower()), None)
     df_sobras = pd.read_excel(xls, aba_sobras, header=None) if aba_sobras else pd.DataFrame()
     sobras_dados, sobras_detalhe, sku_map = [], [], {}
-    
     if not df_sobras.empty:
         header_1 = -1
         idx_st1 = idx_prod1 = idx_mc1 = idx_loc1 = idx_val1 = -1
         for r in range(min(15, len(df_sobras))):
             row_vals = [str(v).upper().strip() for v in df_sobras.iloc[r].values[:6]]
             if 'STATUS' in row_vals and 'MARCA' in row_vals:
-                header_1 = r
-                idx_st1 = row_vals.index('STATUS') if 'STATUS' in row_vals else -1
-                idx_prod1 = row_vals.index('PRODUTO') if 'PRODUTO' in row_vals else -1
-                idx_mc1 = row_vals.index('MARCA') if 'MARCA' in row_vals else -1
+                header_1, idx_st1, idx_prod1, idx_mc1 = r, row_vals.index('STATUS') if 'STATUS' in row_vals else -1, row_vals.index('PRODUTO') if 'PRODUTO' in row_vals else -1, row_vals.index('MARCA') if 'MARCA' in row_vals else -1
                 idx_loc1 = next((i for i, v in enumerate(row_vals) if 'LOCA' in v), -1)
                 idx_val1 = next((i for i, v in enumerate(row_vals) if 'VALOR' in v and i >= idx_mc1), -1)
                 break
-                
         if header_1 != -1:
             curr_st, curr_mc = "INDEFINIDO", "SEM MARCA"
             for r in range(header_1 + 1, len(df_sobras)):
@@ -307,14 +259,11 @@ def gerar_json():
                 if idx_mc1 != -1:
                     val = str(df_sobras.iloc[r, idx_mc1]).strip()
                     if val.lower() not in ['nan', 'none', '', '(vazio)']: curr_mc = val.upper()
-                prod = ""
                 if idx_prod1 != -1:
                     prod = str(df_sobras.iloc[r, idx_prod1]).strip()
                     if prod.lower() in ['nan', 'none', '', '(vazio)'] or 'TOTAL' in prod.upper(): continue
-                        
                 loc_val = tratar_valor_monetario(df_sobras.iloc[r, idx_loc1]) if idx_loc1 != -1 else 0
                 val_val = tratar_valor_monetario(df_sobras.iloc[r, idx_val1]) if idx_val1 != -1 else 0
-                
                 if prod: sku_map[prod] = {"status": curr_st, "marca": curr_mc}
                 if curr_st != 'RESGATADO': sobras_dados.append({"status": curr_st, "marca": curr_mc, "locacoes": int(loc_val), "valor": val_val})
 
@@ -329,15 +278,12 @@ def gerar_json():
                     elif 'QTD' in v: idx_qtd2 = i
                     elif 'VALOR' in v and i > 4: idx_val2 = i
                 break
-                
         if header_2 != -1 and idx_prod2 != -1:
             for r in range(header_2 + 1, len(df_sobras)):
                 prod = str(df_sobras.iloc[r, idx_prod2]).strip()
                 if prod.lower() in ['nan', 'none', '', '(vazio)', 'total geral', 'total']: continue
-                
                 info = sku_map.get(prod, {"status": "INDEFINIDO", "marca": "SEM MARCA"})
                 if info["status"] == 'RESGATADO': continue
-                
                 qtd = tratar_valor_monetario(df_sobras.iloc[r, idx_qtd2]) if idx_qtd2 != -1 else 0
                 val = tratar_valor_monetario(df_sobras.iloc[r, idx_val2]) if idx_val2 != -1 else 0
                 sobras_detalhe.append({"status": info["status"], "produto": prod, "qtd": int(qtd), "valor": val})
@@ -346,13 +292,11 @@ def gerar_json():
     aba_pic = next((s for s in xls.sheet_names if 'piclinha' in s.lower() or 'divcic' in s.lower() and 'net' not in s.lower()), None)
     df_pic_raw = pd.read_excel(xls, aba_pic, header=None) if aba_pic else pd.DataFrame()
     pic_dados, saldos_divcic, saldos_piclinha, todos_saldos = [], {}, {}, []
-    
     if not df_pic_raw.empty:
         header_idx = -1
         for i, r in df_pic_raw.iterrows():
             if any('FAMILIA' in str(v).upper() or 'FAMÍLIA' in str(v).upper() for v in r.values):
                 header_idx = i; break
-                
         if header_idx != -1:
             df_pic_classico = df_pic_raw.iloc[header_idx+1:].reset_index(drop=True)
             df_pic_classico.columns = df_pic_raw.iloc[header_idx]
@@ -371,11 +315,8 @@ def gerar_json():
         for r in range(min(15, len(df_pic_raw))):
             row_vals = [str(v).upper().strip() for v in df_pic_raw.iloc[r].values]
             if 'SALDO DIVCIC' in row_vals or 'SALDO PICLINHA' in row_vals:
-                header_row_saldos = r
-                idx_div = row_vals.index('SALDO DIVCIC') if 'SALDO DIVCIC' in row_vals else -1
-                idx_pic = row_vals.index('SALDO PICLINHA') if 'SALDO PICLINHA' in row_vals else -1
+                header_row_saldos, idx_div, idx_pic = r, row_vals.index('SALDO DIVCIC') if 'SALDO DIVCIC' in row_vals else -1, row_vals.index('SALDO PICLINHA') if 'SALDO PICLINHA' in row_vals else -1
                 break
-                
         if header_row_saldos != -1:
             if idx_div != -1:
                 idx_div_val = idx_div + 2 if (idx_div + 2) < len(df_pic_raw.columns) else -1
@@ -387,7 +328,6 @@ def gerar_json():
                     val = tratar_valor_monetario(df_pic_raw.iloc[i, idx_div_val]) if idx_div_val != -1 else 0
                     saldos_divcic[sku] = {"qtd": int(qtd), "valor": val}
                     todos_saldos.append({"sku": sku, "setor": "DIVCIC", "qtd": int(qtd), "valor": val})
-
             if idx_pic != -1:
                 idx_pic_val = idx_pic + 2 if (idx_pic + 2) < len(df_pic_raw.columns) else -1
                 for i in range(header_row_saldos + 2, len(df_pic_raw)):
@@ -403,81 +343,59 @@ def gerar_json():
     for item in sobras_detalhe:
         if item['status'] != 'PENDENTE': continue
         sku = item['produto']
-        sd = saldos_divcic.get(sku, {"qtd": 0, "valor": 0})
-        sp = saldos_piclinha.get(sku, {"qtd": 0, "valor": 0})
-        
-        saldo_divcic_qtd = sd["qtd"]
-        saldo_piclinha_qtd = sp["qtd"]
-        valor_saldo_total = sd["valor"] + sp["valor"]
-        
-        if saldo_divcic_qtd > 0 or saldo_piclinha_qtd > 0:
-            qtd_sobra = item['qtd']
-            saldo_total_qtd = saldo_divcic_qtd + saldo_piclinha_qtd
-            resgate_tipo = "TOTAL" if saldo_total_qtd >= qtd_sobra else "PARCIAL"
-                
-            cruzamento_sobras.append({
-                "status": item['status'], "sku": sku, "qtd_sobra": qtd_sobra, "valor_sobra": item['valor'],
-                "saldo_divcic": saldo_divcic_qtd, "saldo_piclinha": saldo_piclinha_qtd, "valor_saldo": valor_saldo_total, "resgate_tipo": resgate_tipo
-            })
+        sd, sp = saldos_divcic.get(sku, {"qtd": 0, "valor": 0}), saldos_piclinha.get(sku, {"qtd": 0, "valor": 0})
+        if sd["qtd"] > 0 or sp["qtd"] > 0:
+            cruzamento_sobras.append({"status": item['status'], "sku": sku, "qtd_sobra": item['qtd'], "valor_sobra": item['valor'], "saldo_divcic": sd["qtd"], "saldo_piclinha": sp["qtd"], "valor_saldo": sd["valor"] + sp["valor"], "resgate_tipo": "TOTAL" if (sd["qtd"] + sp["qtd"]) >= item['qtd'] else "PARCIAL"})
     cruzamento_sobras = sorted(cruzamento_sobras, key=lambda x: x['valor_sobra'], reverse=True)
-
     sobras_qtd_map = {item['produto']: item['qtd'] for item in sobras_detalhe}
     for s in todos_saldos:
         sqtd = sobras_qtd_map.get(s['sku'], 0)
-        s['tem_sobra'] = "SIM" if sqtd > 0 else "NÃO"
-        s['qtd_sobra'] = sqtd
+        s['tem_sobra'], s['qtd_sobra'] = "SIM" if sqtd > 0 else "NÃO", sqtd
     top20_saldos = sorted(todos_saldos, key=lambda x: x['valor'], reverse=True)[:20]
 
     # 8. AVARIAS
     aba_avarias = next((s for s in xls.sheet_names if 'avarias' in s.lower()), None)
-    df_avarias = pd.read_excel(xls, aba_avarias) if aba_avarias else pd.DataFrame()
     avarias_dados = []
-    if not df_avarias.empty:
-        df_avarias.columns = [str(c).strip() for c in df_avarias.columns]
-        c_data = next((c for c in df_avarias.columns if 'data' in c.lower() or 'rótulos' in c.lower()), df_avarias.columns[0])
-        c_mot = next((c for c in df_avarias.columns if 'motivo' in c.lower()), df_avarias.columns[1] if len(df_avarias.columns)>1 else None)
-        c_oco = next((c for c in df_avarias.columns if 'ocorrência' in c.lower() or 'ocorrencia' in c.lower()), df_avarias.columns[2] if len(df_avarias.columns)>2 else None)
-        c_val = next((c for c in df_avarias.columns if 'soma' in c.lower() or 'r$' in c.lower() or 'valor' in c.lower()), df_avarias.columns[3] if len(df_avarias.columns)>3 else None)
-        
-        if c_data in df_avarias.columns:
-            df_avarias[c_data] = df_avarias[c_data].ffill()
-            for _, row in df_avarias.iterrows():
-                dr, mot, oc = row.get(c_data), str(row.get(c_mot)).strip(), str(row.get(c_oco)).strip()
-                if pd.isna(dr) or 'total' in str(dr).lower() or '(vazio)' in str(dr).lower() or mot.lower() in ['nan', 'none', '']: continue
-                try:
-                    dstr = pd.to_datetime(dr, dayfirst=True, errors='coerce').strftime('%Y-%m-%d')
-                    if dstr != 'NaT':
-                        avarias_dados.append({"data": dstr, "motivo": mot.upper(), "ocorrencia": oc.upper() if oc.lower() not in ['nan','none',''] else 'OUTROS', "valor": tratar_valor_monetario(row.get(c_val))})
-                except: pass
+    if aba_avarias:
+        df_avarias = pd.read_excel(xls, aba_avarias)
+        if not df_avarias.empty:
+            df_avarias.columns = [str(c).strip() for c in df_avarias.columns]
+            c_data = next((c for c in df_avarias.columns if 'data' in c.lower() or 'rótulos' in c.lower()), df_avarias.columns[0])
+            c_mot = next((c for c in df_avarias.columns if 'motivo' in c.lower()), df_avarias.columns[1] if len(df_avarias.columns)>1 else None)
+            c_oco = next((c for c in df_avarias.columns if 'ocorrência' in c.lower() or 'ocorrencia' in c.lower()), df_avarias.columns[2] if len(df_avarias.columns)>2 else None)
+            c_val = next((c for c in df_avarias.columns if 'soma' in c.lower() or 'r$' in c.lower() or 'valor' in c.lower()), df_avarias.columns[3] if len(df_avarias.columns)>3 else None)
+            
+            if c_data in df_avarias.columns:
+                df_avarias[c_data] = df_avarias[c_data].ffill()
+                for _, row in df_avarias.iterrows():
+                    dr, mot, oc = row.get(c_data), str(row.get(c_mot)).strip(), str(row.get(c_oco)).strip()
+                    if pd.isna(dr) or 'total' in str(dr).lower() or '(vazio)' in str(dr).lower() or mot.lower() in ['nan', 'none', '']: continue
+                    try:
+                        dstr = pd.to_datetime(dr, dayfirst=True, errors='coerce').strftime('%Y-%m-%d')
+                        if dstr != 'NaT': avarias_dados.append({"data": dstr, "motivo": mot.upper(), "ocorrencia": oc.upper() if oc.lower() not in ['nan','none',''] else 'OUTROS', "valor": tratar_valor_monetario(row.get(c_val))})
+                    except: pass
 
-    # ==========================================
-    # 9. ACURACIDADE (EMOJIS DINÂMICOS)
-    # ==========================================
+    # 9. ACURACIDADE (EMOJIS)
     aba_acuracidade = next((s for s in xls.sheet_names if 'acuraci' in s.lower()), None)
     acuracidade_dados = {"net": [], "locacao": []}
-    
     if aba_acuracidade:
         df_acu = pd.read_excel(xls, aba_acuracidade, header=None)
         col_net = col_loc = -1
-        
         for r in range(min(10, len(df_acu))):
             for c in range(len(df_acu.columns)):
                 val = str(df_acu.iloc[r, c]).strip().upper()
                 if val == 'NET': col_net = c
                 if 'LOCA' in val: col_loc = c
-                
         def extrair_bloco(col_start):
             res = []
             if col_start == -1: return res
             row_start = -1
             c_mes, c_meta, c_res = col_start, col_start+1, col_start+2
             meses_str = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO']
-            
             for r in range(min(15, len(df_acu))):
                 row_vals = [str(df_acu.iloc[r, c]).strip().upper() for c in range(col_start, min(col_start+4, len(df_acu.columns)))]
                 if any(m in v for m in meses_str for v in row_vals) or 'META' in row_vals:
                     row_start = r; break
-                    
             if row_start != -1:
                 for r in range(max(0, row_start-2), min(row_start+2, len(df_acu))):
                     for c in range(col_start-1, min(col_start+4, len(df_acu.columns))):
@@ -486,23 +404,34 @@ def gerar_json():
                         if v in meses_str or 'MÊS' in v or 'MES' in v: c_mes = c
                         elif 'META' in v: c_meta = c
                         elif 'RESULTADO' in v: c_res = c
-                
                 for r in range(row_start, len(df_acu)):
                     mes_val = str(df_acu.iloc[r, c_mes]).strip().upper()
                     mes_nome = next((m for m in meses_str if m[:3] in mes_val), None)
                     if mes_nome:
-                        meta_str = str(df_acu.iloc[r, c_meta]).strip().upper()
-                        res_str = str(df_acu.iloc[r, c_res]).strip().upper()
-                        
+                        meta_str, res_str = str(df_acu.iloc[r, c_meta]).strip().upper(), str(df_acu.iloc[r, c_res]).strip().upper()
                         meta_val = tratar_valor_monetario(meta_str) if meta_str not in ['NAN', 'NONE', '', '(VAZIO)'] else None
                         res_val = tratar_valor_monetario(res_str) if res_str not in ['NAN', 'NONE', '', '(VAZIO)'] else None
-                        
-                        if meta_val is not None:
-                            res.append({"mes": mes_nome, "meta": meta_val, "resultado": res_val})
+                        if meta_val is not None: res.append({"mes": mes_nome, "meta": meta_val, "resultado": res_val})
             return res
-            
         acuracidade_dados['net'] = extrair_bloco(max(0, col_net if col_net != -1 else 0))
         acuracidade_dados['locacao'] = extrair_bloco(col_loc if col_loc != -1 else 4)
+
+    # 10. ESTOQUE DIÁRIO (NOVO)
+    aba_estoque = next((s for s in xls.sheet_names if 'estoque' in s.lower() and 'di' in s.lower()), None)
+    estoque_diario_dados = []
+    if aba_estoque:
+        df_est = pd.read_excel(xls, aba_estoque)
+        if not df_est.empty:
+            df_est.columns = [str(c).strip() for c in df_est.columns]
+            c_data = next((c for c in df_est.columns if 'data' in c.lower()), None)
+            c_val = next((c for c in df_est.columns if 'valor' in c.lower() or 'r$' in c.lower()), None)
+            
+            if c_data and c_val:
+                df_est[c_data] = pd.to_datetime(df_est[c_data], dayfirst=True, errors='coerce')
+                for _, row in df_est.dropna(subset=[c_data]).iterrows():
+                    dstr = row[c_data].strftime('%Y-%m-%d')
+                    val = tratar_valor_monetario(row[c_val])
+                    estoque_diario_dados.append({"data": dstr, "valor": val})
 
     json_final = {
         "erros": erros_encontrados, 
@@ -516,7 +445,8 @@ def gerar_json():
         "pic_div": pic_dados,
         "top_saldos": top20_saldos,
         "avarias": avarias_dados,
-        "acuracidade": acuracidade_dados
+        "acuracidade": acuracidade_dados,
+        "estoque_diario": estoque_diario_dados  # NOVO CAMPO
     }
 
     with open('dados.json', 'w', encoding='utf-8') as f:
@@ -545,7 +475,7 @@ def gerar_json():
             if e.code != 404: raise e
 
         payload = {
-            "message": "Atualização (Acuracidade, Planejado vs Contado e Cores) 🚀", 
+            "message": "Atualização Completa (Estoque Diário) 🚀", 
             "content": base64.b64encode(conteudo.encode('utf-8')).decode('utf-8')
         }
         if sha: payload["sha"] = sha
