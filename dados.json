@@ -3396,12 +3396,12 @@
             },
             {
                 "data": "2026-10-22",
-                "total": 16,
+                "total": 15,
                 "curvas": {
                     "A": 5,
                     "B": 2,
                     "C": 6,
-                    "L": 3
+                    "L": 2
                 }
             },
             {
@@ -3429,8 +3429,8 @@
                 "pendente": 287
             },
             "L": {
-                "contado": 179,
-                "pendente": 302
+                "contado": 178,
+                "pendente": 303
             }
         },
         "comparativo": [
@@ -4201,7 +4201,7 @@
             },
             {
                 "data": "2026-10-22",
-                "planejado": 16,
+                "planejado": 15,
                 "contado": 15
             },
             {
@@ -4211,11 +4211,6 @@
             }
         ],
         "divergencias": [
-            {
-                "data": "2026-10-22",
-                "sku": "86180",
-                "motivo": "Planejado e não contado"
-            },
             {
                 "data": "2026-09-12",
                 "sku": "47599",
