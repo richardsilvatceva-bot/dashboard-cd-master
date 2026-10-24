@@ -1,11 +1,5 @@
 {
-    "erros": [
-        {
-            "aba": "Piclinha e Divcic",
-            "celula": "A49",
-            "erro": "#N/D"
-        }
-    ],
+    "erros": [],
     "ciclico": {
         "daily": [
             {
@@ -39620,6 +39614,12 @@
         {
             "setor": "PICLINHA",
             "familia": "Sup. à Venda",
+            "aging": 2,
+            "valor": 132.0
+        },
+        {
+            "setor": "PICLINHA",
+            "familia": "Sup. à Venda",
             "aging": 7,
             "valor": 1843.8000000000002
         },
@@ -39646,12 +39646,6 @@
             "familia": "Home Care",
             "aging": 7,
             "valor": 267.04
-        },
-        {
-            "setor": "PICLINHA",
-            "familia": "#N/D",
-            "aging": 2,
-            "valor": 132.0
         },
         {
             "setor": "DIVCIC",
